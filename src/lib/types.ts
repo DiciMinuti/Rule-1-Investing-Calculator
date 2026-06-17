@@ -132,6 +132,32 @@ export type RuleOneEvaluation = {
   loadedAt: string;
 };
 
+export type BusinessGroupKind = "index" | "sector" | "industry";
+
+export type BusinessGroupSummary = {
+  id: string;
+  name: string;
+  kind: BusinessGroupKind;
+  description: string;
+  count: number;
+  source: DataSourceRef;
+};
+
+export type BusinessGroupConstituent = {
+  symbol: string;
+  displaySymbol: string;
+  name: string;
+  sector?: string;
+  industry?: string;
+  cik?: string;
+  rank?: number;
+};
+
+export type BusinessGroupDetail = BusinessGroupSummary & {
+  constituents: BusinessGroupConstituent[];
+  updatedAt: string;
+};
+
 export type CompanyNotes = {
   thesis: string;
   redFlags: string;

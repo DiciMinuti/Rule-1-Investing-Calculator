@@ -386,7 +386,15 @@ a:hover {
 }
 
 .search-panel {
+  display: grid;
+  gap: 10px;
   padding: 12px;
+}
+
+.mode-toggle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
 }
 
 .search-input-wrap {
@@ -463,6 +471,23 @@ a:hover {
   white-space: nowrap;
 }
 
+.group-suggestion-row {
+  grid-template-columns: 64px 1fr auto;
+}
+
+.group-suggestion-row .suggestion-name {
+  display: grid;
+  gap: 2px;
+}
+
+.group-suggestion-row .suggestion-name strong {
+  overflow: hidden;
+  color: var(--text);
+  font-weight: 720;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .loading-list {
   display: grid;
   gap: 8px;
@@ -526,6 +551,59 @@ a:hover {
 
 .value-mini strong {
   font-size: 0.94rem;
+}
+
+.group-screen {
+  overflow: hidden;
+}
+
+.group-actions {
+  display: flex;
+  align-items: end;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.group-limit-select {
+  width: 138px;
+}
+
+.group-summary-strip {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.group-table {
+  min-width: 980px;
+}
+
+.group-table th:nth-child(3),
+.group-table td:nth-child(3) {
+  min-width: 260px;
+  max-width: 340px;
+}
+
+.group-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 24px;
+  color: var(--muted);
+}
+
+.group-status.done {
+  color: var(--green);
+}
+
+.group-status.loading {
+  color: var(--cyan);
+}
+
+.group-status.failed {
+  color: var(--red);
+}
+
+.group-error {
+  max-width: 220px;
 }
 
 .stepper {
@@ -811,9 +889,23 @@ a:hover {
   .result-grid,
   .valuation-strip,
   .checklist,
+  .group-summary-strip,
   .saves-controls,
   .docs-layout {
     grid-template-columns: 1fr;
+  }
+
+  .group-suggestion-row {
+    grid-template-columns: 52px 1fr;
+  }
+
+  .group-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .group-limit-select {
+    width: 100%;
   }
 
   .docs-list {

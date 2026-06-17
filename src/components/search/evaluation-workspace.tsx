@@ -2,7 +2,7 @@
 
 import { useSearchParams } from "next/navigation";
 import { Check, ChevronLeft, ChevronRight, CircleAlert, Loader2, Save, Search } from "lucide-react";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { MiniPriceChart } from "@/components/ui/mini-price-chart";
 import {
   BusinessGradePill,
@@ -30,17 +30,24 @@ import {
 import type {
   AnnualFinancials,
   BigFiveResult,
+  BusinessGroupConstituent,
+  BusinessGroupDetail,
+  BusinessGroupSummary,
   BusinessGrade,
   CompanyNotes,
   CompanyProfile,
   CompanySearchResult,
   FilingLink,
   PriceHistory,
+  RuleOneEvaluation,
   SavedBusinessItem,
   ValuationAssumptions,
 } from "@/lib/types";
 
 type LoadStatus = "idle" | "loading" | "done" | "warning" | "failed";
+type SearchMode = "business" | "group";
+type GroupRunStatus = "idle" | "loading" | "ready" | "running" | "complete" | "stopped" | "failed";
+type GroupRowStatus = "queued" | "loading" | "done" | "failed";
 
 type LoadStep = {
   id: string;
@@ -58,7 +65,25 @@ type LoadedCompany = {
   loadedAt: string;
 };
 
+type GroupEvaluationRow = {
+  constituent: BusinessGroupConstituent;
+  status: GroupRowStatus;
+  evaluation?: RuleOneEvaluation;
+  error?: string;
+};
+
+type GroupRunSummary = {
+  done: number;
+  failed: number;
+  running: number;
+  queued: number;
+  pass: number;
+  almost: number;
+  nope: number;
+};
+
 const steps = ["Result", "Business", "Big Five", "Moat", "Management", "Valuation", "Reports and notes"];
+const groupLimitOptions = [10, 25, 50, 100, 0];
 const moatTypes = ["Brand", "Price/cost advantage", "Secrets/IP", "Switching costs", "Toll bridge", "Network effects"];
 const managementChecklist = [
   "Clear communication",
@@ -137,10 +162,19 @@ function verdictReason(gapToMos: number) {
 export function EvaluationWorkspace() {
   const params = useSearchParams();
   const symbolParam = params.get("symbol");
+  const groupRunIdRef = useRef(0);
+  const [searchMode, setSearchMode] = useState<SearchMode>("business");
   const [query, setQuery] = useState("");
   const [suggestions, setSuggestions] = useState<CompanySearchResult[]>([]);
   const [searching, setSearching] = useState(false);
   const [searchError, setSearchError] = useState("");
+  const [groupSuggestions, setGroupSuggestions] = useState<BusinessGroupSummary[]>([]);
+  const [groupSearching, setGroupSearching] = useState(false);
+  const [groupError, setGroupError] = useState("");
+  const [selectedGroup, setSelectedGroup] = useState<BusinessGroupDetail | null>(null);
+  const [groupRows, setGroupRows] = useState<GroupEvaluationRow[]>([]);
+  const [groupStatus, setGroupStatus] = useState<GroupRunStatus>("idle");
+  const [groupLimit, setGroupLimit] = useState(25);
   const [loadSteps, setLoadSteps] = useState(initialLoadSteps);
   const [loaded, setLoaded] = useState<LoadedCompany | null>(null);
   const [assumptions, setAssumptions] = useState<ValuationAssumptions | null>(null);
@@ -169,6 +203,10 @@ export function EvaluationWorkspace() {
   }, [saveMessage]);
 
   useEffect(() => {
+    if (searchMode !== "business") {
+      return;
+    }
+
     if (query.trim().length < 1) {
       setSuggestions([]);
       setSearchError("");
@@ -194,7 +232,33 @@ export function EvaluationWorkspace() {
     }, 220);
 
     return () => window.clearTimeout(handle);
-  }, [query]);
+  }, [query, searchMode]);
+
+  useEffect(() => {
+    if (searchMode !== "group") {
+      return;
+    }
+
+    const handle = window.setTimeout(async () => {
+      setGroupSearching(true);
+      setGroupError("");
+      try {
+        const data = await fetchJson<{ groups: BusinessGroupSummary[] }>(
+          `/api/groups?q=${encodeURIComponent(query)}`,
+        );
+        setGroupSuggestions(data.groups);
+        if (query.trim() && data.groups.length === 0) {
+          setGroupError("No group match found.");
+        }
+      } catch (error) {
+        setGroupError(error instanceof Error ? error.message : "Group search failed.");
+      } finally {
+        setGroupSearching(false);
+      }
+    }, 220);
+
+    return () => window.clearTimeout(handle);
+  }, [query, searchMode]);
 
   const loadCompany = useCallback(async (symbol: string) => {
     const normalizedSymbol = symbol.toUpperCase();
@@ -275,6 +339,116 @@ export function EvaluationWorkspace() {
     }
   }, []);
 
+  const loadGroup = useCallback(async (groupId: string) => {
+    groupRunIdRef.current += 1;
+    setSelectedGroup(null);
+    setGroupRows([]);
+    setGroupStatus("loading");
+    setGroupError("");
+
+    try {
+      const data = await fetchJson<{ group: BusinessGroupDetail }>(
+        `/api/groups/${encodeURIComponent(groupId)}`,
+      );
+      setSelectedGroup(data.group);
+      setGroupRows(
+        data.group.constituents.map((constituent) => ({
+          constituent,
+          status: "queued" as const,
+        })),
+      );
+      setGroupStatus("ready");
+      setGroupSuggestions([]);
+      setQuery(data.group.name);
+    } catch (error) {
+      setGroupStatus("failed");
+      setGroupError(error instanceof Error ? error.message : "Group load failed.");
+    }
+  }, []);
+
+  const stopGroupRun = useCallback(() => {
+    groupRunIdRef.current += 1;
+    setGroupStatus((current) => (current === "running" ? "stopped" : current));
+    setGroupRows((current) =>
+      current.map((row) => (row.status === "loading" ? { ...row, status: "queued" as const } : row)),
+    );
+  }, []);
+
+  const runSelectedGroup = useCallback(async () => {
+    if (!selectedGroup) {
+      return;
+    }
+
+    const limit =
+      groupLimit === 0
+        ? selectedGroup.constituents.length
+        : Math.min(groupLimit, selectedGroup.constituents.length);
+    const targetConstituents = selectedGroup.constituents.slice(0, limit);
+    const runId = groupRunIdRef.current + 1;
+    groupRunIdRef.current = runId;
+    setGroupStatus("running");
+    setGroupError("");
+    setGroupRows(
+      selectedGroup.constituents.map((constituent) => ({
+        constituent,
+        status: "queued" as const,
+      })),
+    );
+
+    for (const constituent of targetConstituents) {
+      if (groupRunIdRef.current !== runId) {
+        return;
+      }
+
+      setGroupRows((current) =>
+        current.map((row) =>
+          row.constituent.symbol === constituent.symbol
+            ? { constituent: row.constituent, status: "loading" as const }
+            : row,
+        ),
+      );
+
+      try {
+        const data = await fetchJson<{ evaluation: RuleOneEvaluation }>(
+          `/api/company/${encodeURIComponent(constituent.symbol)}/evaluation`,
+        );
+        if (groupRunIdRef.current !== runId) {
+          return;
+        }
+        setGroupRows((current) =>
+          current.map((row) =>
+            row.constituent.symbol === constituent.symbol
+              ? {
+                  constituent: row.constituent,
+                  status: "done" as const,
+                  evaluation: data.evaluation,
+                }
+              : row,
+          ),
+        );
+      } catch (error) {
+        if (groupRunIdRef.current !== runId) {
+          return;
+        }
+        setGroupRows((current) =>
+          current.map((row) =>
+            row.constituent.symbol === constituent.symbol
+              ? {
+                  constituent: row.constituent,
+                  status: "failed" as const,
+                  error: error instanceof Error ? error.message : "Evaluation failed.",
+                }
+              : row,
+          ),
+        );
+      }
+    }
+
+    if (groupRunIdRef.current === runId) {
+      setGroupStatus("complete");
+    }
+  }, [groupLimit, selectedGroup]);
+
   useEffect(() => {
     if (symbolParam) {
       void loadCompany(symbolParam);
@@ -296,6 +470,32 @@ export function EvaluationWorkspace() {
 
     return calculateValuation(assumptions, businessGrade);
   }, [assumptions, businessGrade]);
+
+  const visibleGroupRows = useMemo(() => {
+    if (!selectedGroup) {
+      return [];
+    }
+
+    const limit =
+      groupLimit === 0
+        ? selectedGroup.constituents.length
+        : Math.min(groupLimit, selectedGroup.constituents.length);
+    return groupRows.slice(0, limit);
+  }, [groupLimit, groupRows, selectedGroup]);
+
+  const groupRunSummary = useMemo(() => {
+    const doneRows = visibleGroupRows.filter((row) => row.status === "done" && row.evaluation);
+    const failed = visibleGroupRows.filter((row) => row.status === "failed").length;
+    return {
+      done: doneRows.length,
+      failed,
+      running: visibleGroupRows.filter((row) => row.status === "loading").length,
+      queued: visibleGroupRows.filter((row) => row.status === "queued").length,
+      pass: doneRows.filter((row) => row.evaluation?.valuation.priceVerdict === "pass").length,
+      almost: doneRows.filter((row) => row.evaluation?.valuation.priceVerdict === "almost").length,
+      nope: doneRows.filter((row) => row.evaluation?.valuation.priceVerdict === "nope").length,
+    };
+  }, [visibleGroupRows]);
 
   async function handleSave() {
     if (!loaded || !assumptions || !valuation) {
@@ -332,61 +532,144 @@ export function EvaluationWorkspace() {
   return (
     <div className="stack">
       <section className="panel search-panel">
-        <div className="search-input-wrap">
-          <Search size={18} />
-          <input
-            className="search-input"
-            value={query}
-            onChange={(event) => setQuery(event.target.value)}
-            placeholder="Search a U.S. business by ticker or name."
-            aria-label="Search a U.S. business by ticker or name"
-          />
-          {searching ? <Loader2 className="spin subtle" size={17} /> : null}
+        <div className="mode-toggle" role="tablist" aria-label="Search mode">
+          <button
+            className={`segmented-button ${searchMode === "business" ? "active" : ""}`}
+            type="button"
+            role="tab"
+            aria-selected={searchMode === "business"}
+            onClick={() => {
+              setSearchMode("business");
+              setGroupSuggestions([]);
+              setGroupError("");
+              setQuery("");
+            }}
+          >
+            Business
+          </button>
+          <button
+            className={`segmented-button ${searchMode === "group" ? "active" : ""}`}
+            type="button"
+            role="tab"
+            aria-selected={searchMode === "group"}
+            onClick={() => {
+              setSearchMode("group");
+              setSuggestions([]);
+              setSearchError("");
+              setQuery("");
+            }}
+          >
+            Group
+          </button>
         </div>
-        {suggestions.length ? (
-          <div className="suggestions">
-            {suggestions.map((suggestion) => (
-              <button
-                className="suggestion-row"
-                key={`${suggestion.symbol}-${suggestion.cik}`}
-                type="button"
-                onClick={() => {
-                  setQuery(suggestion.symbol);
-                  setSuggestions([]);
-                  void loadCompany(suggestion.symbol);
-                }}
-              >
-                <span className="suggestion-symbol">{suggestion.symbol}</span>
-                <span className="suggestion-name">{suggestion.name}</span>
-                <span className="pill info">{suggestion.cik ? `CIK ${suggestion.cik}` : "SEC"}</span>
-              </button>
-            ))}
-          </div>
-        ) : null}
-        {searchError ? <p className="muted search-helper">{searchError}</p> : null}
-        {!loaded && !suggestions.length && !searchError ? (
-          <div className="empty-search">
-            <p className="muted">Search a U.S. business by ticker or name.</p>
-            {recentSaves.length ? (
-              <div className="stack">
-                <div className="label">Recent saved businesses</div>
-                <div className="row wrap">
-                  {recentSaves.map((save) => (
-                    <button
-                      className="button"
-                      key={save.id}
-                      type="button"
-                      onClick={() => void loadCompany(save.symbol)}
-                    >
-                      {save.symbol}
-                    </button>
-                  ))}
-                </div>
+
+        {searchMode === "business" ? (
+          <>
+            <div className="search-input-wrap">
+              <Search size={18} />
+              <input
+                className="search-input"
+                value={query}
+                onChange={(event) => setQuery(event.target.value)}
+                placeholder="Search a U.S. business by ticker or name."
+                aria-label="Search a U.S. business by ticker or name"
+              />
+              {searching ? <Loader2 className="spin subtle" size={17} /> : null}
+            </div>
+            {suggestions.length ? (
+              <div className="suggestions">
+                {suggestions.map((suggestion) => (
+                  <button
+                    className="suggestion-row"
+                    key={`${suggestion.symbol}-${suggestion.cik}`}
+                    type="button"
+                    onClick={() => {
+                      setQuery(suggestion.symbol);
+                      setSuggestions([]);
+                      void loadCompany(suggestion.symbol);
+                    }}
+                  >
+                    <span className="suggestion-symbol">{suggestion.symbol}</span>
+                    <span className="suggestion-name">{suggestion.name}</span>
+                    <span className="pill info">{suggestion.cik ? `CIK ${suggestion.cik}` : "SEC"}</span>
+                  </button>
+                ))}
               </div>
             ) : null}
+            {searchError ? <p className="muted search-helper">{searchError}</p> : null}
+            {!loaded && !suggestions.length && !searchError ? (
+              <div className="empty-search">
+                <p className="muted">Search a U.S. business by ticker or name.</p>
+                {recentSaves.length ? (
+                  <div className="stack">
+                    <div className="label">Recent saved businesses</div>
+                    <div className="row wrap">
+                      {recentSaves.map((save) => (
+                        <button
+                          className="button"
+                          key={save.id}
+                          type="button"
+                          onClick={() => void loadCompany(save.symbol)}
+                        >
+                          {save.symbol}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                ) : null}
+              </div>
+            ) : null}
+          </>
+        ) : (
+          <div className="stack compact-gap">
+            <div className="search-input-wrap">
+              <Search size={18} />
+              <input
+                className="search-input"
+                value={query}
+                onChange={(event) => setQuery(event.target.value)}
+                placeholder="Search S&P 500, software, banks, healthcare..."
+                aria-label="Search a group of businesses"
+              />
+              {groupSearching ? <Loader2 className="spin subtle" size={17} /> : null}
+            </div>
+            {groupSuggestions.length ? (
+              <div className="suggestions group-suggestions">
+                {groupSuggestions.map((group) => (
+                  <button
+                    className="suggestion-row group-suggestion-row"
+                    key={group.id}
+                    type="button"
+                    onClick={() => void loadGroup(group.id)}
+                  >
+                    <span className="suggestion-symbol">{group.count}</span>
+                    <span className="suggestion-name">
+                      <strong>{group.name}</strong>
+                      <span className="subtle">{group.description}</span>
+                    </span>
+                    <span className="pill info">{group.kind}</span>
+                  </button>
+                ))}
+              </div>
+            ) : null}
+            {groupError ? <p className="muted search-helper">{groupError}</p> : null}
           </div>
-        ) : null}
+        )}
       </section>
+
+      {selectedGroup ? (
+        <GroupScreen
+          group={selectedGroup}
+          rows={visibleGroupRows}
+          summary={groupRunSummary}
+          status={groupStatus}
+          groupLimit={groupLimit}
+          onGroupLimitChange={setGroupLimit}
+          onRun={runSelectedGroup}
+          onStop={stopGroupRun}
+          onOpenCompany={loadCompany}
+        />
+      ) : null}
 
       {loadSteps.some((step) => step.status !== "idle") && !loaded ? (
         <section className="panel">
@@ -469,6 +752,167 @@ export function EvaluationWorkspace() {
         </>
       ) : null}
     </div>
+  );
+}
+
+function groupRowStatusIcon(status: GroupRowStatus) {
+  if (status === "done") {
+    return <Check size={15} />;
+  }
+
+  if (status === "loading") {
+    return <Loader2 className="spin" size={15} />;
+  }
+
+  if (status === "failed") {
+    return <CircleAlert size={15} />;
+  }
+
+  return <span className="idle-dot" />;
+}
+
+function GroupScreen({
+  group,
+  rows,
+  summary,
+  status,
+  groupLimit,
+  onGroupLimitChange,
+  onRun,
+  onStop,
+  onOpenCompany,
+}: {
+  group: BusinessGroupDetail;
+  rows: GroupEvaluationRow[];
+  summary: GroupRunSummary;
+  status: GroupRunStatus;
+  groupLimit: number;
+  onGroupLimitChange: (limit: number) => void;
+  onRun: () => void;
+  onStop: () => void;
+  onOpenCompany: (symbol: string) => void;
+}) {
+  const evaluatedCount = summary.done + summary.failed;
+  const runLabel = evaluatedCount > 0 ? "Run again" : "Run screen";
+
+  return (
+    <section className="panel group-screen">
+      <div className="stack">
+        <div className="split">
+          <div className="stack compact-gap">
+            <div className="row wrap">
+              <h1 className="title">{group.name}</h1>
+              <span className="pill info">{group.kind}</span>
+              <span className="pill">{group.count} businesses</span>
+            </div>
+            <div className="row wrap muted">
+              <span>{group.source.label}</span>
+              <span>Updated {formatDate(group.updatedAt)}</span>
+            </div>
+          </div>
+          <div className="group-actions">
+            <label className="stack compact-gap">
+              <span className="label">Max companies</span>
+              <select
+                className="compact-select group-limit-select"
+                value={groupLimit}
+                disabled={status === "running"}
+                onChange={(event) => onGroupLimitChange(Number(event.target.value))}
+              >
+                {groupLimitOptions.map((option) => (
+                  <option key={option} value={option}>
+                    {option === 0 ? "All" : `Top ${option}`}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <button
+              className="button primary"
+              type="button"
+              disabled={status === "running" || rows.length === 0}
+              onClick={onRun}
+            >
+              <Search size={16} />
+              {runLabel}
+            </button>
+            {status === "running" ? (
+              <button className="button danger" type="button" onClick={onStop}>
+                <CircleAlert size={16} />
+                Stop
+              </button>
+            ) : null}
+          </div>
+        </div>
+
+        <div className="valuation-strip group-summary-strip">
+          <ValueBlock label="Evaluated" value={`${evaluatedCount}/${rows.length}`} />
+          <ValueBlock label="Pass" value={String(summary.pass)} />
+          <ValueBlock label="Almost" value={String(summary.almost)} />
+          <ValueBlock label="Nope" value={String(summary.nope)} />
+        </div>
+
+        <div className="table-wrap">
+          <table className="table group-table">
+            <thead>
+              <tr>
+                <th>Status</th>
+                <th>Ticker</th>
+                <th>Business</th>
+                <th>Grade</th>
+                <th>Big Five</th>
+                <th>Current</th>
+                <th>MOS</th>
+                <th>Gap</th>
+                <th>Verdict</th>
+                <th>Open</th>
+              </tr>
+            </thead>
+            <tbody>
+              {rows.map((row) => {
+                const evaluation = row.evaluation;
+                return (
+                  <tr key={row.constituent.symbol}>
+                    <td>
+                      <div className={`group-status ${row.status}`}>
+                        {groupRowStatusIcon(row.status)}
+                        <span>{row.status}</span>
+                      </div>
+                      {row.error ? <div className="subtle group-error">{row.error}</div> : null}
+                    </td>
+                    <td>
+                      <strong>{row.constituent.displaySymbol}</strong>
+                      {row.constituent.displaySymbol !== row.constituent.symbol ? (
+                        <div className="subtle">{row.constituent.symbol}</div>
+                      ) : null}
+                    </td>
+                    <td>
+                      <div>{evaluation?.profile.name ?? row.constituent.name}</div>
+                      <div className="subtle">{row.constituent.industry ?? row.constituent.sector ?? "S&P 500"}</div>
+                    </td>
+                    <td>{evaluation ? <BusinessGradePill grade={evaluation.valuation.businessGrade} /> : "—"}</td>
+                    <td>{evaluation ? `${evaluation.bigFive.healthyCount}/${evaluation.bigFive.totalCount}` : "—"}</td>
+                    <td>{evaluation ? formatCurrency(evaluation.valuation.currentPrice) : "—"}</td>
+                    <td>{evaluation ? formatCurrency(evaluation.valuation.mosPrice) : "—"}</td>
+                    <td>{evaluation ? formatPercent(evaluation.valuation.gapToMos) : "—"}</td>
+                    <td>{evaluation ? <PriceVerdictPill verdict={evaluation.valuation.priceVerdict} /> : "—"}</td>
+                    <td>
+                      <button
+                        className="button"
+                        type="button"
+                        onClick={() => onOpenCompany(row.constituent.symbol)}
+                      >
+                        <Search size={16} />
+                        Open
+                      </button>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
   );
 }
 
