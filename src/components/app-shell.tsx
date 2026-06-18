@@ -30,6 +30,9 @@ export function AppShell({ children }: { children: ReactNode }) {
     <div className="app-shell">
       <header className="top-bar">
         <Link className="brand" href="/">
+          <span className="brand-mark" aria-hidden="true">
+            #1
+          </span>
           Rule One
         </Link>
         <nav className="top-nav" aria-label="Primary">

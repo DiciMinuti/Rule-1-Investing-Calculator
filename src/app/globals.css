@@ -76,9 +76,27 @@ a:hover {
 }
 
 .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
   color: var(--text);
   font-weight: 700;
   white-space: nowrap;
+}
+
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  background: #000000;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1;
 }
 
 .top-nav {

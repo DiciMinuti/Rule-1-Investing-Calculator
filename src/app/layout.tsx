@@ -12,6 +12,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Rule One Portfolio",
   description: "A local-first Rule #1-style business evaluation app.",
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
+  },
 };
 
 export default function RootLayout({
