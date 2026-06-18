@@ -693,41 +693,43 @@ export function EvaluationWorkspace() {
             onSave={handleSave}
             saveMessage={saveMessage}
           />
-          <Stepper activeStep={activeStep} onStepChange={setActiveStep} />
-          <section className="panel">
-            {activeStep === 0 ? (
-              <ResultStep
-                loaded={loaded}
-                assumptions={assumptions}
-                valuation={valuation}
-                gradeOverride={gradeOverride}
-                setGradeOverride={setGradeOverride}
-                notes={notes}
-                setNotes={setNotes}
-                onSave={handleSave}
-                saveMessage={saveMessage}
-              />
-            ) : null}
-            {activeStep === 1 ? <BusinessStep loaded={loaded} notes={notes} setNotes={setNotes} /> : null}
-            {activeStep === 2 ? <BigFiveStep loaded={loaded} /> : null}
-            {activeStep === 3 ? <MoatStep loaded={loaded} notes={notes} setNotes={setNotes} /> : null}
-            {activeStep === 4 ? <ManagementStep loaded={loaded} notes={notes} setNotes={setNotes} /> : null}
-            {activeStep === 5 ? (
-              <ValuationStep
-                assumptions={assumptions}
-                setAssumption={setAssumption}
-                valuation={valuation}
-              />
-            ) : null}
-            {activeStep === 6 ? (
-              <ReportsStep
-                loaded={loaded}
-                notes={notes}
-                setNotes={setNotes}
-                onSave={handleSave}
-                saveMessage={saveMessage}
-              />
-            ) : null}
+          <section className="panel evaluation-panel">
+            <Stepper activeStep={activeStep} onStepChange={setActiveStep} />
+            <div className="evaluation-body">
+              {activeStep === 0 ? (
+                <ResultStep
+                  loaded={loaded}
+                  assumptions={assumptions}
+                  valuation={valuation}
+                  gradeOverride={gradeOverride}
+                  setGradeOverride={setGradeOverride}
+                  notes={notes}
+                  setNotes={setNotes}
+                  onSave={handleSave}
+                  saveMessage={saveMessage}
+                />
+              ) : null}
+              {activeStep === 1 ? <BusinessStep loaded={loaded} notes={notes} setNotes={setNotes} /> : null}
+              {activeStep === 2 ? <BigFiveStep loaded={loaded} /> : null}
+              {activeStep === 3 ? <MoatStep loaded={loaded} notes={notes} setNotes={setNotes} /> : null}
+              {activeStep === 4 ? <ManagementStep loaded={loaded} notes={notes} setNotes={setNotes} /> : null}
+              {activeStep === 5 ? (
+                <ValuationStep
+                  assumptions={assumptions}
+                  setAssumption={setAssumption}
+                  valuation={valuation}
+                />
+              ) : null}
+              {activeStep === 6 ? (
+                <ReportsStep
+                  loaded={loaded}
+                  notes={notes}
+                  setNotes={setNotes}
+                  onSave={handleSave}
+                  saveMessage={saveMessage}
+                />
+              ) : null}
+            </div>
           </section>
           <div className="step-actions">
             <button
@@ -929,8 +931,8 @@ function CompanySummary({
 }) {
   return (
     <section className="panel sticky-summary">
-      <div className="split">
-        <div className="stack compact-gap">
+      <div className="summary-layout">
+        <div className="summary-main stack compact-gap">
           <div className="row wrap">
             <h1 className="title">
               {loaded.profile.name} <span className="subtle">{loaded.profile.symbol}</span>
@@ -945,7 +947,7 @@ function CompanySummary({
             <span>{loaded.prices.source.label}</span>
           </div>
         </div>
-        <div className="row wrap">
+        <div className="summary-metrics">
           <ValueMini label="Current" value={formatCurrency(valuation.currentPrice)} />
           <ValueMini label="Sticker" value={formatCurrency(valuation.stickerPrice)} />
           <ValueMini label="MOS" value={formatCurrency(valuation.mosPrice)} />
@@ -1172,46 +1174,50 @@ function BigFiveStep({ loaded }: { loaded: LoadedCompany }) {
         </div>
         <BusinessGradePill grade={loaded.bigFive.businessContribution} />
       </div>
-      <div className="table-wrap">
-        <table className="table">
-          <thead>
-            <tr>
-              <th>Metric</th>
-              <th>10y</th>
-              <th>5y</th>
-              <th>3y</th>
-              <th>1y</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            {loaded.bigFive.metrics.map((metric) => (
-              <tr key={metric.id}>
-                <td>
-                  <details>
-                    <summary>{metric.label}</summary>
-                    <div className="annual-values">
-                      {metric.values.map((point) => (
-                        <span key={`${metric.id}-${point.fiscalYear}`}>
-                          {point.fiscalYear}: {formatNumber(point.value)}
-                        </span>
-                      ))}
-                    </div>
-                  </details>
-                  <div className="subtle">{metric.sourceLabel}</div>
-                </td>
-                <td>{formatPercent(metric.windows[10].value)}</td>
-                <td>{formatPercent(metric.windows[5].value)}</td>
-                <td>{formatPercent(metric.windows[3].value)}</td>
-                <td>{formatPercent(metric.windows[1].value)}</td>
-                <td>
-                  <MetricStatusPill status={metric.status} />
-                  {metric.warning ? <div className="subtle">{metric.warning}</div> : null}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      <div className="big-five-grid" role="table" aria-label="Big Five metrics">
+        <div className="big-five-header" role="row">
+          <span role="columnheader">Metric</span>
+          <span role="columnheader">10y</span>
+          <span role="columnheader">5y</span>
+          <span role="columnheader">3y</span>
+          <span role="columnheader">1y</span>
+          <span role="columnheader">Status</span>
+        </div>
+        <div className="big-five-rows">
+          {loaded.bigFive.metrics.map((metric) => (
+            <div className="big-five-row" role="row" key={metric.id}>
+              <div className="big-five-metric" role="cell">
+                <details>
+                  <summary>{metric.label}</summary>
+                  <div className="annual-values">
+                    {metric.values.map((point) => (
+                      <span key={`${metric.id}-${point.fiscalYear}`}>
+                        {point.fiscalYear}: {formatNumber(point.value)}
+                      </span>
+                    ))}
+                  </div>
+                </details>
+                <div className="subtle">{metric.sourceLabel}</div>
+              </div>
+              <div className="big-five-value" data-label="10y" role="cell">
+                {formatPercent(metric.windows[10].value)}
+              </div>
+              <div className="big-five-value" data-label="5y" role="cell">
+                {formatPercent(metric.windows[5].value)}
+              </div>
+              <div className="big-five-value" data-label="3y" role="cell">
+                {formatPercent(metric.windows[3].value)}
+              </div>
+              <div className="big-five-value" data-label="1y" role="cell">
+                {formatPercent(metric.windows[1].value)}
+              </div>
+              <div className="big-five-status" role="cell">
+                <MetricStatusPill status={metric.status} />
+                {metric.warning ? <div className="subtle">{metric.warning}</div> : null}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
