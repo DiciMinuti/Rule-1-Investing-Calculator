@@ -19,6 +19,7 @@ import {
   formatCurrency,
   formatDate,
   formatPercent,
+  gradeTone,
 } from "@/lib/format";
 import {
   deleteSavedBusiness,
@@ -919,10 +920,14 @@ function CompanySummary({
   isSaved: boolean;
   onSaveToggle: () => void;
 }) {
+  const hasCurrentPrice = Number.isFinite(valuation.currentPrice) && valuation.currentPrice > 0;
+  const hasMosPrice = Number.isFinite(valuation.mosPrice) && valuation.mosPrice > 0;
+  const isBelowMos = hasCurrentPrice && hasMosPrice && valuation.currentPrice <= valuation.mosPrice;
+
   return (
     <section className="panel sticky-summary">
       <div className="summary-layout">
-        <div className="summary-main stack compact-gap">
+        <div className={`summary-main stack compact-gap ${gradeTone(loaded.bigFive.businessContribution)}`}>
           <div className="row wrap">
             <h1 className="title">
               {loaded.profile.name} <span className="subtle">{loaded.profile.symbol}</span>
@@ -938,7 +943,7 @@ function CompanySummary({
         <div className="summary-metrics">
           <ValueMini label="Current" value={formatCurrency(valuation.currentPrice)} />
           <ValueMini label="Sticker" value={formatCurrency(valuation.stickerPrice)} />
-          <ValueMini label="MOS" value={formatCurrency(valuation.mosPrice)} />
+          <ValueMini label="MOS" value={formatCurrency(valuation.mosPrice)} tone={isBelowMos ? "good" : "bad"} />
           <SaveToggleButton isSaved={isSaved} onClick={onSaveToggle} />
         </div>
       </div>
@@ -955,9 +960,9 @@ function SaveToggleButton({ isSaved, onClick }: { isSaved: boolean; onClick: () 
   );
 }
 
-function ValueMini({ label, value }: { label: string; value: string }) {
+function ValueMini({ label, value, tone }: { label: string; value: string; tone?: "good" | "warn" | "bad" }) {
   return (
-    <div className="value-mini">
+    <div className={`value-mini ${tone ?? ""}`}>
       <span className="label">{label}</span>
       <strong>{value}</strong>
     </div>

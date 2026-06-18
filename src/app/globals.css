@@ -550,6 +550,21 @@ a:hover {
   flex-wrap: wrap;
 }
 
+.summary-main.good,
+.value-mini.good {
+  background: rgba(74, 222, 128, 0.03);
+}
+
+.summary-main.warn,
+.value-mini.warn {
+  background: rgba(251, 191, 36, 0.03);
+}
+
+.summary-main.bad,
+.value-mini.bad {
+  background: rgba(248, 113, 113, 0.03);
+}
+
 .compact-gap {
   gap: 5px;
 }
@@ -566,6 +581,18 @@ a:hover {
 
 .value-mini strong {
   font-size: 0.94rem;
+}
+
+.value-mini.good strong {
+  color: var(--green);
+}
+
+.value-mini.warn strong {
+  color: var(--amber);
+}
+
+.value-mini.bad strong {
+  color: var(--red);
 }
 
 .group-screen {
@@ -704,6 +731,18 @@ a:hover {
 
 .value-block strong {
   font-size: 1.05rem;
+}
+
+.value-block.good strong {
+  color: var(--green);
+}
+
+.value-block.warn strong {
+  color: var(--amber);
+}
+
+.value-block.bad strong {
+  color: var(--red);
 }
 
 .value-block.good {
