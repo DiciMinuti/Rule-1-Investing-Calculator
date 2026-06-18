@@ -633,11 +633,50 @@ a:hover {
 }
 
 .group-table {
-  min-width: 980px;
+  min-width: 900px;
+  border-collapse: separate;
+  border-spacing: 0 8px;
 }
 
-.group-table th:nth-child(3),
-.group-table td:nth-child(3) {
+.group-table th,
+.group-table td {
+  border-bottom: 0;
+}
+
+.group-table th {
+  padding-bottom: 6px;
+}
+
+.group-table td {
+  background: var(--surface);
+}
+
+.group-table td:first-child {
+  border-radius: var(--radius) 0 0 var(--radius);
+}
+
+.group-table td:last-child {
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.group-result-row.good td {
+  background: rgba(74, 222, 128, 0.045);
+}
+
+.group-result-row.warn td {
+  background: rgba(251, 191, 36, 0.045);
+}
+
+.group-result-row.bad td {
+  background: rgba(248, 113, 113, 0.045);
+}
+
+.group-result-row.thinking td {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.group-table th:nth-child(2),
+.group-table td:nth-child(2) {
   min-width: 260px;
   max-width: 340px;
 }
@@ -646,8 +685,10 @@ a:hover {
   display: inline-flex;
   align-items: center;
   gap: 7px;
+  margin-top: 6px;
   min-height: 24px;
   color: var(--muted);
+  font-weight: 650;
 }
 
 .group-status.done {

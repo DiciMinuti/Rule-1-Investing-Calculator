@@ -15,10 +15,6 @@ import {
 import { type CSSProperties, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { MiniPriceChart } from "@/components/ui/mini-price-chart";
 import {
-  BusinessGradePill,
-  PriceVerdictPill,
-} from "@/components/ui/status-pill";
-import {
   buildBigFive,
   calculateValuation,
   deriveBusinessGrade,
@@ -30,6 +26,7 @@ import {
   formatDate,
   formatPercent,
   gradeTone,
+  verdictTone,
 } from "@/lib/format";
 import {
   deleteSavedBusiness,
@@ -842,6 +839,38 @@ function groupRowStatusIcon(status: GroupRowStatus) {
   return <span className="idle-dot" />;
 }
 
+function groupEvaluationRowTone(row: GroupEvaluationRow) {
+  if (row.status === "failed") {
+    return "bad";
+  }
+
+  if (row.status === "done" && row.evaluation) {
+    return verdictTone(row.evaluation.valuation.priceVerdict);
+  }
+
+  return "thinking";
+}
+
+function groupBigFiveTone(bigFive: BigFiveResult) {
+  return gradeTone(bigFive.businessContribution);
+}
+
+function groupRowStatusLabel(status: GroupRowStatus) {
+  if (status === "loading") {
+    return "Thinking";
+  }
+
+  if (status === "queued") {
+    return "Waiting";
+  }
+
+  if (status === "failed") {
+    return "Failed";
+  }
+
+  return "";
+}
+
 function GroupScreen({
   group,
   rows,
@@ -926,30 +955,22 @@ function GroupScreen({
           <table className="table group-table">
             <thead>
               <tr>
-                <th>Status</th>
                 <th>Ticker</th>
                 <th>Business</th>
-                <th>Grade</th>
                 <th>Big Five</th>
                 <th>Current</th>
+                <th>Sticker</th>
                 <th>MOS</th>
                 <th>Gap</th>
-                <th>Verdict</th>
                 <th>Open</th>
               </tr>
             </thead>
             <tbody>
               {rows.map((row) => {
                 const evaluation = row.evaluation;
+                const statusLabel = groupRowStatusLabel(row.status);
                 return (
-                  <tr key={row.constituent.symbol}>
-                    <td>
-                      <div className={`group-status ${row.status}`}>
-                        {groupRowStatusIcon(row.status)}
-                        <span>{row.status}</span>
-                      </div>
-                      {row.error ? <div className="subtle group-error">{row.error}</div> : null}
-                    </td>
+                  <tr className={`group-result-row ${groupEvaluationRowTone(row)}`} key={row.constituent.symbol}>
                     <td>
                       <strong>{row.constituent.displaySymbol}</strong>
                       {row.constituent.displaySymbol !== row.constituent.symbol ? (
@@ -959,13 +980,27 @@ function GroupScreen({
                     <td>
                       <div>{evaluation?.profile.name ?? row.constituent.name}</div>
                       <div className="subtle">{row.constituent.industry ?? row.constituent.sector ?? "S&P 500"}</div>
+                      {statusLabel ? (
+                        <div className={`group-status ${row.status}`}>
+                          {groupRowStatusIcon(row.status)}
+                          <span>{statusLabel}</span>
+                        </div>
+                      ) : null}
+                      {row.error ? <div className="subtle group-error">{row.error}</div> : null}
                     </td>
-                    <td>{evaluation ? <BusinessGradePill grade={evaluation.valuation.businessGrade} /> : "—"}</td>
-                    <td>{evaluation ? `${evaluation.bigFive.healthyCount}/${evaluation.bigFive.totalCount}` : "—"}</td>
+                    <td>
+                      {evaluation ? (
+                        <span className={`pill ${groupBigFiveTone(evaluation.bigFive)}`}>
+                          {evaluation.bigFive.healthyCount}/{evaluation.bigFive.totalCount}
+                        </span>
+                      ) : (
+                        "—"
+                      )}
+                    </td>
                     <td>{evaluation ? formatCurrency(evaluation.valuation.currentPrice) : "—"}</td>
+                    <td>{evaluation ? formatCurrency(evaluation.valuation.stickerPrice) : "—"}</td>
                     <td>{evaluation ? formatCurrency(evaluation.valuation.mosPrice) : "—"}</td>
                     <td>{evaluation ? formatPercent(evaluation.valuation.gapToMos) : "—"}</td>
-                    <td>{evaluation ? <PriceVerdictPill verdict={evaluation.valuation.priceVerdict} /> : "—"}</td>
                     <td>
                       <button
                         className="button"
