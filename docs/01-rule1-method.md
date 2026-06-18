@@ -60,7 +60,7 @@ Default assumptions:
 - Horizon: 10 years.
 - MOS discount: 50%.
 - Future PE: lower of historical high/average PE and 2x selected growth rate, with user override.
-- Future growth: lower of historical growth and user/analyst estimate where available. Since free analyst data may not be reliable, manual entry must be first-class.
+- Future growth: conservative automated estimate from longer-term EPS growth, tempered by sales, equity, and cash-flow growth where available. Since free analyst data may not be reliable, manual entry must be first-class.
 
 Formula:
 

@@ -254,7 +254,7 @@ Defaults:
 - Required return: `0.15`.
 - Years: `10`.
 - Margin of safety: `0.5`.
-- Growth rate: derived from Big Five/EPS growth if reliable; otherwise manual required.
+- Growth rate: conservative automated estimate from longer-term EPS growth, tempered by sales, equity, and cash-flow growth where available.
 - Future PE: `min(historicalPeCap, growthRate * 2 * 100)` where percent handling must be explicit in code.
 
 Implementation note:

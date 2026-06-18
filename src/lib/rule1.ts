@@ -22,6 +22,9 @@ export const DEFAULT_MARGIN_OF_SAFETY = 0.5;
 export const DEFAULT_ALMOST_BAND = 0.15;
 export const DEFAULT_BIG_FIVE_THRESHOLD = 0.1;
 export const DEFAULT_YEARS = 10;
+const DEFAULT_FALLBACK_GROWTH_RATE = 0.1;
+const MAX_AUTO_GROWTH_RATE = 0.25;
+const SUPPORTING_GROWTH_PREMIUM = 0.03;
 
 export function isFiniteNumber(value: unknown): value is number {
   return typeof value === "number" && Number.isFinite(value);
@@ -92,6 +95,42 @@ export function calculateGrowthWindows(points: SeriesPoint[]) {
     },
     {} as Record<GrowthWindow, GrowthResult>,
   );
+}
+
+function preferredGrowthValue(points: SeriesPoint[]) {
+  const windows = calculateGrowthWindows(points);
+  const preferredWindowResult = WINDOWS.map((window) => windows[window]).find((window) =>
+    isFiniteNumber(window.value),
+  );
+
+  return preferredWindowResult?.value ?? null;
+}
+
+function clampAutoGrowth(value: number) {
+  return Math.max(0, Math.min(MAX_AUTO_GROWTH_RATE, value));
+}
+
+function median(values: number[]) {
+  if (!values.length) {
+    return null;
+  }
+
+  const sorted = values.toSorted((a, b) => a - b);
+  const middle = Math.floor(sorted.length / 2);
+
+  if (sorted.length % 2 === 1) {
+    return sorted[middle];
+  }
+
+  return (sorted[middle - 1] + sorted[middle]) / 2;
+}
+
+function usableGrowth(value: number | null | undefined) {
+  if (!isFiniteNumber(value)) {
+    return null;
+  }
+
+  return Math.max(0, value);
 }
 
 export function deriveEps(netIncome?: number, dilutedShares?: number) {
@@ -411,6 +450,52 @@ export function latestAnnualFinancial(financials: AnnualFinancials[]) {
   return financials.toSorted((a, b) => b.fiscalYear - a.fiscalYear)[0];
 }
 
+function deriveSustainableGrowthRate(financials: AnnualFinancials[]) {
+  const sorted = financials.toSorted((a, b) => a.fiscalYear - b.fiscalYear);
+  const epsGrowth = usableGrowth(
+    preferredGrowthValue(
+      sorted.map((row) => ({
+        fiscalYear: row.fiscalYear,
+        value: row.epsDiluted ?? deriveEps(row.netIncome, row.sharesDiluted) ?? null,
+      })),
+    ),
+  );
+  const supportingGrowthRates = [
+    preferredGrowthValue(
+      sorted.map((row) => ({
+        fiscalYear: row.fiscalYear,
+        value: row.revenue ?? null,
+      })),
+    ),
+    preferredGrowthValue(
+      sorted.map((row) => ({
+        fiscalYear: row.fiscalYear,
+        value: bookValuePerShare(row.stockholdersEquity, row.sharesDiluted) ?? row.stockholdersEquity ?? null,
+      })),
+    ),
+    preferredGrowthValue(
+      sorted.map((row) => {
+        const cashFlow = row.freeCashFlow ?? calculateFreeCashFlow(row.operatingCashFlow, row.capex);
+        const perShare =
+          isFiniteNumber(cashFlow) && isFiniteNumber(row.sharesDiluted) && row.sharesDiluted > 0
+            ? cashFlow / row.sharesDiluted
+            : cashFlow;
+
+        return { fiscalYear: row.fiscalYear, value: perShare ?? null };
+      }),
+    ),
+  ]
+    .map(usableGrowth)
+    .filter(isFiniteNumber);
+  const supportingGrowth = median(supportingGrowthRates);
+  const selectedGrowth =
+    epsGrowth !== null && supportingGrowth !== null
+      ? Math.min(epsGrowth, supportingGrowth + SUPPORTING_GROWTH_PREMIUM)
+      : epsGrowth ?? supportingGrowth ?? DEFAULT_FALLBACK_GROWTH_RATE;
+
+  return clampAutoGrowth(selectedGrowth);
+}
+
 export function deriveDefaultAssumptions(
   financials: AnnualFinancials[],
   currentPrice: number,
@@ -418,15 +503,7 @@ export function deriveDefaultAssumptions(
 ): ValuationAssumptions {
   const latest = latestAnnualFinancial(financials);
   const eps = latest?.epsDiluted ?? deriveEps(latest?.netIncome, latest?.sharesDiluted) ?? 0;
-  const epsWindows = calculateGrowthWindows(
-    financials.map((row) => ({
-      fiscalYear: row.fiscalYear,
-      value: row.epsDiluted ?? deriveEps(row.netIncome, row.sharesDiluted) ?? null,
-    })),
-  );
-  const historicalGrowth =
-    epsWindows[5].value ?? epsWindows[10].value ?? epsWindows[3].value ?? epsWindows[1].value;
-  const growthRate = Math.max(0, Math.min(0.25, historicalGrowth ?? 0.1));
+  const growthRate = deriveSustainableGrowthRate(financials);
 
   return {
     eps,
