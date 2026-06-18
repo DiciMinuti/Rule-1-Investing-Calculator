@@ -853,10 +853,6 @@ a:hover {
   width: min(230px, 100%);
 }
 
-.business-data-grid {
-  align-items: start;
-}
-
 .news-list {
   display: grid;
   gap: 6px;
@@ -874,73 +870,6 @@ a:hover {
 .news-row:hover {
   background: var(--surface-strong);
   text-decoration: none;
-}
-
-.compact-table {
-  min-width: 520px;
-}
-
-.compact-table .button {
-  min-height: 30px;
-}
-
-.reports-table {
-  border-collapse: separate;
-  border-spacing: 0 5px;
-  table-layout: fixed;
-}
-
-.reports-table th,
-.reports-table td {
-  border-bottom: 0;
-  padding: 0 14px;
-}
-
-.reports-table th {
-  padding-top: 0;
-  padding-bottom: 4px;
-}
-
-.reports-table td {
-  background: var(--surface);
-  height: 46px;
-  vertical-align: middle;
-}
-
-.reports-table tbody tr:hover td {
-  background: var(--surface-strong);
-}
-
-.reports-table th:nth-child(1),
-.reports-table td:nth-child(1) {
-  width: 96px;
-  font-weight: 700;
-}
-
-.reports-table th:nth-child(2),
-.reports-table td:nth-child(2) {
-  width: 150px;
-}
-
-.reports-table th:nth-child(3),
-.reports-table td:nth-child(3) {
-  width: 92px;
-  text-align: right;
-}
-
-.reports-table td:first-child {
-  border-radius: var(--radius) 0 0 var(--radius);
-}
-
-.reports-table td:last-child {
-  border-radius: 0 var(--radius) var(--radius) 0;
-}
-
-.reports-table .button {
-  width: 68px;
-  min-height: 28px;
-  background: rgba(255, 255, 255, 0.04);
-  color: var(--text);
 }
 
 .filing-viewer {
@@ -1062,6 +991,64 @@ a:hover {
   background: var(--surface);
   padding: 0 10px;
   color: var(--muted);
+}
+
+.management-source-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.management-source-card,
+.management-signal {
+  display: grid;
+  gap: 4px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  padding: 12px;
+}
+
+.management-source-card {
+  min-height: 84px;
+}
+
+.management-source-card strong,
+.management-signal strong {
+  color: var(--text);
+  font-size: 1.03rem;
+}
+
+.management-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
+  gap: 12px;
+  align-items: start;
+}
+
+.management-signal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.management-signal {
+  min-height: 96px;
+}
+
+.management-signal.good {
+  background: rgba(74, 222, 128, 0.03);
+}
+
+.management-signal.warn {
+  background: rgba(251, 191, 36, 0.03);
+}
+
+.management-signal.bad {
+  background: rgba(248, 113, 113, 0.03);
+}
+
+.management-checklist {
+  grid-template-columns: 1fr;
 }
 
 .warning-box {
@@ -1218,6 +1205,9 @@ a:hover {
   .result-grid,
   .valuation-strip,
   .checklist,
+  .management-source-grid,
+  .management-layout,
+  .management-signal-grid,
   .group-summary-strip,
   .saves-controls,
   .docs-layout {

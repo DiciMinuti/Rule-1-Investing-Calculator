@@ -15,7 +15,6 @@ import {
   deriveDefaultAssumptions,
 } from "@/lib/rule1";
 import {
-  businessGradeLabels,
   formatCurrency,
   formatDate,
   formatPercent,
@@ -84,17 +83,8 @@ type GroupRunSummary = {
   nope: number;
 };
 
-const steps = ["Result", "Business", "Moat", "Management", "Valuation", "Reports and notes"];
+const steps = ["Result", "Business", "Inputs"];
 const groupLimitOptions = [10, 25, 50, 100, 0];
-const moatTypes = ["Brand", "Price/cost advantage", "Secrets/IP", "Switching costs", "Toll bridge", "Network effects"];
-const managementChecklist = [
-  "Clear communication",
-  "Rational capital allocation",
-  "Reasonable debt behavior",
-  "Shareholder alignment",
-  "Compensation concerns reviewed",
-  "Governance red flags reviewed",
-];
 
 const initialLoadSteps: LoadStep[] = [
   { id: "profile", label: "Company profile", status: "idle" },
@@ -115,7 +105,7 @@ function initialNotes(): CompanyNotes {
     moat: "middle",
     management: "middle",
     moatTypes: [],
-    managementChecklist: Object.fromEntries(managementChecklist.map((item) => [item, false])),
+    managementChecklist: {},
   };
 }
 
@@ -716,22 +706,11 @@ export function EvaluationWorkspace() {
             <div className="evaluation-body">
               {activeStep === 0 ? <ResultStep loaded={loaded} valuation={valuation} /> : null}
               {activeStep === 1 ? <BusinessStep loaded={loaded} /> : null}
-              {activeStep === 2 ? <MoatStep loaded={loaded} notes={notes} setNotes={setNotes} /> : null}
-              {activeStep === 3 ? <ManagementStep loaded={loaded} notes={notes} setNotes={setNotes} /> : null}
-              {activeStep === 4 ? (
+              {activeStep === 2 ? (
                 <ValuationStep
                   assumptions={assumptions}
                   setAssumption={setAssumption}
                   valuation={valuation}
-                />
-              ) : null}
-              {activeStep === 5 ? (
-                <ReportsStep
-                  loaded={loaded}
-                  notes={notes}
-                  setNotes={setNotes}
-                  isSaved={isLoadedSaved}
-                  onSaveToggle={handleSaveToggle}
                 />
               ) : null}
             </div>
@@ -1083,10 +1062,6 @@ function ValueBlock({ label, value, tone }: { label: string; value: string; tone
   );
 }
 
-function filingViewerUrl(filing: FilingLink, title: string) {
-  return `/filing-viewer?url=${encodeURIComponent(filing.url)}&title=${encodeURIComponent(title)}`;
-}
-
 function companyNewsSearchUrl(symbol: string, name: string) {
   return `https://www.google.com/search?tbm=nws&q=${encodeURIComponent(`${symbol} ${name}`)}`;
 }
@@ -1096,186 +1071,29 @@ function BusinessStep({
 }: {
   loaded: LoadedCompany;
 }) {
-  const recentReports = loaded.filings.slice(0, 6);
-
   return (
     <div className="stack">
       <MiniPriceChart points={loaded.prices.history} sourceLabel={loaded.prices.source.label} />
-      <div className="grid two business-data-grid">
-        <div className="stack">
-          <div className="split aligned">
-            <h3 className="section-title">Latest news</h3>
-            <a className="button" href={companyNewsSearchUrl(loaded.profile.symbol, loaded.profile.name)} target="_blank" rel="noreferrer">
-              <ExternalLink size={16} />
-              More
-            </a>
-          </div>
-          <div className="news-list">
-            {loaded.news.length ? (
-              loaded.news.slice(0, 4).map((item) => (
-                <a className="news-row" href={item.url} key={`${item.title}-${item.publishedAt ?? ""}`} target="_blank" rel="noreferrer">
-                  <span>{item.title}</span>
-                  <span className="subtle">{item.source ?? "News"}{item.publishedAt ? ` · ${formatDate(item.publishedAt)}` : ""}</span>
-                </a>
-              ))
-            ) : (
-              <div className="empty-list">No news returned from the free feed.</div>
-            )}
-          </div>
-        </div>
-        <div className="stack">
-          <h3 className="section-title">Latest reports</h3>
-          <div className="table-wrap">
-            <table className="table compact-table reports-table">
-              <thead>
-                <tr>
-                  <th>Form</th>
-                  <th>Filed</th>
-                  <th>Read</th>
-                </tr>
-              </thead>
-              <tbody>
-                {recentReports.map((filing) => (
-                  <tr key={`${filing.accessionNumber}-${filing.primaryDocument}`}>
-                    <td>{filing.form}</td>
-                    <td>{formatDate(filing.filingDate)}</td>
-                    <td>
-                      <a className="button" href={filingViewerUrl(filing, `${loaded.profile.symbol} ${filing.form} ${filing.filingDate}`)}>
-                        Open
-                      </a>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function MoatStep({
-  loaded,
-  notes,
-  setNotes,
-}: {
-  loaded: LoadedCompany;
-  notes: CompanyNotes;
-  setNotes: (notes: CompanyNotes) => void;
-}) {
-  function toggleMoatType(type: string) {
-    const nextTypes = notes.moatTypes.includes(type)
-      ? notes.moatTypes.filter((item) => item !== type)
-      : [...notes.moatTypes, type];
-    setNotes({ ...notes, moatTypes: nextTypes });
-  }
-
-  return (
-    <div className="stack">
-      <div className="split">
-        <div>
-          <h2 className="section-title">Moat</h2>
-          <p className="muted" style={{ margin: "4px 0 0" }}>
-            The numbers suggest a {businessGradeLabels[loaded.bigFive.businessContribution]} Big Five contribution.
-          </p>
-        </div>
-        <select
-          className="compact-select mini-select"
-          value={notes.moat}
-          onChange={(event) => setNotes({ ...notes, moat: event.target.value as BusinessGrade })}
-        >
-          <option value="strong">Strong</option>
-          <option value="middle">Middle</option>
-          <option value="dull">Dull</option>
-        </select>
-      </div>
-      <div className="row wrap">
-        {moatTypes.map((type) => (
-          <button
-            className={`segmented-button ${notes.moatTypes.includes(type) ? "active" : ""}`}
-            key={type}
-            type="button"
-            onClick={() => toggleMoatType(type)}
-          >
-            {type}
-          </button>
-        ))}
-      </div>
-      <label className="stack compact-gap">
-        <span className="label">Why will this business still matter in 10 years?</span>
-        <textarea
-          className="textarea"
-          value={notes.sourceNotes}
-          onChange={(event) => setNotes({ ...notes, sourceNotes: event.target.value })}
-        />
-      </label>
-    </div>
-  );
-}
-
-function ManagementStep({
-  loaded,
-  notes,
-  setNotes,
-}: {
-  loaded: LoadedCompany;
-  notes: CompanyNotes;
-  setNotes: (notes: CompanyNotes) => void;
-}) {
-  const proxy = loaded.filings.find((filing) => filing.form === "DEF 14A");
-  const latestTenK = loaded.filings.find((filing) => filing.form.startsWith("10-K"));
-
-  return (
-    <div className="stack">
-      <div className="split">
-        <div>
-          <h2 className="section-title">Management</h2>
-          <p className="muted" style={{ margin: "4px 0 0" }}>
-            This step is a manual review using primary-source filings.
-          </p>
-        </div>
-        <select
-          className="compact-select mini-select"
-          value={notes.management}
-          onChange={(event) => setNotes({ ...notes, management: event.target.value as BusinessGrade })}
-        >
-          <option value="strong">Strong</option>
-          <option value="middle">Middle</option>
-          <option value="dull">Dull</option>
-        </select>
-      </div>
-      <div className="row wrap">
-        {latestTenK ? (
-          <a className="button" href={latestTenK.url} target="_blank" rel="noreferrer">
-            Latest 10-K
+      <div className="stack">
+        <div className="split aligned">
+          <h3 className="section-title">Latest news</h3>
+          <a className="button" href={companyNewsSearchUrl(loaded.profile.symbol, loaded.profile.name)} target="_blank" rel="noreferrer">
+            <ExternalLink size={16} />
+            More
           </a>
-        ) : null}
-        {proxy ? (
-          <a className="button" href={proxy.url} target="_blank" rel="noreferrer">
-            Latest proxy
-          </a>
-        ) : null}
-      </div>
-      <div className="checklist">
-        {managementChecklist.map((item) => (
-          <label className="check-row" key={item}>
-            <input
-              type="checkbox"
-              checked={notes.managementChecklist[item] ?? false}
-              onChange={(event) =>
-                setNotes({
-                  ...notes,
-                  managementChecklist: {
-                    ...notes.managementChecklist,
-                    [item]: event.target.checked,
-                  },
-                })
-              }
-            />
-            <span>{item}</span>
-          </label>
-        ))}
+        </div>
+        <div className="news-list">
+          {loaded.news.length ? (
+            loaded.news.slice(0, 4).map((item) => (
+              <a className="news-row" href={item.url} key={`${item.title}-${item.publishedAt ?? ""}`} target="_blank" rel="noreferrer">
+                <span>{item.title}</span>
+                <span className="subtle">{item.source ?? "News"}{item.publishedAt ? ` · ${formatDate(item.publishedAt)}` : ""}</span>
+              </a>
+            ))
+          ) : (
+            <div className="empty-list">No news returned from the free feed.</div>
+          )}
+        </div>
       </div>
     </div>
   );
@@ -1300,9 +1118,9 @@ function ValuationStep({
     <div className="stack">
       <div className="split">
         <div>
-          <h2 className="section-title">Valuation</h2>
+          <h2 className="section-title">Inputs</h2>
           <p className="muted" style={{ margin: "4px 0 0" }}>
-            Edit the assumptions. The sticker price and MOS recalculate immediately.
+            Edit the input numbers. The sticker price and MOS recalculate immediately.
           </p>
         </div>
       </div>
@@ -1411,93 +1229,6 @@ function NumberField({
         value={Number.isFinite(value) ? value : 0}
         onChange={(event) => onChange(event.target.value)}
       />
-    </label>
-  );
-}
-
-function ReportsStep({
-  loaded,
-  notes,
-  setNotes,
-  isSaved,
-  onSaveToggle,
-}: {
-  loaded: LoadedCompany;
-  notes: CompanyNotes;
-  setNotes: (notes: CompanyNotes) => void;
-  isSaved: boolean;
-  onSaveToggle: () => void;
-}) {
-  return (
-    <div className="stack">
-      <div className="split">
-        <div>
-          <h2 className="section-title">Reports and notes</h2>
-          <p className="muted" style={{ margin: "4px 0 0" }}>
-            Keep the human reasoning next to the model.
-          </p>
-        </div>
-        <SaveToggleButton isSaved={isSaved} onClick={onSaveToggle} />
-      </div>
-      <div className="table-wrap">
-        <table className="table">
-          <thead>
-            <tr>
-              <th>Form</th>
-              <th>Filed</th>
-              <th>Document</th>
-            </tr>
-          </thead>
-          <tbody>
-            {loaded.filings.slice(0, 8).map((filing) => (
-              <tr key={`${filing.accessionNumber}-${filing.primaryDocument}`}>
-                <td>{filing.form}</td>
-                <td>{formatDate(filing.filingDate)}</td>
-                <td>
-                  <a href={filingViewerUrl(filing, `${loaded.profile.symbol} ${filing.form} ${filing.filingDate}`)}>
-                    {filing.primaryDocument}
-                  </a>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-      <div className="grid two">
-        <TextArea label="Thesis" value={notes.thesis} onChange={(value) => setNotes({ ...notes, thesis: value })} />
-        <TextArea label="Red flags" value={notes.redFlags} onChange={(value) => setNotes({ ...notes, redFlags: value })} />
-        <TextArea
-          label="What would change my mind?"
-          value={notes.changeMyMind}
-          onChange={(value) => setNotes({ ...notes, changeMyMind: value })}
-        />
-        <label className="stack compact-gap">
-          <span className="label">Next review date</span>
-          <input
-            className="field"
-            type="date"
-            value={notes.nextReviewDate ?? ""}
-            onChange={(event) => setNotes({ ...notes, nextReviewDate: event.target.value })}
-          />
-        </label>
-      </div>
-    </div>
-  );
-}
-
-function TextArea({
-  label,
-  value,
-  onChange,
-}: {
-  label: string;
-  value: string;
-  onChange: (value: string) => void;
-}) {
-  return (
-    <label className="stack compact-gap">
-      <span className="label">{label}</span>
-      <textarea className="textarea" value={value} onChange={(event) => onChange(event.target.value)} />
     </label>
   );
 }
