@@ -1,7 +1,7 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import { Check, ChevronLeft, ChevronRight, CircleAlert, Loader2, Minus, Plus, Search } from "lucide-react";
+import { Check, ChevronLeft, ChevronRight, CircleAlert, ExternalLink, FileText, Loader2, Minus, Newspaper, Plus, Search } from "lucide-react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { MiniPriceChart } from "@/components/ui/mini-price-chart";
 import {
@@ -35,6 +35,7 @@ import type {
   BusinessGroupSummary,
   BusinessGrade,
   CompanyNotes,
+  CompanyNewsItem,
   CompanyProfile,
   CompanySearchResult,
   FilingLink,
@@ -61,6 +62,7 @@ type LoadedCompany = {
   financials: AnnualFinancials[];
   prices: PriceHistory;
   filings: FilingLink[];
+  news: CompanyNewsItem[];
   bigFive: BigFiveResult;
   loadedAt: string;
 };
@@ -99,6 +101,7 @@ const initialLoadSteps: LoadStep[] = [
   { id: "facts", label: "SEC facts", status: "idle" },
   { id: "prices", label: "Price history", status: "idle" },
   { id: "reports", label: "Reports", status: "idle" },
+  { id: "news", label: "News", status: "idle" },
   { id: "calculation", label: "Rule #1 calculation", status: "idle" },
 ];
 
@@ -266,14 +269,15 @@ export function EvaluationWorkspace() {
 
       setLoadSteps((current) =>
         current.map((step) =>
-          ["facts", "prices", "reports"].includes(step.id) ? { ...step, status: "loading" } : step,
+          ["facts", "prices", "reports", "news"].includes(step.id) ? { ...step, status: "loading" } : step,
         ),
       );
 
-      const [factsResult, pricesResult, filingsResult] = await Promise.allSettled([
+      const [factsResult, pricesResult, filingsResult, newsResult] = await Promise.allSettled([
         fetchJson<{ financials: AnnualFinancials[] }>(`/api/company/${normalizedSymbol}/facts`),
         fetchJson<{ prices: PriceHistory }>(`/api/company/${normalizedSymbol}/prices`),
         fetchJson<{ filings: FilingLink[] }>(`/api/company/${normalizedSymbol}/filings`),
+        fetchJson<{ news: CompanyNewsItem[] }>(`/api/company/${normalizedSymbol}/news`),
       ]);
 
       const financials =
@@ -290,25 +294,34 @@ export function EvaluationWorkspace() {
               },
             } satisfies PriceHistory);
       const filings = filingsResult.status === "fulfilled" ? filingsResult.value.filings : [];
+      const news = newsResult.status === "fulfilled" ? newsResult.value.news : [];
 
-      setLoadSteps((current) =>
-        updateLoadStep(
-          updateLoadStep(
-            updateLoadStep(
-              current,
-              "facts",
-              factsResult.status === "fulfilled" && financials.length ? "done" : "warning",
-              factsResult.status === "rejected" ? factsResult.reason.message : financials.length ? undefined : "No annual facts normalized.",
-            ),
-            "prices",
-            pricesResult.status === "fulfilled" && prices.latest ? "done" : "warning",
-            pricesResult.status === "rejected" ? pricesResult.reason.message : prices.latest ? undefined : "Enter current price manually.",
-          ),
+      setLoadSteps((current) => {
+        let next = updateLoadStep(
+          current,
+          "facts",
+          factsResult.status === "fulfilled" && financials.length ? "done" : "warning",
+          factsResult.status === "rejected" ? factsResult.reason.message : financials.length ? undefined : "No annual facts normalized.",
+        );
+        next = updateLoadStep(
+          next,
+          "prices",
+          pricesResult.status === "fulfilled" && prices.latest ? "done" : "warning",
+          pricesResult.status === "rejected" ? pricesResult.reason.message : prices.latest ? undefined : "Enter current price manually.",
+        );
+        next = updateLoadStep(
+          next,
           "reports",
           filingsResult.status === "fulfilled" && filings.length ? "done" : "warning",
           filings.length ? undefined : "No filing links returned.",
-        ),
-      );
+        );
+        return updateLoadStep(
+          next,
+          "news",
+          newsResult.status === "fulfilled" && news.length ? "done" : "warning",
+          newsResult.status === "rejected" ? newsResult.reason.message : news.length ? undefined : "No news returned.",
+        );
+      });
 
       setLoadSteps((current) => updateLoadStep(current, "calculation", "loading"));
       const bigFive = buildBigFive(financials);
@@ -318,6 +331,7 @@ export function EvaluationWorkspace() {
         financials,
         prices,
         filings,
+        news,
         bigFive,
         loadedAt: new Date().toISOString(),
       });
@@ -1069,6 +1083,14 @@ function ValueBlock({ label, value, tone }: { label: string; value: string; tone
   );
 }
 
+function filingViewerUrl(filing: FilingLink, title: string) {
+  return `/filing-viewer?url=${encodeURIComponent(filing.url)}&title=${encodeURIComponent(title)}`;
+}
+
+function companyNewsSearchUrl(symbol: string, name: string) {
+  return `https://www.google.com/search?tbm=nws&q=${encodeURIComponent(`${symbol} ${name}`)}`;
+}
+
 function BusinessStep({
   loaded,
   notes,
@@ -1079,26 +1101,43 @@ function BusinessStep({
   setNotes: (notes: CompanyNotes) => void;
 }) {
   const latestTenK = loaded.filings.find((filing) => filing.form.startsWith("10-K"));
+  const recentReports = loaded.filings.slice(0, 6);
 
   return (
     <div className="stack">
       <div className="split">
-        <div className="stack">
+        <div className="stack business-description">
           <h2 className="section-title">Business</h2>
-          <p className="muted" style={{ margin: 0 }}>
+          <p className="business-summary">
             {loaded.profile.description}
           </p>
           <div className="row wrap">
             <span className="pill info">Ticker {loaded.profile.symbol}</span>
             <span className="pill">Exchange {loaded.profile.exchange ?? "—"}</span>
             <span className="pill">CIK {loaded.profile.cik ?? "—"}</span>
+            {loaded.profile.sector ? <span className="pill">{loaded.profile.sector}</span> : null}
             {loaded.profile.industry ? <span className="pill">{loaded.profile.industry}</span> : null}
+            {loaded.profile.employees ? <span className="pill">{loaded.profile.employees.toLocaleString()} employees</span> : null}
           </div>
-          {latestTenK ? (
-            <a href={latestTenK.url} target="_blank" rel="noreferrer">
-              Latest annual report ({latestTenK.filingDate})
+          <div className="row wrap">
+            {loaded.profile.website ? (
+              <a className="button" href={loaded.profile.website} target="_blank" rel="noreferrer">
+                <ExternalLink size={16} />
+                Website
+              </a>
+            ) : null}
+            {latestTenK ? (
+              <a className="button" href={filingViewerUrl(latestTenK, `${loaded.profile.symbol} ${latestTenK.form} ${latestTenK.filingDate}`)}>
+                <FileText size={16} />
+                Latest 10-K
+              </a>
+            ) : null}
+            <a className="button" href={companyNewsSearchUrl(loaded.profile.symbol, loaded.profile.name)} target="_blank" rel="noreferrer">
+              <Newspaper size={16} />
+              News search
             </a>
-          ) : null}
+          </div>
+          <p className="subtle source-line">{loaded.profile.source.label}</p>
         </div>
         <div className="mini-result">
           <div className="label">Meaning</div>
@@ -1113,15 +1152,61 @@ function BusinessStep({
           </select>
         </div>
       </div>
-      <MiniPriceChart points={loaded.prices.history} />
-      <div className="grid three">
-        {["Can I explain what this business does?", "Is it inside my circle of competence?", "Would I want to own the whole business?"].map(
-          (question) => (
-            <div className="prompt" key={question}>
-              {question}
-            </div>
-          ),
-        )}
+      <MiniPriceChart points={loaded.prices.history} sourceLabel={loaded.prices.source.label} />
+      <div className="grid two business-data-grid">
+        <div className="stack">
+          <div className="split aligned">
+            <h3 className="section-title">Latest news</h3>
+            <a className="button" href={companyNewsSearchUrl(loaded.profile.symbol, loaded.profile.name)} target="_blank" rel="noreferrer">
+              <ExternalLink size={16} />
+              More
+            </a>
+          </div>
+          <div className="news-list">
+            {loaded.news.length ? (
+              loaded.news.slice(0, 4).map((item) => (
+                <a className="news-row" href={item.url} key={`${item.title}-${item.publishedAt ?? ""}`} target="_blank" rel="noreferrer">
+                  <span>{item.title}</span>
+                  <span className="subtle">{item.source ?? "News"}{item.publishedAt ? ` · ${formatDate(item.publishedAt)}` : ""}</span>
+                </a>
+              ))
+            ) : (
+              <div className="empty-list">No news returned from the free feed.</div>
+            )}
+          </div>
+        </div>
+        <div className="stack">
+          <h3 className="section-title">Latest reports</h3>
+          <div className="table-wrap">
+            <table className="table compact-table">
+              <thead>
+                <tr>
+                  <th>Form</th>
+                  <th>Filed</th>
+                  <th>Read</th>
+                </tr>
+              </thead>
+              <tbody>
+                {recentReports.map((filing) => (
+                  <tr key={`${filing.accessionNumber}-${filing.primaryDocument}`}>
+                    <td>{filing.form}</td>
+                    <td>{formatDate(filing.filingDate)}</td>
+                    <td>
+                      <div className="row wrap">
+                        <a className="button" href={filingViewerUrl(filing, `${loaded.profile.symbol} ${filing.form} ${filing.filingDate}`)}>
+                          In app
+                        </a>
+                        <a className="button" href={filing.url} target="_blank" rel="noreferrer">
+                          SEC
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -1426,7 +1511,7 @@ function ReportsStep({
                 <td>{filing.form}</td>
                 <td>{formatDate(filing.filingDate)}</td>
                 <td>
-                  <a href={filing.url} target="_blank" rel="noreferrer">
+                  <a href={filingViewerUrl(filing, `${loaded.profile.symbol} ${filing.form} ${filing.filingDate}`)}>
                     {filing.primaryDocument}
                   </a>
                 </td>

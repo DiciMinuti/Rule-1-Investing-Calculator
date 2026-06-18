@@ -1,11 +1,13 @@
 import type {
   AnnualFinancials,
+  CompanyNewsItem,
   CompanyProfile,
   CompanySearchResult,
   DataSourceRef,
   FilingLink,
 } from "@/lib/types";
 import { calculateFreeCashFlow, calculateRoic, deriveEps, isFiniteNumber } from "@/lib/rule1";
+import https from "node:https";
 
 const SEC_COMPANY_TICKERS_URL = "https://www.sec.gov/files/company_tickers.json";
 const SEC_SUBMISSIONS_URL = "https://data.sec.gov/submissions";
@@ -13,6 +15,7 @@ const SEC_COMPANY_FACTS_URL = "https://data.sec.gov/api/xbrl/companyfacts";
 const SEC_ARCHIVES_URL = "https://www.sec.gov/Archives/edgar/data";
 const USER_AGENT =
   process.env.SEC_USER_AGENT ?? "RuleOnePortfolio/0.1 personal research app contact: local@example.com";
+const YAHOO_USER_AGENT = "Mozilla/5.0";
 
 type SecTickerRecord = {
   cik_str: number;
@@ -66,6 +69,26 @@ type AnnualExtract = {
   fiscalYear: number;
   value: number;
   source: DataSourceRef;
+};
+
+type YahooProfileResponse = {
+  quoteSummary?: {
+    result?: [
+      {
+        assetProfile?: {
+          longBusinessSummary?: string;
+          sector?: string;
+          industry?: string;
+          website?: string;
+          fullTimeEmployees?: number;
+        };
+      },
+    ];
+    error?: {
+      code?: string;
+      description?: string;
+    } | null;
+  };
 };
 
 const conceptMap = {
@@ -125,6 +148,54 @@ async function fetchSecJson<T>(url: string, revalidate: number): Promise<T> {
   }
 
   return response.json() as Promise<T>;
+}
+
+function getWithHttps(url: string): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const request = https.get(
+      url,
+      {
+        headers: {
+          "User-Agent": YAHOO_USER_AGENT,
+          Accept: "application/json,text/plain,*/*",
+          "Accept-Language": "en-US,en;q=0.9",
+        },
+      },
+      (response) => {
+        let body = "";
+        response.setEncoding("utf8");
+        response.on("data", (chunk) => {
+          body += chunk;
+        });
+        response.on("end", () => {
+          if (!response.statusCode || response.statusCode < 200 || response.statusCode >= 300) {
+            reject(new Error(`Request failed (${response.statusCode ?? "unknown"}) for ${url}`));
+            return;
+          }
+          resolve(body);
+        });
+      },
+    );
+
+    request.setTimeout(12000, () => {
+      request.destroy(new Error("Request timed out."));
+    });
+    request.on("error", reject);
+  });
+}
+
+async function getYahooProfile(symbol: string) {
+  const normalizedSymbol = symbol.trim().toUpperCase();
+  const url = `https://query2.finance.yahoo.com/v10/finance/quoteSummary/${encodeURIComponent(
+    normalizedSymbol,
+  )}?modules=assetProfile`;
+  const body = await getWithHttps(url);
+  const data = JSON.parse(body) as YahooProfileResponse;
+  const error = data.quoteSummary?.error;
+  if (error) {
+    throw new Error(error.description ?? error.code ?? "Yahoo profile request failed.");
+  }
+  return { profile: data.quoteSummary?.result?.[0]?.assetProfile, url };
 }
 
 export function padCik(cik: string | number) {
@@ -201,22 +272,82 @@ export async function getCompanyProfile(symbol: string): Promise<CompanyProfile>
     submissions.tickers?.findIndex((ticker) => ticker.toUpperCase() === company.symbol) ?? 0;
   const exchange = submissions.exchanges?.[tickerIndex >= 0 ? tickerIndex : 0];
   const industry = submissions.sicDescription;
+  const secFallbackDescription = industry
+    ? `SEC filings classify this business under ${industry}. Review the linked annual report for the full business description.`
+    : "SEC profile found. Review the linked annual report for the business description.";
+  let yahooProfile: Awaited<ReturnType<typeof getYahooProfile>> | undefined;
+
+  try {
+    yahooProfile = await getYahooProfile(company.symbol);
+  } catch {
+    yahooProfile = undefined;
+  }
 
   return {
     symbol: company.symbol,
     name: submissions.name ?? company.name,
     cik: padCik(company.cik),
     exchange,
-    industry,
-    description: industry
-      ? `SEC filings classify this business under ${industry}. Review the linked annual report for the full business description.`
-      : "SEC profile found. Review the linked annual report for the business description.",
-    source: {
-      label: "SEC submissions",
-      url: `${SEC_SUBMISSIONS_URL}/CIK${padCik(company.cik)}.json`,
-      confidence: "high",
-    },
+    sector: yahooProfile?.profile?.sector,
+    industry: yahooProfile?.profile?.industry ?? industry,
+    description: yahooProfile?.profile?.longBusinessSummary ?? secFallbackDescription,
+    website: yahooProfile?.profile?.website,
+    employees: yahooProfile?.profile?.fullTimeEmployees,
+    source: yahooProfile?.profile?.longBusinessSummary
+      ? {
+          label: "Yahoo Finance company profile",
+          url: yahooProfile.url,
+          confidence: "medium",
+          note: "Business summary from Yahoo Finance public quoteSummary endpoint; SEC classification remains available through CIK and filings.",
+        }
+      : {
+          label: "SEC submissions",
+          url: `${SEC_SUBMISSIONS_URL}/CIK${padCik(company.cik)}.json`,
+          confidence: "high",
+        },
   };
+}
+
+function decodeXmlEntities(value: string) {
+  return value
+    .replaceAll("&amp;", "&")
+    .replaceAll("&quot;", "\"")
+    .replaceAll("&#39;", "'")
+    .replaceAll("&apos;", "'")
+    .replaceAll("&lt;", "<")
+    .replaceAll("&gt;", ">");
+}
+
+function tagValue(item: string, tag: string) {
+  const match = item.match(new RegExp(`<${tag}[^>]*>([\\s\\S]*?)<\\/${tag}>`, "i"));
+  return match?.[1]?.replace(/^<!\[CDATA\[/, "").replace(/\]\]>$/, "").trim();
+}
+
+export async function getCompanyNews(symbol: string): Promise<CompanyNewsItem[]> {
+  const normalizedSymbol = symbol.trim().toUpperCase();
+  const url = `https://feeds.finance.yahoo.com/rss/2.0/headline?s=${encodeURIComponent(
+    normalizedSymbol,
+  )}&region=US&lang=en-US`;
+  const xml = await getWithHttps(url);
+  const items = Array.from(xml.matchAll(/<item>([\s\S]*?)<\/item>/gi));
+
+  return items
+    .map(([, item]): CompanyNewsItem | undefined => {
+      const title = tagValue(item, "title");
+      const link = tagValue(item, "link");
+      if (!title || !link) {
+        return undefined;
+      }
+
+      return {
+        title: decodeXmlEntities(title),
+        url: decodeXmlEntities(link),
+        publishedAt: tagValue(item, "pubDate"),
+        source: tagValue(item, "source") ? decodeXmlEntities(tagValue(item, "source") as string) : "Yahoo Finance",
+      };
+    })
+    .filter((item): item is CompanyNewsItem => item !== undefined)
+    .slice(0, 6);
 }
 
 function filingUrl(cik: string, accessionNumber: string, primaryDocument: string) {

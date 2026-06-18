@@ -28,7 +28,16 @@ export type CompanyProfile = {
   sector?: string;
   industry?: string;
   description?: string;
+  website?: string;
+  employees?: number;
   source: DataSourceRef;
+};
+
+export type CompanyNewsItem = {
+  title: string;
+  url: string;
+  publishedAt?: string;
+  source?: string;
 };
 
 export type FilingLink = {
