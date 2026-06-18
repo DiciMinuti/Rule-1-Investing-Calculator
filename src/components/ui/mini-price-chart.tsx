@@ -9,7 +9,6 @@ const rangeOptions = [
   { label: "3Y", days: 780 },
   { label: "5Y", days: 1300 },
   { label: "10Y", days: 2600 },
-  { label: "Max", days: 0 },
 ];
 
 function pointPath(points: PricePoint[], width: number, height: number, min: number, spread: number) {
@@ -26,10 +25,7 @@ export function MiniPriceChart({ points, sourceLabel }: { points: PricePoint[]; 
   const [selectedRange, setSelectedRange] = useState("5Y");
   const [hoverIndex, setHoverIndex] = useState<number | null>(null);
   const range = rangeOptions.find((option) => option.label === selectedRange) ?? rangeOptions[2];
-  const chartPoints = useMemo(
-    () => (range.days > 0 ? points.slice(-range.days) : points),
-    [points, range.days],
-  );
+  const chartPoints = useMemo(() => points.slice(-range.days), [points, range.days]);
 
   if (chartPoints.length < 2) {
     return <div className="chart-empty">Price chart unavailable.</div>;
