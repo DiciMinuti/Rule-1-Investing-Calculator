@@ -60,6 +60,21 @@ export type ManagementDocument = FilingLink & {
 
 export type ManagementSignalStatus = "found" | "needs-review" | "missing";
 
+export type ManagementTableColumn = {
+  key: string;
+  label: string;
+  align?: "start" | "end";
+  minWidth?: string;
+};
+
+export type ManagementTable = {
+  id: string;
+  title?: string;
+  note?: string;
+  columns: ManagementTableColumn[];
+  rows: Record<string, string>[];
+};
+
 export type ManagementSignal = {
   id: "leaders" | "compensation" | "ownership" | "shareholderLetter";
   label: string;
@@ -67,6 +82,7 @@ export type ManagementSignal = {
   status: ManagementSignalStatus;
   summary: string;
   source?: DataSourceRef;
+  tables?: ManagementTable[];
   excerpts: string[];
 };
 

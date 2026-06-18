@@ -7,6 +7,7 @@ import type {
   ManagementDocument,
   ManagementDocumentKind,
   ManagementSignal,
+  ManagementTable,
 } from "@/lib/types";
 
 const USER_AGENT =
@@ -28,6 +29,11 @@ type FilingTextResult = {
   document: ManagementDocument;
   text?: string;
   error?: string;
+};
+
+type ManagementExtraction = {
+  tables?: ManagementTable[];
+  excerpts?: string[];
 };
 
 const signalConfigs: SignalConfig[] = [
@@ -96,8 +102,8 @@ const signalConfigs: SignalConfig[] = [
     patterns: [
       /dear (fellow )?(shareholders|stockholders)/i,
       /letter to (our )?(shareholders|stockholders)/i,
-      /to our (shareholders|stockholders)/i,
       /fellow (shareholders|stockholders)/i,
+      /(chairman|ceo|chief executive officer)(?:'s|’s)? letter/i,
     ],
     keywords: ["shareholders", "stockholders", "ceo", "chief executive", "year", "capital", "customers"],
     foundSummary: (document) =>
@@ -143,6 +149,444 @@ function truncateExcerpt(value: string, maxLength = 680) {
 
   const cutIndex = value.lastIndexOf(" ", maxLength - 1);
   return `${value.slice(0, cutIndex > 0 ? cutIndex : maxLength).trim()}...`;
+}
+
+function cleanFilingLine(line: string) {
+  return line
+    .replace(/[\u200B\u200C\u200D\uFEFF]/g, "")
+    .replace(/\u00A0/g, " ")
+    .replace(/[•▪]/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function isNavigationLine(line: string) {
+  return (
+    /^table of contents$/i.test(line) ||
+    /^proxy summary$/i.test(line) ||
+    /^corporate$/i.test(line) ||
+    /^governance at$/i.test(line) ||
+    /^american express$/i.test(line) ||
+    /^responsibility and$/i.test(line) ||
+    /^sustainability$/i.test(line) ||
+    /^audit committee$/i.test(line) ||
+    /^matters$/i.test(line) ||
+    /^executive$/i.test(line) ||
+    /^compensation$/i.test(line) ||
+    /^shareholder$/i.test(line) ||
+    /^proposals$/i.test(line) ||
+    /^stock ownership$/i.test(line) ||
+    /^information$/i.test(line) ||
+    /^other$/i.test(line) ||
+    /^\d{4}\s+proxy statement\s+\d+$/i.test(line) ||
+    /^\d+\s+\d{4}\s+proxy statement$/i.test(line) ||
+    /^proxy$/i.test(line) ||
+    /^summary$/i.test(line)
+  );
+}
+
+function filingLines(text: string, { keepSymbols = false }: { keepSymbols?: boolean } = {}) {
+  return normalizeFilingText(text)
+    .split("\n")
+    .map(cleanFilingLine)
+    .filter((line) => {
+      if (!line || line === "$" || isNavigationLine(line)) {
+        return false;
+      }
+
+      if (!keepSymbols && /^[^\p{L}\p{N}$%]+$/u.test(line)) {
+        return false;
+      }
+
+      return true;
+    });
+}
+
+function sectionFromHeading(text: string, startPattern: RegExp, endPatterns: RegExp[]) {
+  const normalizedText = normalizeFilingText(text);
+  const startMatch = normalizedText.match(startPattern);
+  if (!startMatch || startMatch.index === undefined) {
+    return undefined;
+  }
+
+  const sectionStart = startMatch.index;
+  const afterStart = normalizedText.slice(sectionStart + startMatch[0].length);
+  const endIndexes = endPatterns
+    .map((pattern) => {
+      const match = afterStart.match(pattern);
+      return match?.index;
+    })
+    .filter((index): index is number => index !== undefined);
+  const sectionEnd = endIndexes.length ? sectionStart + startMatch[0].length + Math.min(...endIndexes) : undefined;
+
+  return normalizedText.slice(sectionStart, sectionEnd);
+}
+
+function nameCase(value: string) {
+  return value
+    .toLowerCase()
+    .replace(/\b[a-z]/g, (letter) => letter.toUpperCase())
+    .replace(/\bMc([a-z])/g, (_match, letter: string) => `Mc${letter.toUpperCase()}`);
+}
+
+function stripFootnotes(value: string) {
+  return value.replace(/\s+\((?:\d+|[a-z])\)$/i, "").trim();
+}
+
+function moneyCell(value: string | undefined) {
+  if (!value) {
+    return "—";
+  }
+
+  const cleanValue = stripFootnotes(value);
+  if (/^(?:n\/a|—|-|\*)$/i.test(cleanValue)) {
+    return cleanValue === "*" ? "Less than 1%" : cleanValue.toUpperCase();
+  }
+
+  return /^[\d,]+(?:\.\d+)?$/.test(cleanValue) ? `$${cleanValue}` : cleanValue;
+}
+
+function percentCell(value: string | undefined) {
+  if (!value) {
+    return "—";
+  }
+
+  const cleanValue = stripFootnotes(value).replace(/\s+%$/, "%");
+  if (cleanValue === "*") {
+    return "Less than 1%";
+  }
+
+  return cleanValue;
+}
+
+function isYearLine(value: string) {
+  return /^(?:19|20)\d{2}$/.test(value);
+}
+
+function isAmountLike(value: string) {
+  return /^(?:[\d,]+(?:\.\d+)?(?:\s+\(\d+\))?|N\/A|—|-|\*)$/i.test(value);
+}
+
+function isPercentLike(value: string) {
+  return /^(?:\*|less than 1%|[\d.]+\s*%)$/i.test(value);
+}
+
+function tableRowsCount(tables: ManagementTable[] | undefined) {
+  return tables?.reduce((count, table) => count + table.rows.length, 0) ?? 0;
+}
+
+function extractLeadership(document: ManagementDocument, text: string): ManagementExtraction | undefined {
+  const section = sectionFromHeading(text, /information about (our )?executive officers/i, [
+    /\n\s*competition\s*\n/i,
+    /\n\s*item\s+1a/i,
+    /\n\s*risk factors/i,
+  ]);
+
+  if (!section) {
+    return undefined;
+  }
+
+  const rows: Record<string, string>[] = [];
+  const lines = filingLines(section);
+
+  for (let index = 0; index < lines.length; index += 1) {
+    const officerMatch = lines[index].match(/^([A-Z][A-Z .'\-]+?)\s+[—-]\s*(.*)$/);
+    if (!officerMatch) {
+      continue;
+    }
+
+    let role = officerMatch[2].trim();
+    const detailLines: string[] = [];
+    let cursor = index + 1;
+
+    while (
+      cursor < lines.length &&
+      !/^(?:Mr|Ms|Mrs|Dr)\./.test(lines[cursor]) &&
+      !/^[A-Z][A-Z .'\-]+?\s+[—-]/.test(lines[cursor])
+    ) {
+      role = [role, lines[cursor]].filter(Boolean).join(" ");
+      cursor += 1;
+    }
+
+    while (cursor < lines.length && !/^[A-Z][A-Z .'\-]+?\s+[—-]/.test(lines[cursor])) {
+      if (/^competition$/i.test(lines[cursor])) {
+        break;
+      }
+
+      detailLines.push(lines[cursor]);
+      cursor += 1;
+    }
+
+    const background = detailLines.join(" ").trim();
+    if (!role || !background) {
+      continue;
+    }
+
+    const age = background.match(/\((\d{2})\)/)?.[1] ?? "—";
+    rows.push({
+      name: nameCase(officerMatch[1]),
+      role,
+      age,
+      background,
+    });
+
+    index = cursor - 1;
+  }
+
+  if (!rows.length) {
+    return undefined;
+  }
+
+  return {
+    tables: [
+      {
+        id: "leadership",
+        note: `Executive officers from ${document.form} filed ${document.filingDate}.`,
+        columns: [
+          { key: "name", label: "Name", minWidth: "170px" },
+          { key: "role", label: "Role", minWidth: "220px" },
+          { key: "age", label: "Age", align: "end", minWidth: "56px" },
+          { key: "background", label: "Tenure / Background", minWidth: "420px" },
+        ],
+        rows,
+      },
+    ],
+  };
+}
+
+function findSummaryCompensationStart(lines: string[]) {
+  return lines.findIndex(
+    (line, index) =>
+      /^summary compensation table$/i.test(line) &&
+      lines.slice(index, index + 90).some((candidate) => /^name and$/i.test(candidate)) &&
+      lines.slice(index, index + 180).some((candidate) => isYearLine(candidate)),
+  );
+}
+
+function extractCompensation(document: ManagementDocument, text: string): ManagementExtraction | undefined {
+  const lines = filingLines(text);
+  const tableStart = findSummaryCompensationStart(lines);
+  if (tableStart < 0) {
+    return undefined;
+  }
+
+  const totalHeaderIndex = lines.findIndex((line, index) => index > tableStart && /^total$/i.test(line));
+  if (totalHeaderIndex < 0) {
+    return undefined;
+  }
+
+  const rows: Record<string, string>[] = [];
+  let cursor = totalHeaderIndex + 1;
+
+  while (cursor < lines.length && !/^\(\d+\)$/.test(lines[cursor])) {
+    const name = lines[cursor];
+    if (!name || isYearLine(name) || isAmountLike(name)) {
+      cursor += 1;
+      continue;
+    }
+
+    const roleLines: string[] = [];
+    cursor += 1;
+
+    while (cursor < lines.length && !isYearLine(lines[cursor]) && roleLines.length < 4) {
+      if (/^\(\d+\)$/.test(lines[cursor])) {
+        break;
+      }
+
+      roleLines.push(lines[cursor]);
+      cursor += 1;
+    }
+
+    if (!isYearLine(lines[cursor])) {
+      break;
+    }
+
+    const latestYear = lines[cursor];
+    cursor += 1;
+
+    const values: string[] = [];
+    while (cursor < lines.length && values.length < 7) {
+      values.push(lines[cursor]);
+      cursor += 1;
+    }
+
+    if (values.length === 7) {
+      rows.push({
+        name,
+        role: roleLines.join(" "),
+        year: latestYear,
+        salary: moneyCell(values[0]),
+        bonus: moneyCell(values[1]),
+        stockAwards: moneyCell(values[2]),
+        optionAwards: moneyCell(values[3]),
+        pension: moneyCell(values[4]),
+        other: moneyCell(values[5]),
+        total: moneyCell(values[6]),
+      });
+    }
+
+    while (isYearLine(lines[cursor])) {
+      cursor += 8;
+    }
+  }
+
+  if (!rows.length) {
+    return undefined;
+  }
+
+  return {
+    tables: [
+      {
+        id: "compensation",
+        note: `Latest year shown for each named executive officer in the Summary Compensation Table from ${document.form} filed ${document.filingDate}.`,
+        columns: [
+          { key: "name", label: "Executive", minWidth: "150px" },
+          { key: "role", label: "Role", minWidth: "210px" },
+          { key: "year", label: "Year", align: "end", minWidth: "64px" },
+          { key: "salary", label: "Salary", align: "end", minWidth: "104px" },
+          { key: "bonus", label: "Bonus / Incentive", align: "end", minWidth: "130px" },
+          { key: "stockAwards", label: "Stock Awards", align: "end", minWidth: "126px" },
+          { key: "optionAwards", label: "Option Awards", align: "end", minWidth: "126px" },
+          { key: "pension", label: "Pension / Deferred", align: "end", minWidth: "138px" },
+          { key: "other", label: "Other", align: "end", minWidth: "104px" },
+          { key: "total", label: "Total", align: "end", minWidth: "116px" },
+        ],
+        rows,
+      },
+    ],
+  };
+}
+
+function isAddressLine(line: string) {
+  return (
+    /^\d+\s/.test(line) ||
+    (/\d/.test(line) &&
+      /\b(?:street|st\.?|blvd|boulevard|avenue|ave\.?|road|rd\.?|drive|dr\.?|ny|ne|ca|ma|pa|il|tx|fl)\b/i.test(line))
+  );
+}
+
+function cleanHolderName(nameLines: string[]) {
+  const name = nameLines
+    .filter((line) => !isAddressLine(line))
+    .join(" ")
+    .replace(/\s+\((\d+)\)$/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  return stripFootnotes(name);
+}
+
+function findOwnershipStart(lines: string[]) {
+  return lines.findIndex(
+    (line, index) =>
+      /^stock ownership information$/i.test(line) &&
+      lines.slice(index, index + 40).some((candidate) => /shares owned/i.test(candidate)) &&
+      lines.slice(index, index + 60).some((candidate) => /percent of/i.test(candidate)),
+  );
+}
+
+function extractOwnership(document: ManagementDocument, text: string): ManagementExtraction | undefined {
+  const lines = filingLines(text, { keepSymbols: true });
+  const tableStart = findOwnershipStart(lines);
+  if (tableStart < 0) {
+    return undefined;
+  }
+
+  const nameHeaderIndex = lines.findIndex((line, index) => index > tableStart && /^name$/i.test(line));
+  const headerEnd = lines.findIndex((line, index) => index > nameHeaderIndex && /owned by director/i.test(line));
+  if (headerEnd < 0) {
+    return undefined;
+  }
+
+  const rows: Record<string, string>[] = [];
+  let cursor = headerEnd + 1;
+
+  while (cursor < lines.length && !/^\(1\)$/.test(lines[cursor]) && !/^delinquent section/i.test(lines[cursor])) {
+    const nameLines: string[] = [];
+
+    while (cursor < lines.length && !isAmountLike(lines[cursor])) {
+      if (/^\(\d+\)$/.test(lines[cursor]) || /^less than 1%$/i.test(lines[cursor])) {
+        break;
+      }
+
+      nameLines.push(lines[cursor]);
+      cursor += 1;
+    }
+
+    const holder = cleanHolderName(nameLines);
+    if (!holder || cursor >= lines.length || !isAmountLike(lines[cursor])) {
+      cursor += 1;
+      continue;
+    }
+
+    const sharesOwned = lines[cursor];
+    cursor += 1;
+    const betweenCells: string[] = [];
+
+    while (cursor < lines.length && !isPercentLike(lines[cursor]) && betweenCells.length < 4) {
+      if (isAmountLike(lines[cursor])) {
+        betweenCells.push(lines[cursor]);
+      }
+
+      cursor += 1;
+    }
+
+    const percent = isPercentLike(lines[cursor]) ? lines[cursor] : undefined;
+    if (percent) {
+      cursor += 1;
+    }
+
+    if (isAmountLike(lines[cursor])) {
+      cursor += 1;
+    }
+
+    rows.push({
+      holder,
+      sharesOwned: stripFootnotes(sharesOwned),
+      rightToAcquire: stripFootnotes(betweenCells.at(-1) ?? "—"),
+      percent: percentCell(percent),
+    });
+  }
+
+  if (!rows.length) {
+    return undefined;
+  }
+
+  return {
+    tables: [
+      {
+        id: "ownership",
+        note: `Beneficial ownership table from ${document.form} filed ${document.filingDate}.`,
+        columns: [
+          { key: "holder", label: "Holder / Group", minWidth: "270px" },
+          { key: "sharesOwned", label: "Shares Owned", align: "end", minWidth: "130px" },
+          { key: "rightToAcquire", label: "Right to Acquire", align: "end", minWidth: "138px" },
+          { key: "percent", label: "% Class", align: "end", minWidth: "96px" },
+        ],
+        rows,
+      },
+    ],
+  };
+}
+
+function structuredExtraction(
+  config: SignalConfig,
+  document: ManagementDocument,
+  text: string,
+): ManagementExtraction | undefined {
+  if (config.id === "leaders") {
+    return extractLeadership(document, text);
+  }
+
+  if (config.id === "compensation") {
+    return extractCompensation(document, text);
+  }
+
+  if (config.id === "ownership") {
+    return extractOwnership(document, text);
+  }
+
+  return undefined;
 }
 
 function excerptAround(text: string, index: number) {
@@ -198,6 +642,24 @@ function signalFromConfig(
   for (const document of candidateDocuments) {
     const text = documentTexts[document.kind];
     if (!text) {
+      continue;
+    }
+
+    const extraction = structuredExtraction(config, document, text);
+    if (extraction && (tableRowsCount(extraction.tables) > 0 || extraction.excerpts?.length)) {
+      return {
+        id: config.id,
+        label: config.label,
+        question: config.question,
+        status: "found",
+        summary: config.foundSummary(document),
+        source: signalSource(document, "high"),
+        tables: extraction.tables,
+        excerpts: extraction.excerpts ?? [],
+      };
+    }
+
+    if (config.id !== "shareholderLetter") {
       continue;
     }
 

@@ -12,7 +12,7 @@ import {
   Plus,
   Search,
 } from "lucide-react";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { type CSSProperties, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { MiniPriceChart } from "@/components/ui/mini-price-chart";
 import {
   BusinessGradePill,
@@ -50,6 +50,8 @@ import type {
   CompanySearchResult,
   FilingLink,
   ManagementBrief,
+  ManagementSignal,
+  ManagementTable,
   PriceHistory,
   RuleOneEvaluation,
   SavedBusinessItem,
@@ -1202,21 +1204,87 @@ function ManagementStep({
       <div className="management-list">
         {management.signals.map((signal, index) => (
           <section className="management-section" key={signal.id}>
-            <h3 className="section-title">
-              {index + 1}. {signal.label}
-            </h3>
-            {signal.excerpts.length ? (
-              signal.excerpts.map((excerpt) => (
-                <p className="management-result" key={excerpt}>
-                  {excerpt}
-                </p>
-              ))
-            ) : (
-              <p className="management-result muted">Not available from latest SEC filings.</p>
-            )}
+            <div className="split aligned">
+              <h3 className="section-title">
+                {index + 1}. {signal.label}
+              </h3>
+              {signal.source?.url ? (
+                <a className="subtle-link" href={signal.source.url}>
+                  <ExternalLink size={14} />
+                  Source
+                </a>
+              ) : null}
+            </div>
+            <p className="management-summary">{signal.summary}</p>
+            <ManagementSignalContent signal={signal} />
           </section>
         ))}
       </div>
+    </div>
+  );
+}
+
+function ManagementSignalContent({ signal }: { signal: ManagementSignal }) {
+  if (signal.tables?.length) {
+    return (
+      <div className="management-tables">
+        {signal.tables.map((table) => (
+          <ManagementTableGrid key={table.id} table={table} />
+        ))}
+      </div>
+    );
+  }
+
+  if (signal.excerpts.length) {
+    return (
+      <div className="management-letter">
+        {signal.excerpts.map((excerpt) => (
+          <p className="management-result" key={excerpt}>
+            {excerpt}
+          </p>
+        ))}
+      </div>
+    );
+  }
+
+  return <p className="management-result muted">{signal.summary}</p>;
+}
+
+function ManagementTableGrid({ table }: { table: ManagementTable }) {
+  const gridTemplate = table.columns
+    .map((column) => `minmax(${column.minWidth ?? "120px"}, ${column.align === "end" ? "0.7fr" : "1fr"})`)
+    .join(" ");
+  const tableStyle = { "--management-table-columns": gridTemplate } as CSSProperties;
+
+  return (
+    <div className="management-table-wrap">
+      {table.title ? <h4 className="management-table-title">{table.title}</h4> : null}
+      <div className="management-table-grid" role="table" style={tableStyle}>
+        <div className="management-table-header" role="row">
+          {table.columns.map((column) => (
+            <span className={column.align === "end" ? "align-end" : ""} role="columnheader" key={column.key}>
+              {column.label}
+            </span>
+          ))}
+        </div>
+        <div className="management-table-rows">
+          {table.rows.map((row, rowIndex) => (
+            <div className="management-table-row" role="row" key={`${table.id}-${rowIndex}`}>
+              {table.columns.map((column) => (
+                <div
+                  className={`management-table-value ${column.align === "end" ? "align-end" : ""}`}
+                  data-label={column.label}
+                  role="cell"
+                  key={column.key}
+                >
+                  {row[column.key] || "—"}
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
+      {table.note ? <p className="management-table-note">{table.note}</p> : null}
     </div>
   );
 }
