@@ -992,7 +992,6 @@ function ResultStep({
 }) {
   const hasCurrentPrice = Number.isFinite(valuation.currentPrice) && valuation.currentPrice > 0;
   const hasMosPrice = Number.isFinite(valuation.mosPrice) && valuation.mosPrice > 0;
-  const hasGapToMos = Number.isFinite(valuation.gapToMos);
   const isBelowMos = hasCurrentPrice && hasMosPrice && valuation.currentPrice <= valuation.mosPrice;
 
   return (
@@ -1001,7 +1000,7 @@ function ResultStep({
 
       <div className="valuation-strip result-valuation-strip">
         <ValueBlock label="Current price" value={formatCurrency(valuation.currentPrice)} />
-        <ValueBlock label="Gap to MOS" value={formatPercent(valuation.gapToMos)} tone={hasGapToMos && valuation.gapToMos >= 0 ? "good" : "bad"} />
+        <ValueBlock label="Gap to MOS" value={formatPercent(valuation.gapToMos)} />
         <ValueBlock label="Sticker price" value={formatCurrency(valuation.stickerPrice)} />
         <ValueBlock label="MOS price" value={formatCurrency(valuation.mosPrice)} tone={isBelowMos ? "good" : "bad"} />
       </div>
