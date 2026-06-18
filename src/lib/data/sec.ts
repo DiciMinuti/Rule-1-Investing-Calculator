@@ -43,7 +43,9 @@ type SecFactValue = {
   form?: string;
   filed?: string;
   accn?: string;
+  start?: string;
   end?: string;
+  frame?: string;
 };
 
 type SecConcept = {
@@ -67,7 +69,12 @@ type AnnualExtract = {
 };
 
 const conceptMap = {
-  revenue: ["Revenues", "RevenueFromContractWithCustomerExcludingAssessedTax", "SalesRevenueNet"],
+  revenue: [
+    "Revenues",
+    "RevenuesNetOfInterestExpense",
+    "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "SalesRevenueNet",
+  ],
   netIncome: ["NetIncomeLoss"],
   epsDiluted: ["EarningsPerShareDiluted", "EarningsPerShareBasic"],
   sharesDiluted: [
@@ -241,16 +248,6 @@ export async function getCompanyFilings(symbol: string): Promise<FilingLink[]> {
     .slice(0, 18);
 }
 
-function chooseConcept(facts: SecCompanyFacts, conceptNames: string[]) {
-  const usGaap = facts.facts?.["us-gaap"];
-  if (!usGaap) {
-    return undefined;
-  }
-
-  const conceptName = conceptNames.find((name) => usGaap[name]?.units);
-  return conceptName ? { name: conceptName, concept: usGaap[conceptName] } : undefined;
-}
-
 function chooseUnits(concept: SecConcept, preferredUnits: string[]) {
   const units = concept.units ?? {};
   const preferred = preferredUnits.find((unit) => units[unit]?.length);
@@ -259,46 +256,25 @@ function chooseUnits(concept: SecConcept, preferredUnits: string[]) {
   return unit ? { unit, values: units[unit] } : undefined;
 }
 
-function isAnnualFact(value: SecFactValue) {
-  const form = value.form ?? "";
-  return value.fy && isFiniteNumber(value.val) && (value.fp === "FY" || form.startsWith("10-K"));
-}
-
-function sourceRef(
+function annualExtractsForConcept(
   cik: string,
   conceptName: string,
-  fiscalYear: number,
-  confidence: DataSourceRef["confidence"],
-  unit?: string,
-): DataSourceRef {
-  return {
-    label: `SEC ${conceptName}${unit ? ` (${unit})` : ""}`,
-    url: `${SEC_COMPANY_FACTS_URL}/CIK${padCik(cik)}.json`,
-    period: `FY ${fiscalYear}`,
-    confidence,
-  };
-}
-
-function extractAnnualFacts(
-  facts: SecCompanyFacts,
-  cik: string,
-  conceptNames: string[],
+  concept: SecConcept,
   preferredUnits: string[],
-  confidence: DataSourceRef["confidence"] = "high",
-): AnnualExtract[] {
-  const selected = chooseConcept(facts, conceptNames);
-  if (!selected) {
-    return [];
-  }
-
-  const selectedUnits = chooseUnits(selected.concept, preferredUnits);
+  confidence: DataSourceRef["confidence"],
+) {
+  const selectedUnits = chooseUnits(concept, preferredUnits);
   if (!selectedUnits) {
     return [];
   }
 
   const byYear = new Map<number, SecFactValue>();
   selectedUnits.values.filter(isAnnualFact).forEach((value) => {
-    const fiscalYear = value.fy as number;
+    const fiscalYear = fiscalYearFromFact(value);
+    if (!fiscalYear) {
+      return;
+    }
+
     const existing = byYear.get(fiscalYear);
     if (!existing) {
       byYear.set(fiscalYear, value);
@@ -316,9 +292,100 @@ function extractAnnualFacts(
     .map(([fiscalYear, value]) => ({
       fiscalYear,
       value: value.val as number,
-      source: sourceRef(cik, selected.name, fiscalYear, confidence, selectedUnits.unit),
+      source: sourceRef(cik, conceptName, fiscalYear, confidence, selectedUnits.unit),
     }))
     .toSorted((a, b) => a.fiscalYear - b.fiscalYear);
+}
+
+function isAnnualFact(value: SecFactValue) {
+  const form = value.form ?? "";
+  if (!isFiniteNumber(value.val) || (!value.fy && !value.end && !value.frame)) {
+    return false;
+  }
+
+  if (value.frame && /Q\d$/i.test(value.frame)) {
+    return false;
+  }
+
+  if (value.start && value.end) {
+    const startTime = Date.parse(value.start);
+    const endTime = Date.parse(value.end);
+    if (!Number.isFinite(startTime) || !Number.isFinite(endTime)) {
+      return false;
+    }
+
+    const days = (endTime - startTime) / 86_400_000;
+    return days >= 300 && days <= 400 && (value.fp === "FY" || form.startsWith("10-K"));
+  }
+
+  return value.fp === "FY" || form.startsWith("10-K");
+}
+
+function fiscalYearFromFact(value: SecFactValue) {
+  const calendarYearFrame = value.frame?.match(/^CY(\d{4})$/i)?.[1];
+  if (calendarYearFrame) {
+    return Number(calendarYearFrame);
+  }
+
+  if (value.end) {
+    const endYear = Number(value.end.slice(0, 4));
+    if (Number.isInteger(endYear)) {
+      return endYear;
+    }
+  }
+
+  return value.fy;
+}
+
+function sourceRef(
+  cik: string,
+  conceptName: string,
+  fiscalYear: number,
+  confidence: DataSourceRef["confidence"],
+  unit?: string,
+): DataSourceRef {
+  return {
+    label: `SEC ${conceptName}${unit ? ` (${unit})` : ""}`,
+    url: `${SEC_COMPANY_FACTS_URL}/CIK${padCik(cik)}.json`,
+    period: `FY ${fiscalYear}`,
+    confidence,
+  };
+}
+
+export function extractAnnualFacts(
+  facts: SecCompanyFacts,
+  cik: string,
+  conceptNames: string[],
+  preferredUnits: string[],
+  confidence: DataSourceRef["confidence"] = "high",
+): AnnualExtract[] {
+  const usGaap = facts.facts?.["us-gaap"];
+  if (!usGaap) {
+    return [];
+  }
+
+  const candidates = conceptNames
+    .map((conceptName, index) => {
+      const concept = usGaap[conceptName];
+      const extracts = concept
+        ? annualExtractsForConcept(cik, conceptName, concept, preferredUnits, confidence)
+        : [];
+
+      return {
+        index,
+        extracts,
+        latestYear: extracts.at(-1)?.fiscalYear ?? 0,
+      };
+    })
+    .filter((candidate) => candidate.extracts.length > 0)
+    .toSorted(
+      (a, b) =>
+        b.latestYear - a.latestYear ||
+        b.extracts.length - a.extracts.length ||
+        a.index - b.index,
+    );
+
+  return candidates[0]?.extracts ?? [];
 }
 
 function setAnnualValue(
