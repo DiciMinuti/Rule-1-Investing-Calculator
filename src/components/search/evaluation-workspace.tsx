@@ -19,7 +19,6 @@ import {
   businessGradeLabels,
   formatCurrency,
   formatDate,
-  formatNumber,
   formatPercent,
 } from "@/lib/format";
 import {
@@ -83,7 +82,7 @@ type GroupRunSummary = {
   nope: number;
 };
 
-const steps = ["Result", "Business", "Big Five", "Moat", "Management", "Valuation", "Reports and notes"];
+const steps = ["Result", "Business", "Moat", "Management", "Valuation", "Reports and notes"];
 const groupLimitOptions = [10, 25, 50, 100, 0];
 const moatTypes = ["Brand", "Price/cost advantage", "Secrets/IP", "Switching costs", "Toll bridge", "Network effects"];
 const managementChecklist = [
@@ -146,18 +145,6 @@ function statusIcon(status: LoadStatus) {
   }
 
   return <span className="idle-dot" />;
-}
-
-function verdictReason(gapToMos: number) {
-  if (!Number.isFinite(gapToMos)) {
-    return "MOS comparison unavailable.";
-  }
-
-  if (gapToMos >= 0) {
-    return `Price is ${formatPercent(gapToMos)} below MOS.`;
-  }
-
-  return `Price is ${formatPercent(Math.abs(gapToMos))} above MOS.`;
 }
 
 export function EvaluationWorkspace() {
@@ -713,31 +700,18 @@ export function EvaluationWorkspace() {
           <section className="panel evaluation-panel">
             <Stepper activeStep={activeStep} onStepChange={setActiveStep} />
             <div className="evaluation-body">
-              {activeStep === 0 ? (
-                <ResultStep
-                  loaded={loaded}
-                  assumptions={assumptions}
-                  valuation={valuation}
-                  gradeOverride={gradeOverride}
-                  setGradeOverride={setGradeOverride}
-                  notes={notes}
-                  setNotes={setNotes}
-                  isSaved={isLoadedSaved}
-                  onSaveToggle={handleSaveToggle}
-                />
-              ) : null}
+              {activeStep === 0 ? <ResultStep loaded={loaded} valuation={valuation} /> : null}
               {activeStep === 1 ? <BusinessStep loaded={loaded} notes={notes} setNotes={setNotes} /> : null}
-              {activeStep === 2 ? <BigFiveStep loaded={loaded} /> : null}
-              {activeStep === 3 ? <MoatStep loaded={loaded} notes={notes} setNotes={setNotes} /> : null}
-              {activeStep === 4 ? <ManagementStep loaded={loaded} notes={notes} setNotes={setNotes} /> : null}
-              {activeStep === 5 ? (
+              {activeStep === 2 ? <MoatStep loaded={loaded} notes={notes} setNotes={setNotes} /> : null}
+              {activeStep === 3 ? <ManagementStep loaded={loaded} notes={notes} setNotes={setNotes} /> : null}
+              {activeStep === 4 ? (
                 <ValuationStep
                   assumptions={assumptions}
                   setAssumption={setAssumption}
                   valuation={valuation}
                 />
               ) : null}
-              {activeStep === 6 ? (
+              {activeStep === 5 ? (
                 <ReportsStep
                   loaded={loaded}
                   notes={notes}
@@ -954,8 +928,6 @@ function CompanySummary({
             <h1 className="title">
               {loaded.profile.name} <span className="subtle">{loaded.profile.symbol}</span>
             </h1>
-            <BusinessGradePill grade={valuation.businessGrade} />
-            <PriceVerdictPill verdict={valuation.priceVerdict} />
           </div>
           <div className="row wrap muted">
             <span>{loaded.profile.exchange ?? "SEC-listed"}</span>
@@ -1014,108 +986,85 @@ function Stepper({ activeStep, onStepChange }: { activeStep: number; onStepChang
 function ResultStep({
   loaded,
   valuation,
-  gradeOverride,
-  setGradeOverride,
-  notes,
-  setNotes,
-  isSaved,
-  onSaveToggle,
 }: {
   loaded: LoadedCompany;
-  assumptions: ValuationAssumptions;
   valuation: NonNullable<ReturnType<typeof calculateValuation>>;
-  gradeOverride: BusinessGrade | null;
-  setGradeOverride: (grade: BusinessGrade | null) => void;
-  notes: CompanyNotes;
-  setNotes: (notes: CompanyNotes) => void;
-  isSaved: boolean;
-  onSaveToggle: () => void;
 }) {
-  const priceWarning = valuation.warnings.find((warning) => warning.startsWith("Price source"));
-  const reasons = [
-    priceWarning ?? verdictReason(valuation.gapToMos),
-    `${loaded.bigFive.healthyCount} of 5 Big Five checks are healthy.`,
-    notes.management === "middle" ? "Management review not completed." : `Management marked ${businessGradeLabels[notes.management]}.`,
-    ...valuation.warnings.filter((warning) => warning !== priceWarning),
-  ];
+  const hasCurrentPrice = Number.isFinite(valuation.currentPrice) && valuation.currentPrice > 0;
+  const hasMosPrice = Number.isFinite(valuation.mosPrice) && valuation.mosPrice > 0;
+  const hasGapToMos = Number.isFinite(valuation.gapToMos);
+  const isBelowMos = hasCurrentPrice && hasMosPrice && valuation.currentPrice <= valuation.mosPrice;
 
   return (
     <div className="stack">
-      <div className="result-grid">
-        <div className="result-block">
-          <div className="label">Business grade</div>
-          <div className="verdict-line">
-            <BusinessGradePill grade={valuation.businessGrade} />
-            <span className="muted">Quality of the business through the Rule #1 lens.</span>
-          </div>
-        </div>
-        <div className="result-block">
-          <div className="label">Price verdict</div>
-          <div className="verdict-line">
-            <PriceVerdictPill verdict={valuation.priceVerdict} />
-            <span className="muted">
-              {valuation.priceVerdict === "pass"
-                ? "Pass: price is below MOS."
-                : valuation.priceVerdict === "almost"
-                  ? "Almost: close to MOS."
-                  : "Nope: price is too high for this model."}
-            </span>
-          </div>
-        </div>
-      </div>
+      <BigFiveResultRows loaded={loaded} />
 
-      <div className="valuation-strip">
+      <div className="valuation-strip result-valuation-strip">
         <ValueBlock label="Current price" value={formatCurrency(valuation.currentPrice)} />
-        <ValueBlock label="MOS price" value={formatCurrency(valuation.mosPrice)} />
+        <ValueBlock label="Gap to MOS" value={formatPercent(valuation.gapToMos)} tone={hasGapToMos && valuation.gapToMos >= 0 ? "good" : "bad"} />
         <ValueBlock label="Sticker price" value={formatCurrency(valuation.stickerPrice)} />
-        <ValueBlock label="Gap to MOS" value={formatPercent(valuation.gapToMos)} />
-      </div>
-
-      <div className="grid two">
-        <div className="stack">
-          <h2 className="section-title">Reasons</h2>
-          <ul className="reason-list">
-            {reasons.map((reason) => (
-              <li key={reason}>{reason}</li>
-            ))}
-          </ul>
-        </div>
-        <div className="stack">
-          <h2 className="section-title">Controls</h2>
-          <label className="stack compact-gap">
-            <span className="label">Override final business grade</span>
-            <select
-              className="compact-select"
-              value={gradeOverride ?? ""}
-              onChange={(event) => setGradeOverride(event.target.value ? (event.target.value as BusinessGrade) : null)}
-            >
-              <option value="">Use app grade</option>
-              <option value="strong">Strong</option>
-              <option value="middle">Middle</option>
-              <option value="dull">Dull</option>
-            </select>
-          </label>
-          <label className="stack compact-gap">
-            <span className="label">One-line thesis</span>
-            <input
-              className="field"
-              value={notes.thesis}
-              onChange={(event) => setNotes({ ...notes, thesis: event.target.value })}
-              placeholder="Why does this business belong on the list?"
-            />
-          </label>
-          <div className="row wrap">
-            <SaveToggleButton isSaved={isSaved} onClick={onSaveToggle} />
-          </div>
-        </div>
+        <ValueBlock label="MOS price" value={formatCurrency(valuation.mosPrice)} tone={isBelowMos ? "good" : "bad"} />
       </div>
     </div>
   );
 }
 
-function ValueBlock({ label, value }: { label: string; value: string }) {
+function metricResultTone(status: BigFiveResult["metrics"][number]["status"]) {
+  if (status === "healthy") {
+    return "good";
+  }
+
+  if (status === "weak") {
+    return "bad";
+  }
+
+  return "warn";
+}
+
+function BigFiveResultRows({ loaded }: { loaded: LoadedCompany }) {
   return (
-    <div className="value-block">
+    <div className="big-five-grid result-big-five-grid" role="table" aria-label="Big Five result">
+      <div className="big-five-header" role="row">
+        <span role="columnheader">Metric</span>
+        <span role="columnheader">10y</span>
+        <span role="columnheader">5y</span>
+        <span role="columnheader">3y</span>
+        <span role="columnheader">1y</span>
+        <span role="columnheader">Status</span>
+      </div>
+      <div className="big-five-rows">
+        {loaded.bigFive.metrics.map((metric) => (
+          <div className={`big-five-row result-big-five-row ${metricResultTone(metric.status)}`} role="row" key={metric.id}>
+            <div className="big-five-metric" role="cell">
+              <strong>{metric.label}</strong>
+              <div className="subtle">{metric.sourceLabel}</div>
+            </div>
+            <div className="big-five-value" data-label="10y" role="cell">
+              {formatPercent(metric.windows[10].value)}
+            </div>
+            <div className="big-five-value" data-label="5y" role="cell">
+              {formatPercent(metric.windows[5].value)}
+            </div>
+            <div className="big-five-value" data-label="3y" role="cell">
+              {formatPercent(metric.windows[3].value)}
+            </div>
+            <div className="big-five-value" data-label="1y" role="cell">
+              {formatPercent(metric.windows[1].value)}
+            </div>
+            <div className="big-five-status" role="cell">
+              <MetricStatusPill status={metric.status} />
+              {metric.warning ? <div className="subtle">{metric.warning}</div> : null}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function ValueBlock({ label, value, tone }: { label: string; value: string; tone?: "good" | "warn" | "bad" }) {
+  return (
+    <div className={`value-block ${tone ?? ""}`}>
       <span className="label">{label}</span>
       <strong>{value}</strong>
     </div>
@@ -1175,67 +1124,6 @@ function BusinessStep({
             </div>
           ),
         )}
-      </div>
-    </div>
-  );
-}
-
-function BigFiveStep({ loaded }: { loaded: LoadedCompany }) {
-  return (
-    <div className="stack">
-      <div className="split">
-        <div>
-          <h2 className="section-title">Big Five</h2>
-          <p className="muted" style={{ margin: "4px 0 0" }}>
-            {loaded.bigFive.healthyCount}/5 checks are healthy at roughly {formatPercent(loaded.bigFive.threshold)}+.
-          </p>
-        </div>
-        <BusinessGradePill grade={loaded.bigFive.businessContribution} />
-      </div>
-      <div className="big-five-grid" role="table" aria-label="Big Five metrics">
-        <div className="big-five-header" role="row">
-          <span role="columnheader">Metric</span>
-          <span role="columnheader">10y</span>
-          <span role="columnheader">5y</span>
-          <span role="columnheader">3y</span>
-          <span role="columnheader">1y</span>
-          <span role="columnheader">Status</span>
-        </div>
-        <div className="big-five-rows">
-          {loaded.bigFive.metrics.map((metric) => (
-            <div className="big-five-row" role="row" key={metric.id}>
-              <div className="big-five-metric" role="cell">
-                <details>
-                  <summary>{metric.label}</summary>
-                  <div className="annual-values">
-                    {metric.values.map((point) => (
-                      <span key={`${metric.id}-${point.fiscalYear}`}>
-                        {point.fiscalYear}: {formatNumber(point.value)}
-                      </span>
-                    ))}
-                  </div>
-                </details>
-                <div className="subtle">{metric.sourceLabel}</div>
-              </div>
-              <div className="big-five-value" data-label="10y" role="cell">
-                {formatPercent(metric.windows[10].value)}
-              </div>
-              <div className="big-five-value" data-label="5y" role="cell">
-                {formatPercent(metric.windows[5].value)}
-              </div>
-              <div className="big-five-value" data-label="3y" role="cell">
-                {formatPercent(metric.windows[3].value)}
-              </div>
-              <div className="big-five-value" data-label="1y" role="cell">
-                {formatPercent(metric.windows[1].value)}
-              </div>
-              <div className="big-five-status" role="cell">
-                <MetricStatusPill status={metric.status} />
-                {metric.warning ? <div className="subtle">{metric.warning}</div> : null}
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
     </div>
   );
@@ -1391,7 +1279,6 @@ function ValuationStep({
             Edit the assumptions. The sticker price and MOS recalculate immediately.
           </p>
         </div>
-        <PriceVerdictPill verdict={valuation.priceVerdict} />
       </div>
       <div className="row wrap">
         <button

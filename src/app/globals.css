@@ -683,23 +683,21 @@ a:hover {
   padding: 12px;
 }
 
-.verdict-line {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 8px;
-}
-
 .valuation-strip {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 8px;
 }
 
+.result-valuation-strip {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .value-block {
   display: grid;
   gap: 4px;
   min-height: 72px;
+  border: 1px solid transparent;
   border-radius: var(--radius);
   background: var(--surface);
   padding: 12px;
@@ -707,6 +705,21 @@ a:hover {
 
 .value-block strong {
   font-size: 1.05rem;
+}
+
+.value-block.good {
+  border-color: rgba(74, 222, 128, 0.24);
+  background: rgba(74, 222, 128, 0.03);
+}
+
+.value-block.warn {
+  border-color: rgba(251, 191, 36, 0.24);
+  background: rgba(251, 191, 36, 0.03);
+}
+
+.value-block.bad {
+  border-color: rgba(248, 113, 113, 0.24);
+  background: rgba(248, 113, 113, 0.03);
 }
 
 .reason-list {
@@ -784,6 +797,25 @@ a:hover {
   border-radius: var(--radius);
   background: var(--surface);
   padding: 12px 14px;
+}
+
+.result-big-five-row {
+  border: 1px solid transparent;
+}
+
+.result-big-five-row.good {
+  border-color: rgba(74, 222, 128, 0.24);
+  background: rgba(74, 222, 128, 0.03);
+}
+
+.result-big-five-row.warn {
+  border-color: rgba(251, 191, 36, 0.24);
+  background: rgba(251, 191, 36, 0.03);
+}
+
+.result-big-five-row.bad {
+  border-color: rgba(248, 113, 113, 0.24);
+  background: rgba(248, 113, 113, 0.03);
 }
 
 .big-five-value {
