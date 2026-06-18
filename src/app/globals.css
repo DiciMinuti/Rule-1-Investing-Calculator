@@ -775,6 +775,11 @@ a:hover {
   gap: 10px;
 }
 
+.result-big-five-grid .big-five-header,
+.result-big-five-grid .big-five-row {
+  grid-template-columns: minmax(250px, 1.8fr) repeat(4, minmax(74px, 0.55fr));
+}
+
 .big-five-header {
   padding: 0 14px;
   color: var(--subtle);

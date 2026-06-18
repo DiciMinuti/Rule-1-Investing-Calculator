@@ -6,7 +6,6 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { MiniPriceChart } from "@/components/ui/mini-price-chart";
 import {
   BusinessGradePill,
-  MetricStatusPill,
   PriceVerdictPill,
 } from "@/components/ui/status-pill";
 import {
@@ -1029,7 +1028,6 @@ function BigFiveResultRows({ loaded }: { loaded: LoadedCompany }) {
         <span role="columnheader">5y</span>
         <span role="columnheader">3y</span>
         <span role="columnheader">1y</span>
-        <span role="columnheader">Status</span>
       </div>
       <div className="big-five-rows">
         {loaded.bigFive.metrics.map((metric) => (
@@ -1049,10 +1047,6 @@ function BigFiveResultRows({ loaded }: { loaded: LoadedCompany }) {
             </div>
             <div className="big-five-value" data-label="1y" role="cell">
               {formatPercent(metric.windows[1].value)}
-            </div>
-            <div className="big-five-status" role="cell">
-              <MetricStatusPill status={metric.status} />
-              {metric.warning ? <div className="subtle">{metric.warning}</div> : null}
             </div>
           </div>
         ))}
