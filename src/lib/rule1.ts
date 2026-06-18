@@ -182,6 +182,7 @@ function roicMetric(financials: AnnualFinancials[], threshold: number): BigFiveM
     }))
     .sort((a, b) => a.fiscalYear - b.fiscalYear);
   const latest = values.filter((point) => isFiniteNumber(point.value)).at(-1)?.value ?? null;
+  const latestSourceLabel = values.filter((point) => point.source?.label).at(-1)?.source?.label;
   const status = statusFromValue(latest, threshold);
 
   return {
@@ -190,7 +191,7 @@ function roicMetric(financials: AnnualFinancials[], threshold: number): BigFiveM
     values,
     windows: calculateGrowthWindows(values),
     status,
-    sourceLabel: "Net income / invested capital",
+    sourceLabel: latestSourceLabel ?? "Net income / invested capital",
     warning: latest === null ? "ROIC needs net income and invested capital." : undefined,
   };
 }

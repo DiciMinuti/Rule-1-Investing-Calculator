@@ -102,6 +102,9 @@ const unitPreferences = {
   shares: ["shares"],
 };
 
+const FINANCIAL_INDUSTRY_PATTERN =
+  /bank|banks|credit|finance|financial|insurance|investment|broker|security|securities|mortgage|loan|lending/i;
+
 let tickerCache: CompanySearchResult[] | null = null;
 
 function secHeaders() {
@@ -420,6 +423,9 @@ export async function getCompanyFinancials(symbol: string): Promise<AnnualFinanc
     throw new Error(`No SEC company found for ${symbol.toUpperCase()}`);
   }
 
+  const submissions = await getSubmissionsByCik(company.cik);
+  const isFinancialBusiness = FINANCIAL_INDUSTRY_PATTERN.test(submissions.sicDescription ?? "");
+
   const facts = await fetchSecJson<SecCompanyFacts>(
     `${SEC_COMPANY_FACTS_URL}/CIK${padCik(company.cik)}.json`,
     60 * 60 * 24,
@@ -489,7 +495,15 @@ export async function getCompanyFinancials(symbol: string): Promise<AnnualFinanc
         isFiniteNumber(row.cashAndEquivalents)
           ? row.stockholdersEquity + row.totalDebt - row.cashAndEquivalents
           : undefined;
-      const roic = row.roic ?? calculateRoic(row.netIncome, investedCapital);
+      const financialReturnOnEquity =
+        isFinancialBusiness && isFiniteNumber(row.stockholdersEquity)
+          ? calculateRoic(row.netIncome, row.stockholdersEquity)
+          : undefined;
+      const roic = row.roic ?? financialReturnOnEquity ?? calculateRoic(row.netIncome, investedCapital);
+      const roicSourceLabel =
+        financialReturnOnEquity !== undefined
+          ? "Net income / equity (financial business proxy)"
+          : "Net income / invested capital";
 
       return {
         ...row,
@@ -520,7 +534,7 @@ export async function getCompanyFinancials(symbol: string): Promise<AnnualFinanc
           ...(roic !== undefined
             ? {
                 roic: {
-                  label: "Net income / invested capital",
+                  label: roicSourceLabel,
                   period: `FY ${row.fiscalYear}`,
                   confidence: "medium" as const,
                 },

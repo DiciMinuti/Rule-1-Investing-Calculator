@@ -94,4 +94,21 @@ describe("Rule #1 calculations", () => {
     expect(bigFive.healthyCount).toBe(5);
     expect(bigFive.businessContribution).toBe("strong");
   });
+
+  it("uses the ROIC source label from normalized financials", () => {
+    const bigFive = buildBigFive([
+      {
+        fiscalYear: 2025,
+        roic: 0.2,
+        sourceFacts: {
+          roic: {
+            label: "Net income / equity (financial business proxy)",
+            confidence: "medium",
+          },
+        },
+      },
+    ]);
+
+    expect(bigFive.metrics[0].sourceLabel).toBe("Net income / equity (financial business proxy)");
+  });
 });
