@@ -11,7 +11,6 @@
   --green: #4ade80;
   --amber: #fbbf24;
   --red: #f87171;
-  --cyan: #67e8f9;
   --radius: 8px;
   --nav-height: 56px;
 }
@@ -49,7 +48,7 @@ button {
 }
 
 a {
-  color: var(--cyan);
+  color: var(--text);
   text-decoration: none;
 }
 
@@ -250,8 +249,7 @@ a:hover {
 }
 
 .button.primary {
-  border-color: rgba(103, 232, 249, 0.3);
-  background: rgba(103, 232, 249, 0.12);
+  background: var(--surface);
   color: var(--text);
 }
 
@@ -291,7 +289,7 @@ a:hover {
 .field:focus,
 .textarea:focus,
 .compact-select:focus {
-  border-color: rgba(103, 232, 249, 0.45);
+  border-color: var(--border-strong);
 }
 
 .compact-select {
@@ -330,8 +328,7 @@ a:hover {
 }
 
 .pill.info {
-  border-color: rgba(103, 232, 249, 0.24);
-  color: var(--cyan);
+  color: var(--muted);
 }
 
 .table-wrap {
@@ -616,7 +613,7 @@ a:hover {
 }
 
 .group-status.loading {
-  color: var(--cyan);
+  color: var(--text);
 }
 
 .group-status.failed {
@@ -727,7 +724,7 @@ a:hover {
   display: block;
   width: 100%;
   height: 150px;
-  color: var(--cyan);
+  color: var(--muted);
   border-radius: var(--radius);
   background: var(--surface);
   padding: 10px;
