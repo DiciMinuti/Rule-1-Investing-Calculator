@@ -71,7 +71,7 @@ describe("Rule #1 calculations", () => {
     expect(calculateValuation({ ...base, currentPrice: 45 }, "middle").priceVerdict).toBe("nope");
   });
 
-  it("prefers longer-term EPS growth for default valuation assumptions", () => {
+  it("uses the median EPS growth window for default valuation assumptions", () => {
     const assumptions = deriveDefaultAssumptions(
       [
         { fiscalYear: 2013, epsDiluted: 4.88, sourceFacts: {} },
@@ -85,8 +85,8 @@ describe("Rule #1 calculations", () => {
       340.54,
     );
 
-    expect(assumptions.growthRate).toBeCloseTo(0.1004, 4);
-    expect(assumptions.futurePe).toBeCloseTo(20.08, 2);
+    expect(assumptions.growthRate).toBeCloseTo(0.1303, 4);
+    expect(assumptions.futurePe).toBeCloseTo(26.05, 2);
   });
 
   it("tempers EPS rebound growth when broader business metrics grow slower", () => {

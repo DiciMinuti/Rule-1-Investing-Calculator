@@ -97,13 +97,14 @@ export function calculateGrowthWindows(points: SeriesPoint[]) {
   );
 }
 
-function preferredGrowthValue(points: SeriesPoint[]) {
+function growthWindowValues(points: SeriesPoint[]) {
   const windows = calculateGrowthWindows(points);
-  const preferredWindowResult = WINDOWS.map((window) => windows[window]).find((window) =>
-    isFiniteNumber(window.value),
-  );
 
-  return preferredWindowResult?.value ?? null;
+  return WINDOWS.map((window) => windows[window].value).map(usableGrowth).filter(isFiniteNumber);
+}
+
+function centralGrowthValue(points: SeriesPoint[]) {
+  return median(growthWindowValues(points));
 }
 
 function clampAutoGrowth(value: number) {
@@ -453,7 +454,7 @@ export function latestAnnualFinancial(financials: AnnualFinancials[]) {
 function deriveSustainableGrowthRate(financials: AnnualFinancials[]) {
   const sorted = financials.toSorted((a, b) => a.fiscalYear - b.fiscalYear);
   const epsGrowth = usableGrowth(
-    preferredGrowthValue(
+    centralGrowthValue(
       sorted.map((row) => ({
         fiscalYear: row.fiscalYear,
         value: row.epsDiluted ?? deriveEps(row.netIncome, row.sharesDiluted) ?? null,
@@ -461,19 +462,19 @@ function deriveSustainableGrowthRate(financials: AnnualFinancials[]) {
     ),
   );
   const supportingGrowthRates = [
-    preferredGrowthValue(
+    centralGrowthValue(
       sorted.map((row) => ({
         fiscalYear: row.fiscalYear,
         value: row.revenue ?? null,
       })),
     ),
-    preferredGrowthValue(
+    centralGrowthValue(
       sorted.map((row) => ({
         fiscalYear: row.fiscalYear,
         value: bookValuePerShare(row.stockholdersEquity, row.sharesDiluted) ?? row.stockholdersEquity ?? null,
       })),
     ),
-    preferredGrowthValue(
+    centralGrowthValue(
       sorted.map((row) => {
         const cashFlow = row.freeCashFlow ?? calculateFreeCashFlow(row.operatingCashFlow, row.capex);
         const perShare =
