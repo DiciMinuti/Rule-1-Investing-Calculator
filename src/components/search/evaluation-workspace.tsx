@@ -131,6 +131,8 @@ const bigFiveFilters: { id: BigFiveMetric["id"]; label: string }[] = [
   { id: "equityGrowth", label: "Equity pass" },
   { id: "cashFlowGrowth", label: "Cash flow pass" },
 ];
+const recentBusinessSuggestionsKey = "rule-one:recent-business-evaluation-results";
+const recentBusinessSuggestionsLimit = 5;
 
 const initialLoadSteps: LoadStep[] = [
   { id: "profile", label: "Company profile", status: "idle" },
@@ -186,6 +188,84 @@ function statusIcon(status: LoadStatus) {
   return <span className="idle-dot" />;
 }
 
+function isCompanySearchResult(value: unknown): value is CompanySearchResult {
+  if (!value || typeof value !== "object") {
+    return false;
+  }
+
+  const result = value as Partial<CompanySearchResult>;
+  return (
+    typeof result.symbol === "string" &&
+    typeof result.name === "string" &&
+    (result.dataAvailability === "sec" || result.dataAvailability === "limited") &&
+    (result.cik === undefined || typeof result.cik === "string") &&
+    (result.exchange === undefined || typeof result.exchange === "string")
+  );
+}
+
+function normalizeRecentBusinessSuggestions(results: CompanySearchResult[]) {
+  const seen = new Set<string>();
+  const normalized: CompanySearchResult[] = [];
+
+  for (const result of results) {
+    const symbol = result.symbol.trim().toUpperCase();
+    if (!symbol || seen.has(symbol)) {
+      continue;
+    }
+
+    seen.add(symbol);
+    normalized.push({
+      ...result,
+      symbol,
+      name: result.name.trim(),
+    });
+
+    if (normalized.length === recentBusinessSuggestionsLimit) {
+      break;
+    }
+  }
+
+  return normalized;
+}
+
+function readRecentBusinessSuggestions() {
+  if (typeof window === "undefined") {
+    return [];
+  }
+
+  try {
+    const raw = window.localStorage.getItem(recentBusinessSuggestionsKey);
+    const parsed: unknown = raw ? JSON.parse(raw) : [];
+    if (!Array.isArray(parsed)) {
+      window.localStorage.removeItem(recentBusinessSuggestionsKey);
+      return [];
+    }
+
+    const recent = normalizeRecentBusinessSuggestions(parsed.filter(isCompanySearchResult));
+    if (recent.length !== parsed.length) {
+      writeRecentBusinessSuggestions(recent);
+    }
+    return recent;
+  } catch {
+    window.localStorage.removeItem(recentBusinessSuggestionsKey);
+    return [];
+  }
+}
+
+function writeRecentBusinessSuggestions(results: CompanySearchResult[]) {
+  if (typeof window === "undefined") {
+    return [];
+  }
+
+  const recent = normalizeRecentBusinessSuggestions(results);
+  if (recent.length) {
+    window.localStorage.setItem(recentBusinessSuggestionsKey, JSON.stringify(recent));
+  } else {
+    window.localStorage.removeItem(recentBusinessSuggestionsKey);
+  }
+  return recent;
+}
+
 export function EvaluationWorkspace() {
   const params = useSearchParams();
   const symbolParam = params.get("symbol");
@@ -193,6 +273,7 @@ export function EvaluationWorkspace() {
   const [searchMode, setSearchMode] = useState<SearchMode>("business");
   const [query, setQuery] = useState("");
   const [suggestions, setSuggestions] = useState<CompanySearchResult[]>([]);
+  const [recentBusinessSuggestions, setRecentBusinessSuggestions] = useState<CompanySearchResult[]>([]);
   const [suggestionQuotes, setSuggestionQuotes] = useState<Record<string, SuggestionQuote>>({});
   const [searching, setSearching] = useState(false);
   const [searchError, setSearchError] = useState("");
@@ -231,13 +312,26 @@ export function EvaluationWorkspace() {
   }, []);
 
   useEffect(() => {
+    const recent = readRecentBusinessSuggestions();
+    setRecentBusinessSuggestions(recent);
+    setSuggestions((current) => (current.length ? current : recent));
+  }, []);
+
+  useEffect(() => {
+    if (searchMode !== "business" || query.trim().length >= 1) {
+      return;
+    }
+
+    setSuggestions(recentBusinessSuggestions);
+    setSearchError("");
+  }, [query, recentBusinessSuggestions, searchMode]);
+
+  useEffect(() => {
     if (searchMode !== "business") {
       return;
     }
 
     if (query.trim().length < 1) {
-      setSuggestions([]);
-      setSearchError("");
       return;
     }
 
@@ -458,6 +552,18 @@ export function EvaluationWorkspace() {
         loadedAt: new Date().toISOString(),
       });
       setAssumptions(nextAssumptions);
+      setRecentBusinessSuggestions(
+        writeRecentBusinessSuggestions([
+          {
+            symbol: profileData.profile.symbol,
+            name: profileData.profile.name,
+            cik: profileData.profile.cik,
+            exchange: profileData.profile.exchange,
+            dataAvailability: financials.length ? "sec" : "limited",
+          },
+          ...readRecentBusinessSuggestions(),
+        ]),
+      );
       setLoadSteps((current) => updateLoadStep(current, "calculation", "done"));
     } catch (error) {
       setLoadSteps((current) => updateLoadStep(current, "profile", "failed", error instanceof Error ? error.message : "Load failed."));
@@ -599,6 +705,7 @@ export function EvaluationWorkspace() {
   }, [assumptions, businessGrade]);
 
   const isLoadedSaved = loaded ? savedIds.has(makeSavedBusinessId(loaded.profile.symbol)) : false;
+  const showingRecentBusinessSuggestions = searchMode === "business" && query.trim().length < 1;
   const bestSuggestion = suggestions[0];
   const otherSuggestions = suggestions.slice(1);
   const bestGroupSuggestion = groupSuggestions[0];
@@ -887,7 +994,7 @@ export function EvaluationWorkspace() {
                   <span className="suggestion-symbol">{bestSuggestion.symbol}</span>
                   <span className="suggestion-name">
                     <strong>{bestSuggestion.name}</strong>
-                    <span>Best match</span>
+                    <span>{showingRecentBusinessSuggestions ? "Recent result" : "Best match"}</span>
                   </span>
                   {renderSuggestionQuote(bestSuggestion.symbol)}
                 </button>
