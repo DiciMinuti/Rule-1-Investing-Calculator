@@ -1,7 +1,6 @@
 "use client";
 
 import {
-  DEFAULT_ALMOST_BAND,
   DEFAULT_BIG_FIVE_THRESHOLD,
   DEFAULT_MARGIN_OF_SAFETY,
   DEFAULT_REQUIRED_RETURN,
@@ -21,7 +20,6 @@ const DEFAULT_WORKSPACE_ID = "local";
 export const defaultValuationDefaults: ValuationDefaults = {
   requiredReturn: DEFAULT_REQUIRED_RETURN,
   marginOfSafety: DEFAULT_MARGIN_OF_SAFETY,
-  almostBand: DEFAULT_ALMOST_BAND,
   bigFiveHealthyThreshold: DEFAULT_BIG_FIVE_THRESHOLD,
 };
 

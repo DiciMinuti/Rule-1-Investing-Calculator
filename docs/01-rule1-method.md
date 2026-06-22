@@ -60,7 +60,7 @@ Default assumptions:
 - Horizon: 10 years.
 - MOS discount: 50%.
 - Future PE: lower of historical high/average PE and 2x selected growth rate, with user override.
-- Future growth: conservative automated estimate from longer-term EPS growth, tempered by sales, equity, and cash-flow growth where available. Since free analyst data may not be reliable, manual entry must be first-class.
+- Future growth: lower of 10-year EPS growth and analyst growth when an analyst estimate is entered, capped at 15% by default. Since free analyst data may not be reliable, manual entry must be first-class.
 
 Formula:
 
@@ -158,7 +158,7 @@ Use:
 - "Middle."
 - "Dull."
 - "Pass: price is below MOS."
-- "Almost: close to MOS."
+- "Almost: above MOS but not above sticker."
 - "Nope: price is too high for this model."
 - "Missing EPS. Enter EPS to finish valuation."
 - "Only 6 annual periods found."

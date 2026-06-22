@@ -131,8 +131,8 @@ function SettingsDialog({ onClose }: { onClose: () => void }) {
               <div className="metric-value">50%</div>
             </div>
             <div>
-              <div className="label">Almost band</div>
-              <div className="metric-value">15%</div>
+              <div className="label">Years</div>
+              <div className="metric-value">10</div>
             </div>
             <div>
               <div className="label">Big Five healthy</div>

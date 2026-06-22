@@ -182,13 +182,15 @@ export type BigFiveResult = {
 
 export type ValuationAssumptions = {
   eps: number;
+  historicalGrowthRate?: number;
+  analystGrowthRate?: number;
   growthRate: number;
+  historicalPe?: number;
   futurePe: number;
   requiredReturn: number;
   years: number;
   marginOfSafety: number;
   currentPrice: number;
-  almostBand: number;
 };
 
 export type ValuationResult = {
@@ -281,7 +283,6 @@ export type SavedBusinessItem = {
 export type ValuationDefaults = {
   requiredReturn: number;
   marginOfSafety: number;
-  almostBand: number;
   bigFiveHealthyThreshold: number;
 };
 

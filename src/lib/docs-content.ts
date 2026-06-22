@@ -53,8 +53,8 @@ export const docsTopics: DocsTopic[] = [
     title: "Sticker Price",
     summary: "Sticker price is the present value of a future price based on EPS, growth, PE, and required return.",
     whyItMatters: "It gives you a disciplined estimate before applying a margin of safety.",
-    howAppMeasures: "The valuation step projects EPS, multiplies by future PE, and discounts the future price back.",
-    manualJudgment: "Growth and future PE are assumptions. Edit them until the model feels conservative.",
+    howAppMeasures: "The valuation step uses current EPS, selected growth, future PE, 10 years, and a 15% required return.",
+    manualJudgment: "Use the lower conservative growth estimate and the lower of historical PE or 2x growth.",
   },
   {
     id: "margin-of-safety",
@@ -109,7 +109,7 @@ export const docsTopics: DocsTopic[] = [
     title: "How Verdicts Are Decided",
     summary: "Price verdict uses Pass, Almost, or Nope only.",
     whyItMatters: "The verdict is about price versus model value, not a command to buy or sell.",
-    howAppMeasures: "Pass means price is at or below MOS; Almost means within the configured band; Nope is above that band.",
+    howAppMeasures: "Pass means price is at or below MOS; Almost means price is above MOS but not above sticker; Nope means price is above sticker.",
     manualJudgment: "If EPS or price is missing, enter a manual value before trusting the verdict.",
   },
   {

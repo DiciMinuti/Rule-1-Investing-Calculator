@@ -19,6 +19,8 @@ import {
   calculateValuation,
   deriveBusinessGrade,
   deriveDefaultAssumptions,
+  futurePeFromGrowth,
+  selectRuleOneGrowthRate,
 } from "@/lib/rule1";
 import { getQualitativeBrief } from "@/lib/data/qualitative-briefs";
 import {
@@ -338,7 +340,7 @@ export function EvaluationWorkspace() {
 
       setLoadSteps((current) => updateLoadStep(current, "calculation", "loading"));
       const bigFive = buildBigFive(financials);
-      const nextAssumptions = deriveDefaultAssumptions(financials, prices.latest?.close ?? 0);
+      const nextAssumptions = deriveDefaultAssumptions(financials, prices.latest?.close ?? 0, prices.history);
       setLoaded({
         profile: profileData.profile,
         financials,
@@ -991,14 +993,12 @@ function CompanySummary({
   isSaved: boolean;
   onSaveToggle: () => void;
 }) {
-  const hasCurrentPrice = Number.isFinite(valuation.currentPrice) && valuation.currentPrice > 0;
-  const hasMosPrice = Number.isFinite(valuation.mosPrice) && valuation.mosPrice > 0;
-  const isBelowMos = hasCurrentPrice && hasMosPrice && valuation.currentPrice <= valuation.mosPrice;
+  const valuationTone = verdictTone(valuation.priceVerdict);
 
   return (
     <section className="panel sticky-summary">
       <div className="summary-layout">
-        <div className={`summary-main stack compact-gap ${gradeTone(loaded.bigFive.businessContribution)}`}>
+        <div className={`summary-main stack compact-gap ${valuationTone}`}>
           <div className="row wrap">
             <h1 className="title">
               {loaded.profile.name} <span className="subtle">{loaded.profile.symbol}</span>
@@ -1012,9 +1012,9 @@ function CompanySummary({
           </div>
         </div>
         <div className="summary-metrics">
-          <ValueMini label="Current" value={formatCurrency(valuation.currentPrice)} />
+          <ValueMini label="Current" value={formatCurrency(valuation.currentPrice)} tone={valuationTone} />
           <ValueMini label="Sticker" value={formatCurrency(valuation.stickerPrice)} />
-          <ValueMini label="MOS" value={formatCurrency(valuation.mosPrice)} tone={isBelowMos ? "good" : "bad"} />
+          <ValueMini label="MOS" value={formatCurrency(valuation.mosPrice)} tone={valuationTone} />
           <SaveToggleButton isSaved={isSaved} onClick={onSaveToggle} />
         </div>
       </div>
@@ -1073,19 +1073,17 @@ function ResultStep({
   loaded: LoadedCompany;
   valuation: NonNullable<ReturnType<typeof calculateValuation>>;
 }) {
-  const hasCurrentPrice = Number.isFinite(valuation.currentPrice) && valuation.currentPrice > 0;
-  const hasMosPrice = Number.isFinite(valuation.mosPrice) && valuation.mosPrice > 0;
-  const isBelowMos = hasCurrentPrice && hasMosPrice && valuation.currentPrice <= valuation.mosPrice;
+  const valuationTone = verdictTone(valuation.priceVerdict);
 
   return (
     <div className="stack">
       <BigFiveResultRows loaded={loaded} />
 
       <div className="valuation-strip result-valuation-strip">
-        <ValueBlock label="Current price" value={formatCurrency(valuation.currentPrice)} />
+        <ValueBlock label="Current price" value={formatCurrency(valuation.currentPrice)} tone={valuationTone} />
         <ValueBlock label="Gap to MOS" value={formatPercent(valuation.gapToMos)} />
         <ValueBlock label="Sticker price" value={formatCurrency(valuation.stickerPrice)} />
-        <ValueBlock label="MOS price" value={formatCurrency(valuation.mosPrice)} tone={isBelowMos ? "good" : "bad"} />
+        <ValueBlock label="MOS price" value={formatCurrency(valuation.mosPrice)} tone={valuationTone} />
       </div>
     </div>
   );
@@ -1253,10 +1251,61 @@ function ValuationStep({
   setAssumption: <K extends keyof ValuationAssumptions>(key: K, value: ValuationAssumptions[K]) => void;
   valuation: NonNullable<ReturnType<typeof calculateValuation>>;
 }) {
-  function setNumber<K extends keyof ValuationAssumptions>(key: K, rawValue: string, percent = false) {
+  const valuationTone = verdictTone(valuation.priceVerdict);
+
+  function parseInputNumber(rawValue: string, percent = false, optional = false) {
+    if (optional && rawValue.trim() === "") {
+      return undefined;
+    }
+
     const value = Number(rawValue);
-    const nextValue = Number.isFinite(value) ? (percent ? value / 100 : value) : 0;
+    if (!Number.isFinite(value)) {
+      return optional ? undefined : 0;
+    }
+
+    return percent ? value / 100 : value;
+  }
+
+  function setNumber<K extends keyof ValuationAssumptions>(
+    key: K,
+    rawValue: string,
+    percent = false,
+    optional = false,
+  ) {
+    const nextValue = parseInputNumber(rawValue, percent, optional);
     setAssumption(key, nextValue as ValuationAssumptions[K]);
+  }
+
+  function resetRuleOneGrowthAndPe() {
+    const growthRate = selectRuleOneGrowthRate(
+      assumptions.historicalGrowthRate,
+      assumptions.analystGrowthRate,
+    );
+    setAssumption("growthRate", growthRate);
+    setAssumption("futurePe", futurePeFromGrowth(growthRate, assumptions.historicalPe));
+  }
+
+  function setRuleOneInput<K extends "historicalGrowthRate" | "analystGrowthRate" | "historicalPe">(
+    key: K,
+    rawValue: string,
+    percent = false,
+  ) {
+    const nextValue = parseInputNumber(rawValue, percent, true);
+    const nextAssumptions = { ...assumptions, [key]: nextValue };
+    const growthRate =
+      key === "historicalPe"
+        ? assumptions.growthRate
+        : selectRuleOneGrowthRate(nextAssumptions.historicalGrowthRate, nextAssumptions.analystGrowthRate);
+
+    setAssumption(key, nextValue as ValuationAssumptions[K]);
+    setAssumption("growthRate", growthRate);
+    setAssumption("futurePe", futurePeFromGrowth(growthRate, nextAssumptions.historicalPe));
+  }
+
+  function setGrowthUsed(rawValue: string) {
+    const growthRate = parseInputNumber(rawValue, true) ?? 0;
+    setAssumption("growthRate", growthRate);
+    setAssumption("futurePe", futurePeFromGrowth(growthRate, assumptions.historicalPe));
   }
 
   return (
@@ -1265,7 +1314,7 @@ function ValuationStep({
         <div>
           <h2 className="section-title">Inputs</h2>
           <p className="muted" style={{ margin: "4px 0 0" }}>
-            Edit the input numbers. The sticker price and MOS recalculate immediately.
+            Rule #1 sticker price uses the lower growth estimate and the lower PE estimate.
           </p>
         </div>
       </div>
@@ -1273,40 +1322,32 @@ function ValuationStep({
         <button
           className="segmented-button"
           type="button"
-          onClick={() => {
-            setAssumption("growthRate", Math.max(0, assumptions.growthRate - 0.03));
-            setAssumption("futurePe", Math.max(0, assumptions.futurePe - 5));
-          }}
+          onClick={resetRuleOneGrowthAndPe}
         >
-          Conservative
-        </button>
-        <button
-          className="segmented-button"
-          type="button"
-          onClick={() => {
-            setAssumption("growthRate", assumptions.growthRate);
-            setAssumption("futurePe", assumptions.futurePe);
-          }}
-        >
-          Base
-        </button>
-        <button
-          className="segmented-button"
-          type="button"
-          onClick={() => {
-            setAssumption("growthRate", Math.min(0.3, assumptions.growthRate + 0.03));
-            setAssumption("futurePe", Math.min(50, assumptions.futurePe + 5));
-          }}
-        >
-          Optimistic
+          Use lower growth/PE
         </button>
       </div>
       <div className="grid four">
         <NumberField label="Current/TTM EPS" value={assumptions.eps} onChange={(value) => setNumber("eps", value)} />
         <NumberField
-          label="Growth rate %"
+          label="10y EPS growth %"
+          value={assumptions.historicalGrowthRate === undefined ? undefined : assumptions.historicalGrowthRate * 100}
+          onChange={(value) => setRuleOneInput("historicalGrowthRate", value, true)}
+        />
+        <NumberField
+          label="Analyst growth %"
+          value={assumptions.analystGrowthRate === undefined ? undefined : assumptions.analystGrowthRate * 100}
+          onChange={(value) => setRuleOneInput("analystGrowthRate", value, true)}
+        />
+        <NumberField
+          label="Growth used %"
           value={assumptions.growthRate * 100}
-          onChange={(value) => setNumber("growthRate", value, true)}
+          onChange={setGrowthUsed}
+        />
+        <NumberField
+          label="Historical PE"
+          value={assumptions.historicalPe}
+          onChange={(value) => setRuleOneInput("historicalPe", value)}
         />
         <NumberField label="Future PE" value={assumptions.futurePe} onChange={(value) => setNumber("futurePe", value)} />
         <NumberField
@@ -1325,17 +1366,12 @@ function ValuationStep({
           value={assumptions.currentPrice}
           onChange={(value) => setNumber("currentPrice", value)}
         />
-        <NumberField
-          label="Almost band %"
-          value={assumptions.almostBand * 100}
-          onChange={(value) => setNumber("almostBand", value, true)}
-        />
       </div>
       <div className="valuation-strip">
         <ValueBlock label="Future EPS" value={formatCurrency(valuation.futureEps)} />
         <ValueBlock label="Future price" value={formatCurrency(valuation.futurePrice)} />
         <ValueBlock label="Sticker price" value={formatCurrency(valuation.stickerPrice)} />
-        <ValueBlock label="MOS price" value={formatCurrency(valuation.mosPrice)} />
+        <ValueBlock label="MOS price" value={formatCurrency(valuation.mosPrice)} tone={valuationTone} />
       </div>
       {valuation.warnings.length ? (
         <div className="warning-box">
@@ -1361,7 +1397,7 @@ function NumberField({
   onChange,
 }: {
   label: string;
-  value: number;
+  value: number | undefined;
   onChange: (value: string) => void;
 }) {
   return (
@@ -1371,7 +1407,7 @@ function NumberField({
         className="field"
         type="number"
         step="0.01"
-        value={Number.isFinite(value) ? value : 0}
+        value={Number.isFinite(value) ? value : ""}
         onChange={(event) => onChange(event.target.value)}
       />
     </label>

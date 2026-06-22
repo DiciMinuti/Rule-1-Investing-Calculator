@@ -120,13 +120,13 @@ This evaluates the quality of the business through Rule #1 logic.
 This evaluates current price against valuation.
 
 - `Pass` - current price is at or below MOS price.
-- `Almost` - current price is above MOS but close enough to track closely.
-- `Nope` - current price is meaningfully above MOS.
+- `Almost` - current price is above MOS but not above sticker price.
+- `Nope` - current price is above sticker price.
 
 Avoid using these as investment commands. The UI should say things like:
 
 - "Pass: price is below MOS."
-- "Almost: close to MOS."
+- "Almost: price is below sticker."
 - "Nope: price is too high for this model."
 
 Do not use:
@@ -362,7 +362,10 @@ Purpose: calculate sticker price and MOS.
 Inputs:
 
 - Current/TTM EPS.
-- Growth rate.
+- 10y EPS growth rate.
+- Analyst growth rate.
+- Growth rate used.
+- Historical PE.
 - Future PE.
 - Required return, default 15%.
 - Years, default 10.
@@ -381,8 +384,8 @@ Outputs:
 Price verdict logic:
 
 - Pass: current price <= MOS price.
-- Almost: current price is above MOS but within a configurable band, default 15%.
-- Nope: current price is more than 15% above MOS.
+- Almost: current price is above MOS price and <= sticker price.
+- Nope: current price is above sticker price.
 
 Visual:
 
@@ -522,7 +525,7 @@ Sections:
 - Defaults:
   - Required return.
   - MOS percentage.
-  - Almost band.
+  - Years.
   - Big Five healthy threshold.
 - Workspace:
   - Export.

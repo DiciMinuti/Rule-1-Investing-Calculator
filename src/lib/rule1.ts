@@ -6,6 +6,7 @@ import type {
   GrowthResult,
   GrowthWindow,
   MetricStatus,
+  PricePoint,
   ValuationAssumptions,
   ValuationResult,
 } from "@/lib/types";
@@ -19,12 +20,9 @@ type SeriesPoint = {
 
 export const DEFAULT_REQUIRED_RETURN = 0.15;
 export const DEFAULT_MARGIN_OF_SAFETY = 0.5;
-export const DEFAULT_ALMOST_BAND = 0.15;
 export const DEFAULT_BIG_FIVE_THRESHOLD = 0.1;
 export const DEFAULT_YEARS = 10;
-const DEFAULT_FALLBACK_GROWTH_RATE = 0.1;
-const MAX_AUTO_GROWTH_RATE = 0.25;
-const SUPPORTING_GROWTH_PREMIUM = 0.03;
+export const DEFAULT_MAX_GROWTH_RATE = 0.15;
 
 export function isFiniteNumber(value: unknown): value is number {
   return typeof value === "number" && Number.isFinite(value);
@@ -97,33 +95,12 @@ export function calculateGrowthWindows(points: SeriesPoint[]) {
   );
 }
 
-function growthWindowValues(points: SeriesPoint[]) {
-  const windows = calculateGrowthWindows(points);
-
-  return WINDOWS.map((window) => windows[window].value).map(usableGrowth).filter(isFiniteNumber);
-}
-
-function centralGrowthValue(points: SeriesPoint[]) {
-  return median(growthWindowValues(points));
-}
-
-function clampAutoGrowth(value: number) {
-  return Math.max(0, Math.min(MAX_AUTO_GROWTH_RATE, value));
-}
-
-function median(values: number[]) {
+function average(values: number[]) {
   if (!values.length) {
     return null;
   }
 
-  const sorted = values.toSorted((a, b) => a - b);
-  const middle = Math.floor(sorted.length / 2);
-
-  if (sorted.length % 2 === 1) {
-    return sorted[middle];
-  }
-
-  return (sorted[middle - 1] + sorted[middle]) / 2;
+  return values.reduce((sum, value) => sum + value, 0) / values.length;
 }
 
 function usableGrowth(value: number | null | undefined) {
@@ -346,12 +323,76 @@ export function deriveBusinessGrade({
   return "dull";
 }
 
-export function futurePeFromGrowth(growthRate: number, cap = 50) {
+export function futurePeFromGrowth(growthRate: number, historicalPe?: number) {
   if (!isFiniteNumber(growthRate) || growthRate <= 0) {
     return 0;
   }
 
-  return Math.min(cap, growthRate * 200);
+  const doubleGrowthPe = growthRate * 200;
+  return isFiniteNumber(historicalPe) && historicalPe > 0
+    ? Math.min(historicalPe, doubleGrowthPe)
+    : doubleGrowthPe;
+}
+
+export function selectRuleOneGrowthRate(
+  historicalGrowthRate?: number,
+  analystGrowthRate?: number,
+  cap = DEFAULT_MAX_GROWTH_RATE,
+) {
+  const candidates = [historicalGrowthRate, analystGrowthRate]
+    .filter(isFiniteNumber)
+    .map((growthRate) => Math.max(0, Math.min(cap, growthRate)));
+
+  return candidates.length ? Math.min(...candidates) : 0;
+}
+
+export function deriveHistoricalEpsGrowthRate(financials: AnnualFinancials[]) {
+  const sorted = financials.toSorted((a, b) => a.fiscalYear - b.fiscalYear);
+  return (
+    usableGrowth(
+      calculateGrowthWindow(
+        sorted.map((row) => ({
+          fiscalYear: row.fiscalYear,
+          value: row.epsDiluted ?? deriveEps(row.netIncome, row.sharesDiluted) ?? null,
+        })),
+        DEFAULT_YEARS,
+      ).value,
+    ) ?? undefined
+  );
+}
+
+function yearEndCloseByFiscalYear(priceHistory: PricePoint[]) {
+  return priceHistory
+    .filter((point) => isFiniteNumber(point.close))
+    .toSorted((a, b) => a.date.localeCompare(b.date))
+    .reduce((pricesByYear, point) => {
+      const fiscalYear = Number(point.date.slice(0, 4));
+      if (Number.isInteger(fiscalYear)) {
+        pricesByYear.set(fiscalYear, point.close);
+      }
+
+      return pricesByYear;
+    }, new Map<number, number>());
+}
+
+export function deriveHistoricalPe(financials: AnnualFinancials[], priceHistory: PricePoint[] = []) {
+  const pricesByYear = yearEndCloseByFiscalYear(priceHistory);
+  const ratios = financials
+    .toSorted((a, b) => a.fiscalYear - b.fiscalYear)
+    .map((row) => {
+      const eps = row.epsDiluted ?? deriveEps(row.netIncome, row.sharesDiluted);
+      const price = pricesByYear.get(row.fiscalYear);
+
+      if (!isFiniteNumber(eps) || eps <= 0 || !isFiniteNumber(price) || price <= 0) {
+        return null;
+      }
+
+      return price / eps;
+    })
+    .filter(isFiniteNumber)
+    .slice(-DEFAULT_YEARS);
+
+  return average(ratios) ?? undefined;
 }
 
 export function calculateValuation(
@@ -367,7 +408,6 @@ export function calculateValuation(
     years,
     marginOfSafety,
     currentPrice,
-    almostBand,
   } = assumptions;
 
   if (!isFiniteNumber(currentPrice) || currentPrice <= 0) {
@@ -430,7 +470,7 @@ export function calculateValuation(
       ? "nope"
       : safeCurrentPrice <= mosPrice
         ? "pass"
-        : safeCurrentPrice <= mosPrice * (1 + almostBand)
+        : safeCurrentPrice <= stickerPrice
           ? "almost"
           : "nope";
 
@@ -451,70 +491,35 @@ export function latestAnnualFinancial(financials: AnnualFinancials[]) {
   return financials.toSorted((a, b) => b.fiscalYear - a.fiscalYear)[0];
 }
 
-function deriveSustainableGrowthRate(financials: AnnualFinancials[]) {
-  const sorted = financials.toSorted((a, b) => a.fiscalYear - b.fiscalYear);
-  const epsGrowth = usableGrowth(
-    centralGrowthValue(
-      sorted.map((row) => ({
-        fiscalYear: row.fiscalYear,
-        value: row.epsDiluted ?? deriveEps(row.netIncome, row.sharesDiluted) ?? null,
-      })),
-    ),
-  );
-  const supportingGrowthRates = [
-    centralGrowthValue(
-      sorted.map((row) => ({
-        fiscalYear: row.fiscalYear,
-        value: row.revenue ?? null,
-      })),
-    ),
-    centralGrowthValue(
-      sorted.map((row) => ({
-        fiscalYear: row.fiscalYear,
-        value: bookValuePerShare(row.stockholdersEquity, row.sharesDiluted) ?? row.stockholdersEquity ?? null,
-      })),
-    ),
-    centralGrowthValue(
-      sorted.map((row) => {
-        const cashFlow = row.freeCashFlow ?? calculateFreeCashFlow(row.operatingCashFlow, row.capex);
-        const perShare =
-          isFiniteNumber(cashFlow) && isFiniteNumber(row.sharesDiluted) && row.sharesDiluted > 0
-            ? cashFlow / row.sharesDiluted
-            : cashFlow;
-
-        return { fiscalYear: row.fiscalYear, value: perShare ?? null };
-      }),
-    ),
-  ]
-    .map(usableGrowth)
-    .filter(isFiniteNumber);
-  const supportingGrowth = median(supportingGrowthRates);
-  const selectedGrowth =
-    epsGrowth !== null && supportingGrowth !== null
-      ? Math.min(epsGrowth, supportingGrowth + SUPPORTING_GROWTH_PREMIUM)
-      : epsGrowth ?? supportingGrowth ?? DEFAULT_FALLBACK_GROWTH_RATE;
-
-  return clampAutoGrowth(selectedGrowth);
-}
-
 export function deriveDefaultAssumptions(
   financials: AnnualFinancials[],
   currentPrice: number,
+  priceHistory: PricePoint[] = [],
   overrides?: Partial<ValuationAssumptions>,
 ): ValuationAssumptions {
   const latest = latestAnnualFinancial(financials);
   const eps = latest?.epsDiluted ?? deriveEps(latest?.netIncome, latest?.sharesDiluted) ?? 0;
-  const growthRate = deriveSustainableGrowthRate(financials);
-
-  return {
+  const historicalGrowthRate = deriveHistoricalEpsGrowthRate(financials);
+  const historicalPe = deriveHistoricalPe(financials, priceHistory);
+  const baseAssumptions = {
     eps,
-    growthRate,
-    futurePe: futurePeFromGrowth(growthRate),
+    historicalGrowthRate,
+    analystGrowthRate: undefined,
+    historicalPe,
     requiredReturn: DEFAULT_REQUIRED_RETURN,
     years: DEFAULT_YEARS,
     marginOfSafety: DEFAULT_MARGIN_OF_SAFETY,
     currentPrice,
-    almostBand: DEFAULT_ALMOST_BAND,
     ...overrides,
+  };
+  const growthRate =
+    overrides?.growthRate ??
+    selectRuleOneGrowthRate(baseAssumptions.historicalGrowthRate, baseAssumptions.analystGrowthRate);
+  const futurePe = overrides?.futurePe ?? futurePeFromGrowth(growthRate, baseAssumptions.historicalPe);
+
+  return {
+    ...baseAssumptions,
+    growthRate,
+    futurePe,
   };
 }

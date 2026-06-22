@@ -7,6 +7,7 @@ import {
   deriveDefaultAssumptions,
   deriveEps,
   futurePeFromGrowth,
+  selectRuleOneGrowthRate,
 } from "@/lib/rule1";
 
 describe("Rule #1 calculations", () => {
@@ -30,9 +31,16 @@ describe("Rule #1 calculations", () => {
     expect(calculateFreeCashFlow(100, -30)).toBe(70);
   });
 
-  it("turns decimal growth into a two-times-growth PE correctly", () => {
+  it("uses the lower of historical PE and two-times growth PE", () => {
     expect(futurePeFromGrowth(0.12)).toBe(24);
-    expect(futurePeFromGrowth(0.4)).toBe(50);
+    expect(futurePeFromGrowth(0.12, 18)).toBe(18);
+    expect(futurePeFromGrowth(0.12, 40)).toBe(24);
+  });
+
+  it("uses the lower historical or analyst growth rate with a 15% auto cap", () => {
+    expect(selectRuleOneGrowthRate(0.12, undefined)).toBe(0.12);
+    expect(selectRuleOneGrowthRate(0.12, 0.08)).toBe(0.08);
+    expect(selectRuleOneGrowthRate(0.25, undefined)).toBe(0.15);
   });
 
   it("calculates sticker price, MOS price, and pass verdict", () => {
@@ -45,7 +53,6 @@ describe("Rule #1 calculations", () => {
         years: 10,
         marginOfSafety: 0.5,
         currentPrice: 25,
-        almostBand: 0.15,
       },
       "strong",
     );
@@ -56,7 +63,7 @@ describe("Rule #1 calculations", () => {
     expect(result.priceVerdict).toBe("pass");
   });
 
-  it("uses almost and nope around the MOS threshold", () => {
+  it("uses almost between MOS and sticker, then nope above sticker", () => {
     const base = {
       eps: 5,
       growthRate: 0.1,
@@ -64,89 +71,68 @@ describe("Rule #1 calculations", () => {
       requiredReturn: 0.15,
       years: 10,
       marginOfSafety: 0.5,
-      almostBand: 0.15,
     };
 
     expect(calculateValuation({ ...base, currentPrice: 35 }, "middle").priceVerdict).toBe("almost");
-    expect(calculateValuation({ ...base, currentPrice: 45 }, "middle").priceVerdict).toBe("nope");
+    expect(calculateValuation({ ...base, currentPrice: 65 }, "middle").priceVerdict).toBe("nope");
   });
 
-  it("uses the median EPS growth window for default valuation assumptions", () => {
+  it("uses 10-year EPS growth and historical PE for default valuation assumptions", () => {
+    const financials = Array.from({ length: 11 }, (_, index) => {
+      const fiscalYear = 2015 + index;
+      const epsDiluted = 5 * 1.12 ** index;
+      return { fiscalYear, epsDiluted, sourceFacts: {} };
+    });
+    const priceHistory = financials.map((row) => ({
+      date: `${row.fiscalYear}-12-31`,
+      close: (row.epsDiluted ?? 0) * 18,
+    }));
     const assumptions = deriveDefaultAssumptions(
-      [
-        { fiscalYear: 2013, epsDiluted: 4.88, sourceFacts: {} },
-        { fiscalYear: 2020, epsDiluted: 3.77, sourceFacts: {} },
-        { fiscalYear: 2021, epsDiluted: 10.02, sourceFacts: {} },
-        { fiscalYear: 2022, epsDiluted: 9.85, sourceFacts: {} },
-        { fiscalYear: 2023, epsDiluted: 11.21, sourceFacts: {} },
-        { fiscalYear: 2024, epsDiluted: 14.01, sourceFacts: {} },
-        { fiscalYear: 2025, epsDiluted: 15.38, sourceFacts: {} },
-      ],
-      340.54,
+      financials,
+      priceHistory.at(-1)?.close ?? 0,
+      priceHistory,
     );
 
-    expect(assumptions.growthRate).toBeCloseTo(0.1303, 4);
-    expect(assumptions.futurePe).toBeCloseTo(26.05, 2);
+    expect(assumptions.historicalGrowthRate).toBeCloseTo(0.12, 4);
+    expect(assumptions.growthRate).toBeCloseTo(0.12, 4);
+    expect(assumptions.historicalPe).toBeCloseTo(18, 2);
+    expect(assumptions.futurePe).toBeCloseTo(18, 2);
   });
 
-  it("tempers EPS rebound growth when broader business metrics grow slower", () => {
+  it("uses the lower analyst growth estimate when provided", () => {
+    const financials = Array.from({ length: 11 }, (_, index) => {
+      const fiscalYear = 2015 + index;
+      const epsDiluted = 4 * 1.12 ** index;
+      return { fiscalYear, epsDiluted, sourceFacts: {} };
+    });
+    const priceHistory = financials.map((row) => ({
+      date: `${row.fiscalYear}-12-31`,
+      close: (row.epsDiluted ?? 0) * 25,
+    }));
     const assumptions = deriveDefaultAssumptions(
-      [
-        {
-          fiscalYear: 2020,
-          revenue: 100,
-          epsDiluted: 3.77,
-          sharesDiluted: 1,
-          stockholdersEquity: 100,
-          freeCashFlow: 10,
-          sourceFacts: {},
-        },
-        {
-          fiscalYear: 2025,
-          revenue: 150,
-          epsDiluted: 15.38,
-          sharesDiluted: 1,
-          stockholdersEquity: 140,
-          freeCashFlow: 14,
-          sourceFacts: {},
-        },
-      ],
-      340.54,
+      financials,
+      priceHistory.at(-1)?.close ?? 0,
+      priceHistory,
+      { analystGrowthRate: 0.08 },
     );
 
-    expect(assumptions.growthRate).toBeGreaterThan(0.09);
-    expect(assumptions.growthRate).toBeLessThan(0.1);
-    expect(assumptions.futurePe).toBeLessThan(20);
+    expect(assumptions.growthRate).toBeCloseTo(0.08, 4);
+    expect(assumptions.futurePe).toBeCloseTo(16, 2);
   });
 
-  it("keeps a high default growth rate when supporting metrics confirm it", () => {
-    const growth = 1.25 ** 5;
+  it("caps automatic growth at 15%", () => {
     const assumptions = deriveDefaultAssumptions(
-      [
-        {
-          fiscalYear: 2020,
-          revenue: 100,
-          epsDiluted: 2,
-          sharesDiluted: 1,
-          stockholdersEquity: 100,
-          freeCashFlow: 10,
-          sourceFacts: {},
-        },
-        {
-          fiscalYear: 2025,
-          revenue: 100 * growth,
-          epsDiluted: 2 * growth,
-          sharesDiluted: 1,
-          stockholdersEquity: 100 * growth,
-          freeCashFlow: 10 * growth,
-          sourceFacts: {},
-        },
-      ],
+      Array.from({ length: 11 }, (_, index) => ({
+        fiscalYear: 2015 + index,
+        epsDiluted: 2 * 1.25 ** index,
+        sourceFacts: {},
+      })),
       100,
     );
 
-    expect(assumptions.growthRate).toBeCloseTo(0.25, 4);
-    expect(assumptions.futurePe).toBe(50);
+    expect(assumptions.historicalGrowthRate).toBeCloseTo(0.25, 4);
+    expect(assumptions.growthRate).toBeCloseTo(0.15, 4);
+    expect(assumptions.futurePe).toBeCloseTo(30, 2);
   });
 
   it("scores Big Five with healthy threshold logic", () => {
