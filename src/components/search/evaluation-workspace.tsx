@@ -1690,7 +1690,6 @@ function IndicatorsStep({ prices }: { prices: PriceHistory }) {
   const macd = indicators.macd;
   const stochastics = indicators.stochastics;
   const movingAverage = indicators.movingAverage;
-  const summary = indicators.summary;
 
   return (
     <div className="stack">
@@ -1742,18 +1741,6 @@ function IndicatorsStep({ prices }: { prices: PriceHistory }) {
           <IndicatorStat label="Date" value={formatDate(movingAverage.latest?.date)} />
           <IndicatorStat label="Last cross" value={formatCrossoverDate(movingAverage.crossover?.date)} />
           <IndicatorStat label="Since cross" value={formatSessionsAgo(movingAverage.crossover?.sessionsAgo)} />
-        </IndicatorCard>
-
-        <IndicatorCard
-          title="Three Tools"
-          meta={`${summary.availableCount}/${summary.totalCount}`}
-          signal={summary.signal}
-          detail={summary.detail}
-        >
-          <IndicatorStat label="Overall" value={summary.label} />
-          <IndicatorStat label="Available" value={`${summary.availableCount}/${summary.totalCount}`} />
-          <IndicatorStat label="Up" value={String(summary.bullishCount)} />
-          <IndicatorStat label="Down" value={String(summary.bearishCount)} />
         </IndicatorCard>
       </div>
     </div>
