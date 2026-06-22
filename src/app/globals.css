@@ -465,6 +465,14 @@ a:hover {
   margin-top: 10px;
 }
 
+.suggestion-group-label {
+  margin: 8px 4px 2px;
+  color: var(--subtle);
+  font-size: 0.72rem;
+  font-weight: 720;
+  text-transform: uppercase;
+}
+
 .suggestion-row {
   display: grid;
   grid-template-columns: 84px 1fr auto;
@@ -485,6 +493,14 @@ a:hover {
   background: var(--surface-strong);
 }
 
+.suggestion-row.best-match {
+  grid-template-columns: 104px 1fr auto;
+  min-height: 62px;
+  border: 1px solid var(--border);
+  background: var(--surface-strong);
+  padding: 10px 12px;
+}
+
 .suggestion-symbol {
   font-weight: 760;
 }
@@ -495,6 +511,63 @@ a:hover {
   color: var(--muted);
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.suggestion-row.best-match .suggestion-symbol {
+  font-size: 1.2rem;
+}
+
+.suggestion-row.best-match .suggestion-name {
+  display: grid;
+  gap: 3px;
+  white-space: normal;
+}
+
+.suggestion-row.best-match .suggestion-name strong {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--text);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.suggestion-row.best-match .suggestion-name span {
+  color: var(--subtle);
+  font-size: 0.78rem;
+  font-weight: 680;
+  text-transform: uppercase;
+}
+
+.suggestion-quote {
+  display: grid;
+  justify-items: end;
+  gap: 2px;
+  min-width: 82px;
+  color: var(--muted);
+  text-align: right;
+}
+
+.suggestion-quote strong {
+  color: var(--text);
+  font-size: 0.92rem;
+  font-weight: 760;
+}
+
+.suggestion-change {
+  font-size: 0.74rem;
+  font-weight: 760;
+}
+
+.suggestion-change.good {
+  color: var(--green);
+}
+
+.suggestion-change.bad {
+  color: var(--red);
+}
+
+.suggestion-row.best-match .suggestion-quote strong {
+  font-size: 1rem;
 }
 
 .group-suggestion-row {
@@ -1315,9 +1388,20 @@ a:hover {
     grid-template-columns: 68px 1fr;
   }
 
+  .suggestion-row.best-match {
+    grid-template-columns: 76px 1fr;
+  }
+
   .suggestion-row .pill {
     grid-column: 1 / -1;
     width: max-content;
+  }
+
+  .suggestion-quote {
+    grid-column: 1 / -1;
+    justify-items: start;
+    min-width: 0;
+    text-align: left;
   }
 
   .sticky-summary {

@@ -250,32 +250,103 @@ export async function getTickerList(): Promise<CompanySearchResult[]> {
 }
 
 export async function searchCompanies(query: string) {
-  const normalizedQuery = query.trim().toLowerCase();
+  const normalizedQuery = normalizeSearchText(query);
+  const normalizedSymbolQuery = normalizeSearchSymbol(query);
   if (normalizedQuery.length < 1) {
     return [];
   }
 
   const companies = await getTickerList();
+  const aliases = companySearchAliases[normalizedQuery] ?? [];
   return companies
-    .filter((company) => {
-      const symbol = company.symbol.toLowerCase();
-      const name = company.name.toLowerCase();
-      return symbol.includes(normalizedQuery) || name.includes(normalizedQuery);
-    })
+    .map((company) => ({
+      company,
+      score: scoreCompanySearchResult(company, normalizedQuery, normalizedSymbolQuery, aliases),
+    }))
+    .filter((result) => result.score < Number.POSITIVE_INFINITY)
     .toSorted((a, b) => {
-      const aSymbol = a.symbol.toLowerCase();
-      const bSymbol = b.symbol.toLowerCase();
-      const aName = a.name.toLowerCase();
-      const bName = b.name.toLowerCase();
-      const aScore =
-        (aSymbol === normalizedQuery ? 0 : aSymbol.startsWith(normalizedQuery) ? 1 : 2) +
-        (aName.startsWith(normalizedQuery) ? 0 : 1);
-      const bScore =
-        (bSymbol === normalizedQuery ? 0 : bSymbol.startsWith(normalizedQuery) ? 1 : 2) +
-        (bName.startsWith(normalizedQuery) ? 0 : 1);
-      return aScore - bScore || a.symbol.localeCompare(b.symbol);
+      return a.score - b.score || a.company.symbol.localeCompare(b.company.symbol);
     })
+    .map((result) => result.company)
     .slice(0, 12);
+}
+
+function normalizeSearchText(value: string) {
+  return value
+    .trim()
+    .toLowerCase()
+    .replace(/&/g, " and ")
+    .replace(/['.,/()]/g, " ")
+    .replace(/\b(incorporated|inc|corp|corporation|co|company|class|common|stock|plc|ltd|limited|holdings?)\b/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function normalizeSearchSymbol(value: string) {
+  return value.trim().toUpperCase().replace(/[^A-Z0-9]/g, "");
+}
+
+const companySearchAliases: Record<string, string[]> = {
+  alphabet: ["GOOG", "GOOGL"],
+  amazon: ["AMZN"],
+  apple: ["AAPL"],
+  berkshire: ["BRK-B", "BRK-A"],
+  facebook: ["META"],
+  google: ["GOOG", "GOOGL"],
+  mastercard: ["MA"],
+  meta: ["META"],
+  microsoft: ["MSFT"],
+  netflix: ["NFLX"],
+  nvidia: ["NVDA"],
+  tesla: ["TSLA"],
+  visa: ["V"],
+  walmart: ["WMT"],
+};
+
+function scoreCompanySearchResult(
+  company: CompanySearchResult,
+  normalizedQuery: string,
+  normalizedSymbolQuery: string,
+  aliases: string[],
+) {
+  const symbol = company.symbol.toUpperCase();
+  const compactSymbol = normalizeSearchSymbol(company.symbol);
+  const name = normalizeSearchText(company.name);
+  const words = name.split(" ");
+
+  if (compactSymbol === normalizedSymbolQuery || symbol === normalizedSymbolQuery) {
+    return 0;
+  }
+
+  if (aliases.includes(symbol)) {
+    return 1;
+  }
+
+  if (name === normalizedQuery) {
+    return 2;
+  }
+
+  if (words.includes(normalizedQuery)) {
+    return 3;
+  }
+
+  if (name.startsWith(`${normalizedQuery} `) || name.startsWith(normalizedQuery)) {
+    return 4;
+  }
+
+  if (compactSymbol.startsWith(normalizedSymbolQuery)) {
+    return 5;
+  }
+
+  if (name.includes(` ${normalizedQuery} `) || name.includes(normalizedQuery)) {
+    return 6;
+  }
+
+  if (compactSymbol.includes(normalizedSymbolQuery)) {
+    return 7;
+  }
+
+  return Number.POSITIVE_INFINITY;
 }
 
 export async function findCompany(symbol: string) {

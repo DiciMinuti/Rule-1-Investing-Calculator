@@ -80,6 +80,12 @@ type LoadedCompany = {
   loadedAt: string;
 };
 
+type SuggestionQuote = {
+  price?: number;
+  changePercent?: number;
+  status: "loading" | "ready" | "failed";
+};
+
 type GroupEvaluationRow = {
   constituent: BusinessGroupConstituent;
   status: GroupRowStatus;
@@ -161,6 +167,7 @@ export function EvaluationWorkspace() {
   const [searchMode, setSearchMode] = useState<SearchMode>("business");
   const [query, setQuery] = useState("");
   const [suggestions, setSuggestions] = useState<CompanySearchResult[]>([]);
+  const [suggestionQuotes, setSuggestionQuotes] = useState<Record<string, SuggestionQuote>>({});
   const [searching, setSearching] = useState(false);
   const [searchError, setSearchError] = useState("");
   const [groupSuggestions, setGroupSuggestions] = useState<BusinessGroupSummary[]>([]);
@@ -177,20 +184,17 @@ export function EvaluationWorkspace() {
   const [gradeOverride, setGradeOverride] = useState<BusinessGrade | null>(null);
   const [activeStep, setActiveStep] = useState(0);
   const [savedIds, setSavedIds] = useState<Set<string>>(() => new Set());
-  const [recentSaves, setRecentSaves] = useState<SavedBusinessItem[]>([]);
 
   useEffect(() => {
     let ignore = false;
     getSavedBusinesses()
       .then((saves) => {
         if (!ignore) {
-          setRecentSaves(saves.slice(0, 5));
           setSavedIds(new Set(saves.map((save) => save.id)));
         }
       })
       .catch(() => {
         if (!ignore) {
-          setRecentSaves([]);
           setSavedIds(new Set());
         }
       });
@@ -230,6 +234,70 @@ export function EvaluationWorkspace() {
 
     return () => window.clearTimeout(handle);
   }, [query, searchMode]);
+
+  useEffect(() => {
+    if (searchMode !== "business" || !suggestions.length) {
+      setSuggestionQuotes({});
+      return;
+    }
+
+    let ignore = false;
+    const symbols = [...new Set(suggestions.map((suggestion) => suggestion.symbol))];
+    setSuggestionQuotes((current) => {
+      const next = { ...current };
+      for (const symbol of symbols) {
+        next[symbol] = next[symbol] ?? { status: "loading" };
+      }
+      return next;
+    });
+
+    async function loadSuggestionQuotes() {
+      const quoteResults = await Promise.allSettled(
+        symbols.map(async (symbol) => {
+          const data = await fetchJson<{ prices: PriceHistory }>(
+            `/api/company/${encodeURIComponent(symbol)}/prices`,
+          );
+          const latest = data.prices.latest;
+          const previous = data.prices.history.at(-2);
+          const changePercent =
+            latest && previous?.close ? (latest.close - previous.close) / previous.close : undefined;
+
+          return {
+            symbol,
+            quote: {
+              price: latest?.close,
+              changePercent,
+              status: "ready" as const,
+            },
+          };
+        }),
+      );
+
+      if (ignore) {
+        return;
+      }
+
+      setSuggestionQuotes((current) => {
+        const next = { ...current };
+        quoteResults.forEach((result, index) => {
+          const symbol = symbols[index];
+          if (!symbol) {
+            return;
+          }
+
+          next[symbol] =
+            result.status === "fulfilled" ? result.value.quote : { status: "failed" };
+        });
+        return next;
+      });
+    }
+
+    void loadSuggestionQuotes();
+
+    return () => {
+      ignore = true;
+    };
+  }, [searchMode, suggestions]);
 
   useEffect(() => {
     if (searchMode !== "group") {
@@ -496,6 +564,8 @@ export function EvaluationWorkspace() {
   }, [assumptions, businessGrade]);
 
   const isLoadedSaved = loaded ? savedIds.has(makeSavedBusinessId(loaded.profile.symbol)) : false;
+  const bestSuggestion = suggestions[0];
+  const otherSuggestions = suggestions.slice(1);
 
   const visibleGroupRows = useMemo(() => {
     if (!selectedGroup) {
@@ -546,7 +616,6 @@ export function EvaluationWorkspace() {
         next.delete(saveId);
         return next;
       });
-      setRecentSaves((current) => current.filter((save) => save.id !== saveId));
       return;
     }
 
@@ -571,7 +640,34 @@ export function EvaluationWorkspace() {
 
     await saveBusiness(save);
     setSavedIds((current) => new Set(current).add(save.id));
-    setRecentSaves((current) => [save, ...current.filter((item) => item.id !== save.id)].slice(0, 5));
+  }
+
+  function selectBusiness(symbol: string) {
+    setQuery(symbol);
+    setSuggestions([]);
+    void loadCompany(symbol);
+  }
+
+  function renderSuggestionQuote(symbol: string) {
+    const quote = suggestionQuotes[symbol];
+    const changeClass =
+      quote?.changePercent === undefined
+        ? ""
+        : quote.changePercent >= 0
+          ? "good"
+          : "bad";
+
+    return (
+      <span className="suggestion-quote" aria-label={`${symbol} price`}>
+        <strong>{quote?.status === "ready" ? formatCurrency(quote.price) : "—"}</strong>
+        {quote?.status === "ready" && quote.changePercent !== undefined ? (
+          <span className={`suggestion-change ${changeClass}`}>
+            {quote.changePercent > 0 ? "+" : ""}
+            {formatPercent(quote.changePercent)}
+          </span>
+        ) : null}
+      </span>
+    );
   }
 
   function setAssumption<K extends keyof ValuationAssumptions>(key: K, value: ValuationAssumptions[K]) {
@@ -620,54 +716,42 @@ export function EvaluationWorkspace() {
                 className="search-input"
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
-                placeholder="Search a U.S. business by ticker or name."
-                aria-label="Search a U.S. business by ticker or name"
+                placeholder="Search by ticker or business name"
+                aria-label="Search by ticker or business name"
               />
               {searching ? <Loader2 className="spin subtle" size={17} /> : null}
             </div>
-            {suggestions.length ? (
+            {bestSuggestion ? (
               <div className="suggestions">
-                {suggestions.map((suggestion) => (
+                <button
+                  className="suggestion-row best-match"
+                  key={`${bestSuggestion.symbol}-${bestSuggestion.cik}`}
+                  type="button"
+                  onClick={() => selectBusiness(bestSuggestion.symbol)}
+                >
+                  <span className="suggestion-symbol">{bestSuggestion.symbol}</span>
+                  <span className="suggestion-name">
+                    <strong>{bestSuggestion.name}</strong>
+                    <span>Best match</span>
+                  </span>
+                  {renderSuggestionQuote(bestSuggestion.symbol)}
+                </button>
+                {otherSuggestions.length ? <div className="suggestion-group-label">Other businesses</div> : null}
+                {otherSuggestions.map((suggestion) => (
                   <button
                     className="suggestion-row"
                     key={`${suggestion.symbol}-${suggestion.cik}`}
                     type="button"
-                    onClick={() => {
-                      setQuery(suggestion.symbol);
-                      setSuggestions([]);
-                      void loadCompany(suggestion.symbol);
-                    }}
+                    onClick={() => selectBusiness(suggestion.symbol)}
                   >
                     <span className="suggestion-symbol">{suggestion.symbol}</span>
                     <span className="suggestion-name">{suggestion.name}</span>
-                    <span className="pill info">{suggestion.cik ? `CIK ${suggestion.cik}` : "SEC"}</span>
+                    {renderSuggestionQuote(suggestion.symbol)}
                   </button>
                 ))}
               </div>
             ) : null}
             {searchError ? <p className="muted search-helper">{searchError}</p> : null}
-            {!loaded && !suggestions.length && !searchError ? (
-              <div className="empty-search">
-                <p className="muted">Search a U.S. business by ticker or name.</p>
-                {recentSaves.length ? (
-                  <div className="stack">
-                    <div className="label">Recent saved businesses</div>
-                    <div className="row wrap">
-                      {recentSaves.map((save) => (
-                        <button
-                          className="button"
-                          key={save.id}
-                          type="button"
-                          onClick={() => void loadCompany(save.symbol)}
-                        >
-                          {save.symbol}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                ) : null}
-              </div>
-            ) : null}
           </>
         ) : (
           <div className="stack compact-gap">
