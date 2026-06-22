@@ -1,0 +1,80 @@
+{
+  "symbol": "SCHW",
+  "companyName": "Charles Schwab",
+  "generatedAt": "2026-06-22",
+  "management": {
+    "grade": "strong",
+    "sections": [
+      {
+        "title": "Leadership",
+        "grade": "strong",
+        "summary": "Richard A. Wurster serves as President and CEO, with founder Charles R. Schwab and Walter W. Bettinger II as Co-Chairmen. Michael Verdeschi acts as CFO, overseeing a business that generated $18.837 billion in total revenue and $5.067 billion in net income for FY2025.",
+        "points": [
+          "Richard A. Wurster leads as President and CEO, while Charles R. Schwab and Walter W. Bettinger II serve as Co-Chairmen of the Board.",
+          "Michael Verdeschi serves as Managing Director and CFO, overseeing financial operations during a year of 22% net revenue growth to $23.9 billion."
+        ]
+      },
+      {
+        "title": "Capital Allocation",
+        "grade": "strong",
+        "summary": "Management oversees a savings and loan holding company model with $424.233 billion in average interest-earning assets for 2025. The bank loan portfolio totals $57.991 billion, primarily in residential real estate and pledged asset lines, while operating cash flow reached $19.587 billion.",
+        "points": [
+          "The company allocates capital across a $57.991 billion bank loan portfolio, including $30.911 billion in residential real estate and $26.603 billion in pledged asset lines.",
+          "Interest-earning assets averaged $424.233 billion for 2025, with receivables from brokerage clients yielding 6.44% and available-for-sale securities yielding 2.06%."
+        ]
+      },
+      {
+        "title": "Shareholder Alignment",
+        "grade": "strong",
+        "summary": "Executive compensation uses base salary, annual cash incentives, and long-term equity incentives, with 2025 cash incentive funding at 116.5% of target. Performance-based restricted stock units have a three-year cliff-vesting period tied to ROTCE exceeding the Cost of Equity.",
+        "points": [
+          "The Compensation Committee approved 2025 annual cash incentive funding at 116.5% of target for named executive officers, linking pay to performance.",
+          "Performance-based restricted stock units granted in 2025 use a three-year performance period with cliff-vesting based on ROTCE exceeding the Cost of Equity."
+        ]
+      },
+      {
+        "title": "Communication",
+        "grade": "strong",
+        "summary": "The company reports two operating segments, Investor Services and Advisor Services, with financial data disclosed for fiscal years 2023, 2024, and 2025. Revenue is broken down across asset management fees, trading revenue, bank deposit account fees, and other revenue categories in its 10-K filings.",
+        "points": [
+          "The 10-K filing details two operating segments, Investor Services and Advisor Services, with multi-year financial data for fiscal years 2023 through 2025.",
+          "Revenue is reported across specific categories including asset management and administration fees, trading revenue, bank deposit account fees, and other revenue."
+        ]
+      },
+      {
+        "title": "Governance",
+        "grade": "middle",
+        "summary": "The board is currently classified into three classes with staggered three-year terms, though a 2026 Annual Meeting proposal seeks to declassify the board starting in 2029. Deloitte & Touche LLP served as independent auditor with total fees of $14.32 million in 2025.",
+        "points": [
+          "The board is classified into three classes with each elected every three years, but a 2026 proposal seeks to phase in annual elections beginning at the 2029 Annual Meeting.",
+          "Deloitte & Touche LLP served as independent auditor with $11.833 million in audit fees and $2.447 million in audit-related fees for 2025."
+        ]
+      }
+    ]
+  },
+  "moat": {
+    "grade": "strong",
+    "types": [
+      {
+        "type": "Scale Economies",
+        "grade": "strong",
+        "summary": "With $11.9 trillion in total client assets and 38.5 million active brokerage accounts as of December 31, 2025, Schwab spreads fixed costs across a massive base. The company generated $18.837 billion in total revenue and $5.067 billion in net income for FY2025."
+      },
+      {
+        "type": "Network Effects",
+        "grade": "middle",
+        "summary": "Schwab operates 5.7 million workplace plan participant accounts and 2.2 million banking accounts alongside its core brokerage base. The TD Bank insured deposit account agreement supports integrated cash management across subsidiaries including TD Ameritrade entities."
+      },
+      {
+        "type": "Intangible Assets",
+        "grade": "strong",
+        "summary": "Schwab holds competitive recognitions including Best Overall Broker from StockBrokers.com for two consecutive years and #1 in J.D. Power's U.S. Direct Banking Satisfaction Study for seven straight years. The company operates as a savings and loan holding company across wealth management, brokerage, and banking."
+      },
+      {
+        "type": "Switching Costs",
+        "grade": "strong",
+        "summary": "Clients face friction moving brokerage accounts, workplace plans, and banking relationships, with core net new assets of $519.4 billion in 2025 indicating organic growth alongside retention. Net interest revenue reached $11.75 billion with a 2.74% yield on interest-earning assets, reflecting embedded deposit economics."
+      }
+    ]
+  }
+}

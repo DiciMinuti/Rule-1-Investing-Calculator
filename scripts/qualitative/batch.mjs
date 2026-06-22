@@ -101,13 +101,17 @@ async function retryStep(label, maxRetries, action) {
     } catch (error) {
       lastError = error;
       console.error(`${label}: attempt ${attempt} failed: ${error instanceof Error ? error.message : String(error)}`);
-      if (error instanceof Error && error.message.includes("insufficient_quota")) {
+      if (error instanceof Error && isProviderCapacityError(error.message)) {
         throw error;
       }
     }
   }
 
   throw lastError;
+}
+
+function isProviderCapacityError(message) {
+  return /insufficient_quota|insufficient balance|no resource package/i.test(message);
 }
 
 function selectCompanies(universe, options) {
@@ -212,8 +216,8 @@ for (const company of companies) {
 
   if (result.error) {
     console.error(`${company.symbol}: failed\n${result.error}`);
-    if (result.error.includes("insufficient_quota")) {
-      console.error("Stopping batch because the OpenAI account is out of quota.");
+    if (isProviderCapacityError(result.error)) {
+      console.error("Stopping batch because the model provider account is out of quota or balance.");
       break;
     }
   } else {

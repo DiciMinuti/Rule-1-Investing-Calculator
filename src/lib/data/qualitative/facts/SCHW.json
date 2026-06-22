@@ -1,0 +1,127 @@
+{
+  "symbol": "SCHW",
+  "companyName": "Charles Schwab",
+  "updatedAt": "2026-06-22",
+  "facts": [
+    {
+      "topic": "Business Model",
+      "statement": "The Charles Schwab Corporation is a savings and loan holding company that engages, through its subsidiaries, in wealth management, securities brokerage, banking, asset management, custody, and financial advisory services.",
+      "source": "DEF 14A filed 2026-04-06 (https://www.sec.gov/Archives/edgar/data/316709/000119312526142826/d930509ddef14a.htm)"
+    },
+    {
+      "topic": "Revenue Scale",
+      "statement": "Total revenue for FY2025 was $18.837 billion, with net income of $5.067 billion.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000316709.)"
+    },
+    {
+      "topic": "Revenue Scale",
+      "statement": "Net revenue for 2025 was $23.9 billion, a 22% increase year-over-year, driven by the 'Through Clients' Eyes' strategy.",
+      "source": "DEF 14A filed 2026-04-06 (https://www.sec.gov/Archives/edgar/data/316709/000119312526142826/d930509ddef14a.htm)"
+    },
+    {
+      "topic": "Client Scale",
+      "statement": "As of December 31, 2025, the company had $11.9 trillion in total client assets (18% increase year-over-year), 38.5 million active brokerage accounts, 5.7 million workplace plan participant accounts, and 2.2 million banking accounts.",
+      "source": "DEF 14A filed 2026-04-06 (https://www.sec.gov/Archives/edgar/data/316709/000119312526142826/d930509ddef14a.htm)"
+    },
+    {
+      "topic": "Cash Flow",
+      "statement": "Operating cash flow for FY2025 was $19.587 billion.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000316709.)"
+    },
+    {
+      "topic": "Balance Sheet",
+      "statement": "As of FY2025, stockholders' equity was $36.608 billion and cash and equivalents were $43.337 billion.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000316709.)"
+    },
+    {
+      "topic": "Profitability",
+      "statement": "Diluted EPS for 2025 was $4.65 (56% increase year-over-year), with adjusted diluted EPS of $4.87; ROCE was 21% and ROTCE was 38%.",
+      "source": "DEF 14A filed 2026-04-06 (https://www.sec.gov/Archives/edgar/data/316709/000119312526142826/d930509ddef14a.htm)"
+    },
+    {
+      "topic": "Growth Metrics",
+      "statement": "Core net new assets for 2025 were $519.4 billion, a 42% increase year-over-year.",
+      "source": "DEF 14A filed 2026-04-06 (https://www.sec.gov/Archives/edgar/data/316709/000119312526142826/d930509ddef14a.htm)"
+    },
+    {
+      "topic": "Net Interest Revenue",
+      "statement": "Net interest revenue for the year ended December 31, 2025 was $11.75 billion with a net yield on interest-earning assets of 2.74%, up from $9.144 billion and 2.12% in 2024.",
+      "source": "10-K filed 2026-02-25 (https://www.sec.gov/Archives/edgar/data/316709/000031670926000009/schw-20251231.htm)"
+    },
+    {
+      "topic": "Segment Reporting",
+      "statement": "The company reports two operating segments: Investor Services and Advisor Services, with financial data reported for each segment for fiscal years 2023, 2024, and 2025.",
+      "source": "10-K filed 2026-02-25 (https://www.sec.gov/Archives/edgar/data/316709/000031670926000009/schw-20251231.htm)"
+    },
+    {
+      "topic": "Revenue Categories",
+      "statement": "Revenue is reported across multiple product and service lines including asset management and administration fees, trading revenue (commissions, order flow, principal transactions), bank deposit account fees, and other revenue.",
+      "source": "10-K filed 2026-02-25 (https://www.sec.gov/Archives/edgar/data/316709/000031670926000009/schw-20251231.htm)"
+    },
+    {
+      "topic": "Bank Loan Portfolio",
+      "statement": "The bank loan portfolio totaled $57.991 billion as of December 31, 2025, comprising residential real estate ($30.911 billion), pledged asset lines ($26.603 billion), and other loans ($477 million).",
+      "source": "10-K filed 2026-02-25 (https://www.sec.gov/Archives/edgar/data/316709/000031670926000009/schw-20251231.htm)"
+    },
+    {
+      "topic": "Credit Quality",
+      "statement": "Allowance for credit losses to total year-end loans was 0.06% at December 31, 2025 (up from 0.05% in 2024); nonaccrual loans to total year-end loans was 0.07% (down from 0.08% in 2024); net charge-offs to average loans were zero across all categories in 2025, 2024, and 2023.",
+      "source": "10-K filed 2026-02-25 (https://www.sec.gov/Archives/edgar/data/316709/000031670926000009/schw-20251231.htm)"
+    },
+    {
+      "topic": "Bank Deposits",
+      "statement": "Average bank deposits for 2025 were $238.088 billion at an average rate of 0.50%, down from $256.212 billion at 1.23% in 2024; uninsured bank deposits totaled approximately $35.2 billion as of December 31, 2025 (up from $32.7 billion in 2024).",
+      "source": "10-K filed 2026-02-25 (https://www.sec.gov/Archives/edgar/data/316709/000031670926000009/schw-20251231.htm)"
+    },
+    {
+      "topic": "Interest-Earning Assets",
+      "statement": "Total interest-earning assets averaged $424.233 billion for 2025, with receivables from brokerage clients averaging $87.3 billion at a 6.44% yield, available-for-sale securities averaging $74.478 billion at 2.06%, and held-to-maturity securities averaging $139.447 billion at 1.71%.",
+      "source": "10-K filed 2026-02-25 (https://www.sec.gov/Archives/edgar/data/316709/000031670926000009/schw-20251231.htm)"
+    },
+    {
+      "topic": "Management",
+      "statement": "Richard A. Wurster serves as President and Chief Executive Officer; Charles R. Schwab and Walter W. Bettinger II serve as Co-Chairmen of the Board; Michael Verdeschi serves as Managing Director and Chief Financial Officer.",
+      "source": "10-K filed 2026-02-25 (https://www.sec.gov/Archives/edgar/data/316709/000031670926000009/schw-20251231.htm)"
+    },
+    {
+      "topic": "Governance",
+      "statement": "The board is currently classified into three classes with each class elected every three years; a proposal at the 2026 Annual Meeting seeks to declassify the board, phasing in annual election of all directors beginning at the 2029 Annual Meeting.",
+      "source": "DEF 14A filed 2026-04-06 (https://www.sec.gov/Archives/edgar/data/316709/000119312526142826/d930509ddef14a.htm)"
+    },
+    {
+      "topic": "Compensation",
+      "statement": "The executive compensation program uses three elements: base salary, annual cash incentives, and long-term equity-based incentives (LTIs); for 2025, the Compensation Committee approved annual cash incentive funding at 116.5% of target for NEOs.",
+      "source": "DEF 14A filed 2026-04-06 (https://www.sec.gov/Archives/edgar/data/316709/000119312526142826/d930509ddef14a.htm)"
+    },
+    {
+      "topic": "Compensation",
+      "statement": "Performance-based restricted stock units (PBRSUs) granted in 2025 have a performance goal of ROTCE exceeding the Cost of Equity (COE), with cliff-vesting based on a three-year performance period.",
+      "source": "DEF 14A filed 2026-04-06 (https://www.sec.gov/Archives/edgar/data/316709/000119312526142826/d930509ddef14a.htm)"
+    },
+    {
+      "topic": "Auditor",
+      "statement": "Deloitte & Touche LLP served as independent registered public accounting firm, with total fees of $14.32 million in 2025 (including $11.833 million in audit fees, $2.447 million in audit-related fees, $25,000 in tax fees, and $15,402 in other fees).",
+      "source": "DEF 14A filed 2026-04-06 (https://www.sec.gov/Archives/edgar/data/316709/000119312526142826/d930509ddef14a.htm)"
+    },
+    {
+      "topic": "Competitive Positioning",
+      "statement": "StockBrokers.com recognized the company as Best Overall Broker for the second consecutive year in 2025; U.S. News & World Report recognized it as Best Investing Platform Overall for the third year in a row; Investor's Business Daily recognized it as a Best Online Broker for the 13th year.",
+      "source": "DEF 14A filed 2026-04-06 (https://www.sec.gov/Archives/edgar/data/316709/000119312526142826/d930509ddef14a.htm)"
+    },
+    {
+      "topic": "Competitive Positioning",
+      "statement": "Charles Schwab Bank, SSB ranked #1 in J.D. Power's U.S. Direct Banking Satisfaction Study for the seventh year in a row.",
+      "source": "DEF 14A filed 2026-04-06 (https://www.sec.gov/Archives/edgar/data/316709/000119312526142826/d930509ddef14a.htm)"
+    },
+    {
+      "topic": "Capital Structure",
+      "statement": "The company has multiple series of preferred stock outstanding including Series D and Series J, and common stock listed on NYSE under ticker SCHW; the SIC classification is 'Security Brokers, Dealers & Flotation Companies.'",
+      "source": "SEC submissions metadata (https://data.sec.gov/submissions/CIK0000316709.)"
+    },
+    {
+      "topic": "Key Partnership",
+      "statement": "The company has a Second Amended and Restated Insured Deposit Account Agreement dated May 4, 2023, with TD Bank USA, N.A. and TD Bank, N.A., under which TD Bank provides insured deposit account services to Schwab and its subsidiaries including Charles Schwab & Co., Inc., Charles Schwab Trust Bank, TD Ameritrade, Inc., and TD Ameritrade Clearing, Inc.",
+      "source": "10-K filed 2026-02-25 (https://www.sec.gov/Archives/edgar/data/316709/000031670926000009/schw-20251231.htm)"
+    }
+  ]
+}

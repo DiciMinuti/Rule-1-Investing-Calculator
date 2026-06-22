@@ -1,0 +1,147 @@
+{
+  "symbol": "DE",
+  "companyName": "Deere & Company (John Deere)",
+  "updatedAt": "2026-06-22",
+  "facts": [
+    {
+      "topic": "Business Model",
+      "statement": "Deere & Company operates under a Smart Industrial Operating Model that has driven growth and success over the past five years, transforming agriculture and construction through advanced technologies.",
+      "source": "DEF 14A filed 2026-01-14 (https://www.sec.gov/Archives/edgar/data/315189/000110465926003618/de-20260225xdef14a.htm)"
+    },
+    {
+      "topic": "Company Overview",
+      "statement": "Deere & Company is classified under SIC code for Farm Machinery & Equipment and trades on the NYSE under the ticker symbol DE.",
+      "source": "SEC submissions metadata (https://data.sec.gov/submissions/CIK0000315189.)"
+    },
+    {
+      "topic": "Revenue Scale",
+      "statement": "Deere & Company reported total revenue of $61,251,000,000 for fiscal year 2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000315189.)"
+    },
+    {
+      "topic": "Profitability",
+      "statement": "Deere & Company reported net income of $10,166,000,000 for fiscal year 2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000315189.)"
+    },
+    {
+      "topic": "Cash Flow",
+      "statement": "Deere & Company generated operating cash flow of $8,589,000,000 for fiscal year 2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000315189.)"
+    },
+    {
+      "topic": "R&D Investment",
+      "statement": "Deere & Company spent $2,177,000,000 on research and development in fiscal year 2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000315189.)"
+    },
+    {
+      "topic": "Balance Sheet",
+      "statement": "As of fiscal year 2025, Deere & Company had stockholders' equity of $22,836,000,000 and cash and equivalents of $7,458,000,000.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000315189.)"
+    },
+    {
+      "topic": "Operating Segments",
+      "statement": "Deere operates four reportable segments: Production and Precision Agriculture (PPA), Small Agriculture and Turf (SAT), Construction and Forestry (CF), and Financial Services (FS).",
+      "source": "10-K filed 2025-12-18 (https://www.sec.gov/Archives/edgar/data/315189/000110465925122321/de-20251102x10k.htm)"
+    },
+    {
+      "topic": "Product Lines",
+      "statement": "The Production and Precision Agriculture segment includes production agriculture products, while the Small Agriculture and Turf segment is divided into small agriculture and turf categories. The Construction and Forestry segment includes roadbuilding, construction equipment, compact construction equipment, and forestry products.",
+      "source": "10-K filed 2025-12-18 (https://www.sec.gov/Archives/edgar/data/315189/000110465925122321/de-20251102x10k.htm)"
+    },
+    {
+      "topic": "Geographic Operations",
+      "statement": "Deere reports regional operations across the United States, Canada, Latin America, Western Europe, Central Europe and Commonwealth of Independent States, and Asia/Africa/Oceania/Middle East.",
+      "source": "10-K filed 2025-12-18 (https://www.sec.gov/Archives/edgar/data/315189/000110465925122321/de-20251102x10k.htm)"
+    },
+    {
+      "topic": "Segment Assets",
+      "statement": "Total assets as of fiscal 2025 were $105,996 million, with Financial Services holding the largest portion at $70,021 million, followed by Corporate at $15,409 million, PPA at $8,787 million, CF at $7,792 million, and SAT at $3,987 million.",
+      "source": "10-K filed 2025-12-18 (https://www.sec.gov/Archives/edgar/data/315189/000110465925122321/de-20251102x10k.htm)"
+    },
+    {
+      "topic": "Capital Expenditures",
+      "statement": "Total capital additions for fiscal 2025 were $1,364 million, with PPA accounting for $716 million, SAT $301 million, CF $345 million, and FS $2 million.",
+      "source": "10-K filed 2025-12-18 (https://www.sec.gov/Archives/edgar/data/315189/000110465925122321/de-20251102x10k.htm)"
+    },
+    {
+      "topic": "Depreciation and Amortization",
+      "statement": "Total depreciation and amortization expense for fiscal 2025 was $2,229 million, with FS at $1,082 million, PPA at $654 million, CF at $365 million, and SAT at $261 million.",
+      "source": "10-K filed 2025-12-18 (https://www.sec.gov/Archives/edgar/data/315189/000110465925122321/de-20251102x10k.htm)"
+    },
+    {
+      "topic": "Capital Allocation - Dividends",
+      "statement": "On December 3, 2025, Deere's Board declared a quarterly dividend of $1.62 per share, payable on February 9, 2026, to stockholders of record on December 31, 2025.",
+      "source": "10-K filed 2025-12-18 (https://www.sec.gov/Archives/edgar/data/315189/000110465925122321/de-20251102x10k.htm)"
+    },
+    {
+      "topic": "Management - CEO",
+      "statement": "John C. May serves as Chairman of the Board, Chief Executive Officer, and President of Deere & Company.",
+      "source": "DEF 14A filed 2026-01-14 (https://www.sec.gov/Archives/edgar/data/315189/000110465926003618/de-20260225xdef14a.htm)"
+    },
+    {
+      "topic": "Management - CFO",
+      "statement": "Joshua A. Jepsen serves as Senior Vice President and Chief Financial Officer of Deere & Company, also serving as Principal Financial Officer and Principal Accounting Officer.",
+      "source": "10-K filed 2025-12-18 (https://www.sec.gov/Archives/edgar/data/315189/000110465925122321/de-20251102x10k.htm)"
+    },
+    {
+      "topic": "Management - Corporate Secretary",
+      "statement": "Kellye L. Walker serves as Corporate Secretary of Deere & Company.",
+      "source": "DEF 14A filed 2026-01-14 (https://www.sec.gov/Archives/edgar/data/315189/000110465926003618/de-20260225xdef14a.htm)"
+    },
+    {
+      "topic": "Board of Directors",
+      "statement": "Deere's Board of Directors includes 10 director nominees for the 2026 Annual Meeting, with R. Preston Feight serving as Lead Director.",
+      "source": "DEF 14A filed 2026-01-14 (https://www.sec.gov/Archives/edgar/data/315189/000110465926003618/de-20260225xdef14a.htm)"
+    },
+    {
+      "topic": "Named Executive Officers",
+      "statement": "Deere's named executive officers for fiscal 2025 include John C. May (CEO), Ryan D. Campbell, Rajesh Kalathur, Joshua Jepsen, and Deanna M. Kovar.",
+      "source": "DEF 14A filed 2026-01-14 (https://www.sec.gov/Archives/edgar/data/315189/000110465926003618/de-20260225xdef14a.htm)"
+    },
+    {
+      "topic": "Compensation - Incentive Design",
+      "statement": "Deere's short-term incentive program uses two key financial metrics: Operating Return on Operating Assets (OROA) and Operating Return on Sales (OROS), with goals formulaically determined based on the company's position in the business cycle relative to mid-cycle sales.",
+      "source": "DEF 14A filed 2026-01-14 (https://www.sec.gov/Archives/edgar/data/315189/000110465926003618/de-20260225xdef14a.htm)"
+    },
+    {
+      "topic": "Compensation - Performance Targets",
+      "statement": "For fiscal 2025, at 76% of mid-cycle, a target payout required 21% OROA and 11% OROS, with performance below 18% OROA and 9.5% OROS resulting in no payment for each STI element.",
+      "source": "DEF 14A filed 2026-01-14 (https://www.sec.gov/Archives/edgar/data/315189/000110465926003618/de-20260225xdef14a.htm)"
+    },
+    {
+      "topic": "Product Innovation",
+      "statement": "In 2025, Deere introduced the F8 and F9 self-propelled forage harvesters, updated round balers, improved planters and sprayers, the 850 X-Tier dozer with dual path electric drive, upgraded P-Tier dozers with SmartGrade, and utility loaders with SmartDetect Digital.",
+      "source": "DEF 14A filed 2026-01-14 (https://www.sec.gov/Archives/edgar/data/315189/000110465926003618/de-20260225xdef14a.htm)"
+    },
+    {
+      "topic": "Audit and Governance",
+      "statement": "Deloitte & Touche LLP has served as Deere's auditor since 1910 and issued an unqualified opinion on the company's internal control over financial reporting as of November 2, 2025.",
+      "source": "10-K filed 2025-12-18 (https://www.sec.gov/Archives/edgar/data/315189/000110465925122321/de-20251102x10k.htm)"
+    },
+    {
+      "topic": "Risk - Credit Losses",
+      "statement": "Deere utilizes linear regression models to estimate expected credit losses for large and complex retail customer receivable pools representing more than 90 percent of retail customer receivables, with independent variables including credit quality, remaining balance, delinquency status, and economic factors such as commodity prices and employment levels.",
+      "source": "10-K filed 2025-12-18 (https://www.sec.gov/Archives/edgar/data/315189/000110465925122321/de-20251102x10k.htm)"
+    },
+    {
+      "topic": "Risk - Sales Incentives",
+      "statement": "Deere offers sales incentive programs to promote the sale of products from dealer to retail customer, recording an estimated cost at the time of sale to dealer based on historical data, announced programs, field inventory levels, and forecasted sales volumes, with final cost determined when the dealer sells to a retail customer.",
+      "source": "10-K filed 2025-12-18 (https://www.sec.gov/Archives/edgar/data/315189/000110465925122321/de-20251102x10k.htm)"
+    },
+    {
+      "topic": "Financial Services - Credit Facilities",
+      "statement": "Deere entered into 2028 and 2030 Credit Agreements and a 364-Day Credit Agreement, all dated March 24, 2025, among the registrant, John Deere Capital Corporation, John Deere Bank S.A., and various financial institutions, with JPMorgan Chase Bank as Administrative Agent and J.P. Morgan Securities LLC as Sustainability Structuring Agent.",
+      "source": "10-K filed 2025-12-18 (https://www.sec.gov/Archives/edgar/data/315189/000110465925122321/de-20251102x10k.htm)"
+    },
+    {
+      "topic": "Equity Investments",
+      "statement": "Total equity investment in unconsolidated affiliates was $510 million in fiscal 2025, up from $122 million in fiscal 2024, with Financial Services accounting for $462 million of the fiscal 2025 total.",
+      "source": "10-K filed 2025-12-18 (https://www.sec.gov/Archives/edgar/data/315189/000110465925122321/de-20251102x10k.htm)"
+    },
+    {
+      "topic": "Corporate History",
+      "statement": "John Deere has been committed to supporting work essential for everyday life since 1837, with core values of integrity, quality, humanity, commitment, and innovation.",
+      "source": "DEF 14A filed 2026-01-14 (https://www.sec.gov/Archives/edgar/data/315189/000110465926003618/de-20260225xdef14a.htm)"
+    }
+  ]
+}

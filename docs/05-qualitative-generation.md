@@ -8,7 +8,7 @@ The app does not call OpenAI at runtime. Qualitative management and moat briefs 
 - `src/lib/data/qualitative/briefs/{SYMBOL}.json` - generated committed brief.
 - `src/lib/data/qualitative/briefs/index.json` - committed registry imported by the app.
 - `scripts/qualitative/schema.mjs` - JSON Schema and local validation.
-- `scripts/qualitative/openai.mjs` - OpenAI Responses API call.
+- `scripts/qualitative/openai.mjs` - OpenAI Responses API call and optional Z.ai fact-packet call.
 - `scripts/qualitative/generate.mjs` - generation CLI.
 
 ## Commands
@@ -51,6 +51,20 @@ OPENAI_FACT_MODEL=gpt-5.4-mini OPENAI_BRIEF_MODEL=gpt-5.5 npm run qualitative:ba
 
 The fact-packet step is usually the expensive step because it reads larger SEC source packets. The final brief step uses a smaller fact packet as input, so it can keep a stronger model while still reducing total cost.
 
+Use Z.ai for cheaper fact packets while keeping OpenAI for the final brief:
+
+```bash
+ZAI_API_KEY=... OPENAI_FACT_PROVIDER=zai ZAI_FACT_MODEL=glm-5.2 OPENAI_BRIEF_MODEL=gpt-5.5 npm run qualitative:batch -- --symbols=C,QCOM
+```
+
+The Z.ai path uses JSON mode and then runs the same local fact-packet validator before any brief is generated.
+
+Use Z.ai for both fact packets and final briefs:
+
+```bash
+ZAI_API_KEY=... OPENAI_FACT_PROVIDER=zai OPENAI_BRIEF_PROVIDER=zai ZAI_FACT_MODEL=glm-5.2 ZAI_BRIEF_MODEL=glm-5.2 npm run qualitative:batch -- --symbols=SCHW,DE
+```
+
 Validate committed briefs:
 
 ```bash
@@ -91,4 +105,4 @@ Batch runs skip existing fact packets and briefs by default, retry failed API ca
 4. Review the generated JSON.
 5. Commit the fact packet, the per-symbol brief, and `index.json`.
 
-The generator uses OpenAI Structured Outputs with a JSON Schema so the model response matches the app's committed data shape.
+The OpenAI path uses Structured Outputs with a JSON Schema so the model response matches the app's committed data shape. The Z.ai paths use JSON mode plus the same local validators.

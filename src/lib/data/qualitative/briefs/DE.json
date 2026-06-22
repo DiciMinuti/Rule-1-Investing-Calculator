@@ -1,0 +1,84 @@
+{
+  "symbol": "DE",
+  "companyName": "Deere & Company (John Deere)",
+  "generatedAt": "2026-06-22",
+  "management": {
+    "grade": "strong",
+    "sections": [
+      {
+        "title": "Leadership",
+        "grade": "strong",
+        "summary": "John C. May leads Deere as Chairman, CEO, and President, guiding the Smart Industrial Operating Model that has driven growth over the past five years. The named executive team for fiscal 2025 includes Ryan D. Campbell, Rajesh Kalathur, Joshua Jepsen, and Deanna M. Kovar.",
+        "points": [
+          "John C. May serves as Chairman, CEO, and President, overseeing the Smart Industrial Operating Model that has transformed agriculture and construction through advanced technologies over the past five years.",
+          "Joshua A. Jepsen serves as Senior Vice President and CFO, also holding the roles of Principal Financial Officer and Principal Accounting Officer.",
+          "Kellye L. Walker serves as Corporate Secretary, supporting the 10 director nominees for the 2026 Annual Meeting, with R. Preston Feight serving as Lead Director."
+        ]
+      },
+      {
+        "title": "Capital Allocation",
+        "grade": "strong",
+        "summary": "Deere generated $8.6 billion in operating cash flow in fiscal 2025 against $1.36 billion in capital additions and $2.18 billion in R&D spending. The Board declared a quarterly dividend of $1.62 per share on December 3, 2025, payable February 9, 2026.",
+        "points": [
+          "Fiscal 2025 capital additions totaled $1,364 million, with PPA receiving $716 million, SAT $301 million, CF $345 million, and FS $2 million, prioritizing production agriculture capacity.",
+          "R&D spending reached $2,177 million in fiscal 2025, funding product launches including the F8 and F9 forage harvesters, the 850 X-Tier dozer, and upgraded P-Tier dozers with SmartGrade.",
+          "Total equity investment in unconsolidated affiliates rose to $510 million in fiscal 2025 from $122 million in fiscal 2024, with Financial Services accounting for $462 million of the total."
+        ]
+      },
+      {
+        "title": "Shareholder Alignment",
+        "grade": "strong",
+        "summary": "Deere's short-term incentive program ties executive compensation to Operating Return on Operating Assets and Operating Return on Sales, with goals formulaically determined based on the company's position in the business cycle relative to mid-cycle sales.",
+        "points": [
+          "For fiscal 2025 at 76% of mid-cycle, a target payout required 21% OROA and 11% OROS, with performance below 18% OROA and 9.5% OROS resulting in no STI payment for each element.",
+          "The Board declared a quarterly dividend of $1.62 per share on December 3, 2025, payable February 9, 2026, to stockholders of record on December 31, 2025."
+        ]
+      },
+      {
+        "title": "Communication",
+        "grade": "strong",
+        "summary": "Deere reports four segments-Production and Precision Agriculture, Small Agriculture and Turf, Construction and Forestry, and Financial Services-with detailed segment asset, capital expenditure, and depreciation disclosures in its 10-K filing.",
+        "points": [
+          "The 10-K filed December 18, 2025 breaks down total assets of $105,996 million across segments, with Financial Services holding $70,021 million, Corporate $15,409 million, PPA $8,787 million, CF $7,792 million, and SAT $3,987 million.",
+          "Deere reports regional operations across six geographic regions including the United States, Canada, Latin America, Western Europe, Central Europe and CIS, and Asia/Africa/Oceania/Middle East.",
+          "The DEF 14A filed January 14, 2026 discloses STI performance thresholds and mid-cycle positioning, providing investors visibility into how cycle stage affects compensation targets."
+        ]
+      },
+      {
+        "title": "Governance",
+        "grade": "strong",
+        "summary": "Deere's Board includes 10 director nominees for the 2026 Annual Meeting with R. Preston Feight as Lead Director, while Deloitte & Touche LLP has served as auditor since 1910 and issued an unqualified opinion on internal controls as of November 2, 2025.",
+        "points": [
+          "Deloitte & Touche LLP has served as Deere's auditor since 1910 and issued an unqualified opinion on the company's internal control over financial reporting as of November 2, 2025.",
+          "Deere utilizes linear regression models to estimate expected credit losses for large retail customer receivable pools representing more than 90 percent of receivables, incorporating commodity prices and employment levels as independent variables.",
+          "The 10-K details sales incentive programs where estimated costs are recorded at the time of dealer sale based on historical data, announced programs, field inventory levels, and forecasted sales volumes, with final cost determined at retail sale."
+        ]
+      }
+    ]
+  },
+  "moat": {
+    "grade": "strong",
+    "types": [
+      {
+        "type": "Intangible Assets",
+        "grade": "strong",
+        "summary": "John Deere has operated since 1837 under a Smart Industrial Operating Model, spending $2.18 billion on R&D in fiscal 2025 to launch precision agriculture products including the F8 and F9 forage harvesters, the 850 X-Tier dozer with dual path electric drive, and SmartGrade-equipped P-Tier dozers."
+      },
+      {
+        "type": "Switching Costs",
+        "grade": "strong",
+        "summary": "Deere's Smart Industrial Operating Model integrates advanced technologies across its equipment lines, with the Production and Precision Agriculture segment holding $8.79 billion in assets and receiving $716 million in fiscal 2025 capital additions to deepen farmer reliance on connected platforms."
+      },
+      {
+        "type": "Cost Advantage",
+        "grade": "middle",
+        "summary": "With $61.25 billion in fiscal 2025 revenue and $10.17 billion in net income, Deere's scale across four segments and six geographic regions supports an R&D budget of $2.18 billion that smaller competitors struggle to match in precision agriculture and construction equipment development."
+      },
+      {
+        "type": "Network Effects",
+        "grade": "middle",
+        "summary": "Deere's Financial Services segment holds $70.02 billion in assets and entered 2028 and 2030 Credit Agreements dated March 24, 2025 with John Deere Capital Corporation and John Deere Bank S.A., embedding financing and dealer support into the equipment purchase ecosystem."
+      }
+    ]
+  }
+}
