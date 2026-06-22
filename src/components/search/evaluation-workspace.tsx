@@ -38,6 +38,7 @@ import {
 } from "@/lib/storage";
 import type {
   AnnualFinancials,
+  BigFiveMetric,
   BigFiveResult,
   BusinessGroupConstituent,
   BusinessGroupDetail,
@@ -48,6 +49,7 @@ import type {
   CompanyProfile,
   CompanySearchResult,
   FilingLink,
+  PriceVerdict,
   PriceHistory,
   QualitativeBrief,
   QualitativeBriefSection,
@@ -59,6 +61,7 @@ import type {
 
 type LoadStatus = "idle" | "loading" | "done" | "warning" | "failed";
 type SearchMode = "business" | "group";
+type PriceBandFilter = "all" | PriceVerdict;
 type GroupRunStatus = "idle" | "loading" | "ready" | "running" | "complete" | "stopped" | "failed";
 type GroupRowStatus = "queued" | "loading" | "done" | "failed";
 
@@ -105,6 +108,19 @@ type GroupRunSummary = {
 
 const baseSteps = ["Result", "Business", "Inputs"];
 const groupLimitOptions = [10, 25, 50, 100, 0];
+const priceBandFilters: { id: PriceBandFilter; label: string }[] = [
+  { id: "all", label: "All" },
+  { id: "pass", label: "Below MOS" },
+  { id: "almost", label: "Between MOS and sticker" },
+  { id: "nope", label: "Above sticker" },
+];
+const bigFiveFilters: { id: BigFiveMetric["id"]; label: string }[] = [
+  { id: "roic", label: "ROIC pass" },
+  { id: "salesGrowth", label: "Sales pass" },
+  { id: "epsGrowth", label: "EPS pass" },
+  { id: "equityGrowth", label: "Equity pass" },
+  { id: "cashFlowGrowth", label: "Cash flow pass" },
+];
 
 const initialLoadSteps: LoadStep[] = [
   { id: "profile", label: "Company profile", status: "idle" },
@@ -639,6 +655,7 @@ export function EvaluationWorkspace() {
       updatedAt: now,
       assumptions,
       latestResult: valuation,
+      bigFive: loaded.bigFive,
       notes,
       overrides: [],
       currentPrice: valuation.currentPrice,
@@ -995,6 +1012,41 @@ function GroupScreen({
 }) {
   const evaluatedCount = summary.done + summary.failed;
   const runLabel = evaluatedCount > 0 ? "Run again" : "Run screen";
+  const [priceBandFilter, setPriceBandFilter] = useState<PriceBandFilter>("all");
+  const [selectedBigFive, setSelectedBigFive] = useState<Set<BigFiveMetric["id"]>>(() => new Set());
+  const filteredRows = useMemo(
+    () =>
+      rows.filter((row) => {
+        if (priceBandFilter !== "all" && row.evaluation?.valuation.priceVerdict !== priceBandFilter) {
+          return false;
+        }
+
+        if (!selectedBigFive.size) {
+          return true;
+        }
+
+        const healthyMetricIds = new Set(
+          row.evaluation?.bigFive.metrics
+            .filter((metric) => metric.status === "healthy")
+            .map((metric) => metric.id) ?? [],
+        );
+
+        return [...selectedBigFive].every((metricId) => healthyMetricIds.has(metricId));
+      }),
+    [priceBandFilter, rows, selectedBigFive],
+  );
+
+  function toggleBigFiveFilter(metricId: BigFiveMetric["id"]) {
+    setSelectedBigFive((current) => {
+      const next = new Set(current);
+      if (next.has(metricId)) {
+        next.delete(metricId);
+      } else {
+        next.add(metricId);
+      }
+      return next;
+    });
+  }
 
   return (
     <section className="group-screen">
@@ -1047,9 +1099,43 @@ function GroupScreen({
 
         <div className="valuation-strip group-summary-strip">
           <ValueBlock label="Evaluated" value={`${evaluatedCount}/${rows.length}`} />
-          <ValueBlock label="Pass" value={String(summary.pass)} />
-          <ValueBlock label="Almost" value={String(summary.almost)} />
-          <ValueBlock label="Nope" value={String(summary.nope)} />
+          <ValueBlock label="Below MOS" value={String(summary.pass)} />
+          <ValueBlock label="Between MOS/sticker" value={String(summary.almost)} />
+          <ValueBlock label="Above sticker" value={String(summary.nope)} />
+        </div>
+
+        <div className="group-filter-panel">
+          <div className="filter-block">
+            <div className="label">Price</div>
+            <div className="row wrap">
+              {priceBandFilters.map((item) => (
+                <button
+                  className={`segmented-button ${priceBandFilter === item.id ? "active" : ""}`}
+                  key={item.id}
+                  type="button"
+                  onClick={() => setPriceBandFilter(item.id)}
+                >
+                  {item.label}
+                </button>
+              ))}
+            </div>
+          </div>
+          <div className="filter-block">
+            <div className="label">Big Five</div>
+            <div className="row wrap">
+              {bigFiveFilters.map((item) => (
+                <button
+                  className={`segmented-button ${selectedBigFive.has(item.id) ? "active" : ""}`}
+                  key={item.id}
+                  type="button"
+                  onClick={() => toggleBigFiveFilter(item.id)}
+                >
+                  {item.label}
+                </button>
+              ))}
+            </div>
+          </div>
+          <span className="subtle">Showing {filteredRows.length} of {rows.length}</span>
         </div>
 
         <div className="table-wrap">
@@ -1067,7 +1153,7 @@ function GroupScreen({
               </tr>
             </thead>
             <tbody>
-              {rows.map((row) => {
+              {filteredRows.map((row) => {
                 const evaluation = row.evaluation;
                 const statusLabel = groupRowStatusLabel(row.status);
                 return (

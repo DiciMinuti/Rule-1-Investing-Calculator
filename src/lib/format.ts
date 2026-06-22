@@ -7,9 +7,9 @@ export const businessGradeLabels: Record<BusinessGrade, string> = {
 };
 
 export const priceVerdictLabels: Record<PriceVerdict, string> = {
-  pass: "Pass",
-  almost: "Almost",
-  nope: "Nope",
+  pass: "Below MOS",
+  almost: "Between MOS and sticker",
+  nope: "Above sticker",
 };
 
 export const statusLabels: Record<MetricStatus, string> = {

@@ -279,6 +279,7 @@ export type SavedBusinessItem = {
   updatedAt: string;
   assumptions: ValuationAssumptions;
   latestResult: ValuationResult;
+  bigFive?: BigFiveResult;
   notes: CompanyNotes;
   overrides: MetricOverride[];
   currentPrice?: number;

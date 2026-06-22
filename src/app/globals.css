@@ -1323,6 +1323,18 @@ a:hover {
   gap: 10px;
 }
 
+.filter-block,
+.group-filter-panel {
+  display: grid;
+  gap: 7px;
+}
+
+.group-filter-panel {
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.025);
+  padding: 10px;
+}
+
 .saves-table td {
   white-space: nowrap;
 }

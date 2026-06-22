@@ -4,11 +4,9 @@ import { Download, ExternalLink, Search, Trash2 } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { BusinessGradePill, PriceVerdictPill } from "@/components/ui/status-pill";
 import {
-  businessGradeLabels,
   formatCurrency,
   formatDate,
   formatPercent,
-  priceVerdictLabels,
 } from "@/lib/format";
 import {
   deleteSavedBusiness,
@@ -16,20 +14,24 @@ import {
   exportWorkspace,
   getSavedBusinesses,
 } from "@/lib/storage";
-import type { BusinessGrade, PriceVerdict, SavedBusinessItem } from "@/lib/types";
+import type { BigFiveMetric, BusinessGrade, PriceVerdict, SavedBusinessItem } from "@/lib/types";
 
-type SaveFilter = "all" | BusinessGrade | PriceVerdict | "nearMos";
+type PriceBandFilter = "all" | PriceVerdict;
 type SaveSort = "gap" | "grade" | "reviewed" | "symbol";
 
-const filters: { id: SaveFilter; label: string }[] = [
+const priceBandFilters: { id: PriceBandFilter; label: string }[] = [
   { id: "all", label: "All" },
-  { id: "strong", label: "Strong" },
-  { id: "middle", label: "Middle" },
-  { id: "dull", label: "Dull" },
-  { id: "pass", label: "Pass" },
-  { id: "almost", label: "Almost" },
-  { id: "nope", label: "Nope" },
-  { id: "nearMos", label: "Near MOS" },
+  { id: "pass", label: "Below MOS" },
+  { id: "almost", label: "Between MOS and sticker" },
+  { id: "nope", label: "Above sticker" },
+];
+
+const bigFiveFilters: { id: BigFiveMetric["id"]; label: string }[] = [
+  { id: "roic", label: "ROIC pass" },
+  { id: "salesGrowth", label: "Sales pass" },
+  { id: "epsGrowth", label: "EPS pass" },
+  { id: "equityGrowth", label: "Equity pass" },
+  { id: "cashFlowGrowth", label: "Cash flow pass" },
 ];
 
 function gradeRank(grade: BusinessGrade) {
@@ -39,7 +41,8 @@ function gradeRank(grade: BusinessGrade) {
 export function SavesClient() {
   const [saves, setSaves] = useState<SavedBusinessItem[]>([]);
   const [query, setQuery] = useState("");
-  const [filter, setFilter] = useState<SaveFilter>("all");
+  const [priceBandFilter, setPriceBandFilter] = useState<PriceBandFilter>("all");
+  const [selectedBigFive, setSelectedBigFive] = useState<Set<BigFiveMetric["id"]>>(() => new Set());
   const [sort, setSort] = useState<SaveSort>("gap");
   const [message, setMessage] = useState("");
 
@@ -82,15 +85,24 @@ export function SavesClient() {
         );
       })
       .filter((save) => {
-        if (filter === "all") {
+        if (priceBandFilter === "all") {
           return true;
         }
 
-        if (filter === "nearMos") {
-          return (save.gapToMos ?? -1) > -0.15 && (save.gapToMos ?? -1) < 0.15;
+        return save.latestResult.priceVerdict === priceBandFilter;
+      })
+      .filter((save) => {
+        if (!selectedBigFive.size) {
+          return true;
         }
 
-        return save.latestResult.businessGrade === filter || save.latestResult.priceVerdict === filter;
+        const healthyMetricIds = new Set(
+          save.bigFive?.metrics
+            .filter((metric) => metric.status === "healthy")
+            .map((metric) => metric.id) ?? [],
+        );
+
+        return [...selectedBigFive].every((metricId) => healthyMetricIds.has(metricId));
       })
       .toSorted((a, b) => {
         if (sort === "gap") {
@@ -107,7 +119,19 @@ export function SavesClient() {
 
         return b.updatedAt.localeCompare(a.updatedAt);
       });
-  }, [filter, query, saves, sort]);
+  }, [priceBandFilter, query, saves, selectedBigFive, sort]);
+
+  function toggleBigFiveFilter(metricId: BigFiveMetric["id"]) {
+    setSelectedBigFive((current) => {
+      const next = new Set(current);
+      if (next.has(metricId)) {
+        next.delete(metricId);
+      } else {
+        next.add(metricId);
+      }
+      return next;
+    });
+  }
 
   async function handleDelete(id: string) {
     await deleteSavedBusiness(id);
@@ -157,17 +181,35 @@ export function SavesClient() {
             <option value="symbol">Sort by ticker/name</option>
           </select>
         </div>
-        <div className="row wrap">
-          {filters.map((item) => (
-            <button
-              className={`segmented-button ${filter === item.id ? "active" : ""}`}
-              type="button"
-              key={item.id}
-              onClick={() => setFilter(item.id)}
-            >
-              {item.label}
-            </button>
-          ))}
+        <div className="filter-block">
+          <div className="label">Price</div>
+          <div className="row wrap">
+            {priceBandFilters.map((item) => (
+              <button
+                className={`segmented-button ${priceBandFilter === item.id ? "active" : ""}`}
+                type="button"
+                key={item.id}
+                onClick={() => setPriceBandFilter(item.id)}
+              >
+                {item.label}
+              </button>
+            ))}
+          </div>
+        </div>
+        <div className="filter-block">
+          <div className="label">Big Five</div>
+          <div className="row wrap">
+            {bigFiveFilters.map((item) => (
+              <button
+                className={`segmented-button ${selectedBigFive.has(item.id) ? "active" : ""}`}
+                type="button"
+                key={item.id}
+                onClick={() => toggleBigFiveFilter(item.id)}
+              >
+                {item.label}
+              </button>
+            ))}
+          </div>
         </div>
         {message ? <span className="pill info">{message}</span> : null}
       </section>
@@ -199,11 +241,12 @@ export function SavesClient() {
                     </td>
                     <td>
                       <BusinessGradePill grade={save.latestResult.businessGrade} />
-                      <div className="subtle">{businessGradeLabels[save.latestResult.businessGrade]}</div>
+                      <div className="subtle">
+                        {save.bigFive ? `${save.bigFive.healthyCount}/${save.bigFive.totalCount} Big Five` : "Big Five not saved"}
+                      </div>
                     </td>
                     <td>
                       <PriceVerdictPill verdict={save.latestResult.priceVerdict} />
-                      <div className="subtle">{priceVerdictLabels[save.latestResult.priceVerdict]}</div>
                     </td>
                     <td>{formatCurrency(save.currentPrice)}</td>
                     <td>{formatCurrency(save.mosPrice)}</td>
