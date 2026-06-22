@@ -304,6 +304,12 @@ export function EvaluationWorkspace() {
       return;
     }
 
+    if (selectedGroup && query.trim() === selectedGroup.name) {
+      setGroupSuggestions([]);
+      setGroupError("");
+      return;
+    }
+
     const handle = window.setTimeout(async () => {
       setGroupSearching(true);
       setGroupError("");
@@ -323,7 +329,7 @@ export function EvaluationWorkspace() {
     }, 220);
 
     return () => window.clearTimeout(handle);
-  }, [query, searchMode]);
+  }, [query, searchMode, selectedGroup]);
 
   const loadCompany = useCallback(async (symbol: string) => {
     const normalizedSymbol = symbol.toUpperCase();
@@ -437,6 +443,7 @@ export function EvaluationWorkspace() {
     setGroupRows([]);
     setGroupStatus("loading");
     setGroupError("");
+    setGroupSuggestions([]);
 
     try {
       const data = await fetchJson<{ group: BusinessGroupDetail }>(
@@ -566,6 +573,8 @@ export function EvaluationWorkspace() {
   const isLoadedSaved = loaded ? savedIds.has(makeSavedBusinessId(loaded.profile.symbol)) : false;
   const bestSuggestion = suggestions[0];
   const otherSuggestions = suggestions.slice(1);
+  const bestGroupSuggestion = groupSuggestions[0];
+  const otherGroupSuggestions = groupSuggestions.slice(1);
 
   const visibleGroupRows = useMemo(() => {
     if (!selectedGroup) {
@@ -645,6 +654,30 @@ export function EvaluationWorkspace() {
   function selectBusiness(symbol: string) {
     setQuery(symbol);
     setSuggestions([]);
+    void loadCompany(symbol);
+  }
+
+  function handleGroupQueryChange(value: string) {
+    setQuery(value);
+    setSelectedGroup(null);
+    setGroupRows([]);
+    setGroupStatus("idle");
+  }
+
+  function selectGroup(group: BusinessGroupSummary) {
+    setQuery(group.name);
+    setGroupSuggestions([]);
+    setGroupError("");
+    void loadGroup(group.id);
+  }
+
+  function openCompanyFromGroup(symbol: string) {
+    setSearchMode("business");
+    setSelectedGroup(null);
+    setGroupRows([]);
+    setGroupStatus("idle");
+    setGroupSuggestions([]);
+    setQuery(symbol);
     void loadCompany(symbol);
   }
 
@@ -760,27 +793,60 @@ export function EvaluationWorkspace() {
               <input
                 className="search-input"
                 value={query}
-                onChange={(event) => setQuery(event.target.value)}
+                onChange={(event) => handleGroupQueryChange(event.target.value)}
                 placeholder="Search S&P 500, software, banks, healthcare..."
                 aria-label="Search a group of businesses"
               />
               {groupSearching ? <Loader2 className="spin subtle" size={17} /> : null}
             </div>
-            {groupSuggestions.length ? (
+            {selectedGroup ? (
+              <GroupScreen
+                group={selectedGroup}
+                rows={visibleGroupRows}
+                summary={groupRunSummary}
+                status={groupStatus}
+                groupLimit={groupLimit}
+                onGroupLimitChange={setGroupLimit}
+                onRun={runSelectedGroup}
+                onStop={stopGroupRun}
+                onOpenCompany={openCompanyFromGroup}
+              />
+            ) : null}
+            {bestGroupSuggestion && !selectedGroup ? (
               <div className="suggestions group-suggestions">
-                {groupSuggestions.map((group) => (
+                <button
+                  className="suggestion-row group-suggestion-row best-match"
+                  key={bestGroupSuggestion.id}
+                  type="button"
+                  onClick={() => selectGroup(bestGroupSuggestion)}
+                >
+                  <span className="suggestion-symbol">{bestGroupSuggestion.count}</span>
+                  <span className="suggestion-name">
+                    <strong>{bestGroupSuggestion.name}</strong>
+                    <span>Best match</span>
+                  </span>
+                  <span className="group-suggestion-meta">
+                    <strong>{bestGroupSuggestion.kind}</strong>
+                    <span>{bestGroupSuggestion.count} businesses</span>
+                  </span>
+                </button>
+                {otherGroupSuggestions.length ? <div className="suggestion-group-label">Other groups</div> : null}
+                {otherGroupSuggestions.map((group) => (
                   <button
                     className="suggestion-row group-suggestion-row"
                     key={group.id}
                     type="button"
-                    onClick={() => void loadGroup(group.id)}
+                    onClick={() => selectGroup(group)}
                   >
                     <span className="suggestion-symbol">{group.count}</span>
                     <span className="suggestion-name">
                       <strong>{group.name}</strong>
                       <span className="subtle">{group.description}</span>
                     </span>
-                    <span className="pill info">{group.kind}</span>
+                    <span className="group-suggestion-meta">
+                      <strong>{group.kind}</strong>
+                      <span>{group.count} businesses</span>
+                    </span>
                   </button>
                 ))}
               </div>
@@ -789,20 +855,6 @@ export function EvaluationWorkspace() {
           </div>
         )}
       </section>
-
-      {selectedGroup ? (
-        <GroupScreen
-          group={selectedGroup}
-          rows={visibleGroupRows}
-          summary={groupRunSummary}
-          status={groupStatus}
-          groupLimit={groupLimit}
-          onGroupLimitChange={setGroupLimit}
-          onRun={runSelectedGroup}
-          onStop={stopGroupRun}
-          onOpenCompany={loadCompany}
-        />
-      ) : null}
 
       {loadSteps.some((step) => step.status !== "idle") && !loaded ? (
         <section className="panel">
@@ -945,7 +997,7 @@ function GroupScreen({
   const runLabel = evaluatedCount > 0 ? "Run again" : "Run screen";
 
   return (
-    <section className="panel group-screen">
+    <section className="group-screen">
       <div className="stack">
         <div className="split">
           <div className="stack compact-gap">

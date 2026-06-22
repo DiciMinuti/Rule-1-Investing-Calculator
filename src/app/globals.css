@@ -574,6 +574,28 @@ a:hover {
   grid-template-columns: 64px 1fr auto;
 }
 
+.group-suggestion-meta {
+  display: grid;
+  justify-items: end;
+  gap: 2px;
+  min-width: 112px;
+  color: var(--muted);
+  text-align: right;
+}
+
+.group-suggestion-meta strong {
+  color: var(--text);
+  font-size: 0.82rem;
+  font-weight: 760;
+  text-transform: capitalize;
+}
+
+.group-suggestion-meta span {
+  color: var(--subtle);
+  font-size: 0.74rem;
+  font-weight: 720;
+}
+
 .group-suggestion-row .suggestion-name {
   display: grid;
   gap: 2px;
@@ -705,6 +727,7 @@ a:hover {
 }
 
 .group-screen {
+  margin-top: 10px;
   overflow: hidden;
 }
 
@@ -1444,6 +1467,13 @@ a:hover {
 
   .group-suggestion-row {
     grid-template-columns: 52px 1fr;
+  }
+
+  .group-suggestion-meta {
+    grid-column: 1 / -1;
+    justify-items: start;
+    min-width: 0;
+    text-align: left;
   }
 
   .big-five-header {

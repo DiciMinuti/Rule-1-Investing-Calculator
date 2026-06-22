@@ -46,6 +46,17 @@ function normalizeWhitespace(value: string) {
   return value.replace(/\s+/g, " ").trim();
 }
 
+function normalizeGroupSearchText(value: string) {
+  return value
+    .trim()
+    .toLowerCase()
+    .replace(/&/g, " and ")
+    .replace(/[^a-z0-9]+/g, " ")
+    .replace(/\b(and|the|services?|companies|businesses|sector|industry|industries)\b/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 export function normalizeGroupSymbolForSec(symbol: string) {
   return normalizeWhitespace(symbol).toUpperCase().replaceAll(".", "-");
 }
@@ -242,31 +253,66 @@ async function getCatalog() {
   return catalogCache;
 }
 
+const groupSearchAliases: Record<string, string[]> = {
+  bank: ["Financials"],
+  banks: ["Financials"],
+  communication: ["Communication Services"],
+  communications: ["Communication Services"],
+  consumer: ["Consumer Discretionary", "Consumer Staples"],
+  energy: ["Energy"],
+  finance: ["Financials"],
+  financial: ["Financials"],
+  healthcare: ["Health Care"],
+  health: ["Health Care"],
+  industrial: ["Industrials"],
+  insurance: ["Financials"],
+  realestate: ["Real Estate"],
+  reit: ["Real Estate"],
+  software: ["Information Technology"],
+  tech: ["Information Technology"],
+  technology: ["Information Technology"],
+  utilities: ["Utilities"],
+};
+
 function groupSearchText(group: BusinessGroupSummary) {
-  return `${group.id} ${group.name} ${group.kind} ${group.description}`.toLowerCase();
+  return normalizeGroupSearchText(`${group.id} ${group.name} ${group.kind} ${group.description}`);
 }
 
-function groupSearchScore(group: BusinessGroupSummary, query: string) {
-  const normalizedName = group.name.toLowerCase();
-  const normalizedId = group.id.toLowerCase();
+function groupSearchScore(group: BusinessGroupSummary, query: string, aliases: string[]) {
+  const normalizedName = normalizeGroupSearchText(group.name);
+  const normalizedId = normalizeGroupSearchText(group.id);
+  const normalizedKind = normalizeGroupSearchText(group.kind);
+  const normalizedDescription = normalizeGroupSearchText(group.description);
 
   if (normalizedId === query || normalizedName === query) {
     return 0;
   }
 
-  if (normalizedId.includes(query) || normalizedName.startsWith(query)) {
+  if (aliases.some((alias) => normalizeGroupSearchText(alias) === normalizedName)) {
     return 1;
   }
 
-  if (normalizedName.includes(query)) {
+  if (normalizedId.includes(query) || normalizedName.startsWith(query)) {
     return 2;
   }
 
-  return 3;
+  if (normalizedName.includes(query)) {
+    return 3;
+  }
+
+  if (normalizedKind === query) {
+    return 4;
+  }
+
+  if (normalizedDescription.includes(query)) {
+    return 5;
+  }
+
+  return Number.POSITIVE_INFINITY;
 }
 
 export async function searchBusinessGroups(query: string): Promise<BusinessGroupSummary[]> {
-  const normalizedQuery = query.trim().toLowerCase();
+  const normalizedQuery = normalizeGroupSearchText(query);
   const catalog = await getCatalog();
   const summaries = catalog.groups.map((group) => ({
     id: group.id,
@@ -284,14 +330,20 @@ export async function searchBusinessGroups(query: string): Promise<BusinessGroup
       .slice(0, GROUP_RESULT_LIMIT);
   }
 
+  const aliases = groupSearchAliases[normalizedQuery.replace(/\s+/g, "")] ?? groupSearchAliases[normalizedQuery] ?? [];
   return summaries
-    .filter((group) => groupSearchText(group).includes(normalizedQuery))
+    .map((group) => ({
+      group,
+      score: groupSearchScore(group, normalizedQuery, aliases),
+    }))
+    .filter((result) => result.score < Number.POSITIVE_INFINITY || groupSearchText(result.group).includes(normalizedQuery))
     .toSorted(
       (a, b) =>
-        groupSearchScore(a, normalizedQuery) - groupSearchScore(b, normalizedQuery) ||
-        b.count - a.count ||
-        a.name.localeCompare(b.name),
+        a.score - b.score ||
+        b.group.count - a.group.count ||
+        a.group.name.localeCompare(b.group.name),
     )
+    .map((result) => result.group)
     .slice(0, GROUP_RESULT_LIMIT);
 }
 
