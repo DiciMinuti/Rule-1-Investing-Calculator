@@ -1,0 +1,80 @@
+{
+  "symbol": "PH",
+  "companyName": "Parker-Hannifin",
+  "generatedAt": "2026-06-22",
+  "management": {
+    "grade": "strong",
+    "sections": [
+      {
+        "title": "Leadership",
+        "grade": "strong",
+        "summary": "Chairman and CEO Jennifer A. Parmentier leads Parker-Hannifin with EVP and CFO Todd M. Leombruno managing finances, overseeing a Fortune 250 motion and control technologies business with $19.065 billion in FY2025 revenue. The leadership team drives the Win Strategy business system to execute growth and transformation initiatives across diversified industrial and aerospace markets.",
+        "points": [
+          "Jennifer A. Parmentier serves as Chairman and CEO, leading a century-old motion and control technologies company generating $19.065 billion in FY2025 revenue across diversified industrial and aerospace markets.",
+          "CFO Todd M. Leombruno oversees a balance sheet with $12.072 billion in stockholders' equity and $8.412 billion in long-term debt as of FY2025, supporting strategic capital deployment."
+        ]
+      },
+      {
+        "title": "Capital Allocation",
+        "grade": "strong",
+        "summary": "Parker-Hannifin returned significant capital to shareholders in FY2025 through $1.6 billion in share repurchases and a 10 percent quarterly dividend increase, marking the 69th consecutive annual dividend increase. The company also pursues strategic M&A including the announced Curtis Instruments acquisition and completed divestitures of non-core Composites and Fuel Containment and Non-Core Filtration businesses in November 2024.",
+        "points": [
+          "The company repurchased $1.6 billion of shares in FY2025 while increasing its quarterly dividend by 10 percent, marking the 69th consecutive year of annual dividend per share increases.",
+          "Strategic portfolio actions include announcing the Curtis Instruments acquisition for electrification capabilities and divesting non-core Composites and Fuel Containment and Non-Core Filtration businesses in November 2024."
+        ]
+      },
+      {
+        "title": "Shareholder Alignment",
+        "grade": "strong",
+        "summary": "Executive compensation heavily weights at-risk performance, with the CEO's target total direct compensation 91 percent at-risk and other Named Executive Officers averaging 80 percent at-risk. LTIP awards tie payouts to achieving average return on average equity or average free cash flow margin thresholds of four percent, with a maximum 200 percent payout.",
+        "points": [
+          "The CEO's target total direct compensation is 91 percent at-risk, while other Named Executive Officers average 80 percent at-risk, heavily weighting pay to performance outcomes.",
+          "LTIP awards base payouts on achieving an average return on average equity of four percent or an average free cash flow margin of four percent, with maximum payout of 200 percent if achieved."
+        ]
+      },
+      {
+        "title": "Communication",
+        "grade": "strong",
+        "summary": "Parker-Hannifin provides detailed segment reporting through its 10-K, breaking Diversified Industrial into Motion Systems, Flow and Process Control, and Filtration and Engineered Materials groups, and Aerospace Systems into Commercial OEM, Commercial Aftermarket, Defense OEM, and Defense Aftermarket categories. The company reports geographic revenue splits with FY2025 North America sales of $13,406 million and international sales of $6,444 million.",
+        "points": [
+          "The 10-K filed August 22, 2025 provides granular segment reporting, dividing Diversified Industrial into three groups and Aerospace Systems into four OEM and aftermarket sub-segments.",
+          "Geographic revenue disclosure shows FY2025 North America sales of $13,406 million versus $6,444 million internationally, with no country other than the United States exceeding 10 percent of consolidated sales."
+        ]
+      },
+      {
+        "title": "Governance",
+        "grade": "strong",
+        "summary": "Parker-Hannifin's board is 91 percent independent with average tenure of 8.6 years, and the company maintains annual elections with majority voting and proxy access for shareholders. Governance policies include mandatory director retirement at age 72, no executive employment agreements, no below-market option repricing, and anti-hedging and anti-pledging policies for directors and officers.",
+        "points": [
+          "The board is 91 percent independent with average tenure of 8.6 years, mandatory retirement at age 72, annual elections of all directors, majority voting with resignation policy, and proxy access for eligible shareholders.",
+          "The company does not offer executive employment agreements, does not reprice options or SARs, and maintains anti-hedging and anti-pledging policies, while a February 2025 fire at the Saegertown, Pennsylvania plant created deductible and retained liability expense."
+        ]
+      }
+    ]
+  },
+  "moat": {
+    "grade": "strong",
+    "types": [
+      {
+        "type": "Switching Costs",
+        "grade": "strong",
+        "summary": "Parker-Hannifin's aerospace and industrial customers face high switching costs due to the engineered specificity of motion and control components, with the Aerospace Systems segment generating revenue across Commercial OEM, Commercial Aftermarket, Defense OEM, and Defense Aftermarket categories that create recurring aftermarket lock-in."
+      },
+      {
+        "type": "Intangible Assets",
+        "grade": "strong",
+        "summary": "The Meggitt acquisition added customer relationships, technology-based intangible assets, and trade names to Parker's portfolio, while $258 million in FY2025 R&D spending reinforces proprietary motion and control technology across its Filtration, Flow and Process Control, and Motion Systems groups."
+      },
+      {
+        "type": "Efficient Scale",
+        "grade": "middle",
+        "summary": "With $19.065 billion in FY2025 revenue and a record 23.0 percent segment operating margin, Parker-Hannifin operates at a scale that creates cost advantages across its diversified industrial and aerospace businesses, supported by $2.98 billion in operating cash flow representing 19 percent of sales."
+      },
+      {
+        "type": "Network Effects",
+        "grade": "middle",
+        "summary": "Parker-Hannifin's equity method joint venture investments generated $167 million in cash dividends in FY2025, up from $114 million in FY2023, reflecting deepened partnerships and collaborative distribution channels that reinforce the company's position across global industrial and aerospace markets."
+      }
+    ]
+  }
+}

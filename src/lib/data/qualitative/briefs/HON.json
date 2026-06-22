@@ -1,0 +1,85 @@
+{
+  "symbol": "HON",
+  "companyName": "Honeywell",
+  "generatedAt": "2026-06-22",
+  "management": {
+    "grade": "strong",
+    "sections": [
+      {
+        "title": "Leadership",
+        "grade": "strong",
+        "summary": "Vimal Kapur leads Honeywell as Chairman and CEO and will continue leading the post-separation automation-focused company, while Jim Currier, who has nearly two decades of senior roles, will helm Honeywell Aerospace as President and CEO. CFO Michal Stepniak oversees financial operations during this multi-business separation process.",
+        "points": [
+          "Vimal Kapur serves as Chairman and CEO and will continue leading the post-separation Honeywell, focusing on the transition from automation to autonomy across Building Automation, Industrial Automation, and Process Automation and Technology segments.",
+          "Jim Currier was named President and CEO of Honeywell Aerospace after leading the Aerospace Technologies business since 2023, with his compensation set at $1.4 million base salary and $13 million target long-term incentive grant value.",
+          "Michal Stepniak serves as Senior Vice President and CFO, managing finances through the Solstice spin-off completed October 30, 2025, and the upcoming Aerospace and Automation separation expected in Q3 2026."
+        ]
+      },
+      {
+        "title": "Capital Allocation",
+        "grade": "strong",
+        "summary": "Honeywell generated $5.102 billion in free cash flow in 2025, up from $4.241 billion in 2024, while deploying capital across acquisitions including CAES Systems, Civitanavi, Carrier's Global Access Solutions, and the Air Products LNG business. The company also divested non-core assets and recorded a $724 million goodwill impairment in Industrial Automation.",
+        "points": [
+          "Honeywell completed acquisitions of CAES Systems Holdings, Civitanavi Systems, Carrier Global's Global Access Solutions business, and the Air Products LNG process technology and equipment business in 2024.",
+          "The company divested its Personal Protective Equipment business by May 2025 for a $28 million loss net of tax, and classified Productivity Solutions and Warehouse Workflow Solutions as held for sale as of December 31, 2025.",
+          "ROIC declined to 14.8% in 2025 from 15.1% in 2024 and 16.9% in 2023, while the company carried $29.046 billion in long-term debt against $9.906 billion in cash and equivalents."
+        ]
+      },
+      {
+        "title": "Shareholder Alignment",
+        "grade": "middle",
+        "summary": "Honeywell's equity compensation plans had 12,997,866 securities outstanding with a weighted average exercise price of $172.59 and 27,733,434 securities available for future issuance as of December 31, 2025. The 2026 proxy includes a proposed 1-for-2 reverse stock split reducing authorized shares from 2 billion to 1 billion.",
+        "points": [
+          "As of December 31, 2025, Honeywell had 12,997,866 securities to be issued upon exercise of outstanding options, warrants, and rights under shareholder-approved equity compensation plans, with a weighted average exercise price of $172.59.",
+          "The 2026 proxy statement proposes a 1-for-2 reverse stock split with a proportionate reduction in authorized shares from 2,000,000,000 to 1,000,000,000 common shares.",
+          "Jim Currier's offer letter sets target annual incentive compensation at 175% of his $1.4 million base salary, aligning aerospace leadership pay with post-separation performance."
+        ]
+      },
+      {
+        "title": "Communication",
+        "grade": "strong",
+        "summary": "Honeywell reports four segments-Aerospace Technologies, Industrial Automation, Building Automation, and Energy and Sustainability Solutions-with detailed sub-line disclosures including Commercial Aviation OE, Aftermarket, Defense Services, and UOP. The 10-K and DEF 14A provide segment profit margins, organic growth rates, and adjusted metrics excluding items like $373 million in Flexjet litigation.",
+        "points": [
+          "Honeywell's 10-K and DEF 14A disclose segment-level profit margins, including Aerospace Technologies' 24.5% segment profit margin and 26.1% adjusted margin after excluding $373 million in Flexjet-related litigation matters.",
+          "The company reports organic sales growth by segment, showing 7% overall growth in 2025 with Aerospace Technologies growing 12% organically and Building Automation growing 8% organically.",
+          "Filings detail multi-year free cash flow trends-$5.102 billion in 2025, $4.241 billion in 2024, and $3.718 billion in 2023-with a 13.5% free cash flow margin in 2025."
+        ]
+      },
+      {
+        "title": "Governance",
+        "grade": "strong",
+        "summary": "Honeywell's Audit Committee is chaired by Michael W. Lamach and includes financial experts D. Scott Davis and Stephen Williamson, while the board added Indra Nooyi and Elliott partner Marc Steinberg under a May 2025 cooperation agreement. The company discloses legacy asbestos and environmental liabilities from the NARCO Buyout, Bendix Friction Materials, and Resideo separation.",
+        "points": [
+          "The Audit Committee, chaired by Michael W. Lamach, includes members William S. Ayer, Kevin Burke, D. Scott Davis, Marc Steinberg, Robin Watson, and Stephen Williamson, with Davis and Williamson designated as financial experts.",
+          "Honeywell entered a Cooperation Agreement with Elliott Investment Management dated May 28, 2025, and welcomed Marc Steinberg as a director on May 31, 2025, alongside Indra Nooyi who joined January 1, 2026.",
+          "The company maintains asbestos-related liabilities from the NARCO Buyout and Bendix Friction Materials, plus environmental liabilities associated with the Resideo separation, all subject to estimation adjustments."
+        ]
+      }
+    ]
+  },
+  "moat": {
+    "grade": "strong",
+    "types": [
+      {
+        "type": "Switching Costs",
+        "grade": "strong",
+        "summary": "Honeywell's Aerospace Technologies segment generated $17,510 million in net sales with a 24.5% segment profit margin in 2025, driven by Commercial Aviation OE, Aftermarket, and Defense Services sub-lines that embed Honeywell equipment into aircraft platforms with long certification cycles and replacement part dependencies."
+      },
+      {
+        "type": "Intangible Assets",
+        "grade": "strong",
+        "summary": "Honeywell spent $1.375 billion on R&D in FY2025 across its four segments, supporting proprietary technologies in sensing, process solutions, UOP catalysts, and aerospace systems that are protected by patents and regulatory certifications, creating barriers for competitors in safety-critical applications."
+      },
+      {
+        "type": "Cost Advantage",
+        "grade": "middle",
+        "summary": "With $33.009 billion in FY2025 revenue across four segments, Honeywell leverages scale in aerospace aftermarket parts, building automation products, and process solutions, though the $724 million goodwill impairment in Industrial Automation suggests not all sub-lines achieve cost leadership."
+      },
+      {
+        "type": "Network Effects",
+        "grade": "middle",
+        "summary": "Honeywell's Building Automation segment, which grew 8% organically in 2025, connects Building Products and Building Solutions through integrated platforms, while Industrial Automation's Process Solutions and Warehouse and Workflow Solutions create ecosystem value across connected industrial deployments."
+      }
+    ]
+  }
+}

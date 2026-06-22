@@ -1,0 +1,127 @@
+{
+  "symbol": "BX",
+  "companyName": "Blackstone Group",
+  "updatedAt": "2026-06-22",
+  "facts": [
+    {
+      "topic": "Business Model",
+      "statement": "Blackstone Inc. is classified under SIC code 'Investment Advice' and is listed on the NYSE under the ticker BX.",
+      "source": "SEC submissions metadata (https://data.sec.gov/submissions/CIK0001393818.)"
+    },
+    {
+      "topic": "Revenue Scale",
+      "statement": "Blackstone reported total revenue of approximately $8.02 billion for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0001393818.)"
+    },
+    {
+      "topic": "Profitability",
+      "statement": "Blackstone reported net income of approximately $1.39 billion for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0001393818.)"
+    },
+    {
+      "topic": "Cash Flow",
+      "statement": "Blackstone generated operating cash flow of approximately $4.06 billion for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0001393818.)"
+    },
+    {
+      "topic": "Balance Sheet",
+      "statement": "As of FY2025, Blackstone had stockholders' equity of approximately $8.21 billion, long-term debt of approximately $12.58 billion, and cash and equivalents of approximately $1.97 billion.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0001393818.)"
+    },
+    {
+      "topic": "Segments",
+      "statement": "Blackstone's operating segments include Real Estate, Private Equity, Credit and Insurance, and Multi-Asset Investing.",
+      "source": "10-K filed 2026-02-27 (https://www.sec.gov/Archives/edgar/data/1393818/000119312526082531/d48618d10k.htm)"
+    },
+    {
+      "topic": "Management",
+      "statement": "Stephen A. Schwarzman serves as Chief Executive Officer and Chairman of the Board of Directors of Blackstone Inc.",
+      "source": "10-K filed 2026-02-27 (https://www.sec.gov/Archives/edgar/data/1393818/000119312526082531/d48618d10k.htm)"
+    },
+    {
+      "topic": "Management",
+      "statement": "Jonathan D. Gray serves as President, Chief Operating Officer, and Director of Blackstone Inc.",
+      "source": "10-K filed 2026-02-27 (https://www.sec.gov/Archives/edgar/data/1393818/000119312526082531/d48618d10k.htm)"
+    },
+    {
+      "topic": "Management",
+      "statement": "Michael S. Chae serves as Vice Chairman and Chief Financial Officer (Principal Financial Officer) of Blackstone Inc.",
+      "source": "10-K filed 2026-02-27 (https://www.sec.gov/Archives/edgar/data/1393818/000119312526082531/d48618d10k.htm)"
+    },
+    {
+      "topic": "Management",
+      "statement": "David Payne serves as Chief Accounting Officer (Principal Accounting Officer) of Blackstone Inc.",
+      "source": "10-K filed 2026-02-27 (https://www.sec.gov/Archives/edgar/data/1393818/000119312526082531/d48618d10k.htm)"
+    },
+    {
+      "topic": "Management",
+      "statement": "Joseph P. Baratta, a senior executive at Blackstone, also serves as a Director on the Board.",
+      "source": "10-K filed 2026-02-27 (https://www.sec.gov/Archives/edgar/data/1393818/000119312526082531/d48618d10k.htm)"
+    },
+    {
+      "topic": "Board of Directors",
+      "statement": "The Board of Directors includes external members James W. Breyer, Reginald J. Brown, Rochelle B. Lazarus, William G. Parrett, and Ruth Porat.",
+      "source": "10-K filed 2026-02-27 (https://www.sec.gov/Archives/edgar/data/1393818/000119312526082531/d48618d10k.htm)"
+    },
+    {
+      "topic": "Capital Structure",
+      "statement": "Blackstone has issued long-term borrowings in the form of unsecured and unsubordinated senior notes that are fully and unconditionally guaranteed jointly and severally by Blackstone, the Guarantors, and the Issuers.",
+      "source": "10-K filed 2026-02-27 (https://www.sec.gov/Archives/edgar/data/1393818/000119312526082531/d48618d10k.htm)"
+    },
+    {
+      "topic": "Capital Allocation",
+      "statement": "In February 2026, Blackstone drew $900.0 million under its Revolving Credit Facility.",
+      "source": "10-K filed 2026-02-27 (https://www.sec.gov/Archives/edgar/data/1393818/000119312526082531/d48618d10k.htm)"
+    },
+    {
+      "topic": "Capital Allocation",
+      "statement": "Blackstone pays quarterly dividends, with fourth quarter dividends for any fiscal year declared and paid in the subsequent fiscal year.",
+      "source": "10-K filed 2026-02-27 (https://www.sec.gov/Archives/edgar/data/1393818/000119312526082531/d48618d10k.htm)"
+    },
+    {
+      "topic": "Risk Factors",
+      "statement": "The Revolving Credit Facility contains financial covenants requiring Blackstone to maintain a maximum net leverage ratio and a minimum amount of fee-earning assets under management, tested quarterly.",
+      "source": "10-K filed 2026-02-27 (https://www.sec.gov/Archives/edgar/data/1393818/000119312526082531/d48618d10k.htm)"
+    },
+    {
+      "topic": "Risk Factors",
+      "statement": "Holders of not less than 25% in aggregate principal amount of outstanding senior notes may declare the notes immediately due and payable upon the occurrence of an event of default.",
+      "source": "10-K filed 2026-02-27 (https://www.sec.gov/Archives/edgar/data/1393818/000119312526082531/d48618d10k.htm)"
+    },
+    {
+      "topic": "Business Model",
+      "statement": "Blackstone's segment presentation excludes the effects of consolidating Blackstone Funds, adjusting for items such as performance revenues, principal investment income, and net management fees earned from these funds.",
+      "source": "10-K filed 2026-02-27 (https://www.sec.gov/Archives/edgar/data/1393818/000119312526082531/d48618d10k.htm)"
+    },
+    {
+      "topic": "Business Model",
+      "statement": "Blackstone Fund Facilities represent borrowing facilities for various consolidated Blackstone Funds used to meet liquidity and investing needs, with borrowings bearing interest at spreads to market rates or stated fixed rates.",
+      "source": "10-K filed 2026-02-27 (https://www.sec.gov/Archives/edgar/data/1393818/000119312526082531/d48618d10k.htm)"
+    },
+    {
+      "topic": "Governance",
+      "statement": "Blackstone maintains an Incentive Compensation Clawback Policy as part of its corporate governance framework.",
+      "source": "10-K filed 2026-02-27 (https://www.sec.gov/Archives/edgar/data/1393818/000119312526082531/d48618d10k.htm)"
+    },
+    {
+      "topic": "Compensation",
+      "statement": "Blackstone uses the Amended and Restated 2007 Equity Incentive Plan to issue deferred unit agreements and phantom unit agreements to directors, executive officers, and employees.",
+      "source": "10-K filed 2026-02-27 (https://www.sec.gov/Archives/edgar/data/1393818/000119312526082531/d48618d10k.htm)"
+    },
+    {
+      "topic": "Capital Structure",
+      "statement": "As of December 31, 2025, the CLO Notes Payable were fully deconsolidated and there were no outstanding borrowings for the current period.",
+      "source": "10-K filed 2026-02-27 (https://www.sec.gov/Archives/edgar/data/1393818/000119312526082531/d48618d10k.htm)"
+    },
+    {
+      "topic": "Capital Structure",
+      "statement": "The Secured Borrowings due 10/27/2033 and 1/29/2035 were repaid during the year ended December 31, 2025.",
+      "source": "10-K filed 2026-02-27 (https://www.sec.gov/Archives/edgar/data/1393818/000119312526082531/d48618d10k.htm)"
+    },
+    {
+      "topic": "Risk Factors",
+      "statement": "The margin on Blackstone's Revolving Credit Facility borrowings above adjusted SOFR was 0.75% plus an additional credit spread adjustment of 0.10%, and is subject to change based on Blackstone's credit rating.",
+      "source": "10-K filed 2026-02-27 (https://www.sec.gov/Archives/edgar/data/1393818/000119312526082531/d48618d10k.htm)"
+    }
+  ]
+}

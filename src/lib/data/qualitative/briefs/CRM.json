@@ -1,0 +1,80 @@
+{
+  "symbol": "CRM",
+  "companyName": "Salesforce",
+  "generatedAt": "2026-06-22",
+  "management": {
+    "grade": "strong",
+    "sections": [
+      {
+        "title": "Leadership",
+        "grade": "strong",
+        "summary": "Marc Benioff continues as Chair and CEO, steering Salesforce through an AI-agent platform transition with Agentforce ARR at $800 million, up 169% year-over-year. Robin Washington serves as President and COO/CFO, while Srinivas Tallapragada leads engineering and customer success across the integrated product portfolio.",
+        "points": [
+          "Benioff publicly targets $46 billion in fiscal 2027 revenue and a $63 billion fiscal 2030 target, reflecting aggressive growth expectations tied to the Informatica acquisition and Agentforce expansion.",
+          "The leadership team oversees a platform that ingested 112 trillion records through Data 360 in fiscal 2026, with Agentforce and Data 360 described as the fastest-growing products in company history."
+        ]
+      },
+      {
+        "title": "Capital Allocation",
+        "grade": "strong",
+        "summary": "Salesforce returned $14.3 billion to stockholders in fiscal 2026 through $12.7 billion in buybacks and $1.6 billion in dividends, then commenced a $25 billion accelerated repurchase program in March 2026. The company also completed the Informatica acquisition in November 2025, adding data integration capabilities.",
+        "points": [
+          "The Informatica and Regrello acquisitions were excluded from FY2026 internal control assessments because together they represented less than one percent of consolidated revenues and operating expenses.",
+          "Long-term debt of $8.4 billion includes senior notes maturing from 2028 to 2061, with credit agreements specifically tied to financing the Informatica acquisition."
+        ]
+      },
+      {
+        "title": "Shareholder Alignment",
+        "grade": "middle",
+        "summary": "Salesforce is seeking stockholder approval to add 34 million shares to its 2013 Equity Incentive Plan and 20 million shares to its 2004 Employee Stock Purchase Plan, signaling continued dilution from equity compensation. The Lead Independent Director frames M&A decisions around a return-on-invested-capital framework.",
+        "points": [
+          "Co-Founder Parker Harris adopted a Rule 10b5-1 plan in December 2025 to sell or donate up to 154,725 shares, while President Srinivas Tallapragada adopted a plan to sell up to 22,904 shares.",
+          "The company maintains an Executive Officer Incentive Compensation Recovery Policy, providing a clawback mechanism tied to financial restatements or misconduct."
+        ]
+      },
+      {
+        "title": "Communication",
+        "grade": "strong",
+        "summary": "Salesforce reports revenue across two segments-Subscription and Support, and Professional Services and Other-with geographic breakdowns for the Americas, Europe, and Asia Pacific. The 10-K separately discloses U.S. versus non-U.S. revenue and assets for geographic concentration risk assessment.",
+        "points": [
+          "The 10-K XBRL taxonomy references five Agentforce product families-Sales, Service, 360 Platform/Slack/Other, Marketing/Commerce, and Integration/Analytics-enabling granular tracking of AI-agent platform performance.",
+          "The fiscal 2026 proxy letter discloses specific operating metrics including non-GAAP operating margin of 34.1%, $72.4 billion in remaining performance obligations, and 29,000 closed Agentforce deals."
+        ]
+      },
+      {
+        "title": "Governance",
+        "grade": "middle",
+        "summary": "The 13-member board slate includes Lead Independent Director Arnold Donald alongside directors with diverse operational backgrounds, while the Code of Conduct applies to all employees including the CEO, CFO, and Chief Accounting Officer. The company faces ongoing litigation related to its former customer Backpage.com.",
+        "points": [
+          "The Backpage-related litigation includes consolidated cases with 244 plaintiffs in the Northern District of Illinois and actions across multiple Texas federal and state courts, with several stayed pending criminal proceedings.",
+          "The Slack class action securities litigation concluded in defendants' favor in federal court in November 2025, but a related Delaware state court action was revived when the stay was lifted for discovery and renewed class certification."
+        ]
+      }
+    ]
+  },
+  "moat": {
+    "grade": "strong",
+    "types": [
+      {
+        "type": "Switching Costs",
+        "grade": "strong",
+        "summary": "Salesforce's $72.4 billion in remaining performance obligations represents contracted future revenue from customers embedded across Sales, Service, Marketing/Commerce, and Integration/Analytics clouds, creating high migration costs for enterprises deeply integrated into the platform."
+      },
+      {
+        "type": "Network Effects",
+        "grade": "middle",
+        "summary": "Agentforce has closed 29,000 deals with customers including Amazon, Ford, AT&T, and GM, while Data 360 ingested 112 trillion records in fiscal 2026, building a data network where more customer records improve AI-agent performance across the installed base."
+      },
+      {
+        "type": "Intangible Assets",
+        "grade": "middle",
+        "summary": "The Informatica acquisition added identifiable intangible assets including developed technology rights, customer relationships, trade names, and order backlog, expanding Salesforce's data integration IP portfolio alongside its existing Agentforce AI-agent platform."
+      },
+      {
+        "type": "Efficient Scale",
+        "grade": "strong",
+        "summary": "With $41.5 billion in fiscal 2026 revenue and $4.9 billion in R&D spending at roughly 14% of revenue, Salesforce operates at a scale where its development budget alone exceeds the total revenue of most CRM competitors, reinforcing its platform breadth across five product families."
+      }
+    ]
+  }
+}

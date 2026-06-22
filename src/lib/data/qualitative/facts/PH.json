@@ -1,0 +1,172 @@
+{
+  "symbol": "PH",
+  "companyName": "Parker-Hannifin",
+  "updatedAt": "2026-06-22",
+  "facts": [
+    {
+      "topic": "Business Model",
+      "statement": "Parker-Hannifin is a Fortune 250 global leader in motion and control technologies, serving diversified industrial and aerospace markets for more than a century.",
+      "source": "DEF 14A filed 2025-09-19 (https://www.sec.gov/Archives/edgar/data/76334/000130817925000603/ph-20250919.htm)"
+    },
+    {
+      "topic": "Business System",
+      "statement": "The Win Strategy is Parker's business system that defines the goals and initiatives that drive growth, transformation and success.",
+      "source": "DEF 14A filed 2025-09-19 (https://www.sec.gov/Archives/edgar/data/76334/000130817925000603/ph-20250919.htm)"
+    },
+    {
+      "topic": "Industry Classification",
+      "statement": "Parker-Hannifin is classified under SIC code for Miscellaneous Fabricated Metal Products and trades on the NYSE under ticker symbol PH.",
+      "source": "SEC submissions metadata (https://data.sec.gov/submissions/CIK0000076334.)"
+    },
+    {
+      "topic": "Revenue Scale",
+      "statement": "Revenue was $19.065 billion for FY2025, filed August 22, 2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000076334.)"
+    },
+    {
+      "topic": "Net Income",
+      "statement": "Net income was $1,315,605,000 for FY2024.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000076334.)"
+    },
+    {
+      "topic": "Operating Cash Flow",
+      "statement": "Operating cash flow was $2.98 billion for FY2025, representing 19% of sales.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000076334.); DEF 14A filed 2025-09-19 (https://www.sec.gov/Archives/edgar/data/76334/000130817925000603/ph-20250919.htm)"
+    },
+    {
+      "topic": "R&D Spending",
+      "statement": "Research and development expense was $258 million for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000076334.)"
+    },
+    {
+      "topic": "Balance Sheet",
+      "statement": "As of FY2025, stockholders' equity was $12.072 billion, long-term debt was $8.412 billion, and cash and equivalents were $422 million.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000076334.)"
+    },
+    {
+      "topic": "Segment Structure",
+      "statement": "Parker-Hannifin operates in two reportable segments: Diversified Industrial and Aerospace Systems, with Diversified Industrial further divided into Motion Systems, Flow and Process Control, and Filtration and Engineered Materials groups.",
+      "source": "10-K filed 2025-08-22 (https://www.sec.gov/Archives/edgar/data/76334/000007633425000035/ph-20250630.htm)"
+    },
+    {
+      "topic": "Aerospace Sub-Segments",
+      "statement": "The Aerospace Systems segment is further broken down into Commercial Original Equipment Manufacturer, Commercial Aftermarket, Defense Original Equipment Manufacturer, and Defense Aftermarket categories.",
+      "source": "10-K filed 2025-08-22 (https://www.sec.gov/Archives/edgar/data/76334/000007633425000035/ph-20250630.htm)"
+    },
+    {
+      "topic": "Segment Operating Margin",
+      "statement": "Segment operating margin was a record at 23.0% in fiscal year 2025.",
+      "source": "DEF 14A filed 2025-09-19 (https://www.sec.gov/Archives/edgar/data/76334/000130817925000603/ph-20250919.htm)"
+    },
+    {
+      "topic": "Earnings Per Share",
+      "statement": "Earnings per share as reported were a record at $27.12 in fiscal year 2025.",
+      "source": "DEF 14A filed 2025-09-19 (https://www.sec.gov/Archives/edgar/data/76334/000130817925000603/ph-20250919.htm)"
+    },
+    {
+      "topic": "Geographic Revenue",
+      "statement": "Net sales for FY2025 were $13,406 million in North America and $6,444 million internationally, totaling $19,850 million; no country other than the United States represents greater than 10 percent of consolidated sales.",
+      "source": "10-K filed 2025-08-22 (https://www.sec.gov/Archives/edgar/data/76334/000007633425000035/ph-20250630.htm)"
+    },
+    {
+      "topic": "Capital Allocation - Dividends",
+      "statement": "Parker-Hannifin increased its annual dividend per share for the 69th consecutive year in fiscal year 2025, including a 10 percent increase in the quarterly cash dividend.",
+      "source": "DEF 14A filed 2025-09-19 (https://www.sec.gov/Archives/edgar/data/76334/000130817925000603/ph-20250919.htm)"
+    },
+    {
+      "topic": "Capital Allocation - Share Repurchases",
+      "statement": "Parker-Hannifin repurchased $1.6 billion of shares in fiscal year 2025.",
+      "source": "DEF 14A filed 2025-09-19 (https://www.sec.gov/Archives/edgar/data/76334/000130817925000603/ph-20250919.htm)"
+    },
+    {
+      "topic": "M&A Activity",
+      "statement": "Parker-Hannifin announced an agreement to acquire Curtis Instruments, Inc. in fiscal year 2025 to further strengthen its electrification portfolio.",
+      "source": "DEF 14A filed 2025-09-19 (https://www.sec.gov/Archives/edgar/data/76334/000130817925000603/ph-20250919.htm)"
+    },
+    {
+      "topic": "M&A Activity - Meggitt",
+      "statement": "Parker-Hannifin acquired Meggitt plc, with the acquisition referenced as having closed around September 12, 2022, and involving customer relationships, technology-based intangible assets, and trade names.",
+      "source": "10-K filed 2025-08-22 (https://www.sec.gov/Archives/edgar/data/76334/000007633425000035/ph-20250630.htm)"
+    },
+    {
+      "topic": "Divestitures",
+      "statement": "During FY2025, Parker-Hannifin divested its Composites and Fuel Containment business and Non-Core Filtration business within the Diversified Industrial segment, both in November 2024.",
+      "source": "10-K filed 2025-08-22 (https://www.sec.gov/Archives/edgar/data/76334/000007633425000035/ph-20250630.htm)"
+    },
+    {
+      "topic": "Management - CEO",
+      "statement": "Jennifer A. Parmentier serves as Chairman and Chief Executive Officer of Parker-Hannifin Corporation.",
+      "source": "10-K filed 2025-08-22 (https://www.sec.gov/Archives/edgar/data/76334/000007633425000035/ph-20250630.htm)"
+    },
+    {
+      "topic": "Management - CFO",
+      "statement": "Todd M. Leombruno serves as Executive Vice President and Chief Financial Officer (Principal Financial Officer) of Parker-Hannifin Corporation.",
+      "source": "10-K filed 2025-08-22 (https://www.sec.gov/Archives/edgar/data/76334/000007633425000035/ph-20250630.htm)"
+    },
+    {
+      "topic": "Board of Directors",
+      "statement": "The Board of Directors includes Jennifer A. Parmentier (Chairman and CEO), Denise Russell Fleming, Lance M. Fritz, Linda A. Harty, Kevin A. Lobo, E. Jean Savage, Joseph Scaminace, Laura K. Thompson, James R. Verrier, James L. Wainscott, and Beth A. Wozniak as nominees for terms expiring in 2026.",
+      "source": "DEF 14A filed 2025-09-19 (https://www.sec.gov/Archives/edgar/data/76334/000130817925000603/ph-20250919.htm)"
+    },
+    {
+      "topic": "Board Independence",
+      "statement": "91% of Parker-Hannifin's Board is independent, with average tenure of 8.6 years and average age of 62 years; 73% of directors are gender, racially, or ethnically diverse.",
+      "source": "DEF 14A filed 2025-09-19 (https://www.sec.gov/Archives/edgar/data/76334/000130817925000603/ph-20250919.htm)"
+    },
+    {
+      "topic": "Executive Compensation Structure",
+      "statement": "The CEO's target total direct compensation is 9% fixed and 91% at-risk, while other Named Executive Officers have an average mix of 20% fixed and 80% at-risk.",
+      "source": "DEF 14A filed 2025-09-19 (https://www.sec.gov/Archives/edgar/data/76334/000130817925000603/ph-20250919.htm)"
+    },
+    {
+      "topic": "Equity Compensation Plans",
+      "statement": "As of June 30, 2025, 3,783,595 securities were to be issued upon exercise of outstanding options, warrants and rights at a weighted-average exercise price of $288.60, with 17,153,703 securities remaining available for future issuance.",
+      "source": "10-K filed 2025-08-22 (https://www.sec.gov/Archives/edgar/data/76334/000007633425000035/ph-20250630.htm)"
+    },
+    {
+      "topic": "LTIP Performance Metrics",
+      "statement": "LTIP awards payouts are determined based on achieving an average return on average equity of four percent or an average free cash flow margin of four percent, with maximum payout of 200 percent if achieved.",
+      "source": "10-K filed 2025-08-22 (https://www.sec.gov/Archives/edgar/data/76334/000007633425000035/ph-20250630.htm)"
+    },
+    {
+      "topic": "Principal Shareholders",
+      "statement": "As of July 31, 2025, The Vanguard Group owned 8.26% of shares, State Street Corporation owned 7.74%, and BlackRock, Inc. owned 6.74%.",
+      "source": "DEF 14A filed 2025-09-19 (https://www.sec.gov/Archives/edgar/data/76334/000130817925000603/ph-20250919.htm)"
+    },
+    {
+      "topic": "Risk Factor - Saegertown Fire",
+      "statement": "A fire at Parker-Hannifin's plant in Saegertown, Pennsylvania in February 2025 resulted in deductible and retained liability expense recorded in other (income) expense, net.",
+      "source": "10-K filed 2025-08-22 (https://www.sec.gov/Archives/edgar/data/76334/000007633425000035/ph-20250630.htm)"
+    },
+    {
+      "topic": "Joint Venture Investments",
+      "statement": "Parker-Hannifin has equity method investments in joint venture companies with 50 percent or less ownership, receiving cash dividends of $167 million in FY2025, $148 million in FY2024, and $114 million in FY2023.",
+      "source": "10-K filed 2025-08-22 (https://www.sec.gov/Archives/edgar/data/76334/000007633425000035/ph-20250630.htm)"
+    },
+    {
+      "topic": "Internal Controls",
+      "statement": "Management concluded that Parker-Hannifin's internal control over financial reporting was effective as of June 30, 2025, with Deloitte & Touche LLP issuing an attestation report.",
+      "source": "10-K filed 2025-08-22 (https://www.sec.gov/Archives/edgar/data/76334/000007633425000035/ph-20250630.htm)"
+    },
+    {
+      "topic": "Governance - Mandatory Director Retirement",
+      "statement": "Director retirement is mandatory at Parker-Hannifin after reaching age 72, with no exceptions or conditions.",
+      "source": "DEF 14A filed 2025-09-19 (https://www.sec.gov/Archives/edgar/data/76334/000130817925000603/ph-20250919.htm)"
+    },
+    {
+      "topic": "Governance - Shareholder Rights",
+      "statement": "Parker-Hannifin has annual election of all directors, majority voting with resignation policy for uncontested elections, and proxy access permitted for eligible shareholders.",
+      "source": "DEF 14A filed 2025-09-19 (https://www.sec.gov/Archives/edgar/data/76334/000130817925000603/ph-20250919.htm)"
+    },
+    {
+      "topic": "Compensation Governance",
+      "statement": "Parker-Hannifin does not offer employment agreements to executives, does not grant stock options or SARs with exercise prices below fair market value, does not reprice options or SARs, and maintains anti-hedging and anti-pledging policies for directors and executive officers.",
+      "source": "DEF 14A filed 2025-09-19 (https://www.sec.gov/Archives/edgar/data/76334/000130817925000603/ph-20250919.htm)"
+    },
+    {
+      "topic": "Shares Outstanding",
+      "statement": "On September 5, 2025, 126,544,072 shares of Parker-Hannifin common stock were outstanding and entitled to vote at the annual meeting.",
+      "source": "DEF 14A filed 2025-09-19 (https://www.sec.gov/Archives/edgar/data/76334/000130817925000603/ph-20250919.htm)"
+    }
+  ]
+}

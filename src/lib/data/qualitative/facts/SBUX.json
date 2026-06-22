@@ -1,0 +1,127 @@
+{
+  "symbol": "SBUX",
+  "companyName": "Starbucks",
+  "updatedAt": "2026-06-22",
+  "facts": [
+    {
+      "topic": "Business Model",
+      "statement": "Starbucks is classified under SIC code 'Retail-Eating & Drinking Places' and trades on Nasdaq under ticker SBUX.",
+      "source": "SEC submissions metadata (https://data.sec.gov/submissions/CIK0000829224.)"
+    },
+    {
+      "topic": "Business Model",
+      "statement": "Starbucks operates a global footprint of more than 40,000 company-operated and licensed coffeehouses and has a growing presence in consumer-packaged goods, positioning itself as the world's premier purveyor of specialty coffee.",
+      "source": "DEF 14A filed 2026-01-26 (https://www.sec.gov/Archives/edgar/data/829224/000121390026007780/ea0270973-01.htm)"
+    },
+    {
+      "topic": "Business Model",
+      "statement": "Starbucks' 'Back to Starbucks' strategy focuses on high quality coffee hand-crafted by skilled green apron partners, served in warm community spaces, with the goal of being the world's leading customer service company.",
+      "source": "DEF 14A filed 2026-01-26 (https://www.sec.gov/Archives/edgar/data/829224/000121390026007780/ea0270973-01.htm)"
+    },
+    {
+      "topic": "Revenue Scale",
+      "statement": "Starbucks reported total revenue of $35,975,600,000 for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000829224.)"
+    },
+    {
+      "topic": "Revenue Scale",
+      "statement": "Consolidated net revenues increased 3% in FY2025, primarily driven by incremental revenues from net new company-operated stores, an increase in revenue in the Global Coffee Alliance, and incremental revenue from the acquisition of 23.5 Degrees Topco Limited (a U.K. licensed business partner), partially offset by a decrease in comparable store sales and a decline in the licensed store business.",
+      "source": "DEF 14A filed 2026-01-26 (https://www.sec.gov/Archives/edgar/data/829224/000121390026007780/ea0270973-01.htm)"
+    },
+    {
+      "topic": "Profitability",
+      "statement": "Starbucks reported net income of $4,124,500,000 for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000829224.)"
+    },
+    {
+      "topic": "Profitability",
+      "statement": "GAAP operating margin contracted to 7.9% in FY2025 from 15.0% in the prior year, while non-GAAP operating margin (in constant currency) contracted to 9.9%, driven by restructuring costs, deleverage, investments in the 'Back to Starbucks' strategy, and inflation.",
+      "source": "DEF 14A filed 2026-01-26 (https://www.sec.gov/Archives/edgar/data/829224/000121390026007780/ea0270973-01.htm)"
+    },
+    {
+      "topic": "Profitability",
+      "statement": "GAAP EPS declined 51% to $1.63 and non-GAAP EPS (in constant currency) declined 35% to $2.13 in FY2025 compared to the prior year.",
+      "source": "DEF 14A filed 2026-01-26 (https://www.sec.gov/Archives/edgar/data/829224/000121390026007780/ea0270973-01.htm)"
+    },
+    {
+      "topic": "Cash Flow",
+      "statement": "Starbucks generated operating cash flow of $6,008,700,000 in FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000829224.)"
+    },
+    {
+      "topic": "Capital Structure",
+      "statement": "As of FY2025, Starbucks had negative stockholders' equity of -$7,448,900,000 and long-term debt of $14,319,500,000.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000829224.)"
+    },
+    {
+      "topic": "Comparable Store Sales",
+      "statement": "Global comparable store sales declined 1% in FY2025, driven by a 2% decline in comparable transactions, partially offset by a 1% increase in average ticket; however, Q4 FY2025 delivered positive global comparable store sales for the first time in seven quarters.",
+      "source": "DEF 14A filed 2026-01-26 (https://www.sec.gov/Archives/edgar/data/829224/000121390026007780/ea0270973-01.htm)"
+    },
+    {
+      "topic": "Restructuring",
+      "statement": "FY2025 restructuring and impairment costs totaled $892.0 million, associated with the closure of coffeehouses and simplification of the support organization.",
+      "source": "DEF 14A filed 2026-01-26 (https://www.sec.gov/Archives/edgar/data/829224/000121390026007780/ea0270973-01.htm)"
+    },
+    {
+      "topic": "Strategic Transactions",
+      "statement": "FY2025 transaction costs of $8.2 million were related to the strategic partnership and divestiture of 60% of Starbucks' operations in China.",
+      "source": "DEF 14A filed 2026-01-26 (https://www.sec.gov/Archives/edgar/data/829224/000121390026007780/ea0270973-01.htm)"
+    },
+    {
+      "topic": "Goodwill and Intangibles",
+      "statement": "The goodwill balance was $3,368.9 million as of September 28, 2025, of which $2,842.6 million was allocated to the international segment, inclusive of the China reporting unit; the fair value of the China reporting unit exceeded its carrying value and no impairment charge was recorded.",
+      "source": "10-K filed 2025-11-14 (https://www.sec.gov/Archives/edgar/data/829224/000082922425000114/sbux-20250928.htm)"
+    },
+    {
+      "topic": "Management",
+      "statement": "Brian R. Niccol serves as chairman and chief executive officer of Starbucks Corporation, having signed the 10-K on November 14, 2025.",
+      "source": "10-K filed 2025-11-14 (https://www.sec.gov/Archives/edgar/data/829224/000082922425000114/sbux-20250928.htm)"
+    },
+    {
+      "topic": "Management",
+      "statement": "Cathy R. Smith serves as executive vice president, chief financial officer, and principal accounting officer of Starbucks Corporation.",
+      "source": "10-K filed 2025-11-14 (https://www.sec.gov/Archives/edgar/data/829224/000082922425000114/sbux-20250928.htm)"
+    },
+    {
+      "topic": "Board of Directors",
+      "statement": "The Starbucks Board of Directors comprises 11 nominees including Brian Niccol, Ritch Allison, Andy Campion, Beth Ford, Jørgen Vig Knudstorp, Marissa Mayer, Neal Mohan, Dambisa Moyo, Daniel Servitje, Mike Sievert, and Wei Zhang.",
+      "source": "DEF 14A filed 2026-01-26 (https://www.sec.gov/Archives/edgar/data/829224/000121390026007780/ea0270973-01.htm)"
+    },
+    {
+      "topic": "Governance",
+      "statement": "Starbucks has majority voting procedures for the election of directors in uncontested elections, where a nominee is elected only if votes cast for the nominee exceed votes cast against.",
+      "source": "DEF 14A filed 2026-01-26 (https://www.sec.gov/Archives/edgar/data/829224/000121390026007780/ea0270973-01.htm)"
+    },
+    {
+      "topic": "Governance",
+      "statement": "A shareholder proposal requesting adoption of an independent board chair policy is on the 2026 annual meeting ballot, with the Board recommending a vote against it.",
+      "source": "DEF 14A filed 2026-01-26 (https://www.sec.gov/Archives/edgar/data/829224/000121390026007780/ea0270973-01.htm)"
+    },
+    {
+      "topic": "Compensation",
+      "statement": "Starbucks' executive compensation program uses non-GAAP financial measures as performance goals, including 'adjusted net revenues,' 'adjusted operating income,' and 'adjusted EPS,' which exclude restructuring and impairment costs, transaction and integration-related costs, gains on sale of assets, legal accruals, and certain tax impacts.",
+      "source": "DEF 14A filed 2026-01-26 (https://www.sec.gov/Archives/edgar/data/829224/000121390026007780/ea0270973-01.htm)"
+    },
+    {
+      "topic": "Labor and Partner Investment",
+      "statement": "Starbucks invested in U.S.-based coffeehouse partners with competitive pay and industry-leading benefits worth together on average $30 per hour, and saw more than 2,000 partners graduate from Arizona State University in FY2025.",
+      "source": "DEF 14A filed 2026-01-26 (https://www.sec.gov/Archives/edgar/data/829224/000121390026007780/ea0270973-01.htm)"
+    },
+    {
+      "topic": "Operational Initiatives",
+      "statement": "Starbucks launched new tools including Green Dot Assist and Smart Queue, improved speed and consistency, and brought Green Apron Service to every North American coffeehouse in FY2025.",
+      "source": "DEF 14A filed 2026-01-26 (https://www.sec.gov/Archives/edgar/data/829224/000121390026007780/ea0270973-01.htm)"
+    },
+    {
+      "topic": "Risk Factors",
+      "statement": "Starbucks expects macroeconomic challenges including impacts from new tariffs and dynamic coffee prices to continue, and anticipates that restructuring costs associated with coffeehouse closures and support organization simplification will be completed within a finite period.",
+      "source": "DEF 14A filed 2026-01-26 (https://www.sec.gov/Archives/edgar/data/829224/000121390026007780/ea0270973-01.htm)"
+    },
+    {
+      "topic": "Auditor",
+      "statement": "Deloitte & Touche LLP has served as Starbucks' auditor since 1987 and is being recommended for ratification as the independent registered public accounting firm for fiscal year 2026.",
+      "source": "10-K filed 2025-11-14 (https://www.sec.gov/Archives/edgar/data/829224/000082922425000114/sbux-20250928.htm)"
+    }
+  ]
+}

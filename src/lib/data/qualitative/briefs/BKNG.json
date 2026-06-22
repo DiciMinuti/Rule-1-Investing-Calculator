@@ -1,0 +1,85 @@
+{
+  "symbol": "BKNG",
+  "companyName": "Booking Holdings (Booking.com)",
+  "generatedAt": "2026-06-22",
+  "management": {
+    "grade": "strong",
+    "sections": [
+      {
+        "title": "Leadership",
+        "grade": "strong",
+        "summary": "The CEO and President serve as the Chief Operating Decision Maker, reviewing Segment Adjusted EBITDA less Capex across five operating segments to drive resource allocation. Leadership is executing a Transformation Program started in Q4 2024 to improve operating expense efficiency, incurring $117 million in employee termination benefits and $82 million in professional fees in FY2025.",
+        "points": [
+          "The CODM structure centralizes decision-making with the CEO and President, who review Segment Adjusted EBITDA less Capex of $9.852 billion in FY2025 across five operating segments.",
+          "Management is executing a Transformation Program begun in Q4 2024 to improve operating expense efficiency, with FY2025 costs including $117 million in employee termination benefits and $82 million in professional fees.",
+          "Leadership is prioritizing Generative AI as a strategic initiative, creating Gen AI-powered consumer and partner offerings to advance the company's mission."
+        ]
+      },
+      {
+        "title": "Capital Allocation",
+        "grade": "strong",
+        "summary": "The company returned $8.2 billion to stockholders in 2025 through share repurchases, dividends, and convertible note conversion premiums, while increasing its quarterly dividend by 10%. Since restarting repurchases in 2022, management has returned over 100% of free cash flow and reduced share count by 22%.",
+        "points": [
+          "Management returned $8.2 billion to stockholders in 2025, including $1.248 billion in dividends after increasing the quarterly dividend by 10% in Q1 2025.",
+          "Since restarting repurchases in 2022, the company has returned over 100% of free cash flow and reduced share count by 22%, demonstrating aggressive capital return.",
+          "The company holds long-term equity investments in private companies including Grab Holdings, DiDi Global, and Yanolja, while recording a $457 million impairment of KAYAK's goodwill and intangible assets in FY2025."
+        ]
+      },
+      {
+        "title": "Shareholder Alignment",
+        "grade": "middle",
+        "summary": "Stock-based compensation was $613 million in FY2025, representing 11% of GAAP net income, down from higher relative levels in prior years. The company's capital return strategy of distributing over 100% of free cash flow since 2022 aligns management with shareholders through aggressive share count reduction.",
+        "points": [
+          "Stock-based compensation was $613 million in FY2025, representing 11% of GAAP net income, compared to $599 million in FY2024 and $530 million in FY2023.",
+          "The company's strategy of returning over 100% of free cash flow since restarting repurchases in 2022 has reduced share count by 22%, directly benefiting shareholders.",
+          "The Board proposed an amendment to the Restated Certificate of Incorporation for officer exculpation, limiting personal liability of officers for monetary damages for breach of fiduciary duty."
+        ]
+      },
+      {
+        "title": "Communication",
+        "grade": "strong",
+        "summary": "The company reports revenue across three categories-Merchant, Agency, and Advertising and other-while aggregating five operating segments into one reportable segment with Segment Adjusted EBITDA less Capex disclosed for each. The 10-K and DEF 14A provide detailed geographic revenue breakdowns, with $24.338 billion from outside the U.S. versus $2.579 billion domestically in FY2025.",
+        "points": [
+          "The company discloses revenue across three categories-Merchant, Agency, and Advertising and other-and reports Segment Adjusted EBITDA less Capex for each of five operating segments.",
+          "Geographic revenue disclosure shows $24.338 billion from outside the U.S. versus $2.579 billion from the U.S. in FY2025, with $21.7 billion attributed to a Netherlands-domiciled entity.",
+          "The 10-K identifies online accommodation reservation services as a product concentration risk, with revenue reported separately from other travel reservation services and advertising revenues."
+        ]
+      },
+      {
+        "title": "Governance",
+        "grade": "middle",
+        "summary": "The company faces significant regulatory and litigation risks across multiple European jurisdictions, including a $485 million liability from Spain's CNMC fine and class action threats from hotel associations in Spain, France, the UK, and the Netherlands. The Board proposed officer exculpation amendments while the effective tax rate of 20.9% benefits from a 10.9 percentage point reduction via the Netherlands innovation box.",
+        "points": [
+          "Spain's CNMC imposed a fine restricting Booking.com's parity provisions and ranking criteria, resulting in a $485 million liability as of December 31, 2025, suspended pending appeal.",
+          "The company faces competition and consumer protection investigations in Greece, Hungary, France, and Switzerland, plus class action threats from hotel associations across multiple European countries.",
+          "The Board proposed an amendment to the Restated Certificate of Incorporation to provide officer exculpation, limiting personal liability for monetary damages for breach of fiduciary duty to the fullest extent permitted by law."
+        ]
+      }
+    ]
+  },
+  "moat": {
+    "grade": "strong",
+    "types": [
+      {
+        "type": "Network Effects",
+        "grade": "strong",
+        "summary": "Booking's platform connects independent partners who drive the vast majority of room nights, while the top 10 global hotel chains represent only a low double-digit percentage of total room nights. The Genius loyalty program reinforces two-sided network effects, with Level 2 and 3 travelers accounting for a high-50% share of room nights in 2025."
+      },
+      {
+        "type": "Scale Advantages",
+        "grade": "strong",
+        "summary": "The company booked more than 1.2 billion room nights in 2025 across over 220 countries and territories and 40+ languages, generating $26.917 billion in revenue and $9.937 billion in Adjusted EBITDA. This scale enables the company to spread technology and marketing costs across a global inventory base that competitors struggle to match."
+      },
+      {
+        "type": "Switching Costs",
+        "grade": "middle",
+        "summary": "The Connected Trip strategy creates switching costs as connected transactions grew in the high 20% range in 2025 and represented a low double-digit percentage of Booking.com's total transactions. The Genius loyalty program, available in over 200 countries, further embeds repeat usage with Level 2 and 3 travelers representing over 30% of the active base."
+      },
+      {
+        "type": "Intangible Assets",
+        "grade": "middle",
+        "summary": "The Netherlands innovation box reduced the effective tax rate by 10.9 percentage points in FY2025, reflecting the value of intellectual property embedded in the company's booking platform technology. However, the $457 million KAYAK goodwill impairment in FY2025 demonstrates that intangible asset value is not uniformly durable across the portfolio."
+      }
+    ]
+  }
+}

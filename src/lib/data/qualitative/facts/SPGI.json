@@ -1,0 +1,127 @@
+{
+  "symbol": "SPGI",
+  "companyName": "S&P Global",
+  "updatedAt": "2026-06-22",
+  "facts": [
+    {
+      "topic": "Business Model & Strategy",
+      "statement": "S&P Global describes its strategy as advancing essential intelligence through three key objectives: advancing market leadership, expanding in high-growth adjacencies, and amplifying enterprise capabilities and artificial intelligence, leveraging strong brands with 100+ years of trust, benchmarks, differentiated data and IP, and AI-enabled solutions.",
+      "source": "DEF 14A filed 2026-03-31 (https://www.sec.gov/Archives/edgar/data/64040/000110465926037380/tm261443-1_def14a.htm)"
+    },
+    {
+      "topic": "Revenue Scale",
+      "statement": "S&P Global reported revenue of $12,497 million for FY2025 on an XBRL basis (concept RevenueFromContractWithCustomerExcludingAssessedTax), filed 2026-02-11.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000064040.)"
+    },
+    {
+      "topic": "Revenue Scale (Proxy)",
+      "statement": "The 2026 Proxy Statement reports FY2025 revenue of $15.336 billion, up 8% year-over-year, with GAAP net income of $4.471 billion up 16% YoY and GAAP diluted EPS of $14.66 up 19% YoY.",
+      "source": "DEF 14A filed 2026-03-31 (https://www.sec.gov/Archives/edgar/data/64040/000110465926037380/tm261443-1_def14a.htm)"
+    },
+    {
+      "topic": "Net Income",
+      "statement": "S&P Global reported net income of $2,626 million for FY2025 on an XBRL basis (concept NetIncomeLoss), filed 2026-02-11.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000064040.)"
+    },
+    {
+      "topic": "Cash Flow",
+      "statement": "S&P Global generated operating cash flow of $3,710 million for FY2025 (concept NetCashProvidedByUsedInOperatingActivities), filed 2026-02-11.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000064040.)"
+    },
+    {
+      "topic": "Balance Sheet",
+      "statement": "As of FY2025, S&P Global had stockholders' equity of $33,159 million, long-term debt of $11,394 million, and cash and equivalents of $1,666 million.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000064040.)"
+    },
+    {
+      "topic": "Segments",
+      "statement": "S&P Global's operating segments include Market Intelligence, Ratings, Energy, Mobility, and Indices, along with a Corporate non-segment category, as reflected in the 10-K for FY2025.",
+      "source": "10-K filed 2026-02-11 (https://www.sec.gov/Archives/edgar/data/64040/000006404026000013/spgi-20251231.htm)"
+    },
+    {
+      "topic": "Segment Performance - Mobility",
+      "statement": "For FY2025, the Mobility segment reported revenue of $1,747 million and adjusted EBITA of $697 million, with an adjusted EBITA margin of 39.9%.",
+      "source": "DEF 14A filed 2026-03-31 (https://www.sec.gov/Archives/edgar/data/64040/000110465926037380/tm261443-1_def14a.htm)"
+    },
+    {
+      "topic": "Segment Performance - Market Intelligence",
+      "statement": "For FY2025, the Market Intelligence segment reported revenue of $4,916 million and adjusted EBITA of $1,671 million, with an adjusted EBITA margin of 34.0%.",
+      "source": "DEF 14A filed 2026-03-31 (https://www.sec.gov/Archives/edgar/data/64040/000110465926037380/tm261443-1_def14a.htm)"
+    },
+    {
+      "topic": "Segment Performance - S&P Dow Jones Indices",
+      "statement": "For FY2025, the S&P Dow Jones Indices segment reported revenue of $1,850 million and adjusted EBITA of $1,313 million, with an adjusted EBITA margin of 71.0%.",
+      "source": "DEF 14A filed 2026-03-31 (https://www.sec.gov/Archives/edgar/data/64040/000110465926037380/tm261443-1_def14a.htm)"
+    },
+    {
+      "topic": "Capital Allocation - Shareholder Returns",
+      "statement": "S&P Global returned $6.2 billion to shareholders in 2025, including $1.2 billion in dividends and $5.0 billion in share repurchases.",
+      "source": "DEF 14A filed 2026-03-31 (https://www.sec.gov/Archives/edgar/data/64040/000110465926037380/tm261443-1_def14a.htm)"
+    },
+    {
+      "topic": "Capital Allocation - Dividend",
+      "statement": "S&P Global maintained a steady record of more than 50 consecutive years of dividend increases as of 2025.",
+      "source": "DEF 14A filed 2026-03-31 (https://www.sec.gov/Archives/edgar/data/64040/000110465926037380/tm261443-1_def14a.htm)"
+    },
+    {
+      "topic": "Capital Allocation - Share Repurchases",
+      "statement": "S&P Global initiated multiple uncapped accelerated share repurchase programs during 2025, including programs initiated on February 19, May 6, August 12, and December 4, and a new 2025 Repurchase Program authorized on November 13, 2025.",
+      "source": "10-K filed 2026-02-11 (https://www.sec.gov/Archives/edgar/data/64040/000006404026000013/spgi-20251231.htm)"
+    },
+    {
+      "topic": "Management - CEO",
+      "statement": "Martina L. Cheung serves as President and Chief Executive Officer of S&P Global and signed the 10-K on February 10, 2026; she has been a Director since 2024.",
+      "source": "10-K filed 2026-02-11 (https://www.sec.gov/Archives/edgar/data/64040/000006404026000013/spgi-20251231.htm)"
+    },
+    {
+      "topic": "Management - CFO",
+      "statement": "Eric W. Aboaf serves as Executive Vice President and Chief Financial Officer of S&P Global, with an offer letter dated September 18, 2024.",
+      "source": "10-K filed 2026-02-11 (https://www.sec.gov/Archives/edgar/data/64040/000006404026000013/spgi-20251231.htm)"
+    },
+    {
+      "topic": "Management - Other Executives",
+      "statement": "Christopher F. Craig serves as Senior Vice President and Chief Accounting Officer, and Steve Kemps serves as Executive Vice President and Chief Legal Officer of S&P Global.",
+      "source": "10-K filed 2026-02-11 (https://www.sec.gov/Archives/edgar/data/64040/000006404026000013/spgi-20251231.htm)"
+    },
+    {
+      "topic": "Board of Directors",
+      "statement": "Ian P. Livingston serves as Chairman of the Board of S&P Global; the Board nominated 10 directors for one-year terms at the 2026 Annual Meeting, with William Green not standing for re-election and retiring from the Board.",
+      "source": "DEF 14A filed 2026-03-31 (https://www.sec.gov/Archives/edgar/data/64040/000110465926037380/tm261443-1_def14a.htm)"
+    },
+    {
+      "topic": "Compensation Governance",
+      "statement": "Approximately 92% of CEO and 82% of other NEOs' 2025 total target annual compensation opportunity was performance-based, emphasizing pay-for-performance principles.",
+      "source": "DEF 14A filed 2026-03-31 (https://www.sec.gov/Archives/edgar/data/64040/000110465926037380/tm261443-1_def14a.htm)"
+    },
+    {
+      "topic": "Equity Compensation Plans",
+      "statement": "As of December 31, 2025, S&P Global had 982,406 securities to be issued upon exercise of outstanding options, warrants and rights with a weighted-average exercise price of $74.46, and 18,372,433 securities remaining available for future issuance under equity compensation plans.",
+      "source": "10-K filed 2026-02-11 (https://www.sec.gov/Archives/edgar/data/64040/000006404026000013/spgi-20251231.htm)"
+    },
+    {
+      "topic": "Debt Structure",
+      "statement": "S&P Global has a five-year revolving credit facility expiring December 17, 2029, and multiple series of senior notes outstanding with maturities ranging from 2026 to 2062, including sustainability-linked senior notes due 2029.",
+      "source": "10-K filed 2026-02-11 (https://www.sec.gov/Archives/edgar/data/64040/000006404026000013/spgi-20251231.htm)"
+    },
+    {
+      "topic": "Divestitures",
+      "statement": "S&P Global completed or initiated divestitures of several businesses, including the Engineering Solutions Business (sold May 2, 2023), Leveraged Commentary and Data (2023), PrimeOne, and Fincentric (held for sale or disposed in 2024-2025).",
+      "source": "10-K filed 2026-02-11 (https://www.sec.gov/Archives/edgar/data/64040/000006404026000013/spgi-20251231.htm)"
+    },
+    {
+      "topic": "Auditor",
+      "statement": "Ernst & Young LLP audited S&P Global's consolidated financial statements for the year ended December 31, 2025, and the Board recommended ratification of EY as independent registered public accounting firm for 2026.",
+      "source": "10-K filed 2026-02-11 (https://www.sec.gov/Archives/edgar/data/64040/000006404026000013/spgi-20251231.htm)"
+    },
+    {
+      "topic": "Intangible Assets",
+      "statement": "S&P Global's intangible assets include databases and software, media content, customer relationships, trade names, and other intangibles, with Goldman Sachs Commodity and Broad Market intellectual property associated with the Indices segment.",
+      "source": "10-K filed 2026-02-11 (https://www.sec.gov/Archives/edgar/data/64040/000006404026000013/spgi-20251231.htm)"
+    },
+    {
+      "topic": "Company Classification",
+      "statement": "S&P Global Inc. is listed on the NYSE under ticker SPGI and is classified under SIC code for Services-Consumer Credit Reporting, Collection Agencies per SEC submissions metadata.",
+      "source": "SEC submissions metadata (https://data.sec.gov/submissions/CIK0000064040.)"
+    }
+  ]
+}

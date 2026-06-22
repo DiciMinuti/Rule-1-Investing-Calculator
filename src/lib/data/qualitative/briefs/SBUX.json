@@ -1,0 +1,80 @@
+{
+  "symbol": "SBUX",
+  "companyName": "Starbucks",
+  "generatedAt": "2026-06-22",
+  "management": {
+    "grade": "middle",
+    "sections": [
+      {
+        "title": "Leadership",
+        "grade": "middle",
+        "summary": "Brian R. Niccol serves as chairman and CEO, leading the 'Back to Starbucks' strategy focused on hand-crafted coffee and community spaces, while Cathy R. Smith operates as CFO and principal accounting officer. FY2025 saw a 51% GAAP EPS decline to $1.63 and operating margin contraction to 7.9%, reflecting significant restructuring and strategy investment costs.",
+        "points": [
+          "Niccol signed the FY2025 10-K on November 14, 2025, overseeing a 'Back to Starbucks' strategy emphasizing skilled green apron partners and customer service across more than 40,000 global coffeehouses.",
+          "Smith manages financials during a period of margin compression, with FY2025 GAAP operating margin falling to 7.9% from 15.0% due to $892.0 million in restructuring costs and inflation."
+        ]
+      },
+      {
+        "title": "Capital Allocation",
+        "grade": "middle",
+        "summary": "Starbucks generated $6.0 billion in operating cash flow against $14.3 billion in long-term debt and negative stockholders' equity of -$7.4 billion in FY2025. Capital deployment included $892.0 million in restructuring costs for coffeehouse closures and $8.2 million in transaction costs to divest 60% of China operations.",
+        "points": [
+          "The company carries negative stockholders' equity of -$7.4 billion alongside $14.3 billion in long-term debt as of FY2025, reflecting an aggressive historical capital return posture.",
+          "FY2025 restructuring charges of $892.0 million funded coffeehouse closures and support organization simplification, with management expecting these costs to conclude within a finite period."
+        ]
+      },
+      {
+        "title": "Shareholder Alignment",
+        "grade": "middle",
+        "summary": "Executive compensation uses non-GAAP measures including adjusted operating income and adjusted EPS, which exclude restructuring, impairment, and transaction costs. These adjustments mean FY2025's $892.0 million restructuring charge and $8.2 million China divestiture costs do not impact performance goals.",
+        "points": [
+          "The compensation program excludes restructuring and impairment costs from performance metrics, meaning the $892.0 million FY2025 restructuring charge does not reduce executive payout calculations.",
+          "Adjusted EPS of $2.13 in constant currency declined 35% versus prior year, a less severe drop than the 51% GAAP EPS decline to $1.63, affecting how performance targets are measured."
+        ]
+      },
+      {
+        "title": "Communication",
+        "grade": "middle",
+        "summary": "Starbucks files detailed DEF 14A and 10-K disclosures covering segment-level goodwill, comparable store sales metrics, and restructuring cost breakdowns. The FY2025 10-K reports $2,842.6 million of goodwill allocated to the international segment including China, and quarterly comparable sales trends including Q4's first positive result in seven quarters.",
+        "points": [
+          "The 10-K provides segment-level goodwill detail, noting the China reporting unit's fair value exceeded carrying value with no impairment recorded as of September 28, 2025.",
+          "Earnings disclosures break out global comparable store sales components, showing a 1% FY2025 decline driven by 2% lower transactions partially offset by 1% higher average ticket."
+        ]
+      },
+      {
+        "title": "Governance",
+        "grade": "middle",
+        "summary": "The 11-member board includes directors such as Marissa Mayer, Neal Mohan, and Beth Ford, with majority voting for uncontested director elections. A 2026 shareholder proposal seeks an independent board chair policy, but the board recommends voting against it, keeping Niccol's combined chairman and CEO role.",
+        "points": [
+          "Majority voting procedures require that director nominees receive more votes for than against in uncontested elections, providing shareholders a direct say in board composition.",
+          "The board opposes a shareholder proposal on the 2026 ballot requesting an independent chair policy, maintaining the combined chairman and CEO structure under Niccol."
+        ]
+      }
+    ]
+  },
+  "moat": {
+    "grade": "middle",
+    "types": [
+      {
+        "type": "Scale",
+        "grade": "strong",
+        "summary": "Starbucks operates more than 40,000 company-operated and licensed coffeehouses globally, generating $36.0 billion in FY2025 revenue. This footprint supports the 'Back to Starbucks' strategy and enables investments like Green Apron Service deployment across every North American location."
+      },
+      {
+        "type": "Brand",
+        "grade": "middle",
+        "summary": "The company positions itself as the world's premier purveyor of specialty coffee through its green apron partner identity and community space experience. However, FY2025 global comparable store sales declined 1% with a 2% drop in transactions, indicating brand pull weakened before Q4's positive turnaround."
+      },
+      {
+        "type": "Channel Access",
+        "grade": "middle",
+        "summary": "Starbucks maintains a growing consumer-packaged goods presence and the Global Coffee Alliance, which contributed incremental revenue in FY2025. The licensed store business declined during the year, partially offsetting gains from net new company-operated stores and the 23.5 Degrees Topco acquisition in the U.K."
+      },
+      {
+        "type": "Human Capital",
+        "grade": "middle",
+        "summary": "The company invested in U.S. coffeehouse partners with competitive pay and benefits averaging $30 per hour, and over 2,000 partners graduated from Arizona State University in FY2025. New operational tools like Green Dot Assist and Smart Queue were launched to improve service speed and consistency across stores."
+      }
+    ]
+  }
+}

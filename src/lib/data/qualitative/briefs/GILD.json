@@ -1,0 +1,80 @@
+{
+  "symbol": "GILD",
+  "companyName": "Gilead Sciences",
+  "generatedAt": "2026-06-22",
+  "management": {
+    "grade": "strong",
+    "sections": [
+      {
+        "title": "Leadership",
+        "grade": "strong",
+        "summary": "Chairman and CEO Daniel P. O'Day leads Gilead with a long-term strategy to deliver 10+ transformative therapies by 2030, prioritizing long-acting HIV, oncology, and inflammation. CFO Andrew D. Dickinson and CAO Erin E. Burkhart support execution, with O'Day signing the FY2025 10-K on February 24, 2026.",
+        "points": [
+          "O'Day's strategy targets up to seven potential HIV treatment and prevention launches by 2033, aiming to extend HIV leadership into the 2040s with no major loss of exclusivity for the coming decade.",
+          "Leadership is accelerating the oncology pipeline following positive 2025 data for Trodelvy in breast cancer and anito-cel in multiple myeloma, positioning Gilead for potential 2026 approvals."
+        ]
+      },
+      {
+        "title": "Capital Allocation",
+        "grade": "strong",
+        "summary": "Gilead generated $8.006 billion in operating cash flow for FY2025 against $24.896 billion in long-term debt, funding both R&D and acquisitions. The company is deploying a new ERP system in phases while pursuing strategic deals like the CymaBay and Arcellx mergers.",
+        "points": [
+          "Gilead entered a merger agreement to acquire Arcellx on February 22, 2026, its partner on anito-cel since 2022, deepening its cell therapy commitment alongside the 2024 CymaBay acquisition.",
+          "The company launched Livdelzi for primary biliary cholangitis with rapid adoption in 2025 and could see a U.S. launch of bulevirtide for chronic hepatitis delta in 2026."
+        ]
+      },
+      {
+        "title": "Shareholder Alignment",
+        "grade": "middle",
+        "summary": "Gilead's board recommends voting against all three 2026 stockholder proposals, including an independent Board Chair policy and a report on extended patent exclusivities' impact on patient access. The company engaged with investors representing approximately 42% of outstanding shares in 2025.",
+        "points": [
+          "Lead Independent Director Anthony Welters met directly with investors representing approximately 30% of outstanding shares during 2025 engagement efforts.",
+          "The 2026 proxy includes a stockholder proposal questioning ESG and DEI executive compensation metrics, with the Board recommending a vote against it."
+        ]
+      },
+      {
+        "title": "Communication",
+        "grade": "strong",
+        "summary": "Gilead's 10-K filed February 24, 2026 provides product-level revenue breakdowns across U.S., Europe, and Rest of World for HIV, liver disease, cell therapy, and other products for FY2023-FY2025. The filing also discloses customer concentration with three major U.S. wholesalers.",
+        "points": [
+          "The 10-K tracks sales by individual product including Biktarvy, Descovy, Tecartus, Yescarta, Trodelvy, Veklury, and AmBisome across three geographic segments for three fiscal years.",
+          "Gilead discloses revenue from contracts with customers for Cardinal Health, Cencora, and McKesson for FY2023-FY2025, quantifying wholesaler concentration risk."
+        ]
+      },
+      {
+        "title": "Governance",
+        "grade": "middle",
+        "summary": "Gilead's nine-member board includes Lead Independent Director Anthony Welters and nominees with scientific, operational, and financial expertise. The board oversaw the rollout of Gilead's AI Principles in February 2025 and ongoing AI integration discussions with management.",
+        "points": [
+          "Ernst & Young LLP audited Gilead's internal controls over financial reporting as effective as of December 31, 2025, while the company phases in a new ERP system over the next few years.",
+          "Board nominees include Jacqueline K. Barton, Jeffrey A. Bluestone, Sandra J. Horning, Kelly A. Kramer, Ted W. Love, Harish Manwani, Javier J. Rodriguez, and Anthony Welters alongside O'Day."
+        ]
+      }
+    ]
+  },
+  "moat": {
+    "grade": "strong",
+    "types": [
+      {
+        "type": "Intangible Assets (Patents & Regulatory Exclusivity)",
+        "grade": "strong",
+        "summary": "Gilead expects no major loss of exclusivity for the coming decade, with up to seven potential HIV treatment and prevention launches by 2033. This patent runway supports the company's $27.116 billion in FY2025 revenue and positions HIV leadership to extend into the 2040s."
+      },
+      {
+        "type": "Switching Costs",
+        "grade": "strong",
+        "summary": "Biktarvy is the most-prescribed HIV treatment, and Gilead achieved record HIV sales in 2025 driven by the franchise. The launch of Yeztugo, the world's first twice-yearly HIV prevention therapy approved by the FDA, adds a long-acting option that deepens patient and provider retention."
+      },
+      {
+        "type": "Efficient Scale",
+        "grade": "middle",
+        "summary": "Gilead's $8.006 billion in FY2025 operating cash flow and $3.734 billion in historical R&D spending reflect the scale needed to sustain a biopharma pipeline across HIV, oncology, and liver disease. The company's long-acting HIV and cell therapy investments require capital depth that few peers can match."
+      },
+      {
+        "type": "Network Effects",
+        "grade": "dull",
+        "summary": "Gilead's customer concentration with three major U.S. wholesalers-Cardinal Health, Cencora, and McKesson-reflects a distribution dependency rather than a network advantage. The packet does not support a meaningful network effect moat for Gilead's business model."
+      }
+    ]
+  }
+}

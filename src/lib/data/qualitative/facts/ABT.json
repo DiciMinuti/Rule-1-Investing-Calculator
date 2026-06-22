@@ -1,0 +1,137 @@
+{
+  "symbol": "ABT",
+  "companyName": "Abbott Laboratories",
+  "updatedAt": "2026-06-22",
+  "facts": [
+    {
+      "topic": "Business Model",
+      "statement": "Abbott Laboratories is a diversified healthcare company classified under SIC 'Pharmaceutical Preparations,' listed on the NYSE under ticker ABT, with operating segments including Established Pharmaceutical Products, Nutritional Products, Diagnostic Products, and Medical Devices.",
+      "source": "SEC submissions metadata (https://data.sec.gov/submissions/CIK0000001800.); 10-K filed 2026-02-20 (https://www.sec.gov/Archives/edgar/data/1800/000162828026010185/abt-20251231.htm)"
+    },
+    {
+      "topic": "Revenue Scale",
+      "statement": "Abbott reported total revenue of $40,109,000,000 for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000001800.)"
+    },
+    {
+      "topic": "Profitability",
+      "statement": "Abbott reported net income of $5,723,000,000 for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000001800.)"
+    },
+    {
+      "topic": "Cash Flow",
+      "statement": "Abbott generated operating cash flow of $7,261,000,000 in FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000001800.)"
+    },
+    {
+      "topic": "R&D Investment",
+      "statement": "Abbott spent $2,741,000,000 on research and development in FY2025, representing approximately 6.8% of revenue.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000001800.)"
+    },
+    {
+      "topic": "Balance Sheet",
+      "statement": "As of FY2025 year-end, Abbott had stockholders' equity of $47,664,000,000, long-term debt of $12,625,000,000, and cash and equivalents of $7,616,000,000.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000001800.)"
+    },
+    {
+      "topic": "Segment - Medical Devices",
+      "statement": "Abbott's Medical Devices segment includes the sub-categories of Rhythm Management, Electrophysiology, Heart Failure, Vascular, Structural Heart, Neuromodulation, and Diabetes Care, with results reported across U.S. and non-U.S. geographies for FY2023 through FY2025.",
+      "source": "10-K filed 2026-02-20 (https://www.sec.gov/Archives/edgar/data/1800/000162828026010185/abt-20251231.htm)"
+    },
+    {
+      "topic": "Segment - Diagnostics",
+      "statement": "Abbott's Diagnostic Products segment includes Core Laboratory, Molecular, Point of Care, Rapid Diagnostics, and COVID-19 Testing sub-categories, with results reported across U.S. and non-U.S. geographies for FY2023 through FY2025.",
+      "source": "10-K filed 2026-02-20 (https://www.sec.gov/Archives/edgar/data/1800/000162828026010185/abt-20251231.htm)"
+    },
+    {
+      "topic": "Segment - Nutritionals",
+      "statement": "Abbott's Nutritional Products segment includes Pediatric Nutritionals and Adult Nutritionals sub-categories, with results reported across U.S. and non-U.S. geographies for FY2023 through FY2025.",
+      "source": "10-K filed 2026-02-20 (https://www.sec.gov/Archives/edgar/data/1800/000162828026010185/abt-20251231.htm)"
+    },
+    {
+      "topic": "Segment - Established Pharmaceuticals",
+      "statement": "Abbott's Established Pharmaceutical Products segment reports results across Key Emerging Markets, Other Emerging Markets, U.S., and non-U.S. geographies for FY2023 through FY2025.",
+      "source": "10-K filed 2026-02-20 (https://www.sec.gov/Archives/edgar/data/1800/000162828026010185/abt-20251231.htm)"
+    },
+    {
+      "topic": "M&A Activity",
+      "statement": "Abbott entered into an Agreement and Plan of Merger dated November 19, 2025 with Exact Sciences Corporation, with a Senior Unsecured Bridge Term Loan Facility referenced in connection with the transaction.",
+      "source": "10-K filed 2026-02-20 (https://www.sec.gov/Archives/edgar/data/1800/000162828026010185/abt-20251231.htm)"
+    },
+    {
+      "topic": "Restructuring",
+      "statement": "Abbott implemented a 2025 restructuring plan to streamline operations, with charges allocated across cost of goods sold, R&D, and SG&A, following similar restructuring plans in 2023 and 2024.",
+      "source": "10-K filed 2026-02-20 (https://www.sec.gov/Archives/edgar/data/1800/000162828026010185/abt-20251231.htm)"
+    },
+    {
+      "topic": "Capital Allocation - Dividends",
+      "statement": "Abbott returned $5 billion to shareholders in 2025 and announced a 6.8% dividend increase for 2026, marking its 54th consecutive year of dividend increases.",
+      "source": "DEF 14A filed 2026-03-13 (https://www.sec.gov/Archives/edgar/data/1800/000130817926000064/abt-20260311.htm)"
+    },
+    {
+      "topic": "Shareholder Returns",
+      "statement": "Abbott's one-year TSR was 13% in 2025 versus a 7% peer group median; three-year and five-year TSR were 21% and 25% respectively, exceeding peer group medians of 6% and 17%.",
+      "source": "DEF 14A filed 2026-03-13 (https://www.sec.gov/Archives/edgar/data/1800/000130817926000064/abt-20260311.htm)"
+    },
+    {
+      "topic": "Management - CEO",
+      "statement": "Robert B. Ford serves as Chairman of the Board and Chief Executive Officer of Abbott Laboratories, having signed the 10-K on February 20, 2026.",
+      "source": "10-K filed 2026-02-20 (https://www.sec.gov/Archives/edgar/data/1800/000162828026010185/abt-20251231.htm)"
+    },
+    {
+      "topic": "Management - CFO",
+      "statement": "Philip P. Boudreau serves as Executive Vice President, Finance and Chief Financial Officer of Abbott Laboratories.",
+      "source": "10-K filed 2026-02-20 (https://www.sec.gov/Archives/edgar/data/1800/000162828026010185/abt-20251231.htm)"
+    },
+    {
+      "topic": "Management - Controller",
+      "statement": "John A. McCoy, Jr. serves as Vice President, Finance and Controller (principal accounting officer) of Abbott Laboratories.",
+      "source": "10-K filed 2026-02-20 (https://www.sec.gov/Archives/edgar/data/1800/000162828026010185/abt-20251231.htm)"
+    },
+    {
+      "topic": "Board of Directors",
+      "statement": "Abbott's Board of Directors includes 12 director nominees for the 2026 Annual Meeting, with directors including Nita Ahuja M.D., Robert J. Alpern M.D., Claire Babineaux-Fontenot, Sally E. Blount Ph.D., Paola Gonzalez, Michelle A. Kumbier, Darren W. McDew, Nancy McKinstry, Michael G. O'Grady, Michael F. Roman, Daniel J. Starks, and John G. Stratton.",
+      "source": "10-K filed 2026-02-20 (https://www.sec.gov/Archives/edgar/data/1800/000162828026010185/abt-20251231.htm); DEF 14A filed 2026-03-13 (https://www.sec.gov/Archives/edgar/data/1800/000130817926000064/abt-20260311.htm)"
+    },
+    {
+      "topic": "Governance - Compensation",
+      "statement": "Abbott's executive compensation program features 100% performance-based short-term and long-term incentives, double-trigger change in control benefits, capped incentive awards, no tax gross-ups, no guaranteed bonuses, no employment contracts, and no hedging or pledging of company shares allowed.",
+      "source": "DEF 14A filed 2026-03-13 (https://www.sec.gov/Archives/edgar/data/1800/000130817926000064/abt-20260311.htm)"
+    },
+    {
+      "topic": "Governance - Say on Pay",
+      "statement": "Over the past six years, Abbott averaged 91% shareholder support on 'say on pay' advisory votes.",
+      "source": "DEF 14A filed 2026-03-13 (https://www.sec.gov/Archives/edgar/data/1800/000130817926000064/abt-20260311.htm)"
+    },
+    {
+      "topic": "Governance - Board Refreshment",
+      "statement": "In the last 5 years, Abbott has added 5 new independent directors with varied backgrounds to enhance Board diversity of skills and perspectives.",
+      "source": "DEF 14A filed 2026-03-13 (https://www.sec.gov/Archives/edgar/data/1800/000130817926000064/abt-20260311.htm)"
+    },
+    {
+      "topic": "Governance - Shareholder Engagement",
+      "statement": "In 2025, Abbott contacted shareholders representing over 60% of outstanding shares to discuss its compensation program and various governance topics.",
+      "source": "DEF 14A filed 2026-03-13 (https://www.sec.gov/Archives/edgar/data/1800/000130817926000064/abt-20260311.htm)"
+    },
+    {
+      "topic": "Equity Compensation",
+      "statement": "Abbott operates the 2017 Incentive Stock Program (approved April 30, 2017) covering employee stock options, restricted stock awards, and restricted stock units, and is seeking shareholder approval for a new 2026 Incentive Stock Program at the April 24, 2026 Annual Meeting.",
+      "source": "10-K filed 2026-02-20 (https://www.sec.gov/Archives/edgar/data/1800/000162828026010185/abt-20251231.htm); DEF 14A filed 2026-03-13 (https://www.sec.gov/Archives/edgar/data/1800/000130817926000064/abt-20260311.htm)"
+    },
+    {
+      "topic": "Debt Structure",
+      "statement": "Abbott has multiple series of senior notes outstanding with maturities ranging from 2025 through 2046, including notes originally issued by St. Jude Medical (acquired by Abbott) and notes issued through Abbott Ireland Financing DAC, as well as a Five Year Term Loan due 2029 and a Five Year Credit Agreement dated January 29, 2024 with JPMorgan Chase Bank as administrative agent.",
+      "source": "10-K filed 2026-02-20 (https://www.sec.gov/Archives/edgar/data/1800/000162828026010185/abt-20251231.htm)"
+    },
+    {
+      "topic": "Internal Controls",
+      "statement": "Ernst & Young LLP issued an unqualified opinion on Abbott's internal control over financial reporting as of December 31, 2025, with CEO Robert B. Ford and CFO Philip P. Boudreau concluding that disclosure controls and procedures were effective.",
+      "source": "10-K filed 2026-02-20 (https://www.sec.gov/Archives/edgar/data/1800/000162828026010185/abt-20251231.htm)"
+    },
+    {
+      "topic": "Industry Recognition",
+      "statement": "Abbott has been named to FORTUNE World's Most Admired Companies list since 1984 (No. 1 in medical products and equipment in 2026), has been on the Dow Jones Best-in-Class Index for 20 years, and was named to TIME 100 Most Influential Companies as a 'Pioneer' company.",
+      "source": "DEF 14A filed 2026-03-13 (https://www.sec.gov/Archives/edgar/data/1800/000130817926000064/abt-20260311.htm)"
+    }
+  ]
+}

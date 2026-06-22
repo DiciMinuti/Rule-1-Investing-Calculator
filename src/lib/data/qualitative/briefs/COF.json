@@ -1,0 +1,85 @@
+{
+  "symbol": "COF",
+  "companyName": "Capital One",
+  "generatedAt": "2026-06-22",
+  "management": {
+    "grade": "strong",
+    "sections": [
+      {
+        "title": "Leadership",
+        "grade": "strong",
+        "summary": "Founder Richard D. Fairbank continues as Chair and CEO, the sole management representative on the board, overseeing a leadership team that executed the Discover acquisition and drove 2025 net revenue to $53.4 billion. Segment presidents now lead Card, Commercial Banking, and the Global Payment Network, reflecting a structure built around the post-Discover diversified bank model.",
+        "points": [
+          "Fairbank serves as both Chair and CEO and is the only member of management on the board, consolidating strategic authority under the company's founder.",
+          "Andrew M. Young as CFO and Robert M. Alexander as CIO support a leadership team navigating the integration of Discover, which constituted 21% of total assets post-acquisition.",
+          "Segment leadership includes Mark Daniel Mouadeb (Card), Neal Blinde (Commercial Banking), and Jason P. Hanson (Global Payment Network), aligning executives with the newly diversified business lines."
+        ]
+      },
+      {
+        "title": "Capital Allocation",
+        "grade": "strong",
+        "summary": "Capital One deployed capital aggressively into transformative M&A, completing the Discover acquisition on May 18, 2025, and signing a $5.15 billion agreement to acquire Brex Inc. on January 22, 2026. The CET1 ratio improved to 14.3% at year-end 2025 despite the integration, supporting continued strategic investment.",
+        "points": [
+          "The Discover acquisition closed May 18, 2025, adding a global payment network and bringing Discover's assets to 21% of the combined company's total.",
+          "The Brex merger agreement for $5.15 billion, signed January 22, 2026, allocates approximately $2.58 billion in cash and 10.6 million shares to expand capabilities.",
+          "The common equity Tier 1 capital ratio rose to 14.3% at year-end 2025 from 13.5% in 2024, indicating balance sheet strength despite large-scale integration costs."
+        ]
+      },
+      {
+        "title": "Shareholder Alignment",
+        "grade": "strong",
+        "summary": "Capital One delivered a one-year total shareholder return of 37.7% for 2025, outpacing both the KBW Bank Index at 32.6% and the S&P 500 at 17.9%. Three-year TSR of 174.7% and five-year TSR of 168.0% further demonstrate sustained value creation relative to banking peers.",
+        "points": [
+          "One-year TSR of 37.7% exceeded the KBW Bank Index (32.6%) and the S&P 500 (17.9%) for the period ended December 31, 2025.",
+          "Three-year TSR reached 174.7% versus the KBW Bank Index at 80.3%, reflecting significant long-term outperformance against the banking sector.",
+          "Adjusted ROTCE improved to 18.5% in 2025 from 13.5% in 2024, indicating stronger returns on tangible common equity excluding integration impacts."
+        ]
+      },
+      {
+        "title": "Communication",
+        "grade": "middle",
+        "summary": "Capital One files standard SEC disclosures including a 10-K filed February 19, 2026, and a DEF 14A filed March 25, 2026, reporting adjusted and GAAP metrics across revenue, efficiency, and returns. The company excluded Discover from its internal control evaluation as permitted by the SEC, disclosing integration-stage limitations to investors.",
+        "points": [
+          "The 10-K and DEF 14A provide dual GAAP and adjusted figures, including adjusted diluted EPS of $19.61 versus reported diluted EPS of $4.03, clarifying integration impacts.",
+          "Capital One disclosed that Discover was excluded from its internal control over financial reporting evaluation as of December 31, 2025, as permitted by the SEC during integration.",
+          "Segment and business-line credit trends for Card, Auto, and Commercial are reported against market and industry peers, giving investors context for the 3.3% net charge-off rate."
+        ]
+      },
+      {
+        "title": "Governance",
+        "grade": "strong",
+        "summary": "The board nominated thirteen directors for the 2026 annual meeting, twelve of whom are independent, with seven new independent directors appointed since 2021 including three former Discover board members. Capital One maintains majority voting with a resignation policy, no poison pill, no supermajority provisions, and allows 25% holders to call a special meeting.",
+        "points": [
+          "Twelve of thirteen nominated directors are independent, and three new independent directors added in 2025 previously served on Discover Financial Services' board, aiding integration oversight.",
+          "The company has no supermajority vote provisions, no stockholder rights plan, and majority voting for directors with a resignation policy in uncontested elections.",
+          "Stockholders holding at least 25% of outstanding common stock may request a special meeting, providing a meaningful avenue for shareholder action beyond annual meetings."
+        ]
+      }
+    ]
+  },
+  "moat": {
+    "grade": "strong",
+    "types": [
+      {
+        "type": "Network Effect",
+        "grade": "strong",
+        "summary": "The Discover acquisition positioned Capital One as a diversified bank operating a global payment network, described in its own filings as a rare and valuable asset amid payments disruption. This vertically integrated network model is distinct among U.S. card issuers and creates a closed-loop advantage."
+      },
+      {
+        "type": "Scale Advantages",
+        "grade": "strong",
+        "summary": "With $475.8 billion in total deposits and $453.6 billion in loans held for investment at year-end 2025, Capital One commands funding scale that supports a 7.8% net interest margin. Approximately 85% of deposits are FDIC insured, providing a stable, low-cost funding base."
+      },
+      {
+        "type": "Intangible Assets",
+        "grade": "middle",
+        "summary": "Capital One's brand and technology infrastructure span Card, Auto, Commercial Banking, and the Global Payment Network, with an adjusted operating efficiency ratio of 40.8% reflecting cost advantages. The pending $5.15 billion Brex acquisition further extends intangible capabilities into spend management platforms."
+      },
+      {
+        "type": "Switching Costs",
+        "grade": "middle",
+        "summary": "Across its $453.6 billion loan portfolio, Capital One benefits from embedded customer relationships in credit card, auto, and commercial lending, with business-line credit trends favorable to industry peers. The integration of Discover's card portfolio deepens the installed base of revolving credit customers."
+      }
+    ]
+  }
+}

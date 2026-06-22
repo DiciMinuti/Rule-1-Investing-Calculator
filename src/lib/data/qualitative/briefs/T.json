@@ -1,0 +1,80 @@
+{
+  "symbol": "T",
+  "companyName": "AT&T",
+  "generatedAt": "2026-06-22",
+  "management": {
+    "grade": "middle",
+    "sections": [
+      {
+        "title": "Leadership",
+        "grade": "middle",
+        "summary": "John T. Stankey serves as Chairman, CEO, and President, overseeing a strategy centered on fiber and 5G investment with a goal of discontinuing legacy services across most of the footprint by end of 2029. Pascal Desroches leads finance as CFO, and Sabrina Sanders manages accounting as SVP, CAO, and Controller.",
+        "points": [
+          "Stankey holds the combined Chairman, CEO, and President titles, consolidating board and executive leadership under one individual at a company generating $122.4 billion in FY2025 revenue.",
+          "The leadership team is executing a focused connectivity strategy, directing $20.8 billion in 2025 capital expenditures primarily toward fiber and 5G network buildouts."
+        ]
+      },
+      {
+        "title": "Capital Allocation",
+        "grade": "middle",
+        "summary": "AT&T deployed $20.8 billion in capital expenditures in 2025 while returning $12.4 billion to stockholders through dividends and buybacks, a more than 50% increase year-over-year. The company carries $122.1 billion in long-term debt against $38.3 billion in operating cash flow, with interest expense of $6.8 billion.",
+        "points": [
+          "The company completed the DIRECTV sale to TPG on July 2, 2025, and entered acquisition agreements with EchoStar for spectrum and Lumen Technologies for fiber assets.",
+          "Management secured a $12 billion revolving credit agreement and a $17.5 billion delayed draw term loan in November 2025, providing liquidity for ongoing network investment and debt management."
+        ]
+      },
+      {
+        "title": "Shareholder Alignment",
+        "grade": "middle",
+        "summary": "AT&T increased capital returns to shareholders by over 50% in 2025, distributing $12.4 billion through dividends and share repurchases. The DEF 14A outlines executive compensation structures tied to performance metrics, aligning leadership incentives with shareholder returns.",
+        "points": [
+          "The $12.4 billion returned to stockholders in 2025 represents a significant increase from the prior year, funded by $38.3 billion in operating cash flow.",
+          "The 2026 proxy statement details compensation arrangements for named executive officers, including Stankey and Desroches, linking pay to strategic and financial performance goals."
+        ]
+      },
+      {
+        "title": "Communication",
+        "grade": "middle",
+        "summary": "AT&T files annual 10-K reports with detailed segment reporting across Mobility, Business Wireline, Consumer Wireline, and Latin America, breaking service revenues into Wireless, Business, IP Broadband, Legacy Voice, and Other categories. The company also files DEF 14A proxies disclosing executive compensation and board governance.",
+        "points": [
+          "The 10-K filed February 9, 2026 provides granular segment and service-line revenue breakdowns, plus purchase obligation schedules extending through 2030 and beyond.",
+          "Management assessed internal controls as effective under the COSO 2013 framework as of December 31, 2025, with Ernst & Young LLP issuing an attestation report."
+        ]
+      },
+      {
+        "title": "Governance",
+        "grade": "middle",
+        "summary": "The board includes ten nominees for 2026 led by Independent Lead Director Bill Kennard, with an Audit Committee comprising Luczo, McCallister, Mayer, and Taylor. Approximately 43% of the 133,030-person workforce is unionized, with collective bargaining agreements covering 15,100 employees expiring in 2026.",
+        "points": [
+          "The board features directors with diverse backgrounds including Marissa Mayer, Beth Mooney, and Stephen Luczo, with Kennard serving as Independent Lead Director alongside Stankey's Chairman role.",
+          "Labor relations present a near-term governance risk, as CWA and IBEW agreements covering 15,100 employees are set to expire in 2026, potentially affecting operations across the communications segments."
+        ]
+      }
+    ]
+  },
+  "moat": {
+    "grade": "middle",
+    "types": [
+      {
+        "type": "Network Infrastructure Scale",
+        "grade": "middle",
+        "summary": "AT&T operates a massive physical network with $20.7 billion in 2025 property and equipment spending, supporting Mobility, Business Wireline, and Consumer Wireline segments that generated $122.4 billion in total revenue. The company's fiber and 5G buildout creates a cost barrier for new entrants."
+      },
+      {
+        "type": "Regulatory Spectrum Advantage",
+        "grade": "middle",
+        "summary": "Under the 25-year FirstNet agreement, AT&T receives 20 MHz of dedicated spectrum and serves public safety agencies, with $420 million in sustainability payments submitted in 2025 out of an $18 billion total commitment. This contractually secured spectrum allocation provides a durable competitive position in wireless."
+      },
+      {
+        "type": "Switching Costs",
+        "grade": "middle",
+        "summary": "AT&T's 133,030 employees serve bundled wireless, broadband, and business service customers across multiple segments, with service revenues categorized across Wireless, Business, IP Broadband, and Legacy Voice. Enterprise and consumer customers face friction in migrating integrated communications services to competitors."
+      },
+      {
+        "type": "Capital Requirements Barrier",
+        "grade": "middle",
+        "summary": "With $122.1 billion in long-term debt and $20.8 billion in annual capital expenditures, AT&T operates at a scale that requires enormous sustained investment to maintain and expand network infrastructure. The August 2025 EchoStar spectrum purchase and May 2025 Lumen asset acquisition further demonstrate the capital intensity of competing in telecommunications."
+      }
+    ]
+  }
+}

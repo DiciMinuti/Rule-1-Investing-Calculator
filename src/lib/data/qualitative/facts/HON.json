@@ -1,0 +1,172 @@
+{
+  "symbol": "HON",
+  "companyName": "Honeywell",
+  "updatedAt": "2026-06-22",
+  "facts": [
+    {
+      "topic": "Business Model & Classification",
+      "statement": "Honeywell International Inc. is classified under SIC code 'Aircraft Engines & Engine Parts' and is listed on Nasdaq under the ticker HON.",
+      "source": "SEC submissions metadata (https://data.sec.gov/submissions/CIK0000773840.)"
+    },
+    {
+      "topic": "Revenue Scale",
+      "statement": "Honeywell reported total revenue of $33.009 billion for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000773840.)"
+    },
+    {
+      "topic": "Profitability",
+      "statement": "Honeywell reported net income of $5.658 billion for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000773840.)"
+    },
+    {
+      "topic": "Cash Flow",
+      "statement": "Honeywell generated $5.34 billion in operating cash flow for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000773840.)"
+    },
+    {
+      "topic": "R&D Investment",
+      "statement": "Honeywell spent $1.375 billion on research and development in FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000773840.)"
+    },
+    {
+      "topic": "Balance Sheet",
+      "statement": "As of FY2025, Honeywell had stockholders' equity of $18.619 billion, long-term debt of $29.046 billion, and cash and equivalents of $9.906 billion.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000773840.)"
+    },
+    {
+      "topic": "Segment Structure",
+      "statement": "Honeywell operates four reportable segments: Aerospace Technologies, Industrial Automation, Building Automation, and Energy and Sustainability Solutions.",
+      "source": "10-K filed 2026-02-17 (https://www.sec.gov/Archives/edgar/data/773840/000077384026000013/hon-20251231.htm)"
+    },
+    {
+      "topic": "Aerospace Technologies Sub-lines",
+      "statement": "The Aerospace Technologies segment includes sub-lines: Commercial Aviation Original Equipment, Commercial Aviation Aftermarket, and Defense Services.",
+      "source": "10-K filed 2026-02-17 (https://www.sec.gov/Archives/edgar/data/773840/000077384026000013/hon-20251231.htm)"
+    },
+    {
+      "topic": "Industrial Automation Sub-lines",
+      "statement": "The Industrial Automation segment includes sub-lines: Sensing and Safety Technologies, Productivity Products, Process Solutions, and Warehouse and Workflow Solutions.",
+      "source": "10-K filed 2026-02-17 (https://www.sec.gov/Archives/edgar/data/773840/000077384026000013/hon-20251231.htm)"
+    },
+    {
+      "topic": "Building Automation & Energy Segments",
+      "statement": "The Building Automation segment includes Building Products and Building Solutions sub-lines, while the Energy and Sustainability Solutions segment includes the UOP sub-line.",
+      "source": "10-K filed 2026-02-17 (https://www.sec.gov/Archives/edgar/data/773840/000077384026000013/hon-20251231.htm)"
+    },
+    {
+      "topic": "Portfolio Transformation - Solstice Spin-Off",
+      "statement": "Honeywell completed the spin-off of Solstice Advanced Materials on October 30, 2025, with Solstice beginning trading on Nasdaq under the ticker 'SOLS'.",
+      "source": "DEF 14A filed 2026-04-10 (https://www.sec.gov/Archives/edgar/data/773840/000077384026000029/hon-20260409.htm)"
+    },
+    {
+      "topic": "Portfolio Transformation - Aerospace Separation",
+      "statement": "Honeywell expects to complete the separation of its Aerospace Technologies and Automation businesses in the third quarter of 2026, creating Honeywell Aerospace as one of the world's largest publicly-listed pure-play aerospace and defense companies.",
+      "source": "DEF 14A filed 2026-04-10 (https://www.sec.gov/Archives/edgar/data/773840/000077384026000029/hon-20260409.htm)"
+    },
+    {
+      "topic": "Management - CEO",
+      "statement": "Vimal Kapur serves as Honeywell's Chairman and Chief Executive Officer and will continue in that role leading the post-separation Honeywell, which will focus on the transition from automation to autonomy across Building Automation, Industrial Automation, and Process Automation and Technology segments.",
+      "source": "DEF 14A filed 2026-04-10 (https://www.sec.gov/Archives/edgar/data/773840/000077384026000029/hon-20260409.htm)"
+    },
+    {
+      "topic": "Management - Aerospace CEO",
+      "statement": "Jim Currier was announced as President and CEO of Honeywell Aerospace; he previously served as President and CEO of Honeywell's Aerospace Technologies business since 2023 and has spent nearly two decades in senior roles at the Company.",
+      "source": "10-K filed 2026-02-17 (https://www.sec.gov/Archives/edgar/data/773840/000077384026000013/hon-20251231.htm)"
+    },
+    {
+      "topic": "Management - CFO",
+      "statement": "Michal Stepniak serves as Senior Vice President and Chief Financial Officer (Principal Financial Officer) of Honeywell.",
+      "source": "10-K filed 2026-02-17 (https://www.sec.gov/Archives/edgar/data/773840/000077384026000013/hon-20251231.htm)"
+    },
+    {
+      "topic": "Governance - Board & Audit Committee",
+      "statement": "The Audit Committee of Honeywell's Board of Directors is chaired by Michael W. Lamach and includes members William S. Ayer, Kevin Burke, D. Scott Davis, Marc Steinberg, Robin Watson, and Stephen Williamson; the Board determined that Mr. Davis and Mr. Williamson are Audit Committee financial experts.",
+      "source": "10-K filed 2026-02-17 (https://www.sec.gov/Archives/edgar/data/773840/000077384026000013/hon-20251231.htm)"
+    },
+    {
+      "topic": "Governance - New Directors",
+      "statement": "Honeywell welcomed two new directors: Indra K. Nooyi, former Chair and CEO of PepsiCo, who joined the Board on January 1, 2026, and Marc Steinberg, a Partner at Elliott Investment Management, L.P., who joined the Board on May 31, 2025.",
+      "source": "DEF 14A filed 2026-04-10 (https://www.sec.gov/Archives/edgar/data/773840/000077384026000029/hon-20260409.htm)"
+    },
+    {
+      "topic": "Governance - Elliott Cooperation Agreement",
+      "statement": "Honeywell entered into a Cooperation Agreement with Elliott Investment Management L.P., Elliott Associates, L.P., and Elliott International, L.P., dated as of May 28, 2025.",
+      "source": "10-K filed 2026-02-17 (https://www.sec.gov/Archives/edgar/data/773840/000077384026000013/hon-20251231.htm)"
+    },
+    {
+      "topic": "Aerospace Technologies Segment Performance",
+      "statement": "Aerospace Technologies reported 2025 segment profit of $4,284 million on net sales of $17,510 million, yielding a segment profit margin of 24.5%; adjusted segment profit margin was 26.1% after excluding $373 million in Flexjet-related litigation matters.",
+      "source": "DEF 14A filed 2026-04-10 (https://www.sec.gov/Archives/edgar/data/773840/000077384026000029/hon-20260409.htm)"
+    },
+    {
+      "topic": "Organic Sales Growth",
+      "statement": "Honeywell's overall organic sales growth was 7% in 2025, with Aerospace Technologies growing 12% organically and Building Automation growing 8% organically.",
+      "source": "DEF 14A filed 2026-04-10 (https://www.sec.gov/Archives/edgar/data/773840/000077384026000029/hon-20260409.htm)"
+    },
+    {
+      "topic": "Free Cash Flow",
+      "statement": "Honeywell's free cash flow was $5.102 billion in 2025, up from $4.241 billion in 2024 and $3.718 billion in 2023; the free cash flow margin was 13.5% in 2025.",
+      "source": "DEF 14A filed 2026-04-10 (https://www.sec.gov/Archives/edgar/data/773840/000077384026000029/hon-20260409.htm)"
+    },
+    {
+      "topic": "Return on Invested Capital",
+      "statement": "Honeywell's return on invested capital (ROIC) was 14.8% in 2025, down from 15.1% in 2024 and 16.9% in 2023, based on adjusted net income before interest divided by net investment.",
+      "source": "DEF 14A filed 2026-04-10 (https://www.sec.gov/Archives/edgar/data/773840/000077384026000029/hon-20260409.htm)"
+    },
+    {
+      "topic": "Divestitures - PPE Business",
+      "statement": "Honeywell divested its Personal Protective Equipment business, with the sale completed by May 21, 2025, resulting in a $28 million loss on sale net of tax benefit of $2 million.",
+      "source": "10-K filed 2026-02-17 (https://www.sec.gov/Archives/edgar/data/773840/000077384026000013/hon-20251231.htm); DEF 14A filed 2026-04-10 (https://www.sec.gov/Archives/edgar/data/773840/000077384026000029/hon-20260409.htm)"
+    },
+    {
+      "topic": "Divestitures - Productivity & Warehouse Businesses",
+      "statement": "Honeywell classified its Productivity Solutions and Services and Warehouse Workflow Solutions businesses as held for sale as of December 31, 2025.",
+      "source": "10-K filed 2026-02-17 (https://www.sec.gov/Archives/edgar/data/773840/000077384026000013/hon-20251231.htm)"
+    },
+    {
+      "topic": "M&A Activity",
+      "statement": "Honeywell completed multiple acquisitions including CAES Systems Holdings LLC (August 2024), Civitanavi Systems S.p.A. (August 2024), Carrier Global Corporation's Global Access Solutions business (June 2024), and the Air Products Liquified Natural Gas Process Technology and Equipment business (LNG) (September 2024).",
+      "source": "10-K filed 2026-02-17 (https://www.sec.gov/Archives/edgar/data/773840/000077384026000013/hon-20251231.htm)"
+    },
+    {
+      "topic": "Goodwill Impairment",
+      "statement": "Honeywell recorded a $724 million goodwill impairment charge in 2025 associated with the Industrial Automation reportable segment, with no tax benefit.",
+      "source": "DEF 14A filed 2026-04-10 (https://www.sec.gov/Archives/edgar/data/773840/000077384026000029/hon-20260409.htm)"
+    },
+    {
+      "topic": "Adjusted Net Income",
+      "statement": "Honeywell's adjusted net income from continuing operations attributable to Honeywell was $6.289 billion in 2025, up from $5.723 billion in 2024 and $5.611 billion in 2023.",
+      "source": "DEF 14A filed 2026-04-10 (https://www.sec.gov/Archives/edgar/data/773840/000077384026000029/hon-20260409.htm)"
+    },
+    {
+      "topic": "Equity Compensation Plans",
+      "statement": "As of December 31, 2025, Honeywell had 12,997,866 securities to be issued upon exercise of outstanding options, warrants, and rights under shareholder-approved equity compensation plans, with a weighted average exercise price of $172.59, and 27,733,434 securities remaining available for future issuance.",
+      "source": "10-K filed 2026-02-17 (https://www.sec.gov/Archives/edgar/data/773840/000077384026000013/hon-20251231.htm)"
+    },
+    {
+      "topic": "Capital Structure - Reverse Stock Split Proposal",
+      "statement": "Honeywell's 2026 proxy statement includes a proposal to adopt a 1-for-2 reverse stock split of the Company's common stock, with a proportionate reduction in authorized shares from 2,000,000,000 to 1,000,000,000 common shares.",
+      "source": "DEF 14A filed 2026-04-10 (https://www.sec.gov/Archives/edgar/data/773840/000077384026000029/hon-20260409.htm)"
+    },
+    {
+      "topic": "Debt Structure",
+      "statement": "Honeywell has a diverse long-term debt structure including USD-denominated notes maturing from 2025 through 2064, Euro-denominated notes maturing from 2027 through 2036, term loans, debentures due 2028 and 2033, and industrial development bond obligations.",
+      "source": "10-K filed 2026-02-17 (https://www.sec.gov/Archives/edgar/data/773840/000077384026000013/hon-20251231.htm)"
+    },
+    {
+      "topic": "Risk Factors - Legacy Liabilities",
+      "statement": "Honeywell maintains asbestos-related liabilities, including those related to the NARCO Buyout and Bendix Friction Materials, and environmental liabilities associated with the Resideo separation, which are subject to estimation adjustments.",
+      "source": "10-K filed 2026-02-17 (https://www.sec.gov/Archives/edgar/data/773840/000077384026000013/hon-20251231.htm); DEF 14A filed 2026-04-10 (https://www.sec.gov/Archives/edgar/data/773840/000077384026000029/hon-20260409.htm)"
+    },
+    {
+      "topic": "Executive Compensation - Aerospace CEO",
+      "statement": "Under Jim Currier's offer letter effective upon the Solstice spin-off, his base salary was adjusted to $1,400,000, target annual incentive compensation opportunity set at 175% of base salary, and annual long-term incentive awards with a target grant date value of $13,000,000.",
+      "source": "10-K filed 2026-02-17 (https://www.sec.gov/Archives/edgar/data/773840/000077384026000013/hon-20251231.htm)"
+    },
+    {
+      "topic": "Post-Separation Strategy",
+      "statement": "Post-separation, Honeywell will emerge as the global leader of the industrial world's transition from automation to autonomy, with three automation business segments: Building Automation, Industrial Automation, and Process Automation and Technology.",
+      "source": "DEF 14A filed 2026-04-10 (https://www.sec.gov/Archives/edgar/data/773840/000077384026000029/hon-20260409.htm)"
+    }
+  ]
+}

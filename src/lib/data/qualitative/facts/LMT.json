@@ -1,0 +1,152 @@
+{
+  "symbol": "LMT",
+  "companyName": "Lockheed Martin",
+  "updatedAt": "2026-06-22",
+  "facts": [
+    {
+      "topic": "Business Model",
+      "statement": "Lockheed Martin is a global aerospace and defense technology company that builds and sustains solutions across all warfighting domains, serving U.S. and international customers in defense, civil, and commercial applications, with principal customers being agencies of the U.S. Government and allies.",
+      "source": "DEF 14A filed 2026-03-26 (https://www.sec.gov/Archives/edgar/data/936468/000093646826000004/lmt-20260326.htm)"
+    },
+    {
+      "topic": "Industry Classification",
+      "statement": "Lockheed Martin is classified under SIC code description 'Guided Missiles & Space Vehicles & Parts' and trades on the NYSE under the ticker LMT.",
+      "source": "SEC submissions metadata (https://data.sec.gov/submissions/CIK0000936468.)"
+    },
+    {
+      "topic": "Revenue Scale",
+      "statement": "Lockheed Martin reported total revenue of $67.571 billion for FY2025, filed on 2026-01-29.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000936468.)"
+    },
+    {
+      "topic": "Net Income",
+      "statement": "Net income for FY2025 was $6.92 billion, filed on 2026-01-29.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000936468.)"
+    },
+    {
+      "topic": "Operating Cash Flow",
+      "statement": "Operating cash flow for FY2025 was $7.92 billion, filed on 2026-01-29.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000936468.)"
+    },
+    {
+      "topic": "R&D Investment",
+      "statement": "Research and development expense for FY2025 was $1.5 billion, filed on 2026-01-29.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000936468.)"
+    },
+    {
+      "topic": "Balance Sheet",
+      "statement": "As of FY2025, Lockheed Martin had stockholders' equity of $9.266 billion, long-term debt of $19.627 billion, and cash and equivalents of $2.483 billion.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000936468.)"
+    },
+    {
+      "topic": "Segment Revenue - Aeronautics",
+      "statement": "Aeronautics segment generated $30.3 billion in 2025 sales, making it the largest business area, with key programs including the F-35 Lightning II, F-16 Fighting Falcon, C-130 Hercules, F-22 Raptor, and Skunk Works.",
+      "source": "DEF 14A filed 2026-03-26 (https://www.sec.gov/Archives/edgar/data/936468/000093646826000004/lmt-20260326.htm)"
+    },
+    {
+      "topic": "Segment Revenue - Missiles and Fire Control",
+      "statement": "Missiles and Fire Control segment generated $14.5 billion in 2025 sales, with key programs including GMLRS, HIMARS, PAC-3, THAAD, PrSM, JASSM, LRASM, SNIPER, and IRST21.",
+      "source": "DEF 14A filed 2026-03-26 (https://www.sec.gov/Archives/edgar/data/936468/000093646826000004/lmt-20260326.htm)"
+    },
+    {
+      "topic": "Segment Revenue - Rotary and Mission Systems",
+      "statement": "Rotary and Mission Systems segment generated $17.3 billion in 2025 sales, with key programs including Black Hawk, CH-53K, Aegis, C2BMC, C6ISR, and Training and Logistics.",
+      "source": "DEF 14A filed 2026-03-26 (https://www.sec.gov/Archives/edgar/data/936468/000093646826000004/lmt-20260326.htm)"
+    },
+    {
+      "topic": "Segment Revenue - Space",
+      "statement": "Space segment generated $13.0 billion in 2025 sales, with key programs including Next Gen OPIR GEO, Trident II/D5, Orion, Next Generation Interceptor, GPS III, and Conventional Prompt Strike.",
+      "source": "DEF 14A filed 2026-03-26 (https://www.sec.gov/Archives/edgar/data/936468/000093646826000004/lmt-20260326.htm)"
+    },
+    {
+      "topic": "Backlog",
+      "statement": "Lockheed Martin finished 2025 with a record backlog of nearly $194 billion, representing more than two-and-a-half years of sales.",
+      "source": "DEF 14A filed 2026-03-26 (https://www.sec.gov/Archives/edgar/data/936468/000093646826000004/lmt-20260326.htm)"
+    },
+    {
+      "topic": "Capital Allocation",
+      "statement": "In 2025, Lockheed Martin invested $2.0 billion in Independent Research & Development and $1.6 billion in Capital Expenditures, while also growing top-line sales by 6%.",
+      "source": "DEF 14A filed 2026-03-26 (https://www.sec.gov/Archives/edgar/data/936468/000093646826000004/lmt-20260326.htm)"
+    },
+    {
+      "topic": "Free Cash Flow",
+      "statement": "Free Cash Flow (non-GAAP) for 2025 was $6.9 billion, derived from cash from operations of $8.557 billion less capital expenditures of $1.649 billion; adjusted free cash flow was $7.704 billion after adjustments for unplanned pension contributions, the One Big Beautiful Bill Act, and tariffs.",
+      "source": "DEF 14A filed 2026-03-26 (https://www.sec.gov/Archives/edgar/data/936468/000093646826000004/lmt-20260326.htm)"
+    },
+    {
+      "topic": "Segment Operating Profit",
+      "statement": "Segment Operating Profit (non-GAAP) for 2025 was $6.743 billion, derived from consolidated operating profit of $7.731 billion less unallocated items including FAS/CAS operating adjustment of $1.518 billion, severance charges of $66 million, intangible asset amortization of $254 million, and other net items of $210 million.",
+      "source": "DEF 14A filed 2026-03-26 (https://www.sec.gov/Archives/edgar/data/936468/000093646826000004/lmt-20260326.htm)"
+    },
+    {
+      "topic": "Management - CEO",
+      "statement": "James D. Taiclet serves as Chairman, President, and Chief Executive Officer of Lockheed Martin Corporation.",
+      "source": "10-K filed 2026-01-29 (https://www.sec.gov/Archives/edgar/data/936468/000162828026004195/lmt-20251231.htm)"
+    },
+    {
+      "topic": "Management - CFO",
+      "statement": "Evan T. Scott serves as Chief Financial Officer (Principal Financial Officer) of Lockheed Martin Corporation.",
+      "source": "10-K filed 2026-01-29 (https://www.sec.gov/Archives/edgar/data/936468/000162828026004195/lmt-20251231.htm)"
+    },
+    {
+      "topic": "Board of Directors",
+      "statement": "The Board of Directors includes nine director nominees for the 2026 Annual Meeting, with Thomas J. Falk serving as Independent Lead Director; Gen. Joseph F. Dunford, Jr. has decided not to stand for reelection.",
+      "source": "DEF 14A filed 2026-03-26 (https://www.sec.gov/Archives/edgar/data/936468/000093646826000004/lmt-20260326.htm)"
+    },
+    {
+      "topic": "Governance",
+      "statement": "Lockheed Martin has had a written code of ethics in place since its formation in 1995, titled 'Setting the Standard,' which applies to all employees including principal executive officer, principal financial officer, principal accounting officer, and Board members.",
+      "source": "10-K filed 2026-01-29 (https://www.sec.gov/Archives/edgar/data/936468/000162828026004195/lmt-20251231.htm)"
+    },
+    {
+      "topic": "Equity Compensation",
+      "statement": "As of December 31, 2025, Lockheed Martin had 3,096,235 securities to be issued upon exercise of outstanding options, warrants and rights under equity compensation plans, with 6,840,675 securities remaining available for future issuance; the weighted-average exercise price was zero.",
+      "source": "10-K filed 2026-01-29 (https://www.sec.gov/Archives/edgar/data/936468/000162828026004195/lmt-20251231.htm)"
+    },
+    {
+      "topic": "Internal Controls",
+      "statement": "Management concluded that internal control over financial reporting was effective as of December 31, 2025, based on the COSO 2013 framework, and Ernst & Young LLP issued an unqualified opinion on the effectiveness of internal controls.",
+      "source": "10-K filed 2026-01-29 (https://www.sec.gov/Archives/edgar/data/936468/000162828026004195/lmt-20251231.htm)"
+    },
+    {
+      "topic": "Strategic Growth Initiatives",
+      "statement": "Lockheed Martin is accelerating F-35 upgrades through Block 4 enhancements, advancing sixth-generation development concepts, investing in homeland defense systems including the Golden Dome initiative, and driving enterprise-wide modernization through its 1LMX initiative adopting advanced digital tools and artificial intelligence.",
+      "source": "DEF 14A filed 2026-03-26 (https://www.sec.gov/Archives/edgar/data/936468/000093646826000004/lmt-20260326.htm)"
+    },
+    {
+      "topic": "Contract Types",
+      "statement": "Lockheed Martin's 10-K XBRL taxonomy includes both fixed-price contract and cost-reimbursable contract classifications across all four operating segments (Aeronautics, Missiles and Fire Control, Rotary and Mission Systems, and Space).",
+      "source": "10-K filed 2026-01-29 (https://www.sec.gov/Archives/edgar/data/936468/000162828026004195/lmt-20251231.htm)"
+    },
+    {
+      "topic": "Customer Concentration",
+      "statement": "Lockheed Martin's revenue is disaggregated by customer type including U.S. Government, International, and U.S. Commercial and Other, across all four operating segments, with geographic breakdowns including Europe, Asia Pacific, Middle East, and Other regions.",
+      "source": "10-K filed 2026-01-29 (https://www.sec.gov/Archives/edgar/data/936468/000162828026004195/lmt-20251231.htm)"
+    },
+    {
+      "topic": "Risk Factors",
+      "statement": "Key risk factors include reliance on U.S. Government contracts dependent on government funding and terminable for convenience, budget uncertainty and government shutdowns, risks related to complex programs including the F-35, fixed-price contract estimation risks, key supplier and joint venture performance (including United Launch Alliance), inflation, tariffs, export restrictions, cybersecurity threats, and pension plan assumptions.",
+      "source": "DEF 14A filed 2026-03-26 (https://www.sec.gov/Archives/edgar/data/936468/000093646826000004/lmt-20260326.htm)"
+    },
+    {
+      "topic": "ROIC Performance",
+      "statement": "Return on Invested Capital (ROIC) for the 2023-2025 performance cycle was 19.82%, calculated as return of $6.726 billion divided by average invested capital of $33.929 billion, with adjustments for pension settlement charges, the One Big Beautiful Bill Act, and a prior year loss on a specific strategic program.",
+      "source": "DEF 14A filed 2026-03-26 (https://www.sec.gov/Archives/edgar/data/936468/000093646826000004/lmt-20260326.htm)"
+    },
+    {
+      "topic": "Joint Ventures",
+      "statement": "United Launch Alliance is identified as a joint venture of Lockheed Martin, with its performance and financial viability cited as a risk factor.",
+      "source": "10-K filed 2026-01-29 (https://www.sec.gov/Archives/edgar/data/936468/000162828026004195/lmt-20251231.htm)"
+    },
+    {
+      "topic": "Product Concentration Risk",
+      "statement": "The F-35 program is identified as a product concentration risk within the Aeronautics segment, with XBRL tags for F-35 program product concentration risk and sales revenue across 2023, 2024, and 2025.",
+      "source": "10-K filed 2026-01-29 (https://www.sec.gov/Archives/edgar/data/936468/000162828026004195/lmt-20251231.htm)"
+    },
+    {
+      "topic": "Severance and Restructuring",
+      "statement": "Lockheed Martin incurred severance and other charges of $66 million in 2025 as unallocated items, resulting from a review of business segments and corporate functions intended to improve operational efficiency, with a portion of severance costs recoverable through future product and service pricing to the U.S. Government and other customers.",
+      "source": "10-K filed 2026-01-29 (https://www.sec.gov/Archives/edgar/data/936468/000162828026004195/lmt-20251231.htm)"
+    }
+  ]
+}

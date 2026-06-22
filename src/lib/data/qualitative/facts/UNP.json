@@ -1,0 +1,137 @@
+{
+  "symbol": "UNP",
+  "companyName": "Union Pacific Corporation",
+  "updatedAt": "2026-06-22",
+  "facts": [
+    {
+      "topic": "Business Model",
+      "statement": "Union Pacific Corporation is classified under SIC code 'Railroads, Line-Haul Operating' and is listed on the NYSE under the ticker symbol UNP.",
+      "source": "SEC submissions metadata (https://data.sec.gov/submissions/CIK0000100885.)"
+    },
+    {
+      "topic": "Business Model",
+      "statement": "Union Pacific Corporation is incorporated in Utah, with principal executive offices at 1400 Douglas Street, Omaha, Nebraska 68179.",
+      "source": "10-K filed 2026-02-06 (https://www.sec.gov/Archives/edgar/data/100885/000010088526000037/unp-20251231.htm)"
+    },
+    {
+      "topic": "Revenue Scale",
+      "statement": "Union Pacific reported total revenue of $24.119 billion for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000100885.)"
+    },
+    {
+      "topic": "Profitability",
+      "statement": "Union Pacific reported net income of $6.379 billion for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000100885.)"
+    },
+    {
+      "topic": "Cash Flow",
+      "statement": "Union Pacific generated $8.379 billion in operating cash flow for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000100885.)"
+    },
+    {
+      "topic": "Balance Sheet",
+      "statement": "As of FY2025 year-end, Union Pacific had stockholders' equity of $12.163 billion, long-term debt of $31.814 billion, and cash and equivalents of $1.055 billion.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000100885.)"
+    },
+    {
+      "topic": "Operating Performance",
+      "statement": "In 2025, Union Pacific achieved an operating ratio of 59.8%, a 10-basis point improvement versus 2024, and reported an 8% increase in earnings per share versus 2024.",
+      "source": "10-K filed 2026-02-06 (https://www.sec.gov/Archives/edgar/data/100885/000010088526000037/unp-20251231.htm)"
+    },
+    {
+      "topic": "Volume and Business Mix",
+      "statement": "Total volume increased 1% in 2025 versus 2024, driven by coal, industrial chemicals and plastics, grain and grain products, and rock shipments, partially offset by weaker demand for automotive and energy and specialized markets shipments.",
+      "source": "10-K filed 2026-02-06 (https://www.sec.gov/Archives/edgar/data/100885/000010088526000037/unp-20251231.htm)"
+    },
+    {
+      "topic": "Segments",
+      "statement": "Union Pacific reports revenue across three principal business segments: Bulk, Industrial, and Premium, as well as Other subsidiary revenues and accessorial revenues.",
+      "source": "10-K filed 2026-02-06 (https://www.sec.gov/Archives/edgar/data/100885/000010088526000037/unp-20251231.htm)"
+    },
+    {
+      "topic": "Safety Performance",
+      "statement": "In 2025, Union Pacific achieved best-ever personal injury and derailment incident rate results, with a personal injury rate of 0.68 (improved 24% vs. 2024) and a derailment incident rate of 1.75 (improved 19% vs. 2024).",
+      "source": "DEF 14A filed 2026-03-25 (https://www.sec.gov/Archives/edgar/data/100885/000010088526000098/unp-20260324.htm)"
+    },
+    {
+      "topic": "Service Performance",
+      "statement": "In 2025, freight car velocity improved 8% and terminal dwell declined 8% compared to 2024, while Service Performance Index improved 9 points for intermodal and 11 points for manifest products.",
+      "source": "DEF 14A filed 2026-03-25 (https://www.sec.gov/Archives/edgar/data/100885/000010088526000098/unp-20260324.htm)"
+    },
+    {
+      "topic": "Strategic Investment",
+      "statement": "Union Pacific holds an equity-method investment in TTX Company, a rail car pooling company, valued at $2.0 billion as of December 31, 2025 (up from $1.9 billion in 2024), with TTX car hire expense of $447 million in 2025.",
+      "source": "10-K filed 2026-02-06 (https://www.sec.gov/Archives/edgar/data/100885/000010088526000037/unp-20251231.htm)"
+    },
+    {
+      "topic": "Pending Acquisition",
+      "statement": "On July 28, 2025, Union Pacific entered into a merger agreement to acquire Norfolk Southern Corporation, with each Norfolk Southern share to be converted into one share of UNP common stock plus $88.82 in cash; the transaction is expected to issue approximately 224.8 million UNP shares and pay approximately $20 billion in cash.",
+      "source": "10-K filed 2026-02-06 (https://www.sec.gov/Archives/edgar/data/100885/000010088526000037/unp-20251231.htm)"
+    },
+    {
+      "topic": "Acquisition Status",
+      "statement": "The STB issued a decision on January 16, 2026 that the joint application for the Norfolk Southern merger was not accepted as complete; the applicants are permitted to file a revised application, and the acquisition is currently expected to be completed in 2027.",
+      "source": "10-K filed 2026-02-06 (https://www.sec.gov/Archives/edgar/data/100885/000010088526000037/unp-20251231.htm)"
+    },
+    {
+      "topic": "Acquisition Risk",
+      "statement": "Both Union Pacific and Norfolk Southern may be required to pay the other a termination fee of $2.5 billion if the merger agreement is terminated under certain circumstances.",
+      "source": "10-K filed 2026-02-06 (https://www.sec.gov/Archives/edgar/data/100885/000010088526000037/unp-20251231.htm)"
+    },
+    {
+      "topic": "Acquisition Expenses",
+      "statement": "Union Pacific incurred $72 million in total acquisition-related expense associated with the Norfolk Southern merger agreement for the year ended December 31, 2025, including $68 million in purchased services and materials and $4 million in other costs.",
+      "source": "10-K filed 2026-02-06 (https://www.sec.gov/Archives/edgar/data/100885/000010088526000037/unp-20251231.htm)"
+    },
+    {
+      "topic": "Management",
+      "statement": "V. James Vena serves as Chief Executive Officer of Union Pacific Corporation, and Jennifer L. Hamann serves as Executive Vice President and Chief Financial Officer.",
+      "source": "10-K filed 2026-02-06 (https://www.sec.gov/Archives/edgar/data/100885/000010088526000037/unp-20251231.htm)"
+    },
+    {
+      "topic": "Management",
+      "statement": "Carrie J. Powers serves as Vice President, Controller, and Chief Accounting Officer of Union Pacific Corporation.",
+      "source": "10-K filed 2026-02-06 (https://www.sec.gov/Archives/edgar/data/100885/000010088526000037/unp-20251231.htm)"
+    },
+    {
+      "topic": "Management",
+      "statement": "Eric G. Gehringer serves as Executive Vice President - Operations at Union Pacific, and on December 19, 2025 adopted a Rule 10b5-1 trading plan to sell up to 1,999 shares of UNP common stock between March 20, 2026 and December 31, 2026.",
+      "source": "10-K filed 2026-02-06 (https://www.sec.gov/Archives/edgar/data/100885/000010088526000037/unp-20251231.htm)"
+    },
+    {
+      "topic": "Board of Directors",
+      "statement": "Union Pacific's Board of Directors includes eleven directors: David B. Dillon, Doyle R. Simons, Sheri H. Edison, John K. Tien Jr., Teresa M. Finley, John P. Wiehoff, Deborah C. Hopkins, W. Anthony Will, Jane H. Lute, Christopher J. Williams, and Michael R. McCarthy.",
+      "source": "10-K filed 2026-02-06 (https://www.sec.gov/Archives/edgar/data/100885/000010088526000037/unp-20251231.htm)"
+    },
+    {
+      "topic": "Capital Allocation",
+      "statement": "Union Pacific conducted an accelerated share repurchase program in 2025, with transactions initiated on February 18, 2025 and additional activity in Q1 and Q2 2025.",
+      "source": "10-K filed 2026-02-06 (https://www.sec.gov/Archives/edgar/data/100885/000010088526000037/unp-20251231.htm)"
+    },
+    {
+      "topic": "Share Count",
+      "statement": "As of January 30, 2026, Union Pacific had 593,391,460 shares of common stock outstanding, and as of June 30, 2025, the aggregate market value of common stock held by non-affiliates was $136.1 billion.",
+      "source": "10-K filed 2026-02-06 (https://www.sec.gov/Archives/edgar/data/100885/000010088526000037/unp-20251231.htm)"
+    },
+    {
+      "topic": "Equity Compensation",
+      "statement": "As of December 31, 2025, Union Pacific had 2,487,690 securities to be issued upon exercise of outstanding options, warrants and rights under equity compensation plans, with a weighted-average exercise price of $210.32, and 29,874,539 securities remaining available for future issuance.",
+      "source": "10-K filed 2026-02-06 (https://www.sec.gov/Archives/edgar/data/100885/000010088526000037/unp-20251231.htm)"
+    },
+    {
+      "topic": "Governance",
+      "statement": "Union Pacific's 2026 Annual Meeting of Shareholders is scheduled for May 14, 2026, with a record date of March 13, 2026, at which eleven directors are to be elected, Deloitte & Touche LLP is to be ratified as auditor, and an advisory vote on executive compensation is to be held.",
+      "source": "DEF 14A filed 2026-03-25 (https://www.sec.gov/Archives/edgar/data/100885/000010088526000098/unp-20260324.htm)"
+    },
+    {
+      "topic": "Non-GAAP Financial Measures",
+      "statement": "Union Pacific reported adjusted (non-GAAP) FY2025 results excluding acquisition-related expense, industrial park land sales, deferred tax adjustments, and a crew staffing agreement, resulting in adjusted net income of $6.947 billion, adjusted diluted EPS of $11.66, and an adjusted operating ratio of 59.3%.",
+      "source": "DEF 14A filed 2026-03-25 (https://www.sec.gov/Archives/edgar/data/100885/000010088526000098/unp-20260324.htm)"
+    },
+    {
+      "topic": "Internal Controls",
+      "statement": "Deloitte & Touche LLP issued an unqualified opinion on Union Pacific's internal control over financial reporting as of December 31, 2025, and management assessed internal controls as effective based on the COSO 2013 framework.",
+      "source": "10-K filed 2026-02-06 (https://www.sec.gov/Archives/edgar/data/100885/000010088526000037/unp-20251231.htm)"
+    }
+  ]
+}

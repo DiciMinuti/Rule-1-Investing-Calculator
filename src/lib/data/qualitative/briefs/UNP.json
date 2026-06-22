@@ -1,0 +1,80 @@
+{
+  "symbol": "UNP",
+  "companyName": "Union Pacific Corporation",
+  "generatedAt": "2026-06-22",
+  "management": {
+    "grade": "strong",
+    "sections": [
+      {
+        "title": "Leadership",
+        "grade": "strong",
+        "summary": "CEO V. James Vena and CFO Jennifer L. Hamann lead a management team that delivered an 8% EPS increase and a 59.8% operating ratio in 2025, alongside best-ever safety results. Operations EVP Eric G. Gehringer oversaw an 8% improvement in freight car velocity and a 9-point Service Performance Index gain for intermodal.",
+        "points": [
+          "Vena and Hamann delivered FY2025 net income of $6.379 billion on $24.119 billion in revenue, with a 10-basis-point operating ratio improvement to 59.8%.",
+          "Under Gehringer's operations leadership, terminal dwell declined 8% and the derailment incident rate improved 19% to 1.75, marking best-ever safety performance."
+        ]
+      },
+      {
+        "title": "Capital Allocation",
+        "grade": "middle",
+        "summary": "Management executed an accelerated share repurchase program across Q1 and Q2 2025 while maintaining $8.379 billion in operating cash flow. The pending Norfolk Southern acquisition, expected to issue approximately 224.8 million shares and pay $20 billion in cash, signals a major capital deployment shift toward network expansion.",
+        "points": [
+          "The company initiated an accelerated share repurchase program on February 18, 2025, with additional activity in Q1 and Q2 2025, returning capital while operating with $31.814 billion in long-term debt.",
+          "The Norfolk Southern merger agreement includes a $2.5 billion termination fee, and UNP incurred $72 million in acquisition-related expenses in 2025, reflecting significant deal execution risk."
+        ]
+      },
+      {
+        "title": "Shareholder Alignment",
+        "grade": "middle",
+        "summary": "Equity compensation plans include 2,487,690 outstanding securities with a weighted-average exercise price of $210.32 and 29,874,539 securities available for future issuance. The advisory vote on executive compensation at the May 2026 annual meeting provides shareholders a say-on-pay mechanism.",
+        "points": [
+          "Approximately 593.4 million shares were outstanding as of January 2026, with non-affiliate market value of $136.1 billion as of June 2025, indicating broad institutional ownership.",
+          "Operations EVP Gehringer adopted a Rule 10b5-1 plan to sell up to 1,999 shares between March and December 2026, a modest planned divestiture relative to total holdings."
+        ]
+      },
+      {
+        "title": "Communication",
+        "grade": "strong",
+        "summary": "Union Pacific reports revenue across three principal segments-Bulk, Industrial, and Premium-plus Other subsidiary and accessorial revenues, with detailed operating metrics including freight car velocity, terminal dwell, and Service Performance Index scores. The 10-K and DEF 14A provide granular volume mix data and adjusted non-GAAP measures excluding acquisition costs and one-time items.",
+        "points": [
+          "The company discloses adjusted FY2025 results excluding acquisition-related expense, industrial park land sales, deferred tax adjustments, and a crew staffing agreement, yielding adjusted diluted EPS of $11.66 and an adjusted operating ratio of 59.3%.",
+          "Segment reporting breaks out volume drivers including coal, industrial chemicals and plastics, grain, and rock shipments, partially offset by weaker automotive and energy and specialized markets demand."
+        ]
+      },
+      {
+        "title": "Governance",
+        "grade": "strong",
+        "summary": "An eleven-member board including directors David B. Dillon, Doyle R. Simons, and Sheri H. Edison oversees the company, with Deloitte & Touche LLP providing an unqualified internal controls opinion. The 2026 annual meeting includes director elections, auditor ratification, and an advisory executive compensation vote.",
+        "points": [
+          "Deloitte & Touche LLP issued an unqualified opinion on internal control over financial reporting as of December 31, 2025, with management assessing controls effective under the COSO 2013 framework.",
+          "The STB's January 16, 2026 decision that the Norfolk Southern merger application was incomplete represents a material regulatory risk, with the acquisition now expected to close in 2027."
+        ]
+      }
+    ]
+  },
+  "moat": {
+    "grade": "strong",
+    "types": [
+      {
+        "type": "Network Economics",
+        "grade": "strong",
+        "summary": "Union Pacific operates a line-haul railroad generating $24.119 billion in FY2025 revenue across Bulk, Industrial, and Premium segments, with an operating ratio of 59.8% that reflects the cost advantages of moving high volumes over a fixed rail network. The pending Norfolk Southern acquisition would extend this network by combining two Class I railroads."
+      },
+      {
+        "type": "Regulatory Barriers",
+        "grade": "strong",
+        "summary": "The STB's review of the Norfolk Southern merger-requiring a revised application after the January 2026 incomplete determination-illustrates the high regulatory barriers that protect existing Class I railroad franchises from new entrants. These same barriers also pose acquisition execution risk, with completion now expected in 2027."
+      },
+      {
+        "type": "Scale Advantages",
+        "grade": "strong",
+        "summary": "With $8.379 billion in operating cash flow and a $2.0 billion equity-method investment in TTX Company for rail car pooling, Union Pacific leverages scale to manage equipment costs of $447 million annually while serving diverse commodity volumes across coal, chemicals, grain, and intermodal freight."
+      },
+      {
+        "type": "Switching Costs",
+        "grade": "middle",
+        "summary": "Customers shipping coal, industrial chemicals and plastics, grain, and rock via Union Pacific's network face logistical and contractual costs to reroute to alternative transportation, supporting the 1% volume growth in 2025 despite weaker demand in automotive and energy and specialized markets."
+      }
+    ]
+  }
+}

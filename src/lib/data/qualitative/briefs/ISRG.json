@@ -1,0 +1,80 @@
+{
+  "symbol": "ISRG",
+  "companyName": "Intuitive Surgical",
+  "generatedAt": "2026-06-22",
+  "management": {
+    "grade": "strong",
+    "sections": [
+      {
+        "title": "Leadership",
+        "grade": "strong",
+        "summary": "David J. Rosa serves as CEO and Director, having succeeded Gary S. Guthart, Ph.D., who transitioned to Executive Chair as part of a planned leadership succession. CFO Jamie E. Samath oversees a financial structure that generated $1.798 billion in net income on $7.124 billion in FY2025 revenue.",
+        "points": [
+          "Gary S. Guthart, Ph.D. moved from CEO to Executive Chair, ensuring continuity while David J. Rosa takes over operational leadership and signs the 10-K.",
+          "The leadership team oversees a single reportable segment where the CEO acts as Chief Operating Decision Maker, streamlining accountability across the entire ecosystem."
+        ]
+      },
+      {
+        "title": "Capital Allocation",
+        "grade": "strong",
+        "summary": "Intuitive allocated $998.8 million to R&D in FY2025 while maintaining a stockholders' equity base of $16.43 billion and $2.03 billion in cash. The company also actively repurchased common stock across FY2023, FY2024, and FY2025 under its repurchase program.",
+        "points": [
+          "R&D expense of $998.8 million in FY2025 represents roughly 14% of total revenue, reinforcing investment in the digital and surgical ecosystem pipeline.",
+          "The company maintains a common stock repurchase program with activity reported across three consecutive fiscal years, returning capital alongside growth investment."
+        ]
+      },
+      {
+        "title": "Shareholder Alignment",
+        "grade": "middle",
+        "summary": "Share-based compensation expense reached $802.8 million in FY2025, up from $688.1 million in FY2024, tying executive rewards to equity performance. The company met with stockholders representing approximately 45% of outstanding shares during 2025 to discuss strategy and governance.",
+        "points": [
+          "Share-based compensation of $802.8 million in FY2025 grew 16.6% year-over-year, aligning management incentives with shareholder value creation through equity awards.",
+          "During 2025, the company engaged with stockholders holding roughly 45% of outstanding shares, covering executive compensation, sustainability, and corporate governance topics."
+        ]
+      },
+      {
+        "title": "Communication",
+        "grade": "strong",
+        "summary": "Intuitive reports revenue across Systems, Instruments and Accessories, and Service categories, along with variable lease revenue from usage-based arrangements. The 10-K provides geographic revenue split showing 68% domestic and 32% international for FY2025.",
+        "points": [
+          "The company discloses revenue by product line-Systems, Instruments and Accessories, and Service-plus variable lease revenue, giving investors visibility into recurring versus capital revenue streams.",
+          "Geographic revenue mix is reported with 68% domestic and 32% international, enabling investors to assess exposure to hospital capital spending cycles in different regions."
+        ]
+      },
+      {
+        "title": "Governance",
+        "grade": "strong",
+        "summary": "The board comprises 10 nominees with 8 independent directors and Craig H. Barratt, Ph.D. as Lead Independent Director. The company maintains a single class of stock with equal voting rights, majority voting for uncontested elections, proxy access, and stockholder rights to call special meetings.",
+        "points": [
+          "A single share class with equal voting rights and 8 of 10 independent directors under Lead Independent Director Craig H. Barratt, Ph.D. provide structural checks on management authority.",
+          "Named risk factors include FDA approval delays, healthcare reform legislation, intellectual property litigation, and international joint venture exposure with Shanghai Fosun Pharmaceutical."
+        ]
+      }
+    ]
+  },
+  "moat": {
+    "grade": "strong",
+    "types": [
+      {
+        "type": "Switching Costs",
+        "grade": "strong",
+        "summary": "Intuitive's comprehensive ecosystem of systems, instruments, accessories, learning, and digital services creates high switching costs for hospitals, as retraining surgical staff and replacing integrated platforms would be operationally disruptive and costly."
+      },
+      {
+        "type": "Intangible Assets",
+        "grade": "strong",
+        "summary": "The company's $998.8 million FY2025 R&D investment supports a digital portfolio and intellectual property portfolio, with the 10-K citing intellectual property litigation as a risk factor-indicating patents and proprietary technology that competitors must navigate."
+      },
+      {
+        "type": "Network Effects",
+        "grade": "middle",
+        "summary": "The learning component and digital portfolio connected across the care continuum generate actionable insights, potentially improving outcomes as more procedures are performed on the installed base of systems, reinforcing adoption among surgeons and hospitals."
+      },
+      {
+        "type": "Efficient Scale",
+        "grade": "middle",
+        "summary": "With $7.124 billion in FY2025 revenue and a market capitalization of approximately $193.9 billion as of June 2025, Intuitive operates at a scale where the combined R&D, regulatory, and ecosystem investments create barriers for new entrants in minimally invasive surgical robotics."
+      }
+    ]
+  }
+}

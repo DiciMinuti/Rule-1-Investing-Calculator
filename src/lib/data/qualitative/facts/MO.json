@@ -1,0 +1,132 @@
+{
+  "symbol": "MO",
+  "companyName": "Altria Group",
+  "updatedAt": "2026-06-22",
+  "facts": [
+    {
+      "topic": "Business Model",
+      "statement": "Altria is classified under SIC code 'Cigarettes' and trades on the NYSE under ticker MO.",
+      "source": "SEC submissions metadata (https://data.sec.gov/submissions/CIK0000764180.)"
+    },
+    {
+      "topic": "Business Model",
+      "statement": "Altria's Vision is 'Moving Beyond Smoking' by transitioning adult smokers to a smoke-free future, competing for existing smoke-free adult nicotine consumers, and exploring new growth opportunities beyond the U.S. and beyond nicotine.",
+      "source": "DEF 14A filed 2026-04-02 (https://www.sec.gov/Archives/edgar/data/764180/000110465926038900/tmb-20260514xdef14a.htm)"
+    },
+    {
+      "topic": "Product Lines",
+      "statement": "Altria's operating company subsidiaries include Philip Morris USA Inc. (manufacturer of Marlboro cigarettes), John Middleton Co. (manufacturer of Black & Mild cigars), U.S. Smokeless Tobacco Company LLC (manufacturer of Copenhagen and Skoal moist smokeless tobacco), Helix Innovations LLC (manufacturer of on! and on! PLUS oral nicotine pouches), and NJOY, LLC (manufacturer of NJOY e-vapor products).",
+      "source": "DEF 14A filed 2026-04-02 (https://www.sec.gov/Archives/edgar/data/764180/000110465926038900/tmb-20260514xdef14a.htm)"
+    },
+    {
+      "topic": "Product Lines",
+      "statement": "Altria owns a majority interest in Horizon Innovations LLC, a joint venture with JTI (US) Holdings, Inc. (a subsidiary of Japan Tobacco Inc.), which is responsible for the U.S. marketing and commercialization of heated tobacco stick products owned by either party.",
+      "source": "DEF 14A filed 2026-04-02 (https://www.sec.gov/Archives/edgar/data/764180/000110465926038900/tmb-20260514xdef14a.htm)"
+    },
+    {
+      "topic": "Equity Investments",
+      "statement": "Altria's equity investments include Anheuser-Busch InBev SA/NV (ABI), the world's largest brewer, and Cronos Group Inc., a leading Canadian cannabinoid company.",
+      "source": "DEF 14A filed 2026-04-02 (https://www.sec.gov/Archives/edgar/data/764180/000110465926038900/tmb-20260514xdef14a.htm)"
+    },
+    {
+      "topic": "Revenue Scale",
+      "statement": "Altria reported revenue of $24,483,000,000 for FY2025, filed 2026-02-25.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000764180.)"
+    },
+    {
+      "topic": "Profitability",
+      "statement": "Altria reported net income of $8,130,000,000 for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000764180.)"
+    },
+    {
+      "topic": "Cash Flow",
+      "statement": "Altria generated operating cash flow of $9,287,000,000 for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000764180.)"
+    },
+    {
+      "topic": "R&D",
+      "statement": "Altria's R&D expense was $220,000,000 for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000764180.)"
+    },
+    {
+      "topic": "Balance Sheet",
+      "statement": "Altria had stockholders' equity of -$2,238,000,000 as of FY2025 year-end, reflecting a negative equity position.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000764180.)"
+    },
+    {
+      "topic": "Balance Sheet",
+      "statement": "Altria had long-term debt of $23,399,000,000 and cash and equivalents of $3,686,000,000 as of FY2025 year-end.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000764180.)"
+    },
+    {
+      "topic": "Segment Margins",
+      "statement": "For FY2025, the Smokeable Products segment reported adjusted OCI of $11,064 million with an adjusted OCI margin of 63.4%, and the Oral Tobacco Products segment reported adjusted OCI of $1,835 million with an adjusted OCI margin of 67.9%.",
+      "source": "DEF 14A filed 2026-04-02 (https://www.sec.gov/Archives/edgar/data/764180/000110465926038900/tmb-20260514xdef14a.htm)"
+    },
+    {
+      "topic": "Capital Allocation - Dividends",
+      "statement": "Altria raised its regular quarterly dividend for the 60th time in the past 56 years as of 2025, and paid $6,960 million in dividends on common stock in 2025.",
+      "source": "DEF 14A filed 2026-04-02 (https://www.sec.gov/Archives/edgar/data/764180/000110465926038900/tmb-20260514xdef14a.htm)"
+    },
+    {
+      "topic": "Capital Allocation - Share Repurchases",
+      "statement": "Altria repurchased $1,000 million of common stock in 2025, down from $3,400 million in 2024 and $1,000 million in 2023.",
+      "source": "DEF 14A filed 2026-04-02 (https://www.sec.gov/Archives/edgar/data/764180/000110465926038900/tmb-20260514xdef14a.htm)"
+    },
+    {
+      "topic": "Capital Allocation - Debt",
+      "statement": "Altria's debt-to-Consolidated EBITDA ratio was 2.0x as of December 31, 2025, with total debt of $25,709 million and Consolidated EBITDA of $12,593 million.",
+      "source": "DEF 14A filed 2026-04-02 (https://www.sec.gov/Archives/edgar/data/764180/000110465926038900/tmb-20260514xdef14a.htm)"
+    },
+    {
+      "topic": "Management - Executive Officers",
+      "statement": "As of February 13, 2026, Altria's executive officers include William F. Gifford, Jr. (CEO, age 55), Salvatore Mancuso (EVP and CFO, age 60), Jody L. Begley (EVP and COO, age 54), Robert A. McCarter III (EVP and General Counsel, age 53), Heather A. Newman (SVP, Chief Strategy & Growth Officer, age 48), and Charles N. Whitaker (SVP, Chief HR Officer and Chief Compliance Officer, age 59).",
+      "source": "10-K filed 2026-02-25 (https://www.sec.gov/Archives/edgar/data/764180/000076418026000017/mo-20251231.htm)"
+    },
+    {
+      "topic": "Management - CEO Transition",
+      "statement": "Effective upon the conclusion of the 2026 Annual Meeting on May 14, 2026, William F. Gifford, Jr. will retire as CEO and Salvatore Mancuso will become CEO; Heather Newman will become EVP and CFO.",
+      "source": "10-K filed 2026-02-25 (https://www.sec.gov/Archives/edgar/data/764180/000076418026000017/mo-20251231.htm)"
+    },
+    {
+      "topic": "Board of Directors",
+      "statement": "Altria's Board of Directors is chaired by Kathryn B. McQuade and includes 10 director nominees for the 2026 Annual Meeting: Ian L.T. Clarke, Marjorie M. Connelly, R. Matt Davis, Debra J. Kelly-Ennis, Salvatore Mancuso, Kathryn B. McQuade, Virginia E. Shanks, Richard S. Stoddart, Ellen R. Strahlman, and M. Max Yzaguirre.",
+      "source": "DEF 14A filed 2026-04-02 (https://www.sec.gov/Archives/edgar/data/764180/000110465926038900/tmb-20260514xdef14a.htm)"
+    },
+    {
+      "topic": "Governance - Auditor",
+      "statement": "PricewaterhouseCoopers LLP has served as Altria's auditor since at least 1934, when the Company became subject to SEC reporting requirements, and is being proposed for ratification for fiscal year 2026.",
+      "source": "10-K filed 2026-02-25 (https://www.sec.gov/Archives/edgar/data/764180/000076418026000017/mo-20251231.htm)"
+    },
+    {
+      "topic": "Risk - E-Vapor Impairment",
+      "statement": "During Q4 2025, Altria recorded a pre-tax impairment of $970 million on e-vapor definite-lived intangible assets (developed technology and trademarks) after determining the asset group was not recoverable, citing the gradual nature of expected enforcement against illicit flavored disposable e-vapor products.",
+      "source": "10-K filed 2026-02-25 (https://www.sec.gov/Archives/edgar/data/764180/000076418026000017/mo-20251231.htm)"
+    },
+    {
+      "topic": "Risk - Goodwill Impairment",
+      "statement": "Altria recorded a goodwill impairment of $1,158 million in 2025, included in the reconciliation of Consolidated EBITDA.",
+      "source": "DEF 14A filed 2026-04-02 (https://www.sec.gov/Archives/edgar/data/764180/000110465926038900/tmb-20260514xdef14a.htm)"
+    },
+    {
+      "topic": "Risk - Litigation",
+      "statement": "Altria is subject to tobacco and health litigation and Non-Participating Manufacturer (NPM) arbitration panel decisions, which affect reported operating income through adjustments to cost of sales and interest expense.",
+      "source": "10-K filed 2026-02-25 (https://www.sec.gov/Archives/edgar/data/764180/000076418026000017/mo-20251231.htm)"
+    },
+    {
+      "topic": "Risk - Customer Concentration",
+      "statement": "Altria discloses customer concentration risk with at least two customers (Customer One and Customer Two) representing material portions of revenue across 2023-2025.",
+      "source": "10-K filed 2026-02-25 (https://www.sec.gov/Archives/edgar/data/764180/000076418026000017/mo-20251231.htm)"
+    },
+    {
+      "topic": "Strategic Goals",
+      "statement": "Altria's 2028 Enterprise Goals include continuing to lead in the U.S. tobacco space, maintaining strong operating margins, generating earnings growth, steadily growing the dividend, and maintaining a strong balance sheet.",
+      "source": "DEF 14A filed 2026-04-02 (https://www.sec.gov/Archives/edgar/data/764180/000110465926038900/tmb-20260514xdef14a.htm)"
+    },
+    {
+      "topic": "Cash Conversion",
+      "statement": "Altria's 2023-2025 cash conversion was 98.6%, calculated as adjusted discretionary cash flow of $26,640 million divided by net earnings adjusted for special items of $27,012 million over the three-year period.",
+      "source": "DEF 14A filed 2026-04-02 (https://www.sec.gov/Archives/edgar/data/764180/000110465926038900/tmb-20260514xdef14a.htm)"
+    }
+  ]
+}

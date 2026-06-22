@@ -1,0 +1,132 @@
+{
+  "symbol": "VRT",
+  "companyName": "Vertiv Holdings",
+  "updatedAt": "2026-06-22",
+  "facts": [
+    {
+      "topic": "Business Model",
+      "statement": "Vertiv brings together hardware, software, analytics and ongoing services to enable customers' vital applications to run continuously, performing from the cloud to the edge of the network, with a portfolio of power, cooling and IT infrastructure solutions and services for data centers, communication networks and commercial and industrial facilities.",
+      "source": "DEF 14A filed 2026-04-24 (https://www.sec.gov/Archives/edgar/data/1674101/000119312526174898/d18663ddef14a.htm)"
+    },
+    {
+      "topic": "Company Scale",
+      "statement": "Vertiv is headquartered in Westerville, Ohio, USA, and does business in more than 130 countries.",
+      "source": "DEF 14A filed 2026-04-24 (https://www.sec.gov/Archives/edgar/data/1674101/000119312526174898/d18663ddef14a.htm)"
+    },
+    {
+      "topic": "Revenue Scale",
+      "statement": "Net sales reached $10.2 billion for FY2025, up 28% year-over-year from $8.0 billion in FY2024.",
+      "source": "DEF 14A filed 2026-04-24 (https://www.sec.gov/Archives/edgar/data/1674101/000119312526174898/d18663ddef14a.htm)"
+    },
+    {
+      "topic": "Profitability",
+      "statement": "GAAP operating profit was $1.83 billion for FY2025, up from $1.37 billion in FY2024; adjusted operating margin expanded 100 basis points to 20.4%.",
+      "source": "DEF 14A filed 2026-04-24 (https://www.sec.gov/Archives/edgar/data/1674101/000119312526174898/d18663ddef14a.htm)"
+    },
+    {
+      "topic": "Cash Flow",
+      "statement": "Operating cash flow increased 60% to $2.1 billion in FY2025 and adjusted free cash flow increased 66% to $1.9 billion.",
+      "source": "DEF 14A filed 2026-04-24 (https://www.sec.gov/Archives/edgar/data/1674101/000119312526174898/d18663ddef14a.htm)"
+    },
+    {
+      "topic": "Backlog",
+      "statement": "Backlog reached $15.0 billion at year-end 2025, up 109% year-over-year.",
+      "source": "DEF 14A filed 2026-04-24 (https://www.sec.gov/Archives/edgar/data/1674101/000119312526174898/d18663ddef14a.htm)"
+    },
+    {
+      "topic": "Segment Performance",
+      "statement": "FY2025 net sales by segment were: Americas $6,386.3 million, Asia Pacific $2,019.2 million, and Europe, Middle East & Africa $1,824.4 million, with Americas generating the majority of segment operating profit at $1,714.3 million.",
+      "source": "10-K filed 2026-02-13 (https://www.sec.gov/Archives/edgar/data/1674101/000167410126000008/vrt-20251231.htm)"
+    },
+    {
+      "topic": "Product and Service Lines",
+      "statement": "Americas segment products include AC and DC power management, thermal management (air cooled and liquid cooled), low/medium voltage switchgear, busbar, integrated modular solutions, racks, single phase UPS, rack power distribution, energy storage solutions, and software for managing IT equipment; services & spares include preventative maintenance, acceptance testing, engineering and consulting, remote monitoring, training, spare parts, specialized fluid management, and critical digital infrastructure software.",
+      "source": "10-K filed 2026-02-13 (https://www.sec.gov/Archives/edgar/data/1674101/0001674101/000167410126000008/vrt-20251231.htm)"
+    },
+    {
+      "topic": "Revenue by Category",
+      "statement": "FY2025 product revenue was $8,207.0 million (up 31.4% YoY) and services & spares revenue was $2,022.9 million (up 14.5% YoY); organic growth was 30.1% for products and 12.8% for services & spares.",
+      "source": "DEF 14A filed 2026-04-24 (https://www.sec.gov/Archives/edgar/data/1674101/000119312526174898/d18663ddef14a.htm)"
+    },
+    {
+      "topic": "R&D Investment",
+      "statement": "Engineering, research and development costs totaled $441.7 million across segments in FY2025, up from $367.6 million in FY2024; ER&D spending grew 20% in 2025.",
+      "source": "10-K filed 2026-02-13 (https://www.sec.gov/Archives/edgar/data/1674101/000167410126000008/vrt-20251231.htm); DEF 14A filed 2026-04-24 (https://www.sec.gov/Archives/edgar/data/1674101/000119312526174898/d18663ddef14a.htm)"
+    },
+    {
+      "topic": "Capital Allocation - Acquisitions",
+      "statement": "Vertiv deployed approximately $1.2 billion for strategic acquisitions in 2025: Great Lakes (customized racks and cabinets for AI infrastructure), Waylay (AI-enabled advanced monitoring for digital services), and PurgeRite (specialized fluid management for liquid cooling systems).",
+      "source": "DEF 14A filed 2026-04-24 (https://www.sec.gov/Archives/edgar/data/1674101/000119312526174898/d18663ddef14a.htm)"
+    },
+    {
+      "topic": "Capital Allocation - CapEx",
+      "statement": "Capital expenditures were $220.0 million in FY2025, up from $167.0 million in FY2024 and $127.9 million in FY2023, with Americas receiving $110.9 million of the FY2025 total.",
+      "source": "10-K filed 2026-02-13 (https://www.sec.gov/Archives/edgar/data/1674101/000167410126000008/vrt-20251231.htm)"
+    },
+    {
+      "topic": "Strategic Partnerships",
+      "statement": "Vertiv deepened collaboration with NVIDIA on next-generation AI infrastructure and 800 VDC power architectures, and partnered with Caterpillar and Oklo on on-site power generation for gigawatt-scale AI infrastructure.",
+      "source": "DEF 14A filed 2026-04-24 (https://www.sec.gov/Archives/edgar/data/1674101/000119312526174898/d18663ddef14a.htm)"
+    },
+    {
+      "topic": "Product Innovation",
+      "statement": "In 2025, Vertiv launched Vertiv OneCore (complete converged data center infrastructure solution) and Vertiv SmartRun (prefabricated whitespace infrastructure that accelerates data hall fit-out), and expanded liquid cooling and thermal management technologies for next-generation AI applications.",
+      "source": "DEF 14A filed 2026-04-24 (https://www.sec.gov/Archives/edgar/data/1674101/000119312526174898/d18663ddef14a.htm)"
+    },
+    {
+      "topic": "Balance Sheet - Debt",
+      "statement": "Long-term debt was $2,907.2 million as of December 31, 2025, consisting primarily of a Term Loan due 2032 (par value $2,076.1 million) and Senior Secured Notes due 2028 (par value $850.0 million).",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0001674101.); 10-K filed 2026-02-13 (https://www.sec.gov/Archives/edgar/data/1674101/000167410126000008/vrt-20251231.htm)"
+    },
+    {
+      "topic": "Balance Sheet - Liquidity",
+      "statement": "Cash and equivalents were $780.4 million and stockholders' equity was $1,441.9 million as of December 31, 2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0001674101.)"
+    },
+    {
+      "topic": "Management - CEO",
+      "statement": "Giordano Albertazzi serves as CEO; his 2025 compensation included a base salary of $1,300,000, a target cash bonus of 150% of base salary, an actual cash bonus of $4,000,000, and approximately $13.04 million in grant date fair value of annual equity awards.",
+      "source": "DEF 14A filed 2026-04-24 (https://www.sec.gov/Archives/edgar/data/1674101/000119312526174898/d18663ddef14a.htm)"
+    },
+    {
+      "topic": "Management - Chairman",
+      "statement": "David M. Cote serves as Executive Chairman of the Board; the company maintains separate Chairman and CEO roles.",
+      "source": "DEF 14A filed 2026-04-24 (https://www.sec.gov/Archives/edgar/data/1674101/000119312526174898/d18663ddef14a.htm)"
+    },
+    {
+      "topic": "Board Composition",
+      "statement": "Eleven director nominees are standing for election at the 2026 Annual Meeting, including David M. Cote, Giordano Albertazzi, Joseph J. DeAngelo, Joseph van Dokkum, Roger Fradin, Jakki L. Haussler, Jacob Kotzubei, Matthew Louie, Krishna Mikkilineni, Edward L. Monser, and Steven S. Reinemund.",
+      "source": "DEF 14A filed 2026-04-24 (https://www.sec.gov/Archives/edgar/data/1674101/000119312526174898/d18663ddef14a.htm)"
+    },
+    {
+      "topic": "Governance",
+      "statement": "Vertiv does not maintain a poison pill or stockholder rights plan, prohibits hedging and pledging of shares by officers, directors and employees, and requires executive officers and directors to meet stock ownership guidelines with a 'no sale' restriction until guidelines are met.",
+      "source": "DEF 14A filed 2026-04-24 (https://www.sec.gov/Archives/edgar/data/1674101/000119312526174898/d18663ddef14a.htm)"
+    },
+    {
+      "topic": "Geographic Revenue",
+      "statement": "FY2025 sales by destination were: United States $6,013.6 million, Europe $1,474.6 million, Asia Pacific $2,020.3 million, Latin America and Canada $436.9 million, and Middle East/Africa $284.5 million.",
+      "source": "10-K filed 2026-02-13 (https://www.sec.gov/Archives/edgar/data/1674101/000167410126000008/vrt-20251231.htm)"
+    },
+    {
+      "topic": "Risk Factor - Litigation",
+      "statement": "A putative securities class action (In re Vertiv Holdings Co Securities Litigation, 22-cv-3572) is pending in the Southern District of New York alleging materially false and/or misleading public statements regarding inflationary and supply chain pressures and pricing issues; claims under Sections 11, 12(a)(2), and 15 of the Securities Act were dismissed in January 2024, but claims under Sections 10(b) and 20(a) of the Exchange Act remain pending.",
+      "source": "10-K filed 2026-02-13 (https://www.sec.gov/Archives/edgar/data/1674101/000167410126000008/vrt-20251231.htm)"
+    },
+    {
+      "topic": "Risk Factor - SEC Investigation",
+      "statement": "On December 30, 2025, the SEC's Division of Enforcement informed Vertiv that it had concluded its investigation as to the Company and did not intend to recommend any enforcement action at this time.",
+      "source": "10-K filed 2026-02-13 (https://www.sec.gov/Archives/edgar/data/1674101/000167410126000008/vrt-20251231.htm)"
+    },
+    {
+      "topic": "Net Income",
+      "statement": "Net income was $1,332.8 million for FY2025, up from $495.8 million in FY2024 and $460.2 million in FY2023; diluted EPS was $3.41 for FY2025 versus $1.28 for FY2024.",
+      "source": "10-K filed 2026-02-13 (https://www.sec.gov/Archives/edgar/data/1674101/000167410126000008/vrt-20251231.htm)"
+    },
+    {
+      "topic": "Service Capability",
+      "statement": "Vertiv scaled its services capabilities to over 5,000 field service engineers worldwide in 2025.",
+      "source": "DEF 14A filed 2026-04-24 (https://www.sec.gov/Archives/edgar/data/1674101/000119312526174898/d18663ddef14a.htm)"
+    }
+  ]
+}

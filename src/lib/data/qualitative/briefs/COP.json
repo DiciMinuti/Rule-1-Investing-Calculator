@@ -1,0 +1,80 @@
+{
+  "symbol": "COP",
+  "companyName": "ConocoPhillips",
+  "generatedAt": "2026-06-22",
+  "management": {
+    "grade": "strong",
+    "sections": [
+      {
+        "title": "Leadership",
+        "grade": "strong",
+        "summary": "Ryan M. Lance serves as Chairman and CEO, leading a company that produced 2,375 MBOED in 2025 with operations spanning 14 countries. Andrew M. O'Brien oversees finance and strategy as EVP and CFO, while Kontessa S. Haynes-Welsh manages accounting as VP, Finance and Controller.",
+        "points": [
+          "Lance holds both Chairman and CEO roles, consolidating strategic and board leadership over a global portfolio with $122 billion in total assets and approximately 9,900 employees.",
+          "O'Brien's combined CFO and Strategy role integrates financial discipline with portfolio decisions, including the Marathon Oil integration that captured over $1 billion in synergies."
+        ]
+      },
+      {
+        "title": "Capital Allocation",
+        "grade": "strong",
+        "summary": "ConocoPhillips returned 45% of its $19.965 billion in operating cash flow to shareholders through buybacks and dividends in 2025, while spending $12.4 billion on oil and gas activities. The company also raised its ordinary dividend by 8% in December 2025, targeting top-quartile S&P 500 dividend growth.",
+        "points": [
+          "The 45% CFO return target was achieved on $19.965 billion in operating cash flow, balancing shareholder returns with $12,364 million in oil and gas capital expenditures including $11,174 million in development costs.",
+          "Marathon Oil integration delivered over $1 billion in synergies and approximately $1 billion in one-time benefits, with an additional $1 billion in run-rate cost reductions targeted by year-end 2026."
+        ]
+      },
+      {
+        "title": "Shareholder Alignment",
+        "grade": "strong",
+        "summary": "The company commits to growing its base dividend at a top-quartile S&P 500 rate, demonstrated by the 8% ordinary dividend increase in December 2025. Capital returns of 45% of cash from operations directly tie shareholder payouts to operational cash generation.",
+        "points": [
+          "The 8% dividend increase in December 2025 reflects a stated commitment to top-quartile S&P 500 base dividend growth, aligning payout policy with peer benchmarking.",
+          "Returning 45% of CFO to shareholders through buybacks and dividends links capital returns directly to operating cash flow performance rather than commodity price targets."
+        ]
+      },
+      {
+        "title": "Communication",
+        "grade": "strong",
+        "summary": "ConocoPhillips discloses detailed segment and operational data through its 10-K and DEF 14A filings, including production of 2,375 MBOED, proved reserves of 7.6 billion BOE, and standardized reserve valuation of $55,962 million. The filings also report specific capital expenditure breakdowns across development and exploration costs.",
+        "points": [
+          "The 10-K provides granular oil and gas cost disclosures, separating $11,174 million in development costs, $928 million in exploration costs, and total activity costs of $12,364 million for 2025.",
+          "The DEF 14A reports operational metrics including the 15% year-over-year improvement in Lower 48 drilling and completion efficiencies and progress on emissions intensity reduction targets."
+        ]
+      },
+      {
+        "title": "Governance",
+        "grade": "middle",
+        "summary": "The 13-director board includes Lead Director Robert A. Niblock and nominees with diverse industry backgrounds, but the board recommends voting against a stockholder proposal for an Independent Board Chairman at the 2026 Annual Meeting. Lance's combined Chairman and CEO role remains a point of shareholder contention.",
+        "points": [
+          "The board's recommendation against the Independent Board Chairman stockholder proposal signals resistance to separating the Chairman and CEO roles despite investor pressure at the 2026 Annual Meeting.",
+          "Thirteen director nominees include figures such as William H. McRaven, Kathleen A. McGinty, and Arjun N. Murti, providing oversight across military, energy policy, and financial markets expertise."
+        ]
+      }
+    ]
+  },
+  "moat": {
+    "grade": "strong",
+    "types": [
+      {
+        "type": "Scale and Asset Base",
+        "grade": "strong",
+        "summary": "With 2,375 MBOED of production, 7.6 billion BOE of proved reserves, and $122 billion in total assets across 14 countries, ConocoPhillips operates at a scale that creates cost advantages and portfolio flexibility unavailable to smaller E&P peers."
+      },
+      {
+        "type": "Resource Quality and Reserve Life",
+        "grade": "strong",
+        "summary": "Proved reserves of 7.6 billion BOE provide a multi-decade resource base, while growth projects like Willow in Alaska and equity LNG positions in Qatar and Port Arthur LNG secure 10 MTPA of commercial LNG offtake for future cash flow generation."
+      },
+      {
+        "type": "Operational Efficiency",
+        "grade": "strong",
+        "summary": "A more than 15% improvement in Lower 48 drilling and completion efficiencies in 2025 demonstrates the company's ability to lower per-unit costs through technical execution, supporting margins even in volatile commodity environments."
+      },
+      {
+        "type": "Portfolio Diversification",
+        "grade": "strong",
+        "summary": "Operations across 14 countries and asset classes spanning conventional, unconventional, and LNG provide geographic and commodity diversification, while active portfolio management includes divesting noncore Lower 48 assets like Ursa/Europa Fields and Anadarko Basin properties."
+      }
+    ]
+  }
+}

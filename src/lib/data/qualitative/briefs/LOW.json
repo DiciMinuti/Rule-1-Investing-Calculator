@@ -1,0 +1,80 @@
+{
+  "symbol": "LOW",
+  "companyName": "Lowe's Companies",
+  "generatedAt": "2026-06-22",
+  "management": {
+    "grade": "strong",
+    "sections": [
+      {
+        "title": "Leadership",
+        "grade": "strong",
+        "summary": "Marvin R. Ellison serves as Chairman, President, and CEO, leading Lowe's through a strategic pivot toward Pro customers and Total Home execution. The leadership team is executing a multi-year technology transformation while integrating two major 2025 acquisitions to expand beyond traditional DIY retail.",
+        "points": [
+          "Ellison holds the combined Chairman, President, and CEO roles, consolidating strategic and operational leadership under one executive with Richard W. Dreiling serving as Lead Independent Director.",
+          "CFO Brandon J. Sink and Chief Accounting Officer Dan C. Griggs, Jr. oversee financial stewardship during a period of heavy acquisition integration and technology modernization across distribution and finance systems."
+        ]
+      },
+      {
+        "title": "Capital Allocation",
+        "grade": "strong",
+        "summary": "Lowe's generated $46.3 billion in operating cash flow over five years and achieved a 26.1% ROIC in 2025, funding both aggressive shareholder returns and strategic acquisitions. The company returned $2.6 billion in dividends and repurchased shares while deploying capital into FBM and ADG to expand its Pro distribution footprint.",
+        "points": [
+          "Over five years, Lowe's returned $12.1 billion in dividends and $37.4 billion in share repurchases while maintaining Dividend Aristocrat status with a 4.4% dividend increase in 2025.",
+          "The 2025 acquisitions of FBM and ADG expanded Lowe's into large Pro and commercial markets, with FBM alone representing 4.5% of consolidated total assets as of January 30, 2026."
+        ]
+      },
+      {
+        "title": "Shareholder Alignment",
+        "grade": "strong",
+        "summary": "Lowe's five-year capital return of nearly $50 billion in dividends and buybacks demonstrates clear alignment with shareholder interests, supported by a 26.1% ROIC. The dividend aristocrat designation and consistent annual increases signal a commitment to returning capital even while funding acquisitions.",
+        "points": [
+          "Lowe's has repurchased $37.4 billion in shares over five years, significantly reducing share count to 560 million outstanding as of March 2026 from higher prior levels.",
+          "The 4.4% dividend increase in 2025 and Dividend Aristocrat status reflect a formal commitment to growing shareholder distributions alongside reinvestment in the business."
+        ]
+      },
+      {
+        "title": "Communication",
+        "grade": "middle",
+        "summary": "Lowe's reports two operating segments with detailed merchandise categories across 14 product lines and provides adjusted operating margin reconciliations excluding acquisition-related costs. The 10-K and DEF 14A disclose segment-level operating income, acquisition integration details, and specific risk factors including tariff litigation impacts.",
+        "points": [
+          "Lowe's breaks out Retail Home Improvement segment results showing $84.078 billion in net sales and 12.16% operating margin, alongside an Other segment with $2.208 billion in sales and a $70 million operating loss.",
+          "The company discloses adjusted operating margin of 12.11% by excluding $293 million in pre-tax transaction costs and intangible amortization from the ADG and FBM acquisitions."
+        ]
+      },
+      {
+        "title": "Governance",
+        "grade": "strong",
+        "summary": "Lowe's 12-member board includes Lead Independent Director Richard W. Dreiling alongside 11 other directors with diverse retail and operational backgrounds. The board oversees risk factors including ongoing tariff litigation and a multi-year technology transformation that could affect financial reporting systems.",
+        "points": [
+          "The board structure separates the Lead Independent Director role from the combined Chairman-CEO position held by Ellison, with Dreiling providing independent oversight alongside directors with experience across retail, finance, and operations.",
+          "Lowe's explicitly discloses the February 2026 Supreme Court tariff ruling under IEEPA as a risk factor it is evaluating, along with risks from its multi-year technology transformation affecting distribution, replenishment, and accounting systems."
+        ]
+      }
+    ]
+  },
+  "moat": {
+    "grade": "middle",
+    "types": [
+      {
+        "type": "Scale Economies",
+        "grade": "strong",
+        "summary": "Lowe's operates 1,759 U.S. stores with 196 million square feet of retail selling space and $86.4 billion in revenue, generating scale advantages in procurement, distribution, and national brand positioning that smaller regional chains and specialty stores cannot match."
+      },
+      {
+        "type": "Intangible Assets",
+        "grade": "middle",
+        "summary": "Lowe's Dividend Aristocrat status and national footprint create brand recognition among DIY and Pro customers, though it competes directly with other national home improvement warehouse chains and lumber yards in most markets it serves."
+      },
+      {
+        "type": "Network Effects",
+        "grade": "middle",
+        "summary": "The Total Home strategy's loyalty ecosystem and expanding Pro penetration, combined with the FBM and ADG acquisitions adding 540 branch locations, create cross-channel relationships between DIY customers, tradespeople, and now large commercial professionals."
+      },
+      {
+        "type": "Switching Costs",
+        "grade": "dull",
+        "summary": "Individual homeowners and renters face minimal switching costs between home improvement retailers, though the FBM and ADG acquisitions may create deeper relationships with large Pro customers through integrated distribution and installation services."
+      }
+    ]
+  }
+}

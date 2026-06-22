@@ -1,0 +1,127 @@
+{
+  "symbol": "SYK",
+  "companyName": "Stryker Corporation",
+  "updatedAt": "2026-06-22",
+  "facts": [
+    {
+      "topic": "Business model and industry classification",
+      "statement": "Stryker Corporation is classified under SIC code 'Surgical & Medical Instruments & Apparatus' and is listed on the NYSE under the ticker SYK.",
+      "source": "SEC submissions metadata (https://data.sec.gov/submissions/CIK0000310764.)"
+    },
+    {
+      "topic": "Revenue scale",
+      "statement": "Stryker reported total revenue of $20,498 million for FY2025, filed on 2026-02-11.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000310764.)"
+    },
+    {
+      "topic": "Revenue scale (proxy statement)",
+      "statement": "The proxy statement reports net sales of $25,116 million for 2025, an 11.2% increase from $22,595 million in 2024.",
+      "source": "DEF 14A filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/310764/000031076426000013/syk-20260323.htm)"
+    },
+    {
+      "topic": "Net income and profitability",
+      "statement": "Stryker reported net income of $3,165 million for FY2025 per SEC filings; the proxy statement reports net earnings of $3,246 million for 2025, up 8.5% from $2,993 million in 2024.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000310764.); DEF 14A filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/310764/000031076426000013/syk-20260323.htm)"
+    },
+    {
+      "topic": "Operating cash flow",
+      "statement": "Stryker generated $3,711 million in operating cash flow for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000310764.)"
+    },
+    {
+      "topic": "R&D investment",
+      "statement": "Stryker spent $1,388 million on research and development in FY2025, representing approximately 6.8% of revenue.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000310764.)"
+    },
+    {
+      "topic": "Capital structure and debt",
+      "statement": "As of FY2025, Stryker had long-term debt of $12,188 million and cash and equivalents of $3,652 million.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000310764.)"
+    },
+    {
+      "topic": "Segment structure",
+      "statement": "Stryker operates in two reportable segments: MedSurg and Neurotechnology, and Orthopaedics and Spine, with product categories including Instruments, Endoscopy, Medical, Neurovascular, NeuroCranial under MedSurg and Neurotechnology, and Knees, Hips, Trauma and Extremities, Spine, and Other Orthopaedics under Orthopaedics and Spine.",
+      "source": "10-K filed 2026-02-11 (https://www.sec.gov/Archives/edgar/data/310764/000031076426000010/syk-20251231.htm)"
+    },
+    {
+      "topic": "Geographic revenue breakdown",
+      "statement": "Stryker reports revenue split between U.S. and Non-U.S. markets across both segments and all product categories for 2023, 2024, and 2025.",
+      "source": "10-K filed 2026-02-11 (https://www.sec.gov/Archives/edgar/data/310764/000031076426000010/syk-20251231.htm)"
+    },
+    {
+      "topic": "M&A activity - Inari Medical acquisition",
+      "statement": "Stryker acquired Inari Medical, Inc. in February 2025 pursuant to an Agreement and Plan of Merger dated January 6, 2025; as of December 31, 2025, Inari represented approximately 10% of total assets and approximately 2.3% of net sales for the year.",
+      "source": "10-K filed 2026-02-11 (https://www.sec.gov/Archives/edgar/data/310764/000031076426000010/syk-20251231.htm)"
+    },
+    {
+      "topic": "M&A activity - prior acquisitions",
+      "statement": "Stryker's prior acquisitions include Wright Medical Group N.V. (purchase agreement dated November 4, 2019), Vocera Communications, Inc. (merger agreement dated January 6, 2022), and multiple 2024 acquisitions including Artelon, mfPHD, MOLLI Surgical, NICO Corporation, SERF SAS, Vertos Medical, Vuaant, and 1000 Shapes GmbH.",
+      "source": "10-K filed 2026-02-11 (https://www.sec.gov/Archives/edgar/data/310764/000031076426000010/syk-20251231.htm); DEF 14A filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/310764/000031076426000013/syk-20260323.htm)"
+    },
+    {
+      "topic": "Debt instruments and capital allocation",
+      "statement": "Stryker has numerous series of senior unsecured notes outstanding with maturities ranging from 2025 through 2050 and coupon rates ranging from 0.750% to 5.200%, and entered into a new credit agreement dated February 25, 2025 with Wells Fargo Bank as Administrative Agent.",
+      "source": "10-K filed 2026-02-11 (https://www.sec.gov/Archives/edgar/data/310764/000031076426000010/syk-20251231.htm)"
+    },
+    {
+      "topic": "Management - CEO and CFO",
+      "statement": "Kevin A. Lobo serves as Chair and Chief Executive Officer (Principal Executive Officer), and Preston W. Wells serves as Vice President and Chief Financial Officer (Principal Financial Officer); William E. Berry, Jr. serves as Vice President and Chief Accounting Officer.",
+      "source": "10-K filed 2026-02-11 (https://www.sec.gov/Archives/edgar/data/310764/000031076426000010/syk-20251231.htm)"
+    },
+    {
+      "topic": "Board of Directors composition",
+      "statement": "Stryker's board nominees include ten directors, with Sherilyn S. McCoy serving as Lead Independent Director and Andrew K. Silvernail serving as Audit Committee Chair; all directors other than CEO Kevin Lobo are independent.",
+      "source": "DEF 14A filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/310764/000031076426000013/syk-20260323.htm)"
+    },
+    {
+      "topic": "CEO compensation",
+      "statement": "The 2025 annual total compensation for CEO Kevin A. Lobo was $21,401,495, and the ratio of CEO compensation to the median employee's compensation was 264 to 1.",
+      "source": "DEF 14A filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/310764/000031076426000013/syk-20260323.htm)"
+    },
+    {
+      "topic": "Executive compensation philosophy",
+      "statement": "Variable performance and stock-based compensation for Named Executive Officers averaged 87% of total direct compensation in 2025; Stryker does not have employment or severance agreements, does not allow contractual change-in-control payments, and does not pay tax gross-ups.",
+      "source": "DEF 14A filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/310764/000031076426000013/syk-20260323.htm)"
+    },
+    {
+      "topic": "Non-GAAP financial performance",
+      "statement": "Adjusted net earnings for 2025 were $5,267 million (vs. $4,700 million in 2024), and adjusted net earnings per diluted share were $13.63 (vs. $12.19 in 2024); adjustments include amortization of purchased intangibles ($581 million), acquisition and integration-related costs ($430 million total), and structural optimization charges ($140 million).",
+      "source": "DEF 14A filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/310764/000031076426000013/syk-20260323.htm)"
+    },
+    {
+      "topic": "Dividend policy",
+      "statement": "Stryker paid dividends of $3.36 per share of common stock in 2025, a 5.0% increase from $3.20 per share in 2024.",
+      "source": "DEF 14A filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/310764/000031076426000013/syk-20260323.htm)"
+    },
+    {
+      "topic": "Shareholder returns and TSR",
+      "statement": "Stryker's cumulative total shareholder return during the five-year period of 2021 to 2025 was greater than that of the S&P 500 Health Care Index.",
+      "source": "DEF 14A filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/310764/000031076426000013/syk-20260323.htm)"
+    },
+    {
+      "topic": "Corporate governance practices",
+      "statement": "Stryker has no poison pill takeover defense, provides proxy access rights for shareholders, allows shareholders to call special meetings, requires majority voting in uncontested director elections coupled with a resignation policy, and all directors are elected annually.",
+      "source": "DEF 14A filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/310764/000031076426000013/syk-20260323.htm)"
+    },
+    {
+      "topic": "Risk factors - recall and legal matters",
+      "statement": "Stryker recorded recall-related charges of $48 million in 2025 (vs. $30 million in 2024) and regulatory and legal matters charges of $12 million in 2025 (vs. $29 million in 2024); the company also recorded goodwill and other impairment charges of $120 million in 2025.",
+      "source": "DEF 14A filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/310764/000031076426000013/syk-20260323.htm)"
+    },
+    {
+      "topic": "Risk factors - Spine reporting unit",
+      "statement": "The 10-K references a Spine reporting unit and a Peripheral Vascular reporting unit in the context of recall matters and disposal groups held for sale, including spinal implants classified as a disposal group not classified as discontinued operations.",
+      "source": "10-K filed 2026-02-11 (https://www.sec.gov/Archives/edgar/data/310764/000031076426000010/syk-20251231.htm)"
+    },
+    {
+      "topic": "Internal controls and audit",
+      "statement": "Stryker's internal control over financial reporting was assessed as effective as of December 31, 2025, excluding the operations of recently acquired Inari Medical; Ernst & Young LLP issued an unqualified audit opinion on the consolidated financial statements.",
+      "source": "10-K filed 2026-02-11 (https://www.sec.gov/Archives/edgar/data/310764/000031076426000010/syk-20251231.htm)"
+    },
+    {
+      "topic": "Employee scale",
+      "statement": "Stryker's total employee population as of October 1, 2024 was approximately 53,600, with approximately 600 employees joining through 2024 acquisitions excluded from the median employee determination.",
+      "source": "DEF 14A filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/310764/000031076426000013/syk-20260323.htm)"
+    }
+  ]
+}

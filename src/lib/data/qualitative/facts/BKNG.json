@@ -1,0 +1,182 @@
+{
+  "symbol": "BKNG",
+  "companyName": "Booking Holdings (Booking.com)",
+  "updatedAt": "2026-06-22",
+  "facts": [
+    {
+      "topic": "Business Model",
+      "statement": "Booking Holdings operates online travel reservation services across five operating segments aggregated into one reportable segment, with a portfolio of brands including Booking.com, Priceline, Agoda, KAYAK, and OpenTable.",
+      "source": "10-K filed 2026-02-18 (https://www.sec.gov/Archives/edgar/data/1075531/000107553126000009/bkng-20251231.htm)"
+    },
+    {
+      "topic": "Revenue Scale",
+      "statement": "Total revenues for FY2025 were $26.917 billion, up 13% from $23.739 billion in FY2024 and $21.365 billion in FY2023.",
+      "source": "10-K filed 2026-02-18 (https://www.sec.gov/Archives/edgar/data/1075531/000107553126000009/bkng-20251231.htm)"
+    },
+    {
+      "topic": "Revenue Scale (SEC Facts)",
+      "statement": "SEC company facts summary reports FY2025 revenue of $21.365 billion USD (concept: Revenues), filed 2026-02-18.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0001075531.)"
+    },
+    {
+      "topic": "Geographic Revenue",
+      "statement": "In FY2025, revenues from outside the U.S. were $24.338 billion versus $2.579 billion from the U.S.; $21.7 billion of non-U.S. revenue was attributed to an entity domiciled in the Netherlands.",
+      "source": "10-K filed 2026-02-18 (https://www.sec.gov/Archives/edgar/data/1075531/000107553126000009/bkng-20251231.htm)"
+    },
+    {
+      "topic": "Revenue Categories",
+      "statement": "The company reports revenue across three categories: Merchant revenue, Agency revenue, and Advertising and other revenues, with data reported for FY2023, FY2024, and FY2025.",
+      "source": "10-K filed 2026-02-18 (https://www.sec.gov/Archives/edgar/data/1075531/000107553126000009/bkng-20251231.htm)"
+    },
+    {
+      "topic": "Product Concentration",
+      "statement": "Online accommodation reservation services are identified as a product concentration risk, with revenue reported separately from other sources of online travel reservation services or advertising and other revenues for FY2023, FY2024, and FY2025.",
+      "source": "10-K filed 2026-02-18 (https://www.sec.gov/Archives/edgar/data/1075531/000107553126000009/bkng-20251231.htm)"
+    },
+    {
+      "topic": "Profitability",
+      "statement": "GAAP net income for FY2025 was $5.404 billion, down 8% from $5.882 billion in FY2024; Adjusted EBITDA was $9.937 billion in FY2025, up 20% from $8.306 billion in FY2024.",
+      "source": "DEF 14A filed 2026-04-21 (https://www.sec.gov/Archives/edgar/data/1075531/000130817926000310/bkng-20260420.htm)"
+    },
+    {
+      "topic": "Cash Flow",
+      "statement": "Net cash provided by operating activities was $7.344 billion for FY2025 per SEC company facts; the proxy statement reports $9.409 billion for FY2025 and free cash flow of $9.086 billion.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0001075531.); DEF 14A filed 2026-04-21 (https://www.sec.gov/Archives/edgar/data/1075531/000130817926000310/bkng-20260420.htm)"
+    },
+    {
+      "topic": "Segment Profitability",
+      "statement": "Segment Adjusted EBITDA less Capex was $9.852 billion in FY2025, up from $8.179 billion in FY2024 and $7.020 billion in FY2023; the CODM is the CEO and President who reviews this metric for each operating segment.",
+      "source": "10-K filed 2026-02-18 (https://www.sec.gov/Archives/edgar/data/1075531/000107553126000009/bkng-20251231.htm)"
+    },
+    {
+      "topic": "Capital Allocation - Share Repurchases",
+      "statement": "The company returned $8.2 billion to stockholders in 2025 through share repurchases, dividends, and $1.1 billion to settle the conversion premium on convertible notes; since restarting repurchases in 2022, it has returned over 100% of free cash flow and reduced share count by 22%.",
+      "source": "DEF 14A filed 2026-04-21 (https://www.sec.gov/Archives/edgar/data/1075531/000130817926000310/bkng-20260420.htm)"
+    },
+    {
+      "topic": "Capital Allocation - Dividends",
+      "statement": "The company increased its quarterly dividend by 10% in the first quarter of 2025 and paid $1.248 billion in dividends during FY2025.",
+      "source": "DEF 14A filed 2026-04-21 (https://www.sec.gov/Archives/edgar/data/1075531/000130817926000310/bkng-20260420.htm); 10-K filed 2026-02-18 (https://www.sec.gov/Archives/edgar/data/1075531/000107553126000009/bkng-20251231.htm)"
+    },
+    {
+      "topic": "Balance Sheet - Debt",
+      "statement": "Long-term debt was $14.853 billion as of December 31, 2025; the company has numerous senior notes outstanding with maturities ranging from 2026 to 2046 and coupon rates from 0% to 4.75%.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0001075531.); 10-K filed 2026-02-18 (https://www.sec.gov/Archives/edgar/data/1075531/000107553126000009/bkng-20251231.htm)"
+    },
+    {
+      "topic": "Balance Sheet - Cash and Equity",
+      "statement": "As of December 31, 2025, cash and equivalents were $16.164 billion and stockholders' equity was $2.782 billion.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0001075531.)"
+    },
+    {
+      "topic": "Operational Scale",
+      "statement": "The company booked more than 1.2 billion room nights in 2025, an increase of 8% year over year, and operates in over 220 countries and territories and 40+ languages.",
+      "source": "DEF 14A filed 2026-04-21 (https://www.sec.gov/Archives/edgar/data/1075531/000130817926000310/bkng-20260420.htm)"
+    },
+    {
+      "topic": "Connected Trip Strategy",
+      "statement": "Connected transactions (trips including bookings across more than one vertical) grew in the high 20% range in 2025 and represented a low double-digit percentage of Booking.com's total transactions.",
+      "source": "DEF 14A filed 2026-04-21 (https://www.sec.gov/Archives/edgar/data/1075531/000130817926000310/bkng-20260420.htm)"
+    },
+    {
+      "topic": "Loyalty Program",
+      "statement": "The Genius loyalty program is available in more than 200 countries and territories; Level 2 and Level 3 Genius travelers represented over 30% of the active base and accounted for a high-50% share of room nights in 2025.",
+      "source": "DEF 14A filed 2026-04-21 (https://www.sec.gov/Archives/edgar/data/1075531/000130817926000310/bkng-20260420.htm)"
+    },
+    {
+      "topic": "Alternative Accommodations",
+      "statement": "Alternative Accommodations supply reached 8.6 million listings at year-end 2025, with room night growth outpacing both the core hotel business and the broader alternative accommodations industry.",
+      "source": "DEF 14A filed 2026-04-21 (https://www.sec.gov/Archives/edgar/data/1075531/000130817926000310/bkng-20260420.htm)"
+    },
+    {
+      "topic": "Partner Concentration",
+      "statement": "Independent partners drive the vast majority of Booking.com's room nights, while the top 10 global hotel chains represent only a low double-digit percentage of total room nights.",
+      "source": "DEF 14A filed 2026-04-21 (https://www.sec.gov/Archives/edgar/data/1075531/000130817926000310/bkng-20260420.htm)"
+    },
+    {
+      "topic": "Strategic Investments",
+      "statement": "The company holds long-term equity investments in private companies including Grab Holdings Limited, DiDi Global Inc., and Yanolja Co. Ltd., and previously held an investment in Meituan Dianping.",
+      "source": "10-K filed 2026-02-18 (https://www.sec.gov/Archives/edgar/data/1075531/000107553126000009/bkng-20251231.htm)"
+    },
+    {
+      "topic": "Impairment",
+      "statement": "In FY2025, the company recorded a $457 million impairment of KAYAK's goodwill and certain intangible assets.",
+      "source": "DEF 14A filed 2026-04-21 (https://www.sec.gov/Archives/edgar/data/1075531/000130817926000310/bkng-20260420.htm)"
+    },
+    {
+      "topic": "Transformation Program",
+      "statement": "The company began a Transformation Program in Q4 2024 to improve operating expense efficiency; FY2025 transformation costs included $117 million in employee termination benefits and $82 million in professional fees, with costs expected largely incurred by end of 2026.",
+      "source": "10-K filed 2026-02-18 (https://www.sec.gov/Archives/edgar/data/1075531/000107553126000009/bkng-20251231.htm)"
+    },
+    {
+      "topic": "Regulatory Risk - Competition",
+      "statement": "In 2024, Spain's CNMC imposed a fine and restricted certain Booking.com business practices including contractual parity provisions and ranking criteria; the company recorded a $485 million liability as of December 31, 2025, with the fine suspended pending appeal.",
+      "source": "10-K filed 2026-02-18 (https://www.sec.gov/Archives/edgar/data/1075531/000107553126000009/bkng-20251231.htm)"
+    },
+    {
+      "topic": "Regulatory Risk - Multiple Jurisdictions",
+      "statement": "The company faces ongoing competition and consumer protection investigations in multiple jurisdictions including Greece (Hellenic Competition Commission, June 2025), Hungary (Competition Authority, August 2025), France (DGCCRF), and Switzerland (Swiss PSO ordering commission reduction).",
+      "source": "10-K filed 2026-02-18 (https://www.sec.gov/Archives/edgar/data/1075531/000107553126000009/bkng-20251231.htm)"
+    },
+    {
+      "topic": "Tax Risk - Italy",
+      "statement": "In November 2024, the company settled with Italian tax authorities for $332 million related to short-term rental withholding tax obligations; a separate MAP resolution for 2013-2018 transfer pricing resulted in additional Italian income taxes of $23 million.",
+      "source": "10-K filed 2026-02-18 (https://www.sec.gov/Archives/edgar/data/1075531/000107553126000009/bkng-20251231.htm)"
+    },
+    {
+      "topic": "Litigation Risk - Class Actions",
+      "statement": "German hotels have filed parity-related claims against Booking.com, and hotel associations and law firms in Spain, France, the UK, and the Netherlands are promoting potential class actions on behalf of European hotels relating to historical use of contractual parity provisions.",
+      "source": "10-K filed 2026-02-18 (https://www.sec.gov/Archives/edgar/data/1075531/000107553126000009/bkng-20251231.htm)"
+    },
+    {
+      "topic": "Netherlands Pension Matter",
+      "statement": "After a Dutch Supreme Court ruling in March 2025, Booking.com B.V. changed its pension scheme with retroactive effect to 1999; the company paid $136 million in 2025 to settle the liability and recorded a $123 million reduction in personnel expenses.",
+      "source": "10-K filed 2026-02-18 (https://www.sec.gov/Archives/edgar/data/1075531/000107553126000009/bkng-20251231.htm)"
+    },
+    {
+      "topic": "Tax Rate",
+      "statement": "The effective income tax rate was 20.9% in FY2025, 19.3% in FY2024, and 21.8% in FY2023; the Netherlands innovation box reduced the rate by 10.9 percentage points in FY2025.",
+      "source": "10-K filed 2026-02-18 (https://www.sec.gov/Archives/edgar/data/1075531/000107553126000009/bkng-20251231.htm)"
+    },
+    {
+      "topic": "Company Classification",
+      "statement": "Booking Holdings Inc. is classified under SIC code 'Transportation Services' and trades on Nasdaq under the ticker BKNG.",
+      "source": "SEC submissions metadata (https://data.sec.gov/submissions/CIK0001075531.)"
+    },
+    {
+      "topic": "Stock-Based Compensation",
+      "statement": "Stock-based compensation recorded in personnel expenses was $613 million in FY2025, $599 million in FY2024, and $530 million in FY2023, representing 11% of GAAP net income in 2025.",
+      "source": "DEF 14A filed 2026-04-21 (https://www.sec.gov/Archives/edgar/data/1075531/000130817926000310/bkng-20260420.htm)"
+    },
+    {
+      "topic": "Interest Expense",
+      "statement": "Interest expense was $1.617 billion in FY2025, up from $1.295 billion in FY2024 and $897 million in FY2023; the company made interest payments of $1.1 billion in 2025.",
+      "source": "10-K filed 2026-02-18 (https://www.sec.gov/Archives/edgar/data/1075531/000107553126000009/bkng-20251231.htm)"
+    },
+    {
+      "topic": "FX Risk",
+      "statement": "Foreign currency transaction losses of $1.4 billion in FY2025 related to Euro-denominated debt and accrued interest not designated as net investment hedges, contributing to other income (expense) of negative $1.297 billion.",
+      "source": "10-K filed 2026-02-18 (https://www.sec.gov/Archives/edgar/data/1075531/000107553126000009/bkng-20251231.htm)"
+    },
+    {
+      "topic": "Terminated Acquisition",
+      "statement": "The European Commission prohibited the company's proposed acquisition of Etraveli Group in September 2023, resulting in a $90 million termination fee paid in October 2023.",
+      "source": "10-K filed 2026-02-18 (https://www.sec.gov/Archives/edgar/data/1075531/000107553126000009/bkng-20251231.htm)"
+    },
+    {
+      "topic": "Subsequent Event",
+      "statement": "In February 2026, the company entered into favorable settlement agreements to resolve litigation matters in which it was a plaintiff, expecting to receive a benefit of approximately $90 million in Q1 2026.",
+      "source": "10-K filed 2026-02-18 (https://www.sec.gov/Archives/edgar/data/1075531/000107553126000009/bkng-20251231.htm)"
+    },
+    {
+      "topic": "AI Strategy",
+      "statement": "The company states that Generative AI is accelerating innovation and reshaping how it advances its mission, and is creating innovative Gen AI-powered consumer and partner offerings as a strategic priority.",
+      "source": "DEF 14A filed 2026-04-21 (https://www.sec.gov/Archives/edgar/data/1075531/000130817926000310/bkng-20260420.htm)"
+    },
+    {
+      "topic": "Governance - Officer Exculpation",
+      "statement": "The Board proposed an amendment to the Restated Certificate of Incorporation to provide for officer exculpation, limiting personal liability of officers for monetary damages for breach of fiduciary duty to the fullest extent permitted by law.",
+      "source": "DEF 14A filed 2026-04-21 (https://www.sec.gov/Archives/edgar/data/1075531/000130817926000310/bkng-20260420.htm)"
+    }
+  ]
+}

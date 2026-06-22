@@ -1,0 +1,127 @@
+{
+  "symbol": "DHR",
+  "companyName": "Danaher",
+  "updatedAt": "2026-06-22",
+  "facts": [
+    {
+      "topic": "Business Model & Industry Classification",
+      "statement": "Danaher is classified under SIC code 'Industrial Instruments For Measurement, Display, and Control' and trades on the NYSE under the ticker DHR.",
+      "source": "SEC submissions metadata (https://data.sec.gov/submissions/CIK0000313616.)"
+    },
+    {
+      "topic": "Revenue Scale",
+      "statement": "Danaher reported total revenue of $23.89 billion for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000313616.)"
+    },
+    {
+      "topic": "Profitability",
+      "statement": "Danaher reported net income of $4.764 billion for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000313616.)"
+    },
+    {
+      "topic": "Cash Flow",
+      "statement": "Danaher generated $7.164 billion in operating cash flow for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000313616.)"
+    },
+    {
+      "topic": "R&D Investment",
+      "statement": "Danaher spent $1.503 billion on research and development in FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000313616.)"
+    },
+    {
+      "topic": "Balance Sheet",
+      "statement": "As of FY2025, Danaher had stockholders' equity of $49.543 billion and long-term debt of $15.5 billion.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000313616.)"
+    },
+    {
+      "topic": "Segment Structure",
+      "statement": "Danaher operates through three reportable segments: Biotechnology, Life Sciences, and Diagnostics, with revenue tracked across geographic regions including North America, Western Europe, Other Developed Markets, and High Growth Markets.",
+      "source": "10-K filed 2026-02-24 (https://www.sec.gov/Archives/edgar/data/313616/000031361626000062/dhr-20251231.htm)"
+    },
+    {
+      "topic": "Recurring Revenue",
+      "statement": "Danaher tracks recurring and nonrecurring revenue separately for each of its Biotechnology, Life Sciences, and Diagnostics segments.",
+      "source": "10-K filed 2026-02-24 (https://www.sec.gov/Archives/edgar/data/313616/000031361626000062/dhr-20251231.htm)"
+    },
+    {
+      "topic": "Capital Allocation - M&A",
+      "statement": "In February 2026, Danaher entered into a definitive agreement to acquire Masimo Corporation, a specialty diagnostics provider of pulse oximetry and patient monitoring systems, for approximately $9.9 billion including assumed indebtedness and net of acquired cash.",
+      "source": "DEF 14A filed 2026-03-25 (https://www.sec.gov/Archives/edgar/data/313616/000031361626000101/dhr-20260325.htm)"
+    },
+    {
+      "topic": "Capital Allocation - Shareholder Returns",
+      "statement": "In 2025, Danaher returned approximately $4.0 billion to shareholders through stock buybacks and dividends.",
+      "source": "DEF 14A filed 2026-03-25 (https://www.sec.gov/Archives/edgar/data/313616/000031361626000101/dhr-20260325.htm)"
+    },
+    {
+      "topic": "Capital Allocation - CapEx",
+      "statement": "Danaher invested approximately $1.2 billion in capital expenditures in 2025 to support future core growth.",
+      "source": "DEF 14A filed 2026-03-25 (https://www.sec.gov/Archives/edgar/data/313616/000031361626000101/dhr-20260325.htm)"
+    },
+    {
+      "topic": "Prior Acquisition - Abcam",
+      "statement": "Danaher completed the acquisition of Abcam on December 6, 2023, with the 10-K disclosing related fair value adjustments to inventory and settlement of share-based payment awards.",
+      "source": "10-K filed 2026-02-24 (https://www.sec.gov/Archives/edgar/data/313616/000031361626000062/dhr-20251231.htm)"
+    },
+    {
+      "topic": "Veralto Separation",
+      "statement": "Danaher separated its Environmental & Applied Solutions segment as Veralto Corporation on September 29, 2023, with associated debt transferred and equity awards adjusted.",
+      "source": "10-K filed 2026-02-24 (https://www.sec.gov/Archives/edgar/data/313616/000031361626000062/dhr-20251231.htm)"
+    },
+    {
+      "topic": "Management - CEO",
+      "statement": "Rainer M. Blair serves as President and Chief Executive Officer of Danaher and has been a director since 2020.",
+      "source": "10-K filed 2026-02-24 (https://www.sec.gov/Archives/edgar/data/313616/000031361626000062/dhr-20251231.htm)"
+    },
+    {
+      "topic": "Management - CFO",
+      "statement": "Matthew R. McGrew serves as Executive Vice President and Chief Financial Officer of Danaher.",
+      "source": "10-K filed 2026-02-24 (https://www.sec.gov/Archives/edgar/data/313616/000031361626000062/dhr-20251231.htm)"
+    },
+    {
+      "topic": "Board Leadership",
+      "statement": "Steven M. Rales serves as Chairman of the Board and Mitchell P. Rales serves as Chairman of the Executive Committee; the Chairman and CEO positions are separate.",
+      "source": "10-K filed 2026-02-24 (https://www.sec.gov/Archives/edgar/data/313616/000031361626000062/dhr-20251231.htm)"
+    },
+    {
+      "topic": "Board Composition",
+      "statement": "Danaher's board has eleven director nominees for the 2026 annual meeting, with average director nominee tenure declining by more than 11% over the past seven years.",
+      "source": "DEF 14A filed 2026-03-25 (https://www.sec.gov/Archives/edgar/data/313616/000031361626000101/dhr-20260325.htm)"
+    },
+    {
+      "topic": "Governance",
+      "statement": "Danaher has no supermajority voting requirements, no shareholder rights plan, provides proxy access, allows shareholders owning 25% or more to call special meetings, and all directors are elected annually by majority vote.",
+      "source": "DEF 14A filed 2026-03-25 (https://www.sec.gov/Archives/edgar/data/313616/000031361626000101/dhr-20260325.htm)"
+    },
+    {
+      "topic": "Stock-Based Compensation",
+      "statement": "Total pretax stock-based compensation expense was $298 million in 2025, with $168 million of unrecognized RSU/PSU compensation cost and $150 million of unrecognized stock option compensation cost expected to be recognized over approximately two years.",
+      "source": "10-K filed 2026-02-24 (https://www.sec.gov/Archives/edgar/data/313616/000031361626000062/dhr-20251231.htm)"
+    },
+    {
+      "topic": "Executive Compensation Design",
+      "statement": "Danaher's executive compensation program features multi-year vesting for stock options, three-year performance periods plus two-year holding periods for PSUs, no tax gross-ups, no dividends on unvested equity, and no single-trigger change-of-control benefits.",
+      "source": "DEF 14A filed 2026-03-25 (https://www.sec.gov/Archives/edgar/data/313616/000031361626000101/dhr-20260325.htm)"
+    },
+    {
+      "topic": "Debt Structure",
+      "statement": "Danaher has multiple series of senior unsecured notes outstanding with maturities ranging from 2026 through 2051, denominated in USD, CHF, EUR, and JPY, and maintains a Third Amended and Restated Multiyear Credit Facility dated August 11, 2023.",
+      "source": "10-K filed 2026-02-24 (https://www.sec.gov/Archives/edgar/data/313616/000031361626000062/dhr-20251231.htm)"
+    },
+    {
+      "topic": "Geographic Revenue",
+      "statement": "Danaher reports revenue by country including the United States, China, and other countries, with geographic concentration risk disclosures for both sales and property, plant, and equipment.",
+      "source": "10-K filed 2026-02-24 (https://www.sec.gov/Archives/edgar/data/313616/000031361626000062/dhr-20251231.htm)"
+    },
+    {
+      "topic": "Political Spending Policy",
+      "statement": "Danaher and its subsidiaries have made no political contributions in the last decade and have no intention of contributing Danaher funds for political purposes; the company was ranked as a First Tier company in the 2025 CPA-Zicklin Index.",
+      "source": "DEF 14A filed 2026-03-25 (https://www.sec.gov/Archives/edgar/data/313616/000031361626000101/dhr-20260325.htm)"
+    },
+    {
+      "topic": "Auditor",
+      "statement": "Ernst & Young LLP (PCAOB ID: 00042) serves as Danaher's independent registered public accounting firm, with shareholders asked to ratify this selection for 2026.",
+      "source": "10-K filed 2026-02-24 (https://www.sec.gov/Archives/edgar/data/313616/000031361626000062/dhr-20251231.htm)"
+    }
+  ]
+}

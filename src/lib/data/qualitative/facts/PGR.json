@@ -1,0 +1,147 @@
+{
+  "symbol": "PGR",
+  "companyName": "Progressive",
+  "updatedAt": "2026-06-22",
+  "facts": [
+    {
+      "topic": "business_model",
+      "statement": "Progressive is classified under SIC code 'Fire, Marine & Casualty Insurance' and trades on the NYSE under the ticker PGR.",
+      "source": "SEC submissions metadata (https://data.sec.gov/submissions/CIK0000080661.)"
+    },
+    {
+      "topic": "revenue_scale",
+      "statement": "Progressive reported total revenue of $62,109,000,000 for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000080661.)"
+    },
+    {
+      "topic": "profitability",
+      "statement": "Progressive reported net income of $3,903,000,000 for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000080661.)"
+    },
+    {
+      "topic": "cash_flow",
+      "statement": "Progressive generated operating cash flow of $10,643,000,000 for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000080661.)"
+    },
+    {
+      "topic": "balance_sheet",
+      "statement": "Progressive reported stockholders' equity of $20,277,000,000 as of FY2025 year-end.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000080661.)"
+    },
+    {
+      "topic": "segments",
+      "statement": "Progressive reports three operating segments: Personal Lines, Commercial Lines, and Other Indemnity, with data reported for fiscal years 2023, 2024, and 2025.",
+      "source": "10-K filed 2026-03-02 (https://www.sec.gov/Archives/edgar/data/80661/000008066126000086/pgr-20251231.htm)"
+    },
+    {
+      "topic": "segment_premiums",
+      "statement": "For FY2025, net premiums written were $72,558 million in Personal Lines, $10,613 million in Commercial Lines, and $3 million in Other Indemnity, for a total of $83,174 million.",
+      "source": "10-K filed 2026-03-02 (https://www.sec.gov/Archives/edgar/data/80661/000008066126000086/pgr-20251231.htm)"
+    },
+    {
+      "topic": "segment_premiums",
+      "statement": "Total net premiums written grew from $61,550 million in FY2023 to $74,424 million in FY2024 and $83,174 million in FY2025.",
+      "source": "10-K filed 2026-03-02 (https://www.sec.gov/Archives/edgar/data/80661/000008066126000086/pgr-20251231.htm)"
+    },
+    {
+      "topic": "investment_portfolio",
+      "statement": "As of December 31, 2025, Progressive's total investments were $97,373 million at fair value, consisting of $82,866 million in fixed maturities, $4,502 million in equity securities, and $10,005 million in short-term investments.",
+      "source": "10-K filed 2026-03-02 (https://www.sec.gov/Archives/edgar/data/80661/000008066126000086/pgr-20251231.htm)"
+    },
+    {
+      "topic": "investment_portfolio",
+      "statement": "U.S. Government and government agency bonds constituted the largest fixed maturity holding at $43,298 million fair value as of December 31, 2025, followed by corporate and other debt securities at $18,132 million and asset-backed securities at $16,257 million.",
+      "source": "10-K filed 2026-03-02 (https://www.sec.gov/Archives/edgar/data/80661/000008066126000086/pgr-20251231.htm)"
+    },
+    {
+      "topic": "reinsurance",
+      "statement": "For FY2025, Progressive ceded $1,186 million in premiums to other companies and assumed $0, resulting in net premiums earned of $81,661 million; the percentage of assumed premiums to net was 0%.",
+      "source": "10-K filed 2026-03-02 (https://www.sec.gov/Archives/edgar/data/80661/000008066126000086/pgr-20251231.htm)"
+    },
+    {
+      "topic": "capital_allocation",
+      "statement": "In FY2025, Progressive paid $2,871 million in dividends to common shareholders, compared to $674 million in FY2024 and $234 million in FY2023.",
+      "source": "10-K filed 2026-03-02 (https://www.sec.gov/Archives/edgar/data/80661/000008066126000086/pgr-20251231.htm)"
+    },
+    {
+      "topic": "capital_allocation",
+      "statement": "Progressive acquired $74 million of treasury shares in the open market in FY2025, compared to $13 million in FY2024 and $46 million in FY2023.",
+      "source": "10-K filed 2026-03-02 (https://www.sec.gov/Archives/edgar/data/80661/000008066126000086/pgr-20251231.htm)"
+    },
+    {
+      "topic": "debt",
+      "statement": "Progressive's parent company had $6,897 million in long-term debt as of December 31, 2025, essentially unchanged from $6,893 million at December 31, 2024.",
+      "source": "10-K filed 2026-03-02 (https://www.sec.gov/Archives/edgar/data/80661/000008066126000086/pgr-20251231.htm)"
+    },
+    {
+      "topic": "debt",
+      "statement": "Progressive has multiple senior note issuances outstanding, including 6.625% Senior Notes due 2029 ($300M), 6.25% Senior Notes due 2032 ($400M), 4.35% Senior Notes due 2044 ($350M), 4.125% Senior Notes due 2047 ($850M), and 4.20% Senior Notes due 2048 ($600M), among others.",
+      "source": "10-K filed 2026-03-02 (https://www.sec.gov/Archives/edgar/data/80661/000008066126000086/pgr-20251231.htm)"
+    },
+    {
+      "topic": "management",
+      "statement": "Susan Patricia Griffith serves as President and Chief Executive Officer of The Progressive Corporation, and John P. Sauerland serves as Vice President and Chief Financial Officer.",
+      "source": "10-K filed 2026-03-02 (https://www.sec.gov/Archives/edgar/data/80661/000008066126000086/pgr-20251231.htm)"
+    },
+    {
+      "topic": "management",
+      "statement": "Carl G. Joyce serves as Vice President and Chief Accounting Officer of The Progressive Corporation.",
+      "source": "10-K filed 2026-03-02 (https://www.sec.gov/Archives/edgar/data/80661/000008066126000086/pgr-20251231.htm)"
+    },
+    {
+      "topic": "governance",
+      "statement": "Lawton W. Fitt serves as Chairperson of the Board, and the Board nominated 11 directors for election at the May 8, 2026 Annual Meeting, each to serve a one-year term.",
+      "source": "DEF 14A filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/80661/000008066126000099/pgr-20260318.htm)"
+    },
+    {
+      "topic": "governance",
+      "statement": "As of the March 13, 2026 record date, Progressive had 584,962,821 common shares outstanding.",
+      "source": "DEF 14A filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/80661/000008066126000099/pgr-20260318.htm)"
+    },
+    {
+      "topic": "business_performance",
+      "statement": "In 2025, Progressive achieved companywide policies in force growth of 10% and net premiums written growth of 12%, with a debt-to-capital ratio of 18.5% at year-end.",
+      "source": "DEF 14A filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/80661/000008066126000099/pgr-20260318.htm)"
+    },
+    {
+      "topic": "business_performance",
+      "statement": "Over the five-year period ending 2025, Progressive delivered annualized rates of return on net income and comprehensive income of 26.0% and 25.2% respectively, outpaced the S&P 500 by 1.6x for total shareholder return, and achieved annualized net premiums written growth of 15%.",
+      "source": "DEF 14A filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/80661/000008066126000099/pgr-20260318.htm)"
+    },
+    {
+      "topic": "competitive_positioning",
+      "statement": "Progressive's five-year annualized underwriting margin of 8.3% and net premiums written growth of 15% exceeded the insurance industry's underwriting margin of (0.4)% and net premiums written growth of 7%, based on 2024 U.S. private passenger auto premiums written.",
+      "source": "DEF 14A filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/80661/000008066126000099/pgr-20260318.htm)"
+    },
+    {
+      "topic": "underwriting_target",
+      "statement": "Progressive maintained underwriting profitability aligned with its long-term 96 combined ratio target over the five-year period ending 2025.",
+      "source": "DEF 14A filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/80661/000008066126000099/pgr-20260318.htm)"
+    },
+    {
+      "topic": "human_capital",
+      "statement": "Progressive ranked in the 99th percentile of companies in its annual engagement and culture survey in 2025 and has approximately 70,000 employees.",
+      "source": "DEF 14A filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/80661/000008066126000099/pgr-20260318.htm)"
+    },
+    {
+      "topic": "compensation_governance",
+      "statement": "Progressive has a Dodd-Frank Clawback Policy and an Insider Trading Policy governing securities transactions by directors, officers, and insiders, both filed as exhibits to its annual reports.",
+      "source": "10-K filed 2026-03-02 (https://www.sec.gov/Archives/edgar/data/80661/000008066126000086/pgr-20251231.htm)"
+    },
+    {
+      "topic": "auditor",
+      "statement": "PricewaterhouseCoopers LLP (PCAOB ID: 238) serves as Progressive's independent registered public accounting firm, with the Board recommending ratification of their appointment for 2026.",
+      "source": "DEF 14A filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/80661/000008066126000099/pgr-20260318.htm)"
+    },
+    {
+      "topic": "parent_company_financials",
+      "statement": "The Progressive Corporation parent company received $10,151 million in dividends from subsidiaries in FY2025, up from $3,667 million in FY2024 and $399 million in FY2023.",
+      "source": "10-K filed 2026-03-02 (https://www.sec.gov/Archives/edgar/data/80661/000008066126000086/pgr-20251231.htm)"
+    },
+    {
+      "topic": "liquidity",
+      "statement": "At December 31, 2025, $13.0 billion of marketable securities were available in a non-insurance investment subsidiary for the parent company to meet holding company obligations, up from $6.2 billion at year-end 2024.",
+      "source": "10-K filed 2026-03-02 (https://www.sec.gov/Archives/edgar/data/80661/000008066126000086/pgr-20251231.htm)"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "symbol": "MO",
+  "companyName": "Altria Group",
+  "generatedAt": "2026-06-22",
+  "management": {
+    "grade": "middle",
+    "sections": [
+      {
+        "title": "Leadership",
+        "grade": "middle",
+        "summary": "CEO William F. Gifford, Jr. (age 55) will retire at the May 14, 2026 Annual Meeting, with CFO Salvatore Mancuso (age 60) succeeding him and Heather Newman shifting to EVP and CFO. The transition occurs amid a $970 million e-vapor impairment and a $1,158 million goodwill impairment recorded in 2025.",
+        "points": [
+          "Gifford's retirement hands the CEO role to Mancuso, a 60-year-old CFO who has overseen a debt-to-EBITDA ratio of 2.0x and $25,709 million in total debt as of December 31, 2025.",
+          "Heather Newman, currently SVP and Chief Strategy & Growth Officer at age 48, will become EVP and CFO, bringing growth-strategy experience to the finance role as Altria pursues its 'Moving Beyond Smoking' vision."
+        ]
+      },
+      {
+        "title": "Capital Allocation",
+        "grade": "strong",
+        "summary": "Altria generated $9,287 million in operating cash flow for FY2025 and maintained 98.6% cash conversion over 2023-2025, supporting $6,960 million in dividends and $1,000 million in share repurchases. The company raised its quarterly dividend for the 60th time in 56 years while holding debt-to-Consolidated EBITDA at 2.0x.",
+        "points": [
+          "Share repurchases dropped to $1,000 million in 2025 from $3,400 million in 2024, reflecting tighter capital deployment alongside $23,399 million in long-term debt and negative stockholders' equity of $2,238 million.",
+          "The 2028 Enterprise Goals explicitly include steadily growing the dividend and maintaining a strong balance sheet, aligning capital returns with the 60th dividend increase in 56 years."
+        ]
+      },
+      {
+        "title": "Shareholder Alignment",
+        "grade": "middle",
+        "summary": "Altria paid $6,960 million in common stock dividends in 2025 and repurchased $1,000 million, returning capital while carrying negative equity of $2,238 million. The 2028 Enterprise Goals tie executive focus to dividend growth, earnings growth, and margin maintenance.",
+        "points": [
+          "The 2028 Enterprise Goals include maintaining strong operating margins and generating earnings growth, linking management priorities to shareholder returns through both dividends and buybacks.",
+          "Negative stockholders' equity of $2,238 million and $23,399 million in long-term debt constrain the balance sheet, even as the company maintains a 2.0x debt-to-EBITDA ratio within target range."
+        ]
+      },
+      {
+        "title": "Communication",
+        "grade": "middle",
+        "summary": "Altria files detailed DEF 14A and 10-K disclosures covering segment-level adjusted OCI margins, with Smokeable Products at 63.4% and Oral Tobacco Products at 67.9% for FY2025. The company reports customer concentration risk naming at least two material customers across 2023-2025.",
+        "points": [
+          "The 10-K quantifies impairments including a $970 million pre-tax e-vapor intangible impairment and a $1,158 million goodwill impairment, providing specific asset-group recovery rationale tied to enforcement against illicit flavored disposables.",
+          "Segment reporting breaks out adjusted OCI by Smokeable Products ($11,064 million) and Oral Tobacco Products ($1,835 million), with cash conversion disclosed at 98.6% over the 2023-2025 period."
+        ]
+      },
+      {
+        "title": "Governance",
+        "grade": "middle",
+        "summary": "Chair Kathryn B. McQuade leads a 10-director nominee board including incoming CEO Salvatore Mancuso, with PricewaterhouseCoopers LLP as auditor since at least 1934. The 10-K discloses litigation exposure from tobacco and health cases and NPM arbitration panel decisions affecting operating income.",
+        "points": [
+          "Board nominees include directors with diverse oversight backgrounds such as Ian L.T. Clarke, Debra J. Kelly-Ennis, and Ellen R. Strahlman, with Mancuso's inclusion bridging executive and board roles during the CEO transition.",
+          "Named risk factors include customer concentration with at least two material customers, tobacco and health litigation, and NPM arbitration decisions that adjust cost of sales and interest expense."
+        ]
+      }
+    ]
+  },
+  "moat": {
+    "grade": "strong",
+    "types": [
+      {
+        "type": "Intangible Brands",
+        "grade": "strong",
+        "summary": "Marlboro cigarettes, manufactured by Philip Morris USA, anchor a smokeable products segment that generated $11,064 million in adjusted OCI with a 63.4% margin for FY2025. The brand portfolio extends to Copenhagen, Skoal, Black & Mild, and on! nicotine pouches across multiple tobacco categories."
+      },
+      {
+        "type": "Regulatory Licensing",
+        "grade": "middle",
+        "summary": "Altria operates in a heavily regulated U.S. tobacco market where compliance and enforcement barriers protect incumbents, though the gradual nature of enforcement against illicit flavored disposable e-vapor products contributed to a $970 million impairment on NJOY's e-vapor intangible assets in Q4 2025."
+      },
+      {
+        "type": "Distribution Scale",
+        "grade": "strong",
+        "summary": "With $24,483 million in FY2025 revenue and products spanning cigarettes, cigars, moist smokeless tobacco, oral nicotine pouches, and e-vapor, Altria leverages scale across its Philip Morris USA, John Middleton, U.S. Smokeless Tobacco, Helix Innovations, and NJOY subsidiaries to reach concentrated retail channels."
+      },
+      {
+        "type": "Pricing Power",
+        "grade": "strong",
+        "summary": "The Oral Tobacco Products segment achieved a 67.9% adjusted OCI margin on $1,835 million in FY2025, while Smokeable Products reached 63.4%, demonstrating ability to sustain high margins in a declining-volume category through pricing discipline across Marlboro, Copenhagen, and Skoal."
+      }
+    ]
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "symbol": "DHR",
+  "companyName": "Danaher",
+  "generatedAt": "2026-06-22",
+  "management": {
+    "grade": "strong",
+    "sections": [
+      {
+        "title": "Leadership",
+        "grade": "strong",
+        "summary": "CEO Rainer M. Blair, a director since 2020, leads Danaher alongside CFO Matthew R. McGrew, with Steven M. Rales serving as Chairman and Mitchell P. Rales as Chairman of the Executive Committee. The separation of Chairman and CEO roles provides distinct oversight, while the Rales family's continued leadership anchors strategic direction.",
+        "points": [
+          "Rainer M. Blair serves as President and CEO and has been a director since 2020, guiding Danaher through its post-Veralto life sciences and diagnostics focus.",
+          "Steven M. Rales chairs the board while Mitchell P. Rales chairs the Executive Committee, maintaining the Rales family's active governance role with separated Chairman and CEO positions."
+        ]
+      },
+      {
+        "title": "Capital Allocation",
+        "grade": "strong",
+        "summary": "Danaher returned approximately $4.0 billion to shareholders through buybacks and dividends in 2025 while investing $1.2 billion in capital expenditures and spending $1.503 billion on R&D. The February 2026 agreement to acquire Masimo for roughly $9.9 billion signals continued portfolio reshaping in specialty diagnostics.",
+        "points": [
+          "In 2025, Danaher returned approximately $4.0 billion to shareholders via buybacks and dividends while investing $1.2 billion in capex and $1.503 billion in R&D to support core growth.",
+          "The February 2026 definitive agreement to acquire Masimo for approximately $9.9 billion including assumed debt extends Danaher's M&A strategy into pulse oximetry and patient monitoring following the 2023 Abcam acquisition."
+        ]
+      },
+      {
+        "title": "Shareholder Alignment",
+        "grade": "strong",
+        "summary": "Executive compensation features multi-year vesting for stock options, three-year performance periods plus two-year holding periods for PSUs, and no single-trigger change-of-control benefits. Total pretax stock-based compensation was $298 million in 2025, with significant unrecognized costs vesting over approximately two years.",
+        "points": [
+          "Executive pay includes multi-year option vesting, three-year PSU performance periods with two-year holding requirements, no tax gross-ups, no dividends on unvested equity, and no single-trigger change-of-control benefits.",
+          "Total pretax stock-based compensation was $298 million in 2025, with $168 million in unrecognized RSU/PSU cost and $150 million in unrecognized option cost expected to vest over roughly two years."
+        ]
+      },
+      {
+        "title": "Communication",
+        "grade": "strong",
+        "summary": "Danaher's 10-K tracks recurring and nonrecurring revenue separately across Biotechnology, Life Sciences, and Diagnostics segments, with geographic revenue broken out by country including the United States and China. The company discloses geographic concentration risk for both sales and property, plant, and equipment.",
+        "points": [
+          "The 10-K separately tracks recurring and nonrecurring revenue for each of the Biotechnology, Life Sciences, and Diagnostics segments, giving investors visibility into revenue durability.",
+          "Danaher reports revenue by country including the United States and China, with explicit geographic concentration risk disclosures covering both sales and property, plant, and equipment."
+        ]
+      },
+      {
+        "title": "Governance",
+        "grade": "strong",
+        "summary": "Danaher's board has eleven director nominees with average tenure declining over 11% in seven years, and the company provides proxy access, allows 25% holders to call special meetings, and elects all directors annually by majority vote. No supermajority requirements or shareholder rights plan are in place.",
+        "points": [
+          "Governance features include no supermajority voting, no shareholder rights plan, proxy access, special meeting rights for 25% holders, and annual majority-vote elections for all directors.",
+          "The board has eleven director nominees with average tenure declining more than 11% over seven years, and Danaher has made no political contributions in the last decade, earning First Tier status in the 2025 CPA-Zicklin Index."
+        ]
+      }
+    ]
+  },
+  "moat": {
+    "grade": "strong",
+    "types": [
+      {
+        "type": "Intangible Assets",
+        "grade": "strong",
+        "summary": "Danaher spent $1.503 billion on R&D in FY2025 across its Biotechnology, Life Sciences, and Diagnostics segments, building proprietary instrument and consumable platforms that generate recurring revenue streams. The pending $9.9 billion Masimo acquisition adds pulse oximetry and patient monitoring intellectual property to this portfolio."
+      },
+      {
+        "type": "Switching Costs",
+        "grade": "strong",
+        "summary": "Danaher separately tracks recurring revenue across all three segments, indicating that instruments, consumables, and service contracts create ongoing customer relationships that are costly to replace. The $23.89 billion FY2025 revenue base, supported by $7.164 billion in operating cash flow, reflects entrenched customer spending patterns."
+      },
+      {
+        "type": "Scale",
+        "grade": "strong",
+        "summary": "With $23.89 billion in FY2025 revenue and $49.543 billion in stockholders' equity against $15.5 billion in long-term debt, Danaher operates at a scale that supports $1.2 billion in annual capex and a multi-currency debt platform spanning USD, CHF, EUR, and JPY maturities through 2051. This financial capacity enables large acquisitions like the $9.9 billion Masimo deal."
+      },
+      {
+        "type": "Network Effects",
+        "grade": "middle",
+        "summary": "Danaher's three-segment structure spanning Biotechnology, Life Sciences, and Diagnostics creates cross-selling opportunities across research, bioproduction, and clinical workflows, with revenue tracked across North America, Western Europe, Other Developed Markets, and High Growth Markets. The Abcam acquisition completed in December 2023 expanded the life sciences antibody and reagent catalog available to this customer base."
+      }
+    ]
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "symbol": "COP",
+  "companyName": "ConocoPhillips",
+  "updatedAt": "2026-06-22",
+  "facts": [
+    {
+      "topic": "Business Model",
+      "statement": "ConocoPhillips is one of the world's leading exploration and production companies, based on both production and reserves, with a globally diversified asset portfolio, headquartered in Houston, Texas.",
+      "source": "DEF 14A filed 2026-03-30 (https://www.sec.gov/Archives/edgar/data/1163165/000110465926036366/tm2523177-3_def14a.htm)"
+    },
+    {
+      "topic": "Revenue Scale",
+      "statement": "ConocoPhillips reported revenue of $48.522 billion for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0001163165.)"
+    },
+    {
+      "topic": "Profitability",
+      "statement": "ConocoPhillips reported net income of $10.957 billion for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0001163165.)"
+    },
+    {
+      "topic": "Cash Flow",
+      "statement": "ConocoPhillips generated $19.965 billion in operating cash flow for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0001163165.)"
+    },
+    {
+      "topic": "Balance Sheet",
+      "statement": "As of December 31, 2025, ConocoPhillips had stockholders' equity of $48.003 billion and cash and equivalents of $5.607 billion.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0001163165.)"
+    },
+    {
+      "topic": "Production Scale",
+      "statement": "ConocoPhillips' production averaged 2,375 thousand barrels of oil equivalent per day (MBOED) in 2025.",
+      "source": "DEF 14A filed 2026-03-30 (https://www.sec.gov/Archives/edgar/data/1163165/000110465926036366/tm2523177-3_def14a.htm)"
+    },
+    {
+      "topic": "Reserves",
+      "statement": "As of December 31, 2025, ConocoPhillips had proved reserves of 7.6 billion barrels of oil equivalent.",
+      "source": "DEF 14A filed 2026-03-30 (https://www.sec.gov/Archives/edgar/data/1163165/000110465926036366/tm2523177-3_def14a.htm)"
+    },
+    {
+      "topic": "Global Footprint",
+      "statement": "As of December 31, 2025, ConocoPhillips had operations and activities in 14 countries, $122 billion of total assets, and approximately 9,900 employees.",
+      "source": "DEF 14A filed 2026-03-30 (https://www.sec.gov/Archives/edgar/data/1163165/000110465926036366/tm2523177-3_def14a.htm)"
+    },
+    {
+      "topic": "Capital Allocation",
+      "statement": "In 2025, ConocoPhillips achieved its target of returning 45% of cash from operations (CFO) to shareholders through buybacks and the dividend.",
+      "source": "DEF 14A filed 2026-03-30 (https://www.sec.gov/Archives/edgar/data/1163165/000110465926036366/tm2523177-3_def14a.htm)"
+    },
+    {
+      "topic": "Capital Allocation",
+      "statement": "In December 2025, ConocoPhillips increased its ordinary dividend by 8%, in line with its commitment to grow the base dividend at a top-quartile S&P 500 rate.",
+      "source": "DEF 14A filed 2026-03-30 (https://www.sec.gov/Archives/edgar/data/1163165/000110465926036366/tm2523177-3_def14a.htm)"
+    },
+    {
+      "topic": "M&A Integration",
+      "statement": "ConocoPhillips successfully completed the integration of Marathon Oil Corporation, capturing more than $1 billion of synergies and approximately $1 billion of additional one-time benefits, while identifying an incremental $1 billion in cost reduction and margin enhancement opportunities to be captured on a run-rate basis by year-end 2026.",
+      "source": "DEF 14A filed 2026-03-30 (https://www.sec.gov/Archives/edgar/data/1163165/000110465926036366/tm2523177-3_def14a.htm)"
+    },
+    {
+      "topic": "Growth Projects",
+      "statement": "ConocoPhillips advanced the Willow project in Alaska and equity LNG projects at North Field East and North Field South in Qatar and Port Arthur LNG (PALNG) on the U.S. Gulf Coast, and secured total commercial LNG offtake of 10 MTPA.",
+      "source": "DEF 14A filed 2026-03-30 (https://www.sec.gov/Archives/edgar/data/1163165/000110465926036366/tm2523177-3_def14a.htm)"
+    },
+    {
+      "topic": "Operational Efficiency",
+      "statement": "ConocoPhillips achieved a more than 15% improvement in Lower 48 drilling and completion efficiencies year over year in 2025.",
+      "source": "DEF 14A filed 2026-03-30 (https://www.sec.gov/Archives/edgar/data/1163165/000110465926036366/tm2523177-3_def14a.htm)"
+    },
+    {
+      "topic": "Emissions Targets",
+      "statement": "In 2025, ConocoPhillips completed approved emissions abatement projects and met its annual greenhouse gas emissions intensity target, advancing its goal to reduce emissions intensity by 50 to 60% by 2030, and reached zero routine flaring for heritage ConocoPhillips assets.",
+      "source": "DEF 14A filed 2026-03-30 (https://www.sec.gov/Archives/edgar/data/1163165/000110465926036366/tm2523177-3_def14a.htm)"
+    },
+    {
+      "topic": "Management",
+      "statement": "Ryan M. Lance serves as Chairman of the Board of Directors and Chief Executive Officer of ConocoPhillips.",
+      "source": "10-K filed 2026-02-17 (https://www.sec.gov/Archives/edgar/data/1163165/000116316526000009/cop-20251231.htm)"
+    },
+    {
+      "topic": "Management",
+      "statement": "Andrew M. O'Brien serves as Chief Financial Officer and Executive Vice President, Strategy and Commercial (principal financial officer) of ConocoPhillips.",
+      "source": "10-K filed 2026-02-17 (https://www.sec.gov/Archives/edgar/data/1163165/000116316526000009/cop-20251231.htm)"
+    },
+    {
+      "topic": "Management",
+      "statement": "Kontessa S. Haynes-Welsh serves as Vice President, Finance and Controller (principal accounting officer) of ConocoPhillips.",
+      "source": "10-K filed 2026-02-17 (https://www.sec.gov/Archives/edgar/data/1163165/000116316526000009/cop-20251231.htm)"
+    },
+    {
+      "topic": "Governance",
+      "statement": "Robert A. Niblock serves as Lead Director of the ConocoPhillips Board, and the Board has recommended a vote against a stockholder proposal for an Independent Board Chairman at the 2026 Annual Meeting.",
+      "source": "DEF 14A filed 2026-03-30 (https://www.sec.gov/Archives/edgar/data/1163165/000110465926036366/tm2523177-3_def14a.htm)"
+    },
+    {
+      "topic": "Board Composition",
+      "statement": "ConocoPhillips' Board of Directors consists of 13 director nominees standing for election at the 2026 Annual Meeting, including directors Dennis V. Arriola, Nelda J. Connors, Gay Huey Evans, Jeffrey A. Joerres, Ryan M. Lance, Timothy A. Leach, Kathleen A. McGinty, William H. McRaven, Sharmila Mulligan, Arjun N. Murti, Robert A. Niblock, David T. Seaton, and R.A. Walker.",
+      "source": "DEF 14A filed 2026-03-30 (https://www.sec.gov/Archives/edgar/data/1163165/000110465926036366/tm2523177-3_def14a.htm)"
+    },
+    {
+      "topic": "Capital Expenditure",
+      "statement": "In 2025, ConocoPhillips incurred total costs of $12,364 million in consolidated operations for oil and gas activities, including $11,174 million in development costs and $928 million in exploration costs.",
+      "source": "10-K filed 2026-02-17 (https://www.sec.gov/Archives/edgar/data/1163165/000116316526000009/cop-20251231.htm)"
+    },
+    {
+      "topic": "Reserve Valuation",
+      "statement": "The standardized measure of discounted future net cash flows relating to proved oil and gas reserve quantities was $55,962 million for total company (consolidated operations and equity affiliates) at year-end 2025, down from $70,863 million at year-end 2024.",
+      "source": "10-K filed 2026-02-17 (https://www.sec.gov/Archives/edgar/data/1163165/000116316526000009/cop-20251231.htm)"
+    },
+    {
+      "topic": "Asset Dispositions",
+      "statement": "During 2025, ConocoPhillips classified certain noncore Lower 48 assets, including Ursa/Europa Fields and the Ursa Oil Pipeline Company LLC, and Lower 48 assets in the Anadarko Basin, as disposal groups disposed of by sale.",
+      "source": "10-K filed 2026-02-17 (https://www.sec.gov/Archives/edgar/data/1163165/000116316526000009/cop-20251231.htm)"
+    },
+    {
+      "topic": "R&D",
+      "statement": "ConocoPhillips reported research and development expense of $81 million for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0001163165.)"
+    },
+    {
+      "topic": "Industry Classification",
+      "statement": "ConocoPhillips is classified under the SEC SIC description of 'Petroleum Refining' and is listed on the NYSE under the ticker symbol COP.",
+      "source": "SEC submissions metadata (https://data.sec.gov/submissions/CIK0001163165.)"
+    }
+  ]
+}

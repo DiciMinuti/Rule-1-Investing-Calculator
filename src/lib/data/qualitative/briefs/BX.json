@@ -1,0 +1,83 @@
+{
+  "symbol": "BX",
+  "companyName": "Blackstone Group",
+  "generatedAt": "2026-06-22",
+  "management": {
+    "grade": "strong",
+    "sections": [
+      {
+        "title": "Leadership",
+        "grade": "strong",
+        "summary": "Stephen A. Schwarzman serves as CEO and Chairman, with Jonathan D. Gray as President and COO, overseeing Blackstone's four operating segments. Michael S. Chae acts as Vice Chairman and CFO, and Joseph P. Baratta serves as a senior executive and director.",
+        "points": [
+          "Schwarzman holds both CEO and Chairman roles, consolidating strategic direction and board leadership in a single executive at the firm generating $8.02 billion in FY2025 revenue.",
+          "Gray's dual President and COO role places day-to-day operating leadership across Real Estate, Private Equity, Credit and Insurance, and Multi-Asset Investing segments under one executive.",
+          "Chae's combined Vice Chairman and CFO title means principal financial officer duties sit with a senior executive who also holds broader governance responsibilities."
+        ]
+      },
+      {
+        "title": "Capital Allocation",
+        "grade": "middle",
+        "summary": "Blackstone maintains long-term debt of approximately $12.58 billion against cash of $1.97 billion and stockholders' equity of $8.21 billion as of FY2025. The firm drew $900 million on its revolving credit facility in February 2026 and repaid secured borrowings due 2033 and 2035 during 2025.",
+        "points": [
+          "The February 2026 $900 million revolver draw occurred while the firm carried approximately $12.58 billion in long-term debt against $1.97 billion in cash, indicating active balance sheet management.",
+          "Secured Borrowings due 10/27/2033 and 1/29/2035 were repaid during FY2025, reducing secured obligations while the CLO Notes Payable were fully deconsolidated with no outstanding borrowings.",
+          "Blackstone pays quarterly dividends, with fourth quarter dividends for any fiscal year declared and paid in the subsequent fiscal year, creating a lag between earnings and distribution."
+        ]
+      },
+      {
+        "title": "Shareholder Alignment",
+        "grade": "middle",
+        "summary": "Blackstone uses the Amended and Restated 2007 Equity Incentive Plan to issue deferred unit and phantom unit agreements to directors, executives, and employees. The plan ties compensation to equity-like instruments rather than direct stock grants.",
+        "points": [
+          "The 2007 Equity Incentive Plan issues deferred unit and phantom unit agreements rather than standard stock options, creating equity-linked compensation for directors, executive officers, and employees.",
+          "An Incentive Compensation Clawback Policy exists within the governance framework, providing a mechanism to recover incentive pay under specified circumstances."
+        ]
+      },
+      {
+        "title": "Communication",
+        "grade": "middle",
+        "summary": "Blackstone reports across four operating segments-Real Estate, Private Equity, Credit and Insurance, and Multi-Asset Investing-with segment presentation that excludes consolidating Blackstone Funds effects. The 10-K filed February 27, 2026 details performance revenues, principal investment income, and net management fees.",
+        "points": [
+          "Segment reporting adjusts for consolidating Blackstone Funds by excluding performance revenues, principal investment income, and net management fees earned from those funds, giving investors a view of the firm's own operations.",
+          "The 10-K disclosure specifies Revolving Credit Facility pricing at 0.75% above adjusted SOFR plus a 0.10% credit spread adjustment, subject to change based on Blackstone's credit rating."
+        ]
+      },
+      {
+        "title": "Governance",
+        "grade": "middle",
+        "summary": "The Board includes external members James W. Breyer, Reginald J. Brown, Rochelle B. Lazarus, William G. Parrett, and Ruth Porat alongside insider directors. The Revolving Credit Facility imposes quarterly-tested covenants requiring a maximum net leverage ratio and minimum fee-earning AUM.",
+        "points": [
+          "External directors include Ruth Porat and William G. Parrett, bringing outside oversight to a board that also includes senior executives Schwarzman, Gray, and Baratta as director-insiders.",
+          "Holders of 25% or more in aggregate principal amount of outstanding senior notes may declare notes immediately due upon an event of default, creating a bondholder-driven governance constraint.",
+          "The Revolving Credit Facility's financial covenants require maintaining a maximum net leverage ratio and minimum fee-earning assets under management, tested quarterly, linking governance to operating metrics."
+        ]
+      }
+    ]
+  },
+  "moat": {
+    "grade": "strong",
+    "types": [
+      {
+        "type": "Scale Advantages",
+        "grade": "strong",
+        "summary": "Blackstone generated $8.02 billion in FY2025 total revenue across four segments-Real Estate, Private Equity, Credit and Insurance, and Multi-Asset Investing-producing $4.06 billion in operating cash flow. The firm's $8.21 billion in stockholders' equity and $12.58 billion in long-term debt reflect a balance sheet sized for large-scale alternative asset management."
+      },
+      {
+        "type": "Switching Costs",
+        "grade": "middle",
+        "summary": "Blackstone's Revolving Credit Facility covenants require maintaining a minimum amount of fee-earning assets under management, tested quarterly, indicating that fee-earning AUM is a critical and persistent revenue base. The firm's segment structure spans Real Estate, Private Equity, Credit and Insurance, and Multi-Asset Investing, embedding clients across multiple product families."
+      },
+      {
+        "type": "Network Effects",
+        "grade": "middle",
+        "summary": "Blackstone Fund Facilities provide borrowing capacity for consolidated funds to meet liquidity and investing needs, with borrowings bearing interest at spreads to market rates. The four-segment platform spanning Real Estate, Private Equity, Credit and Insurance, and Multi-Asset Investing connects deal flow, capital raising, and fund operations across asset classes."
+      },
+      {
+        "type": "Intangible Assets",
+        "grade": "strong",
+        "summary": "Blackstone operates under SIC code 'Investment Advice' with $1.39 billion in FY2025 net income, supported by unsecured and unsubordinated senior notes fully and jointly guaranteed by Blackstone and its guarantors. The firm's ability to issue guaranteed senior debt at spreads tied to its credit rating reflects institutional credibility in capital markets."
+      }
+    ]
+  }
+}

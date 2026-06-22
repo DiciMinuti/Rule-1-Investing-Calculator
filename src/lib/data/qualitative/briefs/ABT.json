@@ -1,0 +1,80 @@
+{
+  "symbol": "ABT",
+  "companyName": "Abbott Laboratories",
+  "generatedAt": "2026-06-22",
+  "management": {
+    "grade": "strong",
+    "sections": [
+      {
+        "title": "Leadership",
+        "grade": "strong",
+        "summary": "CEO Robert B. Ford chairs the board and leads a diversified healthcare company generating $40.1 billion in FY2025 revenue with $5.7 billion in net income. CFO Philip P. Boudreau and Controller John A. McCoy, Jr. round out the principal financial team that certified effective internal controls.",
+        "points": [
+          "Robert B. Ford serves as both Chairman and CEO, having signed the FY2025 10-K on February 20, 2026, consolidating board and executive leadership under one accountable leader.",
+          "CFO Philip P. Boudreau and Controller John A. McCoy, Jr. together certified that disclosure controls were effective as of December 31, 2025, supported by an unqualified Ernst & Young audit opinion."
+        ]
+      },
+      {
+        "title": "Capital Allocation",
+        "grade": "strong",
+        "summary": "Abbott returned $5 billion to shareholders in 2025 while funding $2.7 billion in R&D and pursuing a transformative merger with Exact Sciences. The company maintains a disciplined balance sheet with $7.6 billion in cash against $12.6 billion in long-term debt.",
+        "points": [
+          "Abbott spent $2.74 billion on R&D in FY2025, representing approximately 6.8% of revenue, sustaining innovation across its four operating segments including Medical Devices and Diagnostics.",
+          "The November 2025 Exact Sciences merger agreement references a Senior Unsecured Bridge Term Loan Facility, signaling willingness to lever up for strategic acquisitions while maintaining investment-grade debt structure."
+        ]
+      },
+      {
+        "title": "Shareholder Alignment",
+        "grade": "strong",
+        "summary": "Abbott's 54th consecutive year of dividend increases includes a 6.8% raise for 2026, while one-year TSR of 13% in 2025 nearly doubled the 7% peer median. Three- and five-year TSR of 21% and 25% respectively also exceeded peer benchmarks.",
+        "points": [
+          "Executive compensation features 100% performance-based short-term and long-term incentives with no guaranteed bonuses and no employment contracts, tying pay directly to results.",
+          "The compensation program includes double-trigger change-in-control benefits, capped incentive awards, no tax gross-ups, and prohibits hedging or pledging of company shares by executives."
+        ]
+      },
+      {
+        "title": "Communication",
+        "grade": "strong",
+        "summary": "Abbott's 10-K provides detailed segment reporting across four divisions with sub-category breakdowns and three years of geographic data for U.S. and non-U.S. markets. The DEF 14A discloses TSR comparisons, say-on-pay results, and shareholder engagement statistics.",
+        "points": [
+          "The 10-K reports Medical Devices results across seven sub-categories including Diabetes Care and Neuromodulation, with Diagnostics broken into five sub-categories including COVID-19 Testing, all split by U.S. and non-U.S. geographies for FY2023 through FY2025.",
+          "Abbott's DEF 14A discloses that in 2025 the company contacted shareholders representing over 60% of outstanding shares to discuss compensation and governance topics, resulting in an average 91% say-on-pay support over six years."
+        ]
+      },
+      {
+        "title": "Governance",
+        "grade": "strong",
+        "summary": "A 12-director board includes five independent directors added in the last five years to diversify skills and perspectives. The board oversees a compensation program with 91% average say-on-pay support and has refreshed leadership while maintaining oversight of restructuring and M&A activity.",
+        "points": [
+          "The 12 director nominees for the 2026 Annual Meeting include leaders with medical, military, financial, and operational backgrounds such as Dr. Nita Ahuja, General Darren W. McDew, and former CEO Michael F. Roman.",
+          "Abbott has implemented restructuring plans in 2023, 2024, and 2025 to streamline operations, with charges allocated across cost of goods sold, R&D, and SG&A, reflecting active board oversight of operational efficiency."
+        ]
+      }
+    ]
+  },
+  "moat": {
+    "grade": "strong",
+    "types": [
+      {
+        "type": "Intangible Assets (Regulatory & Brand)",
+        "grade": "strong",
+        "summary": "Abbott's Established Pharmaceutical Products segment operates across Key Emerging Markets and Other Emerging Markets, leveraging regulatory approvals and localized brand recognition for off-patent drugs. The company has been named FORTUNE's No. 1 medical products and equipment company in 2026."
+      },
+      {
+        "type": "Switching Costs (Installed Base)",
+        "grade": "strong",
+        "summary": "The Medical Devices segment spans Rhythm Management, Electrophysiology, Heart Failure, Structural Heart, Neuromodulation, and Diabetes Care, creating physician-trained installed bases that resist switching. These device categories embed Abbott into clinical workflows across U.S. and non-U.S. hospitals."
+      },
+      {
+        "type": "Scale & Distribution Network",
+        "grade": "strong",
+        "summary": "With $40.1 billion in FY2025 revenue and $7.3 billion in operating cash flow, Abbott operates four diversified segments spanning pharmaceuticals, nutritionals, diagnostics, and devices. This scale funds $2.7 billion in annual R&D and supports a global distribution footprint across emerging and developed markets."
+      },
+      {
+        "type": "Diversification Across Healthcare Categories",
+        "grade": "strong",
+        "summary": "Abbott's four segments-Established Pharmaceuticals, Nutritionals, Diagnostics, and Medical Devices-serve distinct end markets from pediatric formula to electrophysiology catheters. This diversification generated $5.7 billion in net income in FY2025 while reducing dependence on any single therapeutic area or geography."
+      }
+    ]
+  }
+}

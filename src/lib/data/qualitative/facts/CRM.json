@@ -1,0 +1,132 @@
+{
+  "symbol": "CRM",
+  "companyName": "Salesforce",
+  "updatedAt": "2026-06-22",
+  "facts": [
+    {
+      "topic": "Business Model",
+      "statement": "Salesforce is classified under SIC code 'Services-Prepackaged Software' and trades on the NYSE under the ticker CRM.",
+      "source": "SEC submissions metadata (https://data.sec.gov/submissions/CIK0001108524.)"
+    },
+    {
+      "topic": "Revenue Scale",
+      "statement": "Salesforce reported total revenue of $34,857,000,000 for FY2025 (fiscal year ended January 31, 2026), as filed on March 2, 2026.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0001108524.)"
+    },
+    {
+      "topic": "Revenue Scale",
+      "statement": "In the fiscal 2026 proxy letter, CEO Marc Benioff stated that Salesforce achieved full-year revenue of $41.5 billion in fiscal 2026 and is guiding to more than $46 billion in revenue for fiscal 2027.",
+      "source": "DEF 14A filed 2026-04-16 (https://www.sec.gov/Archives/edgar/data/1108524/000110852426000085/crm-20260416.htm)"
+    },
+    {
+      "topic": "Profitability",
+      "statement": "Salesforce reported net income of $4,136,000,000 for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0001108524.)"
+    },
+    {
+      "topic": "Cash Flow",
+      "statement": "Salesforce generated operating cash flow of $10,234,000,000 for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0001108524.)"
+    },
+    {
+      "topic": "R&D Investment",
+      "statement": "Salesforce spent $4,906,000,000 on research and development in FY2025, representing approximately 14% of revenue.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0001108524.)"
+    },
+    {
+      "topic": "Balance Sheet",
+      "statement": "As of January 31, 2026, Salesforce had stockholders' equity of $58,359,000,000, long-term debt of $8,433,000,000, and cash and equivalents of $8,848,000,000.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0001108524.)"
+    },
+    {
+      "topic": "Product Lines",
+      "statement": "Salesforce's 10-K XBRL taxonomy references product lines including Agentforce Sales, Agentforce Service, Agentforce 360 Platform/Slack/Other, Agentforce Marketing/Commerce, and Agentforce Integration/Analytics, indicating a broad AI-agent-enabled CRM platform.",
+      "source": "10-K filed 2026-03-02 (https://www.sec.gov/Archives/edgar/data/1108524/000110852426000060/crm-20260131.htm)"
+    },
+    {
+      "topic": "Product Lines",
+      "statement": "Salesforce reports revenue under two segments: Subscription and Support, and Professional Services and Other, with data reported for fiscal years 2024, 2025, and 2026.",
+      "source": "10-K filed 2026-03-02 (https://www.sec.gov/Archives/edgar/data/1108524/000110852426000060/crm-20260131.htm)"
+    },
+    {
+      "topic": "Product / Growth",
+      "statement": "Agentforce ARR reached $800 million, up 169% year-over-year, and Salesforce has closed 29,000 Agentforce deals with customers including Amazon, Ford, AT&T, and GM.",
+      "source": "DEF 14A filed 2026-04-16 (https://www.sec.gov/Archives/edgar/data/1108524/000110852426000085/crm-20260416.htm)"
+    },
+    {
+      "topic": "Product / Data Platform",
+      "statement": "In fiscal 2026, Salesforce ingested 112 trillion records through Data 360, which along with Agentforce are described as the fastest-growing, most innovative products in the company's history.",
+      "source": "DEF 14A filed 2026-04-16 (https://www.sec.gov/Archives/edgar/data/1108524/000110852426000085/crm-20260416.htm)"
+    },
+    {
+      "topic": "M&A / Capital Allocation",
+      "statement": "Salesforce acquired Regrello Corp. in October 2025 and Informatica Inc. in November 2025; the Informatica acquisition included developed technology rights (cloud and other), customer relationships, trade names, and order backlog as identifiable intangible assets.",
+      "source": "10-K filed 2026-03-02 (https://www.sec.gov/Archives/edgar/data/1108524/000110852426000060/crm-20260131.htm)"
+    },
+    {
+      "topic": "Capital Allocation",
+      "statement": "Salesforce returned $14.3 billion to stockholders in fiscal 2026, including $12.7 billion through share repurchases and $1.6 billion in dividends, and in March 2026 commenced a $25 billion accelerated share repurchase program.",
+      "source": "DEF 14A filed 2026-04-16 (https://www.sec.gov/Archives/edgar/data/1108524/000110852426000085/crm-20260416.htm)"
+    },
+    {
+      "topic": "Capital Allocation / Debt",
+      "statement": "Salesforce's long-term debt structure includes multiple senior notes with maturities ranging from 2028 to 2061, including A2028 Senior Notes, A2028 Senior Sustainability Notes, A2031, A2041, A2051, and A2061 Senior Notes, as well as credit agreements including a 364-Day Credit Agreement and a Three-Year Credit Agreement related to the Informatica acquisition.",
+      "source": "10-K filed 2026-03-02 (https://www.sec.gov/Archives/edgar/data/1108524/000110852426000060/crm-20260131.htm)"
+    },
+    {
+      "topic": "Management",
+      "statement": "Marc Benioff serves as Chair of the Board and Chief Executive Officer; Robin Washington serves as Director, President and Chief Operating and Financial Officer (Principal Financial Officer); Sundeep Reddy serves as Executive Vice President and Chief Accounting Officer; Parker Harris serves as Director and Co-Founder; and Srinivas Tallapragada serves as President and Chief Engineering and Customer Success Officer.",
+      "source": "10-K filed 2026-03-02 (https://www.sec.gov/Archives/edgar/data/1108524/000110852426000060/crm-20260131.htm)"
+    },
+    {
+      "topic": "Board of Directors",
+      "statement": "The Board of Directors nominees for the 2026 annual meeting include Marc Benioff, Laura Alber, Amy Chang, Craig Conway, Arnold Donald, Parker Harris, David B. Kirk, Neelie Kroes, Sachin Mehra, Mason Morfit, Oscar Munoz, John V. Roos, and Robin Washington, with Arnold Donald serving as Lead Independent Director.",
+      "source": "DEF 14A filed 2026-04-16 (https://www.sec.gov/Archives/edgar/data/1108524/000110852426000085/crm-20260416.htm)"
+    },
+    {
+      "topic": "Governance",
+      "statement": "Salesforce has adopted a Code of Conduct applicable to all employees including CEO Marc Benioff, Principal Financial Officer Robin Washington, and Principal Accounting Officer Sundeep Reddy, and maintains an Insider Trading Policy and an Executive Officer Incentive Compensation Recovery Policy.",
+      "source": "10-K filed 2026-03-02 (https://www.sec.gov/Archives/edgar/data/1108524/000110852426000060/crm-20260131.htm)"
+    },
+    {
+      "topic": "Equity Compensation",
+      "statement": "Salesforce is seeking stockholder approval to amend and restate its 2013 Equity Incentive Plan to increase the shares reserved for issuance by 34 million shares and extend the plan term, and to amend and restate its 2004 Employee Stock Purchase Plan to increase shares reserved by 20 million shares.",
+      "source": "DEF 14A filed 2026-04-16 (https://www.sec.gov/Archives/edgar/data/1108524/000110852426000085/crm-20260416.htm)"
+    },
+    {
+      "topic": "Insider Trading",
+      "statement": "On December 18, 2025, Parker Harris adopted a Rule 10b5-1 trading arrangement for the sale and donation of up to 154,725 shares through December 18, 2026, and on January 12, 2026, Srinivas Tallapragada adopted a Rule 10b5-1 trading arrangement for the sale of up to 22,904 shares through January 12, 2027.",
+      "source": "10-K filed 2026-03-02 (https://www.sec.gov/Archives/edgar/data/1108524/000110852426000060/crm-20260131.htm)"
+    },
+    {
+      "topic": "Operating Margin",
+      "statement": "Salesforce closed fiscal 2026 with a non-GAAP operating margin of 34.1% and $72.4 billion in total remaining performance obligations (RPO).",
+      "source": "DEF 14A filed 2026-04-16 (https://www.sec.gov/Archives/edgar/data/1108524/000110852426000085/crm-20260416.htm)"
+    },
+    {
+      "topic": "Geographic Revenue",
+      "statement": "Salesforce reports revenue by geography including the Americas, Europe, and Asia Pacific, and separately discloses U.S. versus non-U.S. revenue and assets for geographic concentration risk.",
+      "source": "10-K filed 2026-03-02 (https://www.sec.gov/Archives/edgar/data/1108524/000110852426000060/crm-20260131.htm)"
+    },
+    {
+      "topic": "Risk Factors / Litigation",
+      "statement": "Salesforce faces multiple lawsuits related to its former customer Website Technologies, LLC (an affiliate of Backpage.com), with plaintiffs alleging Salesforce's CRM software facilitated sex trafficking; these include consolidated cases in the Northern District of Illinois (G.G. consolidated cases with 244 plaintiffs), the Southern District of Texas (A.B.), the Northern District of Texas (S.M.A. and A.S.), and a Texas state court MDL, with several actions stayed pending criminal proceedings involving Backpage.",
+      "source": "10-K filed 2026-03-02 (https://www.sec.gov/Archives/edgar/data/1108524/000110852426000060/crm-20260131.htm)"
+    },
+    {
+      "topic": "Risk Factors / Litigation",
+      "statement": "The Slack class action securities litigation (Dennee v. Slack Technologies, Inc.) concluded in November 2025 when the district court entered judgment for defendants in the Federal Action; however, a related State Court Action (In re Slack Technologies, Inc. Shareholder Litigation) was revived in November 2025 when the stay was lifted to permit discovery and a renewed motion for class certification.",
+      "source": "10-K filed 2026-03-02 (https://www.sec.gov/Archives/edgar/data/1108524/000110852426000060/crm-20260131.htm)"
+    },
+    {
+      "topic": "Strategic Outlook",
+      "statement": "Following the Informatica acquisition, Salesforce increased its fiscal 2030 revenue target to $63 billion, with the Lead Independent Director noting that early Informatica momentum is validating the company's disciplined M&A strategy underpinned by a return-on-invested-capital framework.",
+      "source": "DEF 14A filed 2026-04-16 (https://www.sec.gov/Archives/edgar/data/1108524/000110852426000085/crm-20260416.htm)"
+    },
+    {
+      "topic": "Internal Controls",
+      "statement": "Salesforce's management excluded the internal control activities of recently acquired Regrello and Informatica from its FY2026 assessment of internal control over financial reporting, as these acquisitions together represented less than one percent of consolidated total revenues and total operating expenses and approximately one percent of consolidated total assets and net assets.",
+      "source": "10-K filed 2026-03-02 (https://www.sec.gov/Archives/edgar/data/1108524/000110852426000060/crm-20260131.htm)"
+    }
+  ]
+}

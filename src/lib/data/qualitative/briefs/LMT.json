@@ -1,0 +1,80 @@
+{
+  "symbol": "LMT",
+  "companyName": "Lockheed Martin",
+  "generatedAt": "2026-06-22",
+  "management": {
+    "grade": "middle",
+    "sections": [
+      {
+        "title": "Leadership",
+        "grade": "middle",
+        "summary": "James D. Taiclet serves as Chairman, President, and CEO, while Evan T. Scott acts as CFO. Leadership is driving modernization through the 1LMX initiative and F-35 Block 4 upgrades, though the F-35 program remains a product concentration risk.",
+        "points": [
+          "James D. Taiclet holds the combined roles of Chairman, President, and CEO, leading strategic initiatives like the 1LMX digital transformation and F-35 Block 4 enhancements.",
+          "Evan T. Scott serves as CFO, overseeing a financial structure that generated $67.571 billion in FY2025 revenue and $6.92 billion in net income."
+        ]
+      },
+      {
+        "title": "Capital Allocation",
+        "grade": "middle",
+        "summary": "The company allocated $2.0 billion to Independent R&D and $1.6 billion to capital expenditures in 2025. This investment strategy yielded a 6% top-line sales increase and $6.9 billion in free cash flow, supporting ongoing program development.",
+        "points": [
+          "In 2025, Lockheed Martin invested $2.0 billion in Independent Research & Development and $1.6 billion in Capital Expenditures to drive enterprise-wide modernization and program advancements.",
+          "Capital deployment generated $6.9 billion in non-GAAP Free Cash Flow, with adjusted free cash flow reaching $7.704 billion after accounting for pension contributions and tariff impacts."
+        ]
+      },
+      {
+        "title": "Shareholder Alignment",
+        "grade": "middle",
+        "summary": "Executive compensation utilizes a 2023-2025 ROIC performance cycle that achieved a 19.82% return. Equity compensation plans maintain 6.8 million securities available for future issuance to align management with long-term value creation.",
+        "points": [
+          "The 2023-2025 performance cycle ROIC was 19.82%, calculated on $33.929 billion in average invested capital, with adjustments for pension settlements and the One Big Beautiful Bill Act.",
+          "As of December 31, 2025, 3,096,235 securities were outstanding under equity compensation plans with a weighted-average exercise price of zero, linking executive rewards to stock performance."
+        ]
+      },
+      {
+        "title": "Communication",
+        "grade": "middle",
+        "summary": "Lockheed Martin provides detailed segment reporting across Aeronautics, Missiles and Fire Control, Rotary and Mission Systems, and Space. The 10-K filing disaggregates revenue by U.S. Government, International, and U.S. Commercial customers across geographic regions.",
+        "points": [
+          "Financial disclosures break down revenue by customer type, including U.S. Government, International, and U.S. Commercial, with geographic splits across Europe, Asia Pacific, and the Middle East.",
+          "The 10-K utilizes XBRL taxonomy to classify fixed-price and cost-reimbursable contracts across all four operating segments, providing granular visibility into contract risk structures."
+        ]
+      },
+      {
+        "title": "Governance",
+        "grade": "middle",
+        "summary": "The Board includes nine director nominees with Thomas J. Falk as Independent Lead Director, while Gen. Joseph F. Dunford, Jr. departs. The company maintains a written ethics code since 1995 and effective internal controls verified by Ernst & Young.",
+        "points": [
+          "The Board of Directors comprises nine nominees for the 2026 Annual Meeting, with Thomas J. Falk serving as Independent Lead Director and Gen. Joseph F. Dunford, Jr. not standing for reelection.",
+          "Management concluded internal controls were effective as of December 31, 2025, based on the COSO 2013 framework, earning an unqualified opinion from Ernst & Young LLP."
+        ]
+      }
+    ]
+  },
+  "moat": {
+    "grade": "strong",
+    "types": [
+      {
+        "type": "Switching Costs",
+        "grade": "strong",
+        "summary": "Lockheed Martin sustains a record backlog of nearly $194 billion, representing more than two-and-a-half years of sales. This backlog reflects high switching costs for government customers reliant on complex platforms like the F-35 and Aegis combat system."
+      },
+      {
+        "type": "Intangible Assets",
+        "grade": "strong",
+        "summary": "The company holds proprietary positions across critical defense programs, including the F-35 Lightning II, HIMARS, and Trident II/D5. These intangible assets are protected by classified technology, export restrictions, and deep integration with U.S. Government defense systems."
+      },
+      {
+        "type": "Cost Advantage",
+        "grade": "middle",
+        "summary": "With FY2025 revenue of $67.571 billion and $1.5 billion in R&D expense, Lockheed Martin leverages scale across its four segments to spread development costs. The Aeronautics segment alone generated $30.3 billion, demonstrating significant production volume advantages."
+      },
+      {
+        "type": "Efficient Scale",
+        "grade": "strong",
+        "summary": "As a prime contractor in guided missiles and space vehicles, Lockheed Martin operates in a market with limited prime competitors. The Space segment's $13.0 billion in sales spans specialized programs like Next Gen OPIR GEO and Orion, where few firms possess the required certifications."
+      }
+    ]
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "symbol": "IBKR",
+  "companyName": "Interactive Brokers",
+  "generatedAt": "2026-06-22",
+  "management": {
+    "grade": "strong",
+    "sections": [
+      {
+        "title": "Leadership",
+        "grade": "strong",
+        "summary": "Founder Thomas Peterffy chairs the board after serving as CEO from November 2006 to September 2019, while CEO Milan Galik and CFO Paul J. Brody run daily operations. The company traces its roots to Peterffy's 1977 market-making business on the American Stock Exchange floor.",
+        "points": [
+          "Thomas Peterffy founded the business in 1977 and served as CEO from November 2006 to September 2019 before handing the role to Milan Galik, who holds the CEO and President titles.",
+          "Paul J. Brody serves as CFO, Treasurer, and Secretary, overseeing a company with 3,182 employees worldwide and offices across North America, Europe, Asia, the Middle East, and Australia."
+        ]
+      },
+      {
+        "title": "Capital Allocation",
+        "grade": "strong",
+        "summary": "The company generated $4.544 billion in operating cash flow against $1.557 billion in revenue for FY2025, holding $3.753 billion in cash and $4.28 billion in stockholders' equity. In April 2025 it executed a four-for-one forward stock split via stock dividend.",
+        "points": [
+          "FY2025 operating cash flow of $4.544 billion dwarfed revenue of $1.557 billion, reflecting the custodial and brokerage nature of client balances held on the balance sheet.",
+          "The company announced a four-for-one forward stock split on April 15, 2025, with each holder of record on June 16, 2025 receiving three additional shares, resulting in 445,439,458 Class A shares outstanding by February 2026."
+        ]
+      },
+      {
+        "title": "Shareholder Alignment",
+        "grade": "strong",
+        "summary": "IBG, Inc. owns approximately 26.3% of IBG LLC membership interests while founder Thomas Peterffy and affiliates, management, employees, and other members hold the remaining 73.7% through IBG Holdings LLC. The 2007 Stock Incentive Plan has been used exclusively for RSUs.",
+        "points": [
+          "Founder Thomas Peterffy and affiliates, along with management and employees, retain approximately 73.7% of IBG LLC economic interests through IBG Holdings LLC, keeping insider ownership high.",
+          "The company granted 1,876,533 RSU awards during 2025, including 317,620 to executive officers, with 35,930,685 RSUs still available for future issuance under the 2007 Stock Incentive Plan."
+        ]
+      },
+      {
+        "title": "Communication",
+        "grade": "strong",
+        "summary": "The company files a 10-K with the SEC and a DEF 14A proxy statement detailing equity compensation, ownership structure, and voting control. Management concluded disclosure controls were effective as of December 31, 2025, with Deloitte issuing an unqualified internal controls opinion.",
+        "points": [
+          "The 10-K filed February 27, 2026 provides detailed segment and structural disclosures including the IBG LLC holding company structure, geographic office locations, and employee headcount of 3,182.",
+          "The DEF 14A filed March 11, 2026 discloses the 2007 Stock Incentive Plan amendment to extend through April 24, 2037, RSU grant totals, and the expected 73.7% voting control by IBG Holdings LLC at the 2026 annual meeting."
+        ]
+      },
+      {
+        "title": "Governance",
+        "grade": "strong",
+        "summary": "IBG Holdings LLC is expected to control approximately 73.7% of votes at the 2026 annual meeting, though Class B shares do not carry supervoting rights. The company maintains a Code of Ethics and Business Conduct and an Insider Trading Policy covering directors, officers, employees, and family members.",
+        "points": [
+          "Class B shares are voted on an as-converted basis without supervoting rights, but IBG Holdings LLC's 73.7% economic stake still concentrates voting control with founder Thomas Peterffy and affiliates.",
+          "The Code of Ethics and Business Conduct applies to all directors, officers, and employees including the CEO, CFO, and Chief Accounting Officer, and an Insider Trading Policy covers controlled entities and family members."
+        ]
+      }
+    ]
+  },
+  "moat": {
+    "grade": "strong",
+    "types": [
+      {
+        "type": "Cost Advantage",
+        "grade": "strong",
+        "summary": "Nearly five decades of developing automated trading platforms and automating middle- and back-office functions have made Interactive Brokers one of the lowest-cost providers of broker-dealer services, supported by only 3,182 employees worldwide."
+      },
+      {
+        "type": "Technology",
+        "grade": "strong",
+        "summary": "Since inception the company has focused on developing proprietary software to automate broker-dealer functions and integrate with an increasing number of trading venues across stocks, options, futures, forex, bonds, ETFs, and cryptocurrencies."
+      },
+      {
+        "type": "Scale",
+        "grade": "strong",
+        "summary": "With $1.557 billion in FY2025 revenue and $4.544 billion in operating cash flow, Interactive Brokers services hedge funds, mutual funds, ETFs, RIAs, proprietary trading groups, introducing brokers, and individual investors from offices across four continents."
+      },
+      {
+        "type": "Switching Costs",
+        "grade": "middle",
+        "summary": "The company custodies and services accounts for institutional clients including hedge funds, registered investment advisors, and introducing brokers who route orders across multiple asset classes through its proprietary automated platform, creating operational integration that raises relocation friction."
+      }
+    ]
+  }
+}

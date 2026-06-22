@@ -1,0 +1,127 @@
+{
+  "symbol": "T",
+  "companyName": "AT&T",
+  "updatedAt": "2026-06-22",
+  "facts": [
+    {
+      "topic": "Business Model",
+      "statement": "AT&T is classified under SIC code 'Telephone Communications (No Radiotelephone)' and is listed on the NYSE under ticker symbol T.",
+      "source": "SEC submissions metadata (https://data.sec.gov/submissions/CIK0000732717.)"
+    },
+    {
+      "topic": "Revenue Scale",
+      "statement": "AT&T reported total revenue of $122,428 million for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000732717.)"
+    },
+    {
+      "topic": "Profitability",
+      "statement": "AT&T reported net income of $14,400 million for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000732717.)"
+    },
+    {
+      "topic": "Cash Flow",
+      "statement": "AT&T generated $38,314 million in operating cash flow for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000732717.)"
+    },
+    {
+      "topic": "Capital Structure",
+      "statement": "AT&T had long-term debt of $122,116 million as of FY2025 year-end.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000732717.)"
+    },
+    {
+      "topic": "Liquidity",
+      "statement": "AT&T held cash and cash equivalents of $3,701 million at FY2025 year-end per SEC company facts, while the 10-K reports cash and cash equivalents of $18,234 million including restricted cash of $293 million.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000732717.); 10-K filed 2026-02-09 (https://www.sec.gov/Archives/edgar/data/732717/000073271726000120/t-20251231.htm)"
+    },
+    {
+      "topic": "Segment Structure",
+      "statement": "AT&T's operating segments include Mobility, Business Wireline, and Consumer Wireline within the Communications segment, plus a Latin America Business segment.",
+      "source": "10-K filed 2026-02-09 (https://www.sec.gov/Archives/edgar/data/732717/000073271726000120/t-20251231.htm)"
+    },
+    {
+      "topic": "Service Lines",
+      "statement": "AT&T categorizes its service revenues across Wireless Service, Business Service, IP Broadband, Legacy Voice and Data, and Other Service categories within each operating segment.",
+      "source": "10-K filed 2026-02-09 (https://www.sec.gov/Archives/edgar/data/732717/000073271726000120/t-20251231.htm)"
+    },
+    {
+      "topic": "Capital Expenditures",
+      "statement": "AT&T's total capital expenditures were $20,842 million in 2025, including $20,677 million for property and equipment and $165 million in capitalized interest.",
+      "source": "10-K filed 2026-02-09 (https://www.sec.gov/Archives/edgar/data/732717/000073271726000120/t-20251231.htm)"
+    },
+    {
+      "topic": "Capital Allocation",
+      "statement": "AT&T returned $12.4 billion to stockholders through dividends and share repurchases in 2025, representing more than a 50% increase from the prior year.",
+      "source": "DEF 14A filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/732717/000119312526119888/d919223ddef14a.htm)"
+    },
+    {
+      "topic": "Interest Expense",
+      "statement": "AT&T's total interest expense was $6,804 million in 2025, down from $6,759 million in 2024 and $6,704 million in 2023.",
+      "source": "10-K filed 2026-02-09 (https://www.sec.gov/Archives/edgar/data/732717/000073271726000120/t-20251231.htm)"
+    },
+    {
+      "topic": "Management",
+      "statement": "John T. Stankey serves as Chairman of the Board, Chief Executive Officer and President of AT&T.",
+      "source": "10-K filed 2026-02-09 (https://www.sec.gov/Archives/edgar/data/732717/000073271726000120/t-20251231.htm)"
+    },
+    {
+      "topic": "Management",
+      "statement": "Pascal Desroches serves as Senior Executive Vice President and Chief Financial Officer of AT&T.",
+      "source": "10-K filed 2026-02-09 (https://www.sec.gov/Archives/edgar/data/732717/000073271726000120/t-20251231.htm)"
+    },
+    {
+      "topic": "Management",
+      "statement": "Sabrina Sanders serves as Senior Vice President, Chief Accounting Officer and Controller of AT&T.",
+      "source": "10-K filed 2026-02-09 (https://www.sec.gov/Archives/edgar/data/732717/000073271726000120/t-20251231.htm)"
+    },
+    {
+      "topic": "Board of Directors",
+      "statement": "AT&T's board nominees for 2026 include Kelly J. Grier, William E. Kennard, Stephen J. Luczo, Marissa A. Mayer, Michael B. McCallister, Beth E. Mooney, Matthew K. Rose, John T. Stankey, Cynthia B. Taylor, and Luis A. Ubiñas.",
+      "source": "DEF 14A filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/732717/000119312526119888/d919223ddef14a.htm)"
+    },
+    {
+      "topic": "Governance",
+      "statement": "Bill Kennard serves as Independent Lead Director of the AT&T Board, while the Audit Committee members include Messrs. Luczo and McCallister, and Mses. Mayer and Taylor.",
+      "source": "DEF 14A filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/732717/000119312526119888/d919223ddef14a.htm); 10-K filed 2026-02-09 (https://www.sec.gov/Archives/edgar/data/732717/000073271726000120/t-20251231.htm)"
+    },
+    {
+      "topic": "Strategic Divestiture",
+      "statement": "On July 2, 2025, AT&T sold its interest in DIRECTV to TPG; AT&T's share of DIRECTV earnings included in equity in net income of affiliates was $1,926 million in 2025.",
+      "source": "10-K filed 2026-02-09 (https://www.sec.gov/Archives/edgar/data/732717/000073271726000120/t-20251231.htm)"
+    },
+    {
+      "topic": "Strategic Asset - FirstNet",
+      "statement": "Under the 25-year FirstNet agreement, AT&T receives 20 MHz of spectrum and has a contractual commitment to make sustainability payments of $18,000 million over the contract term, with $420 million submitted in 2025.",
+      "source": "10-K filed 2026-02-09 (https://www.sec.gov/Archives/edgar/data/732717/000073271726000120/t-20251231.htm)"
+    },
+    {
+      "topic": "Strategic Acquisition",
+      "statement": "AT&T entered into a License Purchase Agreement dated August 25, 2025 with EchoStar Corporation through AT&T Mobility II LLC, and a Purchase Agreement dated May 21, 2025 with Lumen Technologies through AT&T DW Holdings, Inc.",
+      "source": "10-K filed 2026-02-09 (https://www.sec.gov/Archives/edgar/data/732717/000073271726000120/t-20251231.htm)"
+    },
+    {
+      "topic": "Credit Facilities",
+      "statement": "AT&T entered into a $12 billion Second Amended and Restated Credit Agreement and a $17.5 billion Delayed Draw Term Loan Credit Agreement, both dated November 3, 2025.",
+      "source": "10-K filed 2026-02-09 (https://www.sec.gov/Archives/edgar/data/732717/000073271726000120/t-20251231.htm)"
+    },
+    {
+      "topic": "Workforce and Labor Risk",
+      "statement": "As of December 31, 2025, AT&T employed approximately 133,030 persons, with approximately 43% represented by unions including the CWA and IBEW; several collective bargaining agreements covering approximately 15,100 employees are set to expire in 2026.",
+      "source": "10-K filed 2026-02-09 (https://www.sec.gov/Archives/edgar/data/732717/000073271726000120/t-20251231.htm)"
+    },
+    {
+      "topic": "Strategy",
+      "statement": "AT&T's strategy focuses on becoming the best advanced connectivity provider in America through investments in fiber and 5G networks, with a goal of discontinuing legacy services in the large majority of its footprint by the end of 2029.",
+      "source": "DEF 14A filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/732717/000119312526119888/d919223ddef14a.htm)"
+    },
+    {
+      "topic": "Contingent Liabilities",
+      "statement": "AT&T's purchase obligations are expected to be approximately $8,545 million in 2026, $10,698 million in total for 2027-2028, $2,505 million in total for 2029-2030, and $2,890 million in total for years thereafter.",
+      "source": "10-K filed 2026-02-09 (https://www.sec.gov/Archives/edgar/data/732717/000073271726000120/t-20251231.htm)"
+    },
+    {
+      "topic": "Internal Controls",
+      "statement": "AT&T management assessed internal control over financial reporting as effective as of December 31, 2025, using the COSO 2013 framework, with Ernst & Young LLP issuing an attestation report.",
+      "source": "10-K filed 2026-02-09 (https://www.sec.gov/Archives/edgar/data/732717/000073271726000120/t-20251231.htm)"
+    }
+  ]
+}

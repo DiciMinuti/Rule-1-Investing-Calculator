@@ -1,0 +1,127 @@
+{
+  "symbol": "APP",
+  "companyName": "AppLovin",
+  "updatedAt": "2026-06-22",
+  "facts": [
+    {
+      "topic": "Business Model",
+      "statement": "AppLovin provides end-to-end AI-powered advertising solutions for businesses to reach, monetize, and grow their global audiences, generating revenue when advertisers achieve their return on advertising spend targets.",
+      "source": "10-K filed 2026-02-19 (https://www.sec.gov/Archives/edgar/data/1751008/000175100826000010/app-20251231.htm)"
+    },
+    {
+      "topic": "Product Lines",
+      "statement": "AppLovin's advertising solutions include Axon Ads Manager (user acquisition powered by Axon AI), MAX (in-app bidding monetization), Adjust (measurement and analytics), and Wurl (connected TV platform).",
+      "source": "10-K filed 2026-02-19 (https://www.sec.gov/Archives/edgar/data/1751008/000175100826000010/app-20251231.htm)"
+    },
+    {
+      "topic": "Competitive Advantage",
+      "statement": "AppLovin states its scaled business model is intricately linked to the advertising ecosystem, providing a durable competitive advantage.",
+      "source": "10-K filed 2026-02-19 (https://www.sec.gov/Archives/edgar/data/1751008/000175100826000010/app-20251231.htm)"
+    },
+    {
+      "topic": "Revenue Scale",
+      "statement": "AppLovin reported revenue of $5,480,717,000 from continuing operations for FY2025, up from $3,224,058,000 in FY2024 and $1,841,762,000 in FY2023.",
+      "source": "10-K filed 2026-02-19 (https://www.sec.gov/Archives/edgar/data/1751008/000175100826000010/app-20251231.htm)"
+    },
+    {
+      "topic": "Profitability",
+      "statement": "Net income from continuing operations was $3,433,195,000 for FY2025, compared to $1,589,524,000 in FY2024 and $457,826,000 in FY2023.",
+      "source": "10-K filed 2026-02-19 (https://www.sec.gov/Archives/edgar/data/1751008/000175100826000010/app-20251231.htm)"
+    },
+    {
+      "topic": "Adjusted EBITDA and Free Cash Flow",
+      "statement": "AppLovin reported $4.5 billion in Adjusted EBITDA (+87% year-over-year) and $4.0 billion in Free Cash Flow (+91% year-over-year) for FY2025.",
+      "source": "DEF 14A filed 2026-04-21 (https://www.sec.gov/Archives/edgar/data/1751008/000175100826000028/app-20260420.htm)"
+    },
+    {
+      "topic": "Segment Structure",
+      "statement": "Following the June 30, 2025 divestiture of its Apps Business (the former Apps segment), AppLovin operates as a single operating and reportable segment at the consolidated level, providing end-to-end advertising solutions.",
+      "source": "10-K filed 2026-02-19 (https://www.sec.gov/Archives/edgar/data/1751008/000175100826000010/app-20251231.htm)"
+    },
+    {
+      "topic": "Capital Allocation - Share Repurchases",
+      "statement": "AppLovin repurchased $2.2 billion of its Class A common stock during FY2025 and increased its repurchase program authorization by $3.2 billion in October 2025.",
+      "source": "DEF 14A filed 2026-04-21 (https://www.sec.gov/Archives/edgar/data/1751008/000175100826000028/app-20260420.htm)"
+    },
+    {
+      "topic": "R&D Spending",
+      "statement": "AppLovin's R&D expense for FY2025 was $333,781,000, as reported in its SEC company facts summary.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0001751008.)"
+    },
+    {
+      "topic": "Balance Sheet - Debt",
+      "statement": "AppLovin had long-term debt of $3,508,983,000 as of December 31, 2025, including senior notes due 2029 (5.125%), 2031 (5.375%), 2034 (5.500%), and 2054 (5.950%).",
+      "source": "10-K filed 2026-02-19 (https://www.sec.gov/Archives/edgar/data/1751008/000175100826000010/app-20251231.htm)"
+    },
+    {
+      "topic": "Balance Sheet - Cash and Equity",
+      "statement": "As of December 31, 2025, AppLovin had cash and equivalents of $697,030,000 and stockholders' equity of $1,902,677,000.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0001751008.)"
+    },
+    {
+      "topic": "Management - CEO",
+      "statement": "Adam Foroughi, age 45, is a co-founder of AppLovin and has served as Chief Executive Officer and a member of the Board of Directors since December 2011. He served as Chairperson from March 2021 until April 2026.",
+      "source": "DEF 14A filed 2026-04-21 (https://www.sec.gov/Archives/edgar/data/1751008/000175100826000028/app-20260420.htm)"
+    },
+    {
+      "topic": "Management - CFO",
+      "statement": "Matthew Stumpf serves as AppLovin's Chief Financial Officer and Principal Financial Officer.",
+      "source": "10-K filed 2026-02-19 (https://www.sec.gov/Archives/edgar/data/1751008/000175100826000010/app-20251231.htm)"
+    },
+    {
+      "topic": "Management - CTO and CAO",
+      "statement": "Vasily Shikin serves as AppLovin's Chief Technology Officer, and Dmitriy Dorosh serves as Vice President, Controller (Principal Accounting Officer).",
+      "source": "10-K filed 2026-02-19 (https://www.sec.gov/Archives/edgar/data/1751008/000175100826000010/app-20251231.htm)"
+    },
+    {
+      "topic": "Board Leadership",
+      "statement": "Craig Billings, CEO of Wynn Resorts, transitioned to the role of independent Chairperson of AppLovin's Board in April 2026, having served as Lead Independent Director since February 2021.",
+      "source": "DEF 14A filed 2026-04-21 (https://www.sec.gov/Archives/edgar/data/1751008/000175100826000028/app-20260420.htm)"
+    },
+    {
+      "topic": "Governance - Board Composition",
+      "statement": "AppLovin's Board is composed of nine directors, six of whom are independent, with 100% independent committees.",
+      "source": "DEF 14A filed 2026-04-21 (https://www.sec.gov/Archives/edgar/data/1751008/000175100826000028/app-20260420.htm)"
+    },
+    {
+      "topic": "Compensation Practices",
+      "statement": "AppLovin uses RSUs as the primary component of executive compensation, has had no executive base salary increases since its IPO, has no annual cash bonus program for executive officers, and has no single-trigger change of control acceleration.",
+      "source": "DEF 14A filed 2026-04-21 (https://www.sec.gov/Archives/edgar/data/1751008/000175100826000028/app-20260420.htm)"
+    },
+    {
+      "topic": "Share Structure",
+      "statement": "AppLovin has a multi-class share structure with Class A common stock (one vote per share) and Class B common stock (twenty votes per share). As of February 13, 2026, there were 307,070,000 Class A shares and 30,208,000 Class B shares outstanding.",
+      "source": "10-K filed 2026-02-19 (https://www.sec.gov/Archives/edgar/data/1751008/000175100826000010/app-20251231.htm)"
+    },
+    {
+      "topic": "Strategic Divestiture",
+      "statement": "On June 30, 2025, AppLovin completed the divestiture of its Apps Business to Tripledot, sharpening its focus on its core advertising platform.",
+      "source": "10-K filed 2026-02-19 (https://www.sec.gov/Archives/edgar/data/1751008/000175100826000010/app-20251231.htm)"
+    },
+    {
+      "topic": "Related Party - Tripledot",
+      "statement": "Following the Apps Business divestiture, AppLovin accounts for its equity interest in Tripledot under the equity method and recognized $19.0 million in revenue from Tripledot's use of its advertising solutions from the closing date through December 31, 2025.",
+      "source": "10-K filed 2026-02-19 (https://www.sec.gov/Archives/edgar/data/1751008/000175100826000010/app-20251231.htm)"
+    },
+    {
+      "topic": "Investment Impairment",
+      "statement": "AppLovin recorded a full impairment of its $50.0 million investment in Humans, Inc. (developer of Flip Shop) during FY2025 due to its deteriorating financial condition and going concern uncertainty.",
+      "source": "10-K filed 2026-02-19 (https://www.sec.gov/Archives/edgar/data/1751008/000175100826000010/app-20251231.htm)"
+    },
+    {
+      "topic": "Tax - Singapore Incentives",
+      "statement": "AppLovin's qualifying income earned in Singapore is taxed at reduced rates under tax incentive arrangements expected to expire in June 2028, which decreased the provision for income taxes by approximately $272.1 million ($0.80 per diluted share) in FY2025.",
+      "source": "10-K filed 2026-02-19 (https://www.sec.gov/Archives/edgar/data/1751008/000175100826000010/app-20251231.htm)"
+    },
+    {
+      "topic": "Market Valuation",
+      "statement": "The aggregate market value of AppLovin's voting and non-voting common equity held by non-affiliates was $102.7 billion as of June 30, 2025, based on the closing price of its Class A common stock on that date.",
+      "source": "10-K filed 2026-02-19 (https://www.sec.gov/Archives/edgar/data/1751008/000175100826000010/app-20251231.htm)"
+    },
+    {
+      "topic": "Geographic Operations",
+      "statement": "AppLovin operates in jurisdictions outside the US including Singapore, where it has tax incentive arrangements, and had long-lived assets of $147,902,000 as of December 31, 2025, located across the US, Germany, Netherlands, and other countries.",
+      "source": "10-K filed 2026-02-19 (https://www.sec.gov/Archives/edgar/data/1751008/000175100826000010/app-20251231.htm)"
+    }
+  ]
+}

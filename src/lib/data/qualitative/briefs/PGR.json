@@ -1,0 +1,80 @@
+{
+  "symbol": "PGR",
+  "companyName": "Progressive",
+  "generatedAt": "2026-06-22",
+  "management": {
+    "grade": "strong",
+    "sections": [
+      {
+        "title": "Leadership",
+        "grade": "strong",
+        "summary": "CEO Susan Patricia Griffith and CFO John P. Sauerland lead a management team that delivered 10% companywide policies-in-force growth and 12% net premiums written growth in 2025, with a debt-to-capital ratio of 18.5%. The five-year annualized return on net income of 26.0% outpaced the S&P 500 total shareholder return by 1.6x.",
+        "points": [
+          "Susan Patricia Griffith serves as President and CEO while John P. Sauerland serves as VP and CFO, with Carl G. Joyce as VP and Chief Accounting Officer, providing continuity across finance leadership.",
+          "Over the five-year period ending 2025, management delivered annualized net premiums written growth of 15% and a 25.2% annualized return on comprehensive income, exceeding the insurance industry's 7% premium growth rate."
+        ]
+      },
+      {
+        "title": "Capital Allocation",
+        "grade": "strong",
+        "summary": "Progressive dramatically increased common dividends to $2,871 million in FY2025 from $674 million in FY2024, while subsidiary dividends to the parent surged to $10,151 million from $3,667 million. The company maintains a conservative $97,373 million investment portfolio weighted toward U.S. government bonds and holds $13.0 billion in marketable securities at the holding company level.",
+        "points": [
+          "Common dividends paid rose from $234 million in FY2023 to $2,871 million in FY2025, while treasury share repurchases remained modest at $74 million in FY2025, signaling a clear preference for direct cash returns.",
+          "The investment portfolio of $97,373 million is concentrated in fixed maturities at $82,866 million, with U.S. government bonds comprising $43,298 million, reflecting a conservative duration and credit posture suited to insurance liabilities."
+        ]
+      },
+      {
+        "title": "Shareholder Alignment",
+        "grade": "strong",
+        "summary": "Progressive's five-year annualized total shareholder return outpaced the S&P 500 by 1.6x, driven by underwriting profitability aligned with its long-term 96 combined ratio target. The company maintains a Dodd-Frank Clawback Policy and an Insider Trading Policy governing securities transactions by directors, officers, and insiders.",
+        "points": [
+          "The five-year annualized underwriting margin of 8.3% exceeded the insurance industry's negative 0.4% margin, demonstrating that management's underwriting discipline directly benefits shareholders through profitable growth.",
+          "The company's Dodd-Frank Clawback Policy provides a mechanism to recover incentive-based compensation, reinforcing alignment between executive pay and long-term financial reporting integrity."
+        ]
+      },
+      {
+        "title": "Communication",
+        "grade": "strong",
+        "summary": "Progressive reports three operating segments-Personal Lines, Commercial Lines, and Other Indemnity-with detailed net premiums written data across fiscal years 2023 through 2025. The 10-K provides granular investment portfolio breakdowns, reinsurance cessions, and subsidiary dividend flows, while the DEF 14A discloses five-year performance metrics against industry benchmarks.",
+        "points": [
+          "Segment reporting breaks out FY2025 net premiums written of $72,558 million in Personal Lines, $10,613 million in Commercial Lines, and $3 million in Other Indemnity, enabling investors to track premium mix shifts across cycles.",
+          "The DEF 14A explicitly compares Progressive's five-year annualized underwriting margin of 8.3% and premium growth of 15% against the insurance industry's margin of negative 0.4% and growth of 7%, providing clear competitive benchmarking."
+        ]
+      },
+      {
+        "title": "Governance",
+        "grade": "strong",
+        "summary": "Lawton W. Fitt serves as Chairperson of an 11-director board nominated for one-year terms at the May 8, 2026 Annual Meeting, with 584,962,821 common shares outstanding as of the March 13, 2026 record date. PricewaterhouseCoopers LLP serves as independent auditor with board-recommended ratification for 2026.",
+        "points": [
+          "The board structure of 11 directors serving one-year terms allows shareholders to evaluate governance accountability annually, with Lawton W. Fitt providing independent board leadership as Chairperson.",
+          "Progressive maintains $6,897 million in parent company long-term debt across multiple senior note issuances with maturities ranging from 2029 to 2048 and coupon rates from 4.125% to 6.625%, providing transparent disclosure of refinancing exposure."
+        ]
+      }
+    ]
+  },
+  "moat": {
+    "grade": "strong",
+    "types": [
+      {
+        "type": "Scale Efficiency",
+        "grade": "strong",
+        "summary": "Progressive's total net premiums written of $83,174 million in FY2025, growing from $61,550 million in FY2023, provide significant scale advantages in claims processing, advertising spend, and data analytics. The five-year annualized underwriting margin of 8.3% versus the industry's negative 0.4% demonstrates that scale translates directly into profitable underwriting."
+      },
+      {
+        "type": "Underwriting Discipline",
+        "grade": "strong",
+        "summary": "Progressive maintained underwriting profitability aligned with its long-term 96 combined ratio target over the five-year period ending 2025, achieving an 8.3% underwriting margin while the industry averaged negative 0.4%. The company ceded only $1,186 million in premiums in FY2025 and assumed zero, retaining full underwriting risk and reward."
+      },
+      {
+        "type": "Investment Float",
+        "grade": "strong",
+        "summary": "Progressive's $97,373 million investment portfolio at fair value as of December 31, 2025, generates substantial investment income from the float created by $81,661 million in net premiums earned. The portfolio is conservatively positioned with $82,866 million in fixed maturities and $43,298 million in U.S. government bonds, supporting both liquidity and stable returns."
+      },
+      {
+        "type": "Human Capital",
+        "grade": "strong",
+        "summary": "Progressive ranked in the 99th percentile of companies in its annual engagement and culture survey in 2025, with approximately 70,000 employees supporting operations across Personal Lines and Commercial Lines. This engagement level supports the company's 10% policies-in-force growth and 15% annualized net premiums written growth over five years."
+      }
+    ]
+  }
+}

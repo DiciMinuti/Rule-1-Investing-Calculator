@@ -1,0 +1,80 @@
+{
+  "symbol": "GLW",
+  "companyName": "Corning",
+  "generatedAt": "2026-06-22",
+  "management": {
+    "grade": "strong",
+    "sections": [
+      {
+        "title": "Leadership",
+        "grade": "strong",
+        "summary": "Wendell P. Weeks serves as Chairman, CEO, and President, also acting as chief operating decision maker who allocates resources based on segment net income. Under his leadership, 2025 consolidated net sales reached $15.629 billion with net income of $1.742 billion, up from $12.588 billion and $581 million in 2023.",
+        "points": [
+          "Weeks oversees resource allocation across five reportable segments plus Hemlock and Emerging Growth Businesses, using segment net income as the primary performance metric.",
+          "The 2026 annual meeting agenda includes election of 10 directors, with nominees including Roger W. Ferguson, Jr., Daniel P. Huttenlocher, and Kevin J. Martin alongside Weeks."
+        ]
+      },
+      {
+        "title": "Capital Allocation",
+        "grade": "strong",
+        "summary": "Corning deployed $1.287 billion in capital expenditures and $900 million in R&D during 2025 while generating $2.695 billion in operating cash flow and $1.717 billion in adjusted free cash flow. The company returned capital through $0.28 quarterly dividends and repurchased 3.2 million shares for approximately $163 million.",
+        "points": [
+          "The 2019 share repurchase authorization allows up to $5.0 billion in buybacks, with approximately $3.0 billion remaining available as of December 31, 2025.",
+          "R&D spending of $900 million against $15.629 billion in revenue reflects sustained investment in materials science across glass, ceramic, and optical physics capabilities."
+        ]
+      },
+      {
+        "title": "Shareholder Alignment",
+        "grade": "middle",
+        "summary": "Corning maintains a quarterly dividend of $0.28 per share declared February 11, 2026, consistent with 2025 payments, and provides shareholders an advisory Say on Pay vote at the 2026 annual meeting. The board oversees a repurchase program with roughly $3.0 billion remaining under the 2019 authorization.",
+        "points": [
+          "Shareholders are asked to cast an advisory vote on executive compensation at the 2026 annual meeting, providing a check on pay practices.",
+          "The company returned approximately $163 million through share repurchases in 2025 while maintaining $1.779 billion in cash and cash equivalents."
+        ]
+      },
+      {
+        "title": "Communication",
+        "grade": "strong",
+        "summary": "Corning reports financial results across five segments-Optical Communications, Display, Specialty Materials, Automotive, and Life Sciences-plus Hemlock and Emerging Growth Businesses, with detailed segment net sales and net income disclosures. The 2025 10-K provides geographic revenue breakdowns including $7.646 billion in Asia Pacific and $7.105 billion in North America.",
+        "points": [
+          "Segment reporting includes net sales and net income for each of the five segments plus Hemlock, with Optical Communications generating $6.274 billion in sales and $1.048 billion in segment net income for 2025.",
+          "The filing discloses multiple debt instruments with specific maturities ranging from 2026 to 2079, including euro- and yen-denominated notes, giving investors visibility into the debt structure."
+        ]
+      },
+      {
+        "title": "Governance",
+        "grade": "middle",
+        "summary": "Corning's 10-member board includes nominees with diverse backgrounds such as former Federal Reserve Vice Chair Roger W. Ferguson, Jr. and former FCC Chairman Kevin J. Martin. The company faces tax risk with IRS examinations of U.S. federal returns for 2015 through 2020, which could materially impact financial statements if unsuccessfully defended.",
+        "points": [
+          "The IRS is examining Corning's U.S. federal income tax returns for 2015 through 2018 and 2019 through 2020, with potential material impact on consolidated financial statements.",
+          "Stockholders' equity stood at $10.686 billion for FY2025, providing a substantial equity base against which the board oversees capital deployment and risk management."
+        ]
+      }
+    ]
+  },
+  "moat": {
+    "grade": "strong",
+    "types": [
+      {
+        "type": "Intangible Assets (Materials Science IP & Customer Relationships)",
+        "grade": "strong",
+        "summary": "Corning leverages deep capabilities in glass science, ceramic science, and optical physics to develop category-defining products, supported by $900 million in annual R&D spending. The company cites trust-based relationships with global industry leaders across optical communications, display, and mobile consumer electronics markets."
+      },
+      {
+        "type": "Cost Advantage (Manufacturing Scale)",
+        "grade": "strong",
+        "summary": "With $15.629 billion in 2025 consolidated net sales and manufacturing operations spanning multiple materials categories, Corning achieves scale advantages across its five segments. The Display segment alone generated $3.697 billion in sales and $993 million in segment net income from glass substrates for flat panel displays."
+      },
+      {
+        "type": "Switching Costs (Engineered Product Integration)",
+        "grade": "middle",
+        "summary": "Corning's Specialty Materials segment supplies precision formulations for semiconductor equipment optics, aerospace and defense optics, and mobile consumer electronics, where qualification cycles and engineered specifications create customer stickiness. The segment produced $2.211 billion in 2025 sales with $367 million in segment net income."
+      },
+      {
+        "type": "Efficient Scale (Specialized Manufacturing)",
+        "grade": "middle",
+        "summary": "Corning serves concentrated markets such as ceramic substrates for automotive emissions control and high-purity polysilicon for solar, where limited competitors can justify the specialized manufacturing investment. The Automotive segment generated $1.794 billion in 2025 sales with $278 million in segment net income from these specialized products."
+      }
+    ]
+  }
+}

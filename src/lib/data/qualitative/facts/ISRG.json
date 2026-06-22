@@ -1,0 +1,127 @@
+{
+  "symbol": "ISRG",
+  "companyName": "Intuitive Surgical",
+  "updatedAt": "2026-06-22",
+  "facts": [
+    {
+      "topic": "Business Model",
+      "statement": "Intuitive is committed to advancing minimally invasive care through a comprehensive ecosystem of products and services including systems, instruments and accessories, learning, and services connected by a digital portfolio that enables actionable digital insights across the care continuum.",
+      "source": "10-K filed 2026-02-03 (https://www.sec.gov/Archives/edgar/data/1035267/000103526726000010/isrg-20251231.htm)"
+    },
+    {
+      "topic": "Revenue Scale",
+      "statement": "Total revenue for FY2025 was $7.124 billion, as reported under the concept RevenueFromContractWithCustomerExcludingAssessedTax.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0001035267.)"
+    },
+    {
+      "topic": "Profitability",
+      "statement": "Net income for FY2025 was $1.798 billion.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0001035267.)"
+    },
+    {
+      "topic": "Cash Flow",
+      "statement": "Operating cash flow for FY2025 was $1.814 billion.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0001035267.)"
+    },
+    {
+      "topic": "R&D Investment",
+      "statement": "Research and development expense for FY2025 was $998.8 million.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0001035267.)"
+    },
+    {
+      "topic": "Balance Sheet",
+      "statement": "As of FY2025, stockholders' equity was $16.43 billion and cash and equivalents were $2.03 billion.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0001035267.)"
+    },
+    {
+      "topic": "Industry Classification",
+      "statement": "Intuitive Surgical is classified under SIC code description 'Orthopedic, Prosthetic & Surgical Appliances & Supplies' and trades on Nasdaq under the ticker ISRG.",
+      "source": "SEC submissions metadata (https://data.sec.gov/submissions/CIK0001035267.)"
+    },
+    {
+      "topic": "Segment Reporting",
+      "statement": "The Company manages its business activities on a consolidated basis and operates in one reportable segment, with the CEO serving as the Chief Operating Decision Maker.",
+      "source": "10-K filed 2026-02-03 (https://www.sec.gov/Archives/edgar/data/1035267/000103526726000010/isrg-20251231.htm)"
+    },
+    {
+      "topic": "Geographic Revenue Mix",
+      "statement": "Domestic revenue accounted for 68% of total revenue in FY2025, while revenue from outside the U.S. markets accounted for 32%.",
+      "source": "10-K filed 2026-02-03 (https://www.sec.gov/Archives/edgar/data/1035267/000103526726000010/isrg-20251231.htm)"
+    },
+    {
+      "topic": "Product Lines",
+      "statement": "The 10-K references revenue categories including Systems, Instruments and Accessories, and Service, as well as variable lease revenue from usage-based arrangements.",
+      "source": "10-K filed 2026-02-03 (https://www.sec.gov/Archives/edgar/data/1035267/000103526726000010/isrg-20251231.htm)"
+    },
+    {
+      "topic": "Capital Allocation - Share Repurchases",
+      "statement": "The Company has a common stock repurchase program, with repurchase activity reported for FY2023, FY2024, and FY2025.",
+      "source": "10-K filed 2026-02-03 (https://www.sec.gov/Archives/edgar/data/1035267/000103526726000010/isrg-20251231.htm)"
+    },
+    {
+      "topic": "Share-Based Compensation",
+      "statement": "Share-based compensation expense before income taxes was $802.8 million in FY2025, up from $688.1 million in FY2024 and $598.2 million in FY2023.",
+      "source": "10-K filed 2026-02-03 (https://www.sec.gov/Archives/edgar/data/1035267/000103526726000010/isrg-20251231.htm)"
+    },
+    {
+      "topic": "Tax Rate",
+      "statement": "The Company's effective tax rate for FY2025 was 13.1%, with total income tax expense of $434.8 million on pre-tax income of $3.31 billion.",
+      "source": "10-K filed 2026-02-03 (https://www.sec.gov/Archives/edgar/data/1035267/000103526726000010/isrg-20251231.htm)"
+    },
+    {
+      "topic": "Earnings Per Share",
+      "statement": "Diluted net income per share for FY2025 was $7.87, compared to $6.42 in FY2024 and $5.03 in FY2023.",
+      "source": "10-K filed 2026-02-03 (https://www.sec.gov/Archives/edgar/data/1035267/000103526726000010/isrg-20251231.htm)"
+    },
+    {
+      "topic": "Management - CEO",
+      "statement": "David J. Rosa serves as Chief Executive Officer and Director, signing the 10-K on February 3, 2026.",
+      "source": "10-K filed 2026-02-03 (https://www.sec.gov/Archives/edgar/data/1035267/000103526726000010/isrg-20251231.htm)"
+    },
+    {
+      "topic": "Management - CFO",
+      "statement": "Jamie E. Samath serves as Executive Vice President and Chief Financial Officer (Principal Financial Officer).",
+      "source": "10-K filed 2026-02-03 (https://www.sec.gov/Archives/edgar/data/1035267/000103526726000010/isrg-20251231.htm)"
+    },
+    {
+      "topic": "Management - Executive Chair",
+      "statement": "Gary S. Guthart, Ph.D. serves as Executive Chair of the Board of Directors, having transitioned from CEO to Executive Chair as part of a leadership succession.",
+      "source": "DEF 14A filed 2026-03-13 (https://www.sec.gov/Archives/edgar/data/1035267/000103526726000023/isrg-20260313.htm)"
+    },
+    {
+      "topic": "Board of Directors",
+      "statement": "The Board nominees include 10 directors, 8 of whom are independent, with Craig H. Barratt, Ph.D. serving as Lead Independent Director.",
+      "source": "DEF 14A filed 2026-03-13 (https://www.sec.gov/Archives/edgar/data/1035267/000103526726000023/isrg-20260313.htm)"
+    },
+    {
+      "topic": "Corporate Governance",
+      "statement": "The Company has a single class of stock with equal voting rights, majority voting standard for uncontested director elections, a director resignation policy, proxy access for stockholders, and stockholder right to call a special meeting.",
+      "source": "DEF 14A filed 2026-03-13 (https://www.sec.gov/Archives/edgar/data/1035267/000103526726000023/isrg-20260313.htm)"
+    },
+    {
+      "topic": "Market Capitalization",
+      "statement": "The aggregate market value of voting and non-voting common equity held by non-affiliates as of June 30, 2025 was approximately $193.9 billion.",
+      "source": "10-K filed 2026-02-03 (https://www.sec.gov/Archives/edgar/data/1035267/000103526726000010/isrg-20251231.htm)"
+    },
+    {
+      "topic": "Shares Outstanding",
+      "statement": "As of January 28, 2026, there were 355,130,237 shares of common stock outstanding.",
+      "source": "10-K filed 2026-02-03 (https://www.sec.gov/Archives/edgar/data/1035267/000103526726000010/isrg-20251231.htm)"
+    },
+    {
+      "topic": "Risk Factors",
+      "statement": "Forward-looking risk factors include macroeconomic impacts on customer spending and costs (including tariffs, inflation, and interest rates), supply chain disruptions, curtailed hospital capital spending, delays in FDA and other regulatory approvals, healthcare reform legislation, intellectual property litigation, and risks associated with international operations including the joint venture with Shanghai Fosun Pharmaceutical.",
+      "source": "10-K filed 2026-02-03 (https://www.sec.gov/Archives/edgar/data/1035267/000103526726000010/isrg-20251231.htm)"
+    },
+    {
+      "topic": "Insider Trading - 10b5-1 Plans",
+      "statement": "On November 17, 2025, Brian E. Miller, Ph.D., the Company's Head of Digital and AI Strategy, adopted a Rule 10b5-1 trading plan providing for the potential sale of up to 35,344 shares of common stock until December 15, 2026.",
+      "source": "10-K filed 2026-02-03 (https://www.sec.gov/Archives/edgar/data/1035267/000103526726000010/isrg-20251231.htm)"
+    },
+    {
+      "topic": "Stockholder Engagement",
+      "statement": "During 2025, the Company met with stockholders representing approximately 45% of outstanding shares, discussing business strategy, financial performance, corporate governance, executive compensation, and sustainability.",
+      "source": "DEF 14A filed 2026-03-13 (https://www.sec.gov/Archives/edgar/data/1035267/000103526726000023/isrg-20260313.htm)"
+    }
+  ]
+}

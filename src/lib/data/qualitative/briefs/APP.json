@@ -1,0 +1,85 @@
+{
+  "symbol": "APP",
+  "companyName": "AppLovin",
+  "generatedAt": "2026-06-22",
+  "management": {
+    "grade": "strong",
+    "sections": [
+      {
+        "title": "Leadership",
+        "grade": "strong",
+        "summary": "Co-founder Adam Foroughi has led AppLovin as CEO since December 2011 and served as Chairperson from March 2021 until April 2026, when Craig Billings transitioned to independent Chairperson. The leadership team oversaw FY2025 revenue of $5.48 billion and $3.43 billion in net income from continuing operations, reflecting disciplined execution following the June 2025 Apps Business divestiture.",
+        "points": [
+          "Foroughi, age 45, has been CEO since December 2011 and guided the company through its IPO and the 2025 divestiture of its Apps Business to Tripledot.",
+          "Craig Billings, CEO of Wynn Resorts, became independent Chairperson in April 2026 after serving as Lead Independent Director since February 2021.",
+          "CFO Matthew Stumpf and CTO Vasily Shikin lead the financial and technology functions, with Dmitriy Dorosh serving as Principal Accounting Officer."
+        ]
+      },
+      {
+        "title": "Capital Allocation",
+        "grade": "strong",
+        "summary": "AppLovin repurchased $2.2 billion of Class A common stock during FY2025 and increased its buyback authorization by $3.2 billion in October 2025, deploying free cash flow aggressively. The company carries $3.51 billion in long-term debt across senior notes due 2029 through 2054 while maintaining $697 million in cash and $1.90 billion in stockholders' equity as of December 31, 2025.",
+        "points": [
+          "The company generated $4.0 billion in Free Cash Flow in FY2025, up 91% year-over-year, and allocated $2.2 billion to share repurchases during the same period.",
+          "R&D spending of $333.8 million in FY2025 supports continued investment in Axon AI and the broader advertising platform following the Apps Business divestiture.",
+          "Long-term debt of $3.51 billion includes senior notes at rates from 5.125% to 5.950% with maturities spanning 2029 to 2054, providing a staggered maturity profile."
+        ]
+      },
+      {
+        "title": "Shareholder Alignment",
+        "grade": "middle",
+        "summary": "AppLovin uses RSUs as the primary executive compensation component, has had no base salary increases since its IPO, and operates no annual cash bonus program for executive officers. The dual-class share structure gives Class B holders twenty votes per share, with 30.2 million Class B shares outstanding as of February 2026, concentrating voting control with insiders.",
+        "points": [
+          "The company has no single-trigger change of control acceleration, meaning executive equity does not automatically vest upon a takeover, reducing deal-related windfalls.",
+          "No executive base salary increases have occurred since IPO, and the absence of an annual cash bonus program ties executive outcomes to equity performance rather than short-term cash metrics.",
+          "The dual-class structure with 307.1 million Class A shares and 30.2 million Class B shares means Class B holders control a disproportionate share of voting power."
+        ]
+      },
+      {
+        "title": "Communication",
+        "grade": "strong",
+        "summary": "AppLovin reports as a single operating and reportable segment following the June 2025 Apps Business divestiture, providing consolidated financials in its 10-K filed February 2026. The DEF 14A filed April 2026 discloses Adjusted EBITDA of $4.5 billion and Free Cash Flow of $4.0 billion for FY2025, along with detailed compensation practices and board composition.",
+        "points": [
+          "The 10-K filed February 19, 2026 provides revenue figures across three fiscal years ($1.84B in 2023, $3.22B in 2024, $5.48B in 2025) and details the Tripledot divestiture and related-party revenue of $19.0 million.",
+          "The DEF 14A filed April 21, 2026 discloses the $50.0 million full impairment of the Humans, Inc. investment and the Singapore tax incentive arrangements that reduced the tax provision by $272.1 million in FY2025.",
+          "Segment reporting was simplified to a single consolidated segment after the Apps Business divestiture, reflecting the sharpened focus on the advertising platform."
+        ]
+      },
+      {
+        "title": "Governance",
+        "grade": "strong",
+        "summary": "AppLovin's nine-member Board includes six independent directors with 100% independent committee membership, and Craig Billings serves as independent Chairperson as of April 2026. The proxy describes compensation practices designed to align executive interests with shareholders, including RSU-based pay and no single-trigger acceleration, while the 10-K identifies specific risks including the June 2028 expiration of Singapore tax incentives.",
+        "points": [
+          "The Board's six independent directors out of nine total, combined with 100% independent committees, provide structural oversight of management decisions and compensation.",
+          "Singapore tax incentive arrangements expected to expire in June 2028 reduced FY2025 income tax provisions by $272.1 million ($0.80 per diluted share), representing a material regulatory dependency disclosed in the 10-K.",
+          "The $50.0 million impairment of the Humans, Inc. investment and the equity-method accounting for the Tripledot stake demonstrate board oversight of investment portfolio risk."
+        ]
+      }
+    ]
+  },
+  "moat": {
+    "grade": "strong",
+    "types": [
+      {
+        "type": "Network Effects",
+        "grade": "strong",
+        "summary": "AppLovin's scaled advertising ecosystem connects advertisers seeking user acquisition with publishers monetizing through MAX in-app bidding, creating a two-sided network where more advertisers improve fill rates and more publishers attract more ad spend. The company states this scaled model is intricately linked to the advertising ecosystem and provides a durable competitive advantage, supported by FY2025 revenue of $5.48 billion from continuing operations."
+      },
+      {
+        "type": "Intangible Assets - Proprietary Technology",
+        "grade": "strong",
+        "summary": "Axon AI powers the Axon Ads Manager user acquisition platform, enabling advertisers to target return on advertising spend targets with machine learning-driven optimization. This proprietary AI engine, combined with Adjust for measurement analytics and Wurl for connected TV, forms an integrated product suite that generated $4.5 billion in Adjusted EBITDA in FY2025."
+      },
+      {
+        "type": "Efficient Scale",
+        "grade": "strong",
+        "summary": "With FY2025 revenue of $5.48 billion and $4.0 billion in Free Cash Flow, AppLovin operates at a scale where its advertising platform infrastructure and data volume create cost advantages that smaller competitors struggle to match. The company's R&D spending of $333.8 million in FY2025 funds continuous improvement of Axon AI and the integrated ad stack, reinforcing the scale barrier."
+      },
+      {
+        "type": "Switching Costs",
+        "grade": "middle",
+        "summary": "Advertisers integrated with Axon Ads Manager, publishers using MAX for in-app bidding, and marketers relying on Adjust for measurement face operational disruption and data continuity risks if they switch platforms. The end-to-end nature of AppLovin's suite, from user acquisition through monetization and analytics, increases the friction of migrating to competing solutions."
+      }
+    ]
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "symbol": "UBER",
+  "companyName": "Uber",
+  "updatedAt": "2026-06-22",
+  "facts": [
+    {
+      "topic": "Business Model",
+      "statement": "Uber operates as a global technology platform facilitating over 40 million trips per day in over 70 countries, supporting flexible earning opportunities for 9.7 million Drivers and Couriers, and partnering with over 1.3 million monthly Merchants worldwide.",
+      "source": "DEF 14A filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/1543151/000130817926000125/uber014597-def14a.htm)"
+    },
+    {
+      "topic": "Segments",
+      "statement": "Uber reports three operating segments: Mobility, Delivery, and Freight.",
+      "source": "10-K filed 2026-02-13 (https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm)"
+    },
+    {
+      "topic": "Cross-Platform Engagement",
+      "statement": "Roughly 20% of Uber customers use both Mobility and Delivery offerings monthly in active markets, and 40% use multiple products monthly; consumers who engage across the platform have 35% higher retention rates and spend 3x as much as those who do not.",
+      "source": "DEF 14A filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/1543151/000130817926000125/uber014597-def14a.htm)"
+    },
+    {
+      "topic": "Membership Program",
+      "statement": "Uber One reached 46 million members as of 2025, growing 55% year-over-year, and is live in 47 countries.",
+      "source": "DEF 14A filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/1543151/000130817926000125/uber014597-def14a.htm)"
+    },
+    {
+      "topic": "Advertising Business",
+      "statement": "Uber's advertising business surpassed well over $2 billion in annualized revenue in 2025, growing 50% year-over-year, driven by Sponsored Listings and the expansion of Sponsored Items.",
+      "source": "DEF 14A filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/1543151/000130817926000125/uber014597-def14a.htm)"
+    },
+    {
+      "topic": "Autonomous Vehicles",
+      "statement": "Uber has more than 25 AV partners, including live Mobility deployments in seven cities globally as of 2025; AVs on Uber's network are delivering high utilization and low wait times relative to other live deployments.",
+      "source": "DEF 14A filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/1543151/000130817926000125/uber014597-def14a.htm)"
+    },
+    {
+      "topic": "Revenue Scale",
+      "statement": "Uber reported revenue of $37,281,000,000 for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0001543151.)"
+    },
+    {
+      "topic": "Profitability",
+      "statement": "Uber reported net income of $1,887,000,000 for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0001543151.)"
+    },
+    {
+      "topic": "Cash Flow",
+      "statement": "Uber generated operating cash flow of $3,585,000,000 and free cash flow of $9,763,000,000 for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0001543151.); DEF 14A filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/1543151/000130817926000125/uber014597-def14a.htm)"
+    },
+    {
+      "topic": "Adjusted EBITDA",
+      "statement": "Uber's Adjusted EBITDA was $8,730 million for FY2025, up from $6,484 million in FY2024.",
+      "source": "DEF 14A filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/1543151/000130817926000125/uber014597-def14a.htm)"
+    },
+    {
+      "topic": "R&D Investment",
+      "statement": "Uber spent $3,164,000,000 on research and development in FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0001543151.)"
+    },
+    {
+      "topic": "Balance Sheet",
+      "statement": "As of FY2025, Uber had stockholders' equity of $21,558,000,000, long-term debt of $8,347,000,000, and cash and equivalents of $4,680,000,000.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0001543151.)"
+    },
+    {
+      "topic": "Growth Milestone",
+      "statement": "2025 was Uber's fifth consecutive year of 20%+ annual Gross Bookings growth on a constant currency basis; in September 2025, Uber joined the S&P 100.",
+      "source": "DEF 14A filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/1543151/000130817926000125/uber014597-def14a.htm)"
+    },
+    {
+      "topic": "M&A - Trendyol GO Acquisition",
+      "statement": "On June 17, 2025, Uber completed the acquisition of an 85% controlling stake in Trendyol GO, a Turkish online meal and grocery delivery business, for $694 million in an all-cash transaction; goodwill of $712 million was assigned to the Delivery segment.",
+      "source": "10-K filed 2026-02-13 (https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm)"
+    },
+    {
+      "topic": "M&A - Pending Getir Acquisition",
+      "statement": "On February 8, 2026, Uber entered into an agreement to acquire Getir's food delivery business and a minority interest in its grocery delivery business in Türkiye for $435 million in cash, with the food delivery acquisition expected to close in the second half of 2026.",
+      "source": "10-K filed 2026-02-13 (https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm)"
+    },
+    {
+      "topic": "Freight Subsidiary Ownership",
+      "statement": "As of December 31, 2025, Uber owned 90% of Freight Holding capital stock (85% on a fully-diluted basis), up from 84% (80% fully-diluted) at the end of 2024.",
+      "source": "10-K filed 2026-02-13 (https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm)"
+    },
+    {
+      "topic": "Capital Allocation",
+      "statement": "During 2025, Uber deployed capital in a disciplined manner including growing share repurchases and strategic investments in autonomous vehicle technologies.",
+      "source": "DEF 14A filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/1543151/000130817926000125/uber014597-def14a.htm)"
+    },
+    {
+      "topic": "Management - CEO",
+      "statement": "Dara Khosrowshahi serves as Chief Executive Officer and Director of Uber Technologies, Inc., with an employment agreement dated June 28, 2023.",
+      "source": "10-K filed 2026-02-13 (https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm)"
+    },
+    {
+      "topic": "Management - CFO",
+      "statement": "Prashanth Mahendra-Rajah signed the 10-K as Chief Financial Officer as of February 13, 2026; the proxy statement notes a CFO transition welcoming Balaji Krishnamurthy.",
+      "source": "10-K filed 2026-02-13 (https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm); DEF 14A filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/1543151/000130817926000125/uber014597-def14a.htm)"
+    },
+    {
+      "topic": "Management - COO",
+      "statement": "Andrew Macdonald serves as President and Chief Operating Officer of Uber.",
+      "source": "10-K filed 2026-02-13 (https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm); DEF 14A filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/1543151/000130817926000125/uber014597-def14a.htm)"
+    },
+    {
+      "topic": "Board of Directors",
+      "statement": "Uber's Board is chaired by Independent Chairperson Ronald Sugar and includes directors Revathi Advaithi, Turqi Alnowaiser, Nikesh Arora, Ursula Burns, Robert Eckert, Amanda Ginsberg, Dara Khosrowshahi, John Thain, David Trujillo, and Alexander Wynaendts; David Trujillo will transition off the Board following the 2026 Annual Meeting.",
+      "source": "10-K filed 2026-02-13 (https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm); DEF 14A filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/1543151/000130817926000125/uber014597-def14a.htm)"
+    },
+    {
+      "topic": "Geographic Segments",
+      "statement": "Uber reports revenue across four geographic regions: United States and Canada, Latin America, EMEA, and Asia Pacific.",
+      "source": "10-K filed 2026-02-13 (https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm)"
+    },
+    {
+      "topic": "Insurance Reserves",
+      "statement": "Uber's insurance reserves stood at $12,463 million as of December 31, 2025, up from $9,796 million at the end of 2024, with $473 million covered by third-party insurance.",
+      "source": "10-K filed 2026-02-13 (https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm)"
+    },
+    {
+      "topic": "Debt Structure",
+      "statement": "Uber has multiple senior notes outstanding with maturities ranging from 2027 to 2054, convertible notes due 2025 and 2028, and exchangeable senior notes due 2028, along with a revolving credit facility.",
+      "source": "10-K filed 2026-02-13 (https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm)"
+    }
+  ]
+}

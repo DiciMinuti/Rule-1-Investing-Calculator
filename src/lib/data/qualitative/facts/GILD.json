@@ -1,0 +1,137 @@
+{
+  "symbol": "GILD",
+  "companyName": "Gilead Sciences",
+  "updatedAt": "2026-06-22",
+  "facts": [
+    {
+      "topic": "Business Model & Industry Classification",
+      "statement": "Gilead Sciences is classified under SIC code 'Biological Products, (No Diagnostic Substances)' and trades on Nasdaq under ticker GILD.",
+      "source": "SEC submissions metadata (https://data.sec.gov/submissions/CIK0000882095.)"
+    },
+    {
+      "topic": "Revenue Scale",
+      "statement": "Gilead reported total revenue of $27.116 billion for FY2025, filed on 2026-02-24.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000882095.)"
+    },
+    {
+      "topic": "Profitability",
+      "statement": "Gilead reported net income of $5.665 billion for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000882095.)"
+    },
+    {
+      "topic": "Cash Flow",
+      "statement": "Gilead generated $8.006 billion in operating cash flow for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000882095.)"
+    },
+    {
+      "topic": "Balance Sheet",
+      "statement": "As of FY2025, Gilead had stockholders' equity of $19.33 billion and long-term debt of $24.896 billion.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000882095.)"
+    },
+    {
+      "topic": "R&D Investment",
+      "statement": "Gilead reported R&D expense of $3.734 billion for FY2019.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000882095.)"
+    },
+    {
+      "topic": "Product Lines - HIV",
+      "statement": "Gilead's HIV product portfolio includes Biktarvy, Descovy, Genvoya, Odefsey, Symtuza (revenue share), and other HIV products, with sales tracked across U.S., Europe, and Rest of World geographies for FY2023-FY2025.",
+      "source": "10-K filed 2026-02-24 (https://www.sec.gov/Archives/edgar/data/882095/000088209526000006/gild-20251231.htm)"
+    },
+    {
+      "topic": "Product Lines - Liver Disease",
+      "statement": "Gilead's liver disease product portfolio includes sofosbuvir/velpatasvir, Vemlidy, and other liver disease products, with sales tracked across U.S., Europe, and Rest of World for FY2023-FY2025.",
+      "source": "10-K filed 2026-02-24 (https://www.sec.gov/Archives/edgar/data/882095/000088209526000006/gild-20251231.htm)"
+    },
+    {
+      "topic": "Product Lines - Cell Therapy & Oncology",
+      "statement": "Gilead's cell therapy and oncology products include Tecartus, Yescarta, and Trodelvy, with sales tracked across U.S., Europe, and Rest of World for FY2023-FY2025.",
+      "source": "10-K filed 2026-02-24 (https://www.sec.gov/Archives/edgar/data/882095/000088209526000006/gild-20251231.htm)"
+    },
+    {
+      "topic": "Product Lines - Other",
+      "statement": "Gilead's other products include Veklury (remdesivir) and AmBisome, with sales tracked across U.S., Europe, and Rest of World for FY2023-FY2025.",
+      "source": "10-K filed 2026-02-24 (https://www.sec.gov/Archives/edgar/data/882095/000088209526000006/gild-20251231.htm)"
+    },
+    {
+      "topic": "Customer Concentration Risk",
+      "statement": "Gilead discloses customer concentration risk with three major U.S. wholesalers: Cardinal Health, Cencora, and McKesson, for which revenue from contract with customer is tracked for FY2023-FY2025.",
+      "source": "10-K filed 2026-02-24 (https://www.sec.gov/Archives/edgar/data/882095/000088209526000006/gild-20251231.htm)"
+    },
+    {
+      "topic": "Management - CEO",
+      "statement": "Daniel P. O'Day serves as Chairman and Chief Executive Officer of Gilead Sciences, signing the 10-K on February 24, 2026.",
+      "source": "10-K filed 2026-02-24 (https://www.sec.gov/Archives/edgar/data/882095/000088209526000006/gild-20251231.htm)"
+    },
+    {
+      "topic": "Management - CFO",
+      "statement": "Andrew D. Dickinson serves as Chief Financial Officer of Gilead Sciences.",
+      "source": "10-K filed 2026-02-24 (https://www.sec.gov/Archives/edgar/data/882095/000088209526000006/gild-20251231.htm)"
+    },
+    {
+      "topic": "Management - Chief Accounting Officer",
+      "statement": "Erin E. Burkhart serves as Senior Vice President, Controllership and Chief Accounting Officer of Gilead Sciences.",
+      "source": "10-K filed 2026-02-24 (https://www.sec.gov/Archives/edgar/data/882095/000088209526000006/gild-20251231.htm)"
+    },
+    {
+      "topic": "Board of Directors",
+      "statement": "Gilead's Board of Directors includes nine nominees for the 2026 Annual Meeting: Jacqueline K. Barton, Jeffrey A. Bluestone, Sandra J. Horning, Kelly A. Kramer, Ted W. Love, Harish Manwani, Daniel P. O'Day, Javier J. Rodriguez, and Anthony Welters.",
+      "source": "DEF 14A filed 2026-03-20 (https://www.sec.gov/Archives/edgar/data/882095/000130817926000106/gild014721-def14a.htm)"
+    },
+    {
+      "topic": "Board Leadership",
+      "statement": "Anthony Welters serves as Lead Independent Director of Gilead's Board of Directors.",
+      "source": "DEF 14A filed 2026-03-20 (https://www.sec.gov/Archives/edgar/data/882095/000130817926000106/gild014721-def14a.htm)"
+    },
+    {
+      "topic": "Strategic Priorities",
+      "statement": "Gilead's long-term ambition is to bring 10+ transformative therapies to patients by 2030, with strategic priorities including maximizing impact of long-acting HIV, accelerating pipeline build in oncology and inflammation, adopting and scaling AI, prioritizing investments for highest impact, and strengthening collaboration to accelerate innovation.",
+      "source": "DEF 14A filed 2026-03-20 (https://www.sec.gov/Archives/edgar/data/882095/000130817926000106/gild014721-def14a.htm)"
+    },
+    {
+      "topic": "HIV Franchise Strength",
+      "statement": "In 2025, Gilead achieved record HIV sales driven by Biktarvy, the most-prescribed HIV treatment, along with significant growth in HIV prevention following the launch of Yeztugo, the world's first twice-yearly HIV prevention therapy approved by the FDA.",
+      "source": "DEF 14A filed 2026-03-20 (https://www.sec.gov/Archives/edgar/data/882095/000130817926000106/gild014721-def14a.htm)"
+    },
+    {
+      "topic": "Pipeline - Oncology",
+      "statement": "Gilead received positive data for Trodelvy in breast cancer and for anito-cel in multiple myeloma in 2025, positioning the company for potential approvals in 2026, and announced an agreement to acquire Arcellx, its partner on anito-cel since 2022.",
+      "source": "DEF 14A filed 2026-03-20 (https://www.sec.gov/Archives/edgar/data/882095/000130817926000106/gild014721-def14a.htm)"
+    },
+    {
+      "topic": "Pipeline - Inflammation & Liver Disease",
+      "statement": "Gilead launched Livdelzi for primary biliary cholangitis with rapid adoption in 2025, and could potentially see a U.S. launch of bulevirtide for chronic hepatitis delta in 2026.",
+      "source": "DEF 14A filed 2026-03-20 (https://www.sec.gov/Archives/edgar/data/882095/000130817926000106/gild014721-def14a.htm)"
+    },
+    {
+      "topic": "Loss of Exclusivity Outlook",
+      "statement": "Gilead expects no major loss of exclusivity for the coming decade, with up to seven potential HIV treatment and prevention launches by 2033, positioning the company to extend HIV leadership into the 2040s.",
+      "source": "DEF 14A filed 2026-03-20 (https://www.sec.gov/Archives/edgar/data/882095/000130817926000106/gild014721-def14a.htm)"
+    },
+    {
+      "topic": "M&A Activity",
+      "statement": "Gilead entered into an Agreement and Plan of Merger with CymaBay Therapeutics dated February 11, 2024, and an Agreement and Plan of Merger with Arcellx, Inc. dated February 22, 2026.",
+      "source": "10-K filed 2026-02-24 (https://www.sec.gov/Archives/edgar/data/882095/000088209526000006/gild-20251231.htm)"
+    },
+    {
+      "topic": "Governance - Stockholder Engagement",
+      "statement": "In 2025, Gilead engaged with investors representing approximately 42% of outstanding shares, with the Lead Independent Director meeting with investors representing approximately 30% of outstanding shares.",
+      "source": "DEF 14A filed 2026-03-20 (https://www.sec.gov/Archives/edgar/data/882095/000130817926000106/gild014721-def14a.htm)"
+    },
+    {
+      "topic": "Governance - AI Oversight",
+      "statement": "Gilead's Board oversaw the rollout of Gilead's AI Principles in February 2025 and engaged in ongoing discussions with management on the responsible integration and use of AI across the business.",
+      "source": "DEF 14A filed 2026-03-20 (https://www.sec.gov/Archives/edgar/data/882095/000130817926000106/gild014721-def14a.htm)"
+    },
+    {
+      "topic": "Governance - Stockholder Proposals",
+      "statement": "Gilead's 2026 Annual Meeting includes stockholder proposals requesting an independent Board Chair policy, a report on the impact of extended patent exclusivities on patient access, and a report on the risks of ESG and DEI executive compensation metrics, with the Board recommending voting against all three.",
+      "source": "DEF 14A filed 2026-03-20 (https://www.sec.gov/Archives/edgar/data/882095/000130817926000106/gild014721-def14a.htm)"
+    },
+    {
+      "topic": "Internal Controls",
+      "statement": "Gilead concluded that its internal control over financial reporting was effective as of December 31, 2025, as audited by Ernst & Young LLP, and is deploying a new enterprise resource planning (ERP) system in phases over the next few years.",
+      "source": "10-K filed 2026-02-24 (https://www.sec.gov/Archives/edgar/data/882095/000088209526000006/gild-20251231.htm)"
+    }
+  ]
+}

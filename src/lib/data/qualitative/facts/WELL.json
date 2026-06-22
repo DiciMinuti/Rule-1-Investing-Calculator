@@ -1,0 +1,157 @@
+{
+  "symbol": "WELL",
+  "companyName": "Welltower",
+  "updatedAt": "2026-06-22",
+  "facts": [
+    {
+      "topic": "Business Model",
+      "statement": "Welltower is a real estate investment trust (REIT) and S&P 500 company focused on rental housing for aging seniors across the United States, United Kingdom, and Canada, with a portfolio of approximately 2,900 properties predominantly consisting of 2,500+ seniors and wellness housing communities.",
+      "source": "DEF 14A filed 2026-04-10 (https://www.sec.gov/Archives/edgar/data/766704/000076670426000014/well-20260409.htm)"
+    },
+    {
+      "topic": "Revenue Scale",
+      "statement": "Welltower reported total revenue of $4,753,804,000 for FY2025, filed on 2026-02-12.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000766704.)"
+    },
+    {
+      "topic": "Operating Cash Flow",
+      "statement": "Welltower generated operating cash flow of $1,601,861,000 for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000766704.)"
+    },
+    {
+      "topic": "Balance Sheet",
+      "statement": "As of FY2025, Welltower had stockholders' equity of $31,956,208,000, long-term debt of $19,197,302,000, and cash and equivalents of $3,506,586,000.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000766704.)"
+    },
+    {
+      "topic": "Segment - Seniors Housing Operating",
+      "statement": "Welltower's Seniors Housing Operating segment comprised 1,766 properties as of December 31, 2025, with a gross carrying value of $41,179,633,000 and accumulated depreciation of $8,405,903,000.",
+      "source": "10-K filed 2026-02-12 (https://www.sec.gov/Archives/edgar/data/766704/000076670426000010/well-20251231.htm)"
+    },
+    {
+      "topic": "Segment - Triple-Net",
+      "statement": "Welltower's Triple-net segment comprised 778 properties as of December 31, 2025, with a gross carrying value of $12,284,599,000 and accumulated depreciation of $1,726,227,000.",
+      "source": "10-K filed 2026-02-12 (https://www.sec.gov/Archives/edgar/data/766704/000076670426000010/well-20251231.htm)"
+    },
+    {
+      "topic": "Segment - Outpatient Medical",
+      "statement": "Welltower's Outpatient Medical segment comprised 45 properties as of December 31, 2025, with a gross carrying value of $1,439,553,000, plus 81 outpatient medical properties classified as held for sale with a gross carrying value of $1,450,137,000.",
+      "source": "10-K filed 2026-02-12 (https://www.sec.gov/Archives/edgar/data/766704/000076670426000010/well-20251231.htm)"
+    },
+    {
+      "topic": "Capital Allocation - Acquisitions and Dispositions",
+      "statement": "During 2025, Welltower completed $18,596,306,000 in acquisitions and development and $7,694,080,000 in dispositions, with ending real estate investments of $63,773,912,000, up from $51,299,505,000 at the beginning of the year.",
+      "source": "10-K filed 2026-02-12 (https://www.sec.gov/Archives/edgar/data/766704/000076670426000010/well-20251231.htm)"
+    },
+    {
+      "topic": "Capital Allocation - Transaction Activity",
+      "statement": "In 2025, Welltower announced $33 billion of total transaction activity, selling a lower growth outpatient medical operating portfolio and rotating proceeds into higher growth seniors housing communities while incurring no near-term dilution.",
+      "source": "DEF 14A filed 2026-04-10 (https://www.sec.gov/Archives/edgar/data/766704/000076670426000014/well-20260409.htm)"
+    },
+    {
+      "topic": "Capital Allocation - Equity Issuance",
+      "statement": "Welltower issued approximately 56.1 million shares of common stock under its ATM programs in 2025, generating gross proceeds of approximately $8.9 billion.",
+      "source": "DEF 14A filed 2026-04-10 (https://www.sec.gov/Archives/edgar/data/766704/000076670426000014/well-20260409.htm)"
+    },
+    {
+      "topic": "Capital Allocation - Debt Issuance",
+      "statement": "In 2025, Welltower issued $1.0 billion of 4.5% senior unsecured notes maturing in 2030 and $1.25 billion of 5.125% senior unsecured notes maturing in 2035, and extinguished approximately $347 million of secured debt at a blended average interest rate of 5.16%.",
+      "source": "DEF 14A filed 2026-04-10 (https://www.sec.gov/Archives/edgar/data/766704/000076670426000014/well-20260409.htm)"
+    },
+    {
+      "topic": "Credit Rating",
+      "statement": "S&P Global Ratings and Moody's raised their credit ratings for Welltower to A- with a stable outlook and A3 with a stable outlook, respectively, in 2025.",
+      "source": "DEF 14A filed 2026-04-10 (https://www.sec.gov/Archives/edgar/data/766704/000076670426000014/well-20260409.htm)"
+    },
+    {
+      "topic": "Leverage",
+      "statement": "Welltower reported Net Debt to Adjusted EBITDA of 3.03x for FY2025, with approximately $10.2 billion of available liquidity inclusive of $5.2 billion of available cash and restricted cash and full capacity under its $5.0 billion line of credit.",
+      "source": "DEF 14A filed 2026-04-10 (https://www.sec.gov/Archives/edgar/data/766704/000076670426000014/well-20260409.htm)"
+    },
+    {
+      "topic": "Same Store NOI Growth",
+      "statement": "Welltower reported total portfolio year-over-year average same store net operating income (SSNOI) growth of 14.1% for 2025, driven by SSNOI growth in its seniors housing operating (SHO) portfolio of 21.5%.",
+      "source": "DEF 14A filed 2026-04-10 (https://www.sec.gov/Archives/edgar/data/766704/000076670426000014/well-20260409.htm)"
+    },
+    {
+      "topic": "Net Income",
+      "statement": "Welltower reported net income attributable to common stockholders of $937 million for the year ended December 31, 2025.",
+      "source": "DEF 14A filed 2026-04-10 (https://www.sec.gov/Archives/edgar/data/766704/000076670426000014/well-20260409.htm)"
+    },
+    {
+      "topic": "Normalized FFO",
+      "statement": "Welltower reported Normalized FFO attributable to common stockholders of $3,591,666,000 for FY2025, up from $2,626,757,000 in FY2024, representing per diluted share growth of 22% year over year to $5.29.",
+      "source": "DEF 14A filed 2026-04-10 (https://www.sec.gov/Archives/edgar/data/766704/000076670426000014/well-20260409.htm)"
+    },
+    {
+      "topic": "Adjusted EBITDA",
+      "statement": "Welltower reported Adjusted EBITDA of $4,169,347,000 for the twelve months ended December 31, 2025, up 32% from $3,151,811,000 in the prior year.",
+      "source": "DEF 14A filed 2026-04-10 (https://www.sec.gov/Archives/edgar/data/766704/000076670426000014/well-20260409.htm)"
+    },
+    {
+      "topic": "Management - CEO",
+      "statement": "Shankh Mitra serves as Chief Executive Officer and Director of Welltower, signing the 10-K on February 12, 2026.",
+      "source": "10-K filed 2026-02-12 (https://www.sec.gov/Archives/edgar/data/766704/000076670426000010/well-20251231.htm)"
+    },
+    {
+      "topic": "Management - Board Chair",
+      "statement": "Kenneth J. Bacon serves as Chairman of the Board of Welltower.",
+      "source": "10-K filed 2026-02-12 (https://www.sec.gov/Archives/edgar/data/766704/000076670426000010/well-20251231.htm)"
+    },
+    {
+      "topic": "Management - CFO",
+      "statement": "Timothy G. McHugh serves as Co-President and Chief Financial Officer of Welltower.",
+      "source": "10-K filed 2026-02-12 (https://www.sec.gov/Archives/edgar/data/766704/000076670426000010/well-20251231.htm)"
+    },
+    {
+      "topic": "Compensation - Executive Program",
+      "statement": "Welltower has a Ten Year Executive Continuity and Alignment Program for named executive officers and key employees, with a specific LTIP Unit Agreement for Shankh Mitra, and the 2025 special incentive plan compensation expense was $1,497,396,000.",
+      "source": "10-K filed 2026-02-12 (https://www.sec.gov/Archives/edgar/data/766704/000076670426000010/well-20251231.htm)"
+    },
+    {
+      "topic": "Business Strategy - Private Funds Management",
+      "statement": "Welltower launched its private funds management business in 2025, closing Seniors Housing Fund I with approximately $2.5 billion of total equity commitments from eight global third-party institutional LPs, and also launched Seniors Housing Debt Fund I LP in the fourth quarter of 2025.",
+      "source": "DEF 14A filed 2026-04-10 (https://www.sec.gov/Archives/edgar/data/766704/000076670426000014/well-20260409.htm)"
+    },
+    {
+      "topic": "Business Strategy - Technology Platform",
+      "statement": "Welltower announced 'Welltower 3.0,' aimed at modernizing the seniors housing sector through its end-to-end operating platform called the Welltower Business System, including the hiring of Jeff Stott, formerly with Extra Space Storage, as Chief Technology Officer.",
+      "source": "DEF 14A filed 2026-04-10 (https://www.sec.gov/Archives/edgar/data/766704/000076670426000014/well-20260409.htm)"
+    },
+    {
+      "topic": "Business Strategy - Operator Alignment",
+      "statement": "Welltower deepened economic alignment between shareholders and key operating partners via the introduction of RIDEA 6.0 contracts and creation of the Welltower Charles T. Munger Grant Program, providing $10 million annually to front-line staff at its best performing seniors housing communities.",
+      "source": "DEF 14A filed 2026-04-10 (https://www.sec.gov/Archives/edgar/data/766704/000076670426000014/well-20260409.htm)"
+    },
+    {
+      "topic": "Stock Performance",
+      "statement": "Welltower achieved a 228.2% cumulative total shareholder return from 2021-2025, creating approximately $100 billion in shareholder value, and is now the largest global REIT by market capitalization at approximately $129 billion as of 12/31/2025.",
+      "source": "DEF 14A filed 2026-04-10 (https://www.sec.gov/Archives/edgar/data/766704/000076670426000014/well-20260409.htm)"
+    },
+    {
+      "topic": "Geographic Diversification",
+      "statement": "As of December 31, 2025, Welltower's Seniors Housing Operating portfolio included 1,766 properties across the United States (898 properties), United Kingdom (738 properties), and Canada (128 properties).",
+      "source": "10-K filed 2026-02-12 (https://www.sec.gov/Archives/edgar/data/766704/000076670426000010/well-20251231.htm)"
+    },
+    {
+      "topic": "Key Acquisitions",
+      "statement": "Welltower completed acquisitions of Barchester Healthcare (October 2025) and HC One Group (October 2025) in the UK, and Amica Senior Lifestyles (March 2025) in Canada, among other seniors housing transactions during 2025.",
+      "source": "10-K filed 2026-02-12 (https://www.sec.gov/Archives/edgar/data/766704/000076670426000010/well-20251231.htm)"
+    },
+    {
+      "topic": "Mortgage Loan Portfolio",
+      "statement": "Welltower's mortgage loan portfolio had a carrying amount of $1,012,685,000 as of December 31, 2025, down from $1,520,503,000 at the beginning of the year, with no loans subject to delinquent principal or interest.",
+      "source": "10-K filed 2026-02-12 (https://www.sec.gov/Archives/edgar/data/766704/000076670426000010/well-20251231.htm)"
+    },
+    {
+      "topic": "Governance - Board Composition",
+      "statement": "Welltower's Board of Directors includes nine director nominees for the 2026 annual meeting, with Kenneth J. Bacon as Chairman, and directors including Shankh Mitra (CEO), Timothy G. McHugh (Co-President & CFO), Johnese M. Spisso, Karen B. DeSalvo, Kathryn M. Sullivan, Andrew Gundlach, Dennis G. Lopez, Ade J. Patton, and Sergio D. Rivera.",
+      "source": "DEF 14A filed 2026-04-10 (https://www.sec.gov/Archives/edgar/data/766704/000076670426000014/well-20260409.htm)"
+    },
+    {
+      "topic": "Dividend",
+      "statement": "Welltower's dividend yield was 1.5% as of December 31, 2025.",
+      "source": "DEF 14A filed 2026-04-10 (https://www.sec.gov/Archives/edgar/data/766704/000076670426000014/well-20260409.htm)"
+    }
+  ]
+}

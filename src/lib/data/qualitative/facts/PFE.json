@@ -1,0 +1,127 @@
+{
+  "symbol": "PFE",
+  "companyName": "Pfizer",
+  "updatedAt": "2026-06-22",
+  "facts": [
+    {
+      "topic": "Business Model",
+      "statement": "Pfizer is classified under SIC code 'Pharmaceutical Preparations' and trades on the NYSE under the ticker PFE.",
+      "source": "SEC submissions metadata (https://data.sec.gov/submissions/CIK0000078003.)"
+    },
+    {
+      "topic": "Revenue Scale",
+      "statement": "Pfizer reported total revenues of $62.6 billion for full-year 2025, compared with $63.6 billion the previous year, reflecting a year-over-year operational decline of 2%.",
+      "source": "DEF 14A filed 2026-03-12 (https://www.sec.gov/Archives/edgar/data/78003/000007800326000033/pfe-20260312.htm)"
+    },
+    {
+      "topic": "Revenue Scale",
+      "statement": "Excluding contributions from COVID-19 products, Pfizer's revenues grew 6% operationally in 2025.",
+      "source": "DEF 14A filed 2026-03-12 (https://www.sec.gov/Archives/edgar/data/78003/000007800326000033/pfe-20260312.htm)"
+    },
+    {
+      "topic": "Net Income",
+      "statement": "Pfizer reported net income of $2,119,000,000 for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000078003.)"
+    },
+    {
+      "topic": "Cash Flow",
+      "statement": "Pfizer generated operating cash flow of $8,700,000,000 for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000078003.)"
+    },
+    {
+      "topic": "Balance Sheet",
+      "statement": "As of FY2025, Pfizer had stockholders' equity of $88,203,000,000, long-term debt of $57,405,000,000, and cash and equivalents of $1,043,000,000.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000078003.)"
+    },
+    {
+      "topic": "Capital Allocation",
+      "statement": "In 2025, Pfizer returned $9.8 billion to shareholders via its quarterly dividend and invested $10.4 billion in internal R&D and approximately $8.8 billion in business development transactions, primarily reflecting the Metsera acquisition and the 3SBio licensing deal.",
+      "source": "DEF 14A filed 2026-03-12 (https://www.sec.gov/Archives/edgar/data/78003/000007800326000033/pfe-20260312.htm)"
+    },
+    {
+      "topic": "Capital Allocation",
+      "statement": "Pfizer's capital allocation strategy prioritizes maintaining and, over the long term, growing its dividend, reinvesting in the business, and the potential for share repurchases after de-leveraging its balance sheet.",
+      "source": "DEF 14A filed 2026-03-12 (https://www.sec.gov/Archives/edgar/data/78003/000007800326000033/pfe-20260312.htm)"
+    },
+    {
+      "topic": "Cost Realignment Program",
+      "statement": "Pfizer's cost realignment program is expected to deliver total net cost savings of approximately $5.7 billion by the end of 2026, and the first phase of its manufacturing optimization program is on track to deliver approximately $1.5 billion in net cost savings by the end of 2027.",
+      "source": "DEF 14A filed 2026-03-12 (https://www.sec.gov/Archives/edgar/data/78003/000007800326000033/pfe-20260312.htm)"
+    },
+    {
+      "topic": "Management Names",
+      "statement": "Albert Bourla serves as Chairman and Chief Executive Officer of Pfizer, and David M. Denton serves as Chief Financial Officer and Executive Vice President.",
+      "source": "10-K filed 2026-02-26 (https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm)"
+    },
+    {
+      "topic": "Management Names",
+      "statement": "Jennifer B. Damico serves as Senior Vice President and Controller (Principal Accounting Officer), and Margaret M. Madden serves as Senior Vice President and Corporate Secretary, Chief Governance Counsel.",
+      "source": "10-K filed 2026-02-26 (https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm)"
+    },
+    {
+      "topic": "Board of Directors",
+      "statement": "Pfizer's Board of Directors includes Ronald E. Blaylock, Mortimer J. Buckley, Susan Desmond-Hellmann, Joseph J. Echevarria, Scott Gottlieb, Susan Hockfield, Dan R. Littman, Shantanu Narayen, Suzanne Nora Johnson, James Quincey, James C. Smith, and Cyrus Taraporevala.",
+      "source": "10-K filed 2026-02-26 (https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm)"
+    },
+    {
+      "topic": "Board Refreshment",
+      "statement": "Dr. Susan Hockfield will retire from the Pfizer Board and will not stand for re-election in 2026.",
+      "source": "DEF 14A filed 2026-03-12 (https://www.sec.gov/Archives/edgar/data/78003/000007800326000033/pfe-20260312.htm)"
+    },
+    {
+      "topic": "M&A Activity",
+      "statement": "Pfizer completed the acquisition of Seagen Inc. on December 14, 2023, with associated restructuring, integration, and acquisition-related costs, as well as fair value adjustments to inventory and amortization expense.",
+      "source": "10-K filed 2026-02-26 (https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm)"
+    },
+    {
+      "topic": "M&A Activity",
+      "statement": "Pfizer acquired Metsera, Inc. in 2025, reinvigorating its presence in obesity with an ultra-long-acting GLP-1 receptor agonist and an expansive Phase 3 program.",
+      "source": "DEF 14A filed 2026-03-12 (https://www.sec.gov/Archives/edgar/data/78003/000007800326000033/pfe-20260312.htm)"
+    },
+    {
+      "topic": "Business Development",
+      "statement": "Pfizer entered into in-licensing agreements with 3SBio Inc. and YaoPharma Co., Ltd. in 2025 as part of its strategic deals to position the company for future growth.",
+      "source": "DEF 14A filed 2026-03-12 (https://www.sec.gov/Archives/edgar/data/78003/000007800326000033/pfe-20260312.htm)"
+    },
+    {
+      "topic": "Manufacturing Scale",
+      "statement": "Pfizer has 13 manufacturing and distribution facilities in the United States, comprising one of the largest U.S. internal pharmaceutical manufacturing networks, with nearly 40% of colleagues working in the global manufacturing and supply network producing about 45 billion doses of more than 500 medicines and vaccines each year for approximately 200 countries and territories.",
+      "source": "DEF 14A filed 2026-03-12 (https://www.sec.gov/Archives/edgar/data/78003/000007800326000033/pfe-20260312.htm)"
+    },
+    {
+      "topic": "Product Lines",
+      "statement": "Pfizer's 10-K references multiple product and brand members including Tukysa, Zavzpret, Medrol, Prevnar 13, disitamab vedotin, osivelotor, etrasimod (Velsipity), and B7H4 felmetatug vedotin, as well as U.S. Sterile Injectable and Hospital Products.",
+      "source": "10-K filed 2026-02-26 (https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm)"
+    },
+    {
+      "topic": "Strategic Partnerships",
+      "statement": "Pfizer has a manufacturing and supply agreement with Viatris and maintains a relationship with ViiV Healthcare Limited, a collaborative arrangement in HIV.",
+      "source": "10-K filed 2026-02-26 (https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm)"
+    },
+    {
+      "topic": "Government Agreement",
+      "statement": "Pfizer reached a voluntary agreement with the U.S. Government in 2025 supporting efforts to lower prescription drug costs and align prices with those in other developed countries, providing greater clarity on pricing and a three-year grace period from certain U.S. tariffs.",
+      "source": "DEF 14A filed 2026-03-12 (https://www.sec.gov/Archives/edgar/data/78003/000007800326000033/pfe-20260312.htm)"
+    },
+    {
+      "topic": "Equity Investment",
+      "statement": "Pfizer sold its equity method investment in Haleon through public stock offerings and private placements during 2024 and 2025, with transactions occurring in March 2024, October 2024, and throughout 2025.",
+      "source": "10-K filed 2026-02-26 (https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm)"
+    },
+    {
+      "topic": "Financing Arrangements",
+      "statement": "Pfizer has non-recourse financing arrangements with Blackstone (April 2023 and March 2025) and Abingworth (September 2025) involving clinical trial agreement terms, approval-based payment periods, and net sales and royalty agreement terms.",
+      "source": "10-K filed 2026-02-26 (https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm)"
+    },
+    {
+      "topic": "Governance",
+      "statement": "Pfizer's independent registered public accounting firm is KPMG LLP, New York, NY, Auditor Firm ID: 185, and management assessed the company's internal control over financial reporting as effective as of December 31, 2025.",
+      "source": "10-K filed 2026-02-26 (https://www.sec.gov/Archives/edgar/data/78003/000007800326000026/pfe-20251231.htm)"
+    },
+    {
+      "topic": "Access Initiative",
+      "statement": "Pfizer's Accord for a Healthier World initiative, launched in 2022 to provide its entire portfolio of medicines and vaccines to 45 lower-income countries on a not-for-profit basis, reached nearly 800,000 patients in 2025, a fourfold increase from the previous year.",
+      "source": "DEF 14A filed 2026-03-12 (https://www.sec.gov/Archives/edgar/data/78003/000007800326000033/pfe-20260312.htm)"
+    }
+  ]
+}

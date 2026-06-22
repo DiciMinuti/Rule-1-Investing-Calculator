@@ -1,0 +1,80 @@
+{
+  "symbol": "WELL",
+  "companyName": "Welltower",
+  "generatedAt": "2026-06-22",
+  "management": {
+    "grade": "strong",
+    "sections": [
+      {
+        "title": "Leadership",
+        "grade": "strong",
+        "summary": "CEO Shankh Mitra leads the largest global REIT by market capitalization at approximately $129 billion, having delivered a 228.2% cumulative total shareholder return from 2021-2025. The leadership team is executing a portfolio rotation into higher-growth seniors housing while launching new private funds and technology initiatives.",
+        "points": [
+          "Shankh Mitra serves as CEO and Director, signing the 10-K on February 12, 2026, with Timothy G. McHugh as Co-President and CFO and Kenneth J. Bacon as Board Chairman.",
+          "The company hired Jeff Stott, formerly with Extra Space Storage, as Chief Technology Officer to lead the 'Welltower 3.0' modernization initiative and its end-to-end Welltower Business System operating platform."
+        ]
+      },
+      {
+        "title": "Capital Allocation",
+        "grade": "strong",
+        "summary": "Welltower completed $18.6 billion in acquisitions and development in 2025 while raising credit ratings to A-/A3 with stable outlooks from S&P and Moody's. The team rotated $33 billion in total transaction activity, selling lower-growth outpatient medical assets and reinvesting into higher-growth seniors housing communities.",
+        "points": [
+          "The company issued approximately 56.1 million shares under ATM programs generating $8.9 billion in gross proceeds, and issued $2.25 billion in senior unsecured notes at 4.5% and 5.125% rates maturing in 2030 and 2035.",
+          "Net Debt to Adjusted EBITDA stood at 3.03x for FY2025 with approximately $10.2 billion of available liquidity, including full capacity under its $5.0 billion line of credit and $5.2 billion in available cash and restricted cash."
+        ]
+      },
+      {
+        "title": "Shareholder Alignment",
+        "grade": "strong",
+        "summary": "Welltower's Ten Year Executive Continuity and Alignment Program ties named executive officers to long-term value creation, with 2025 special incentive plan compensation expense of $1.5 billion. The company created the Welltower Charles T. Munger Grant Program providing $10 million annually to front-line staff at best-performing communities.",
+        "points": [
+          "Normalized FFO per diluted share grew 22% year over year to $5.29 in FY2025, with Adjusted EBITDA up 32% to $4.17 billion, directly linking executive compensation to per-share growth metrics.",
+          "The dividend yield was 1.5% as of December 31, 2025, with the company creating approximately $100 billion in shareholder value over the 2021-2025 period."
+        ]
+      },
+      {
+        "title": "Communication",
+        "grade": "strong",
+        "summary": "Welltower files detailed 10-K and DEF 14A disclosures breaking out three operating segments with property counts, gross carrying values, and accumulated depreciation by segment. The company reports same-store NOI growth by portfolio, with SHO SSNOI growth of 21.5% and total portfolio SSNOI growth of 14.1% for 2025.",
+        "points": [
+          "The 10-K filed February 12, 2026 provides segment-level granularity including 1,766 Seniors Housing Operating properties at $41.2 billion gross carrying value, 778 Triple-net properties at $12.3 billion, and 45 Outpatient Medical properties at $1.4 billion plus 81 held-for-sale.",
+          "The DEF 14A filed April 10, 2026 discloses geographic breakdowns of the SHO portfolio across 898 US properties, 738 UK properties, and 128 Canadian properties, along with mortgage loan portfolio details showing no delinquent loans."
+        ]
+      },
+      {
+        "title": "Governance",
+        "grade": "strong",
+        "summary": "The nine-member board includes CEO Shankh Mitra, Co-President and CFO Timothy G. McHugh, and seven independent directors with diverse backgrounds including healthcare, technology, and real estate expertise. The board oversees the Ten Year Executive Continuity and Alignment Program and the 2025 special incentive plan with $1.5 billion in compensation expense.",
+        "points": [
+          "Director nominees include Johnese M. Spisso, Karen B. DeSalvo, Kathryn M. Sullivan, Andrew Gundlach, Dennis G. Lopez, Ade J. Patton, and Sergio D. Rivera, providing oversight across healthcare administration, public health, aerospace, and real estate domains.",
+          "The board oversees RIDEA 6.0 operator contracts that deepen economic alignment between shareholders and operating partners, and monitors the mortgage loan portfolio which had no loans subject to delinquent principal or interest as of December 31, 2025."
+        ]
+      }
+    ]
+  },
+  "moat": {
+    "grade": "strong",
+    "types": [
+      {
+        "type": "Scale Advantages",
+        "grade": "strong",
+        "summary": "Welltower operates approximately 2,900 properties with $63.8 billion in ending real estate investments, making it the largest global REIT by market capitalization at approximately $129 billion. The Seniors Housing Operating segment alone comprises 1,766 properties with a gross carrying value of $41.2 billion across the US, UK, and Canada."
+      },
+      {
+        "type": "Network Effects",
+        "grade": "middle",
+        "summary": "The launch of private funds management with Seniors Housing Fund I closing $2.5 billion from eight global institutional LPs creates a capital-sourcing network that competitors cannot easily replicate. The Welltower Business System technology platform and RIDEA 6.0 operator contracts further embed the company across its operating partner ecosystem."
+      },
+      {
+        "type": "Switching Costs",
+        "grade": "middle",
+        "summary": "Welltower's 778 Triple-net properties at $12.3 billion gross carrying value generate stable contractual revenue with operators locked into long-term leases, creating high switching costs for tenants. The introduction of RIDEA 6.0 contracts and the Munger Grant Program deepen economic ties with operating partners, increasing the cost of relationship disruption."
+      },
+      {
+        "type": "Intangible Assets",
+        "grade": "strong",
+        "summary": "Welltower holds A- and A3 credit ratings with stable outlooks from S&P and Moody's, providing a lower cost of capital than most competitors in seniors housing. The company's $10.2 billion in available liquidity and access to $5.0 billion in credit line capacity, combined with the Welltower brand and its newly launched private funds platform, create intangible capital-access advantages."
+      }
+    ]
+  }
+}

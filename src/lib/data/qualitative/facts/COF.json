@@ -1,0 +1,127 @@
+{
+  "symbol": "COF",
+  "companyName": "Capital One",
+  "updatedAt": "2026-06-22",
+  "facts": [
+    {
+      "topic": "Business Model",
+      "statement": "Capital One Financial Corporation is classified as a National Commercial Bank (SIC) and is listed on the NYSE under the ticker COF, with additional preferred stock tickers (COF-PI, COF-PJ, COF-PK, COF-PL, COF-PN).",
+      "source": "SEC submissions metadata (https://data.sec.gov/submissions/CIK0000927628.)"
+    },
+    {
+      "topic": "Revenue Scale",
+      "statement": "Capital One reported revenue of $5.645 billion for FY2025 under the concept RevenueFromContractWithCustomerExcludingAssessedTax, filed February 19, 2026.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000927628.)"
+    },
+    {
+      "topic": "Net Income",
+      "statement": "Capital One reported net income of $4.887 billion for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000927628.)"
+    },
+    {
+      "topic": "Operating Cash Flow",
+      "statement": "Capital One generated $20.575 billion in operating cash flow for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000927628.)"
+    },
+    {
+      "topic": "Stockholders Equity",
+      "statement": "Capital One's stockholders' equity stood at $52.582 billion as of FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000927628.)"
+    },
+    {
+      "topic": "M&A - Discover Transaction",
+      "statement": "Capital One completed the acquisition of Discover Financial Services on May 18, 2025. Discover's businesses constituted approximately 21% of total assets and 20% of total net revenues as of and for the year ended December 31, 2025.",
+      "source": "10-K filed 2026-02-19 (https://www.sec.gov/Archives/edgar/data/927628/000092762826000024/cof-20251231.htm)"
+    },
+    {
+      "topic": "M&A - Brex Transaction",
+      "statement": "On January 22, 2026, Capital One entered into a merger agreement to acquire Brex Inc. for $5.15 billion in aggregate consideration, consisting of approximately $2.58 billion in cash and approximately 10.6 million shares of Capital One common stock, subject to customary closing conditions including HSR clearance.",
+      "source": "10-K filed 2026-02-19 (https://www.sec.gov/Archives/edgar/data/927628/000092762826000024/cof-20251231.htm)"
+    },
+    {
+      "topic": "Revenue and Loan Growth",
+      "statement": "For 2025, Capital One reported net revenue of $53.4 billion, a 37% increase from 2024, driven by strong line of business results and the Discover acquisition. Total loans held for investment were $453.6 billion as of December 31, 2025, up 38% from 2024.",
+      "source": "DEF 14A filed 2026-03-25 (https://www.sec.gov/Archives/edgar/data/927628/000119312526124131/d701179ddef14a.htm)"
+    },
+    {
+      "topic": "Margins - Net Interest Margin",
+      "statement": "Capital One's net interest margin for 2025 was 7.8%, a 96 basis point increase from 2024.",
+      "source": "DEF 14A filed 2026-03-25 (https://www.sec.gov/Archives/edgar/data/927628/000119312526124131/d701179ddef14a.htm)"
+    },
+    {
+      "topic": "Margins - Efficiency Ratio",
+      "statement": "Capital One's adjusted operating efficiency ratio improved 151 basis points to 40.8% in 2025 from 42.4% in 2024. Adjusted efficiency ratio improved to 51.8% from 54.0% in 2024.",
+      "source": "DEF 14A filed 2026-03-25 (https://www.sec.gov/Archives/edgar/data/927628/000119312526124131/d701179ddef14a.htm)"
+    },
+    {
+      "topic": "Earnings Per Share",
+      "statement": "Diluted EPS for 2025 was $4.03, compared to $11.59 in 2024. Adjusted diluted EPS was $19.61, an increase of 40% from $13.96 in 2024.",
+      "source": "DEF 14A filed 2026-03-25 (https://www.sec.gov/Archives/edgar/data/927628/000119312526124131/d701179ddef14a.htm)"
+    },
+    {
+      "topic": "Return on Equity",
+      "statement": "ROTCE for 2025 was 3.2%, compared to 11.2% in 2024. Adjusted ROTCE was 18.5%, up from 13.5% in 2024.",
+      "source": "DEF 14A filed 2026-03-25 (https://www.sec.gov/Archives/edgar/data/927628/000119312526124131/d701179ddef14a.htm)"
+    },
+    {
+      "topic": "Capital Management",
+      "statement": "As of year-end 2025, total deposits were $475.8 billion (up 31% from 2024), approximately 85% of total deposits were FDIC insured, the common equity Tier 1 capital ratio was 14.3% (up from 13.5% at year-end 2024), and the fourth quarter average Liquidity Coverage Ratio was 173%.",
+      "source": "DEF 14A filed 2026-03-25 (https://www.sec.gov/Archives/edgar/data/927628/000119312526124131/d701179ddef14a.htm)"
+    },
+    {
+      "topic": "Credit Performance",
+      "statement": "Capital One's net charge-off rate for 2025 was 3.3%, compared to 3.4% in 2024, with business line credit trends in Card, Auto, and Commercial favorable to market and industry peers.",
+      "source": "DEF 14A filed 2026-03-25 (https://www.sec.gov/Archives/edgar/data/927628/000119312526124131/d701179ddef14a.htm)"
+    },
+    {
+      "topic": "Tangible Book Value",
+      "statement": "Tangible book value per common share was $107.72 as of December 31, 2025, an increase of 0.7% from $106.97 in 2024.",
+      "source": "DEF 14A filed 2026-03-25 (https://www.sec.gov/Archives/edgar/data/927628/000119312526124131/d701179ddef14a.htm)"
+    },
+    {
+      "topic": "Total Shareholder Return",
+      "statement": "Capital One's one-year TSR for the period ended December 31, 2025 was 37.7%, outpacing the KBW Bank Index (32.6%) and the S&P 500 (17.9%). Three-year and five-year TSR were 174.7% and 168.0%, respectively, versus the KBW Bank Index at 80.3% and 96.0%.",
+      "source": "DEF 14A filed 2026-03-25 (https://www.sec.gov/Archives/edgar/data/927628/000119312526124131/d701179ddef14a.htm)"
+    },
+    {
+      "topic": "Management - CEO",
+      "statement": "Richard D. Fairbank serves as Chair and Chief Executive Officer of Capital One Financial Corporation and is the company's founder. He is the only member of management who serves as a director on the board.",
+      "source": "10-K filed 2026-02-19 (https://www.sec.gov/Archives/edgar/data/927628/000092762826000024/cof-20251231.htm)"
+    },
+    {
+      "topic": "Management - CFO and CAO",
+      "statement": "Andrew M. Young serves as Chief Financial Officer and Timothy P. Golden serves as Chief Accounting Officer of Capital One Financial Corporation.",
+      "source": "10-K filed 2026-02-19 (https://www.sec.gov/Archives/edgar/data/927628/000092762826000024/cof-20251231.htm)"
+    },
+    {
+      "topic": "Management - Other Executives",
+      "statement": "Robert M. Alexander serves as Chief Information Officer, Neal Blinde as President of Commercial Banking, Jason P. Hanson as President of Global Payment Network, and Mark Daniel Mouadeb as President of Card.",
+      "source": "10-K filed 2026-02-19 (https://www.sec.gov/Archives/edgar/data/927628/000092762826000024/cof-20251231.htm)"
+    },
+    {
+      "topic": "Board Composition",
+      "statement": "Capital One's board nominated thirteen directors for election at the 2026 Annual Stockholder Meeting, twelve of whom are independent. Seven new independent directors have been appointed since 2021, including three in 2025 who previously served on Discover Financial Services' board.",
+      "source": "DEF 14A filed 2026-03-25 (https://www.sec.gov/Archives/edgar/data/927628/000119312526124131/d701179ddef14a.htm)"
+    },
+    {
+      "topic": "Governance",
+      "statement": "Capital One has no supermajority vote provisions in its Bylaws or Certificate of Incorporation, no stockholder rights plan (poison pill), majority voting for directors with a resignation policy in uncontested elections, and stockholders holding at least 25% of outstanding common stock may request a special meeting.",
+      "source": "DEF 14A filed 2026-03-25 (https://www.sec.gov/Archives/edgar/data/927628/000119312526124131/d701179ddef14a.htm)"
+    },
+    {
+      "topic": "Auditor",
+      "statement": "Ernst & Young LLP serves as Capital One's independent registered public accounting firm, and the Board recommended ratification of their selection for 2026 at the Annual Stockholder Meeting.",
+      "source": "DEF 14A filed 2026-03-25 (https://www.sec.gov/Archives/edgar/data/927628/000119312526124131/d701179ddef14a.htm)"
+    },
+    {
+      "topic": "Internal Controls - Discover Integration",
+      "statement": "As permitted by the SEC, Capital One excluded Discover from its evaluation of the effectiveness of internal control over financial reporting as of December 31, 2025, as the company was in the process of incorporating Discover into its internal control framework following the May 18, 2025 acquisition.",
+      "source": "10-K filed 2026-02-19 (https://www.sec.gov/Archives/edgar/data/927628/000092762826000024/cof-20251231.htm)"
+    },
+    {
+      "topic": "Strategic Positioning",
+      "statement": "The Discover Transaction positioned Capital One as a diversified bank operating a global payment network, described as a rare and valuable asset at a time of significant disruption and innovation across the payments landscape.",
+      "source": "DEF 14A filed 2026-03-25 (https://www.sec.gov/Archives/edgar/data/927628/000119312526124131/d701179ddef14a.htm)"
+    }
+  ]
+}

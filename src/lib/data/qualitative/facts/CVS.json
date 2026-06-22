@@ -1,0 +1,167 @@
+{
+  "symbol": "CVS",
+  "companyName": "CVS Health",
+  "updatedAt": "2026-06-22",
+  "facts": [
+    {
+      "topic": "Business Model",
+      "statement": "CVS Health operates as a diversified health care company classified under SIC code 'Retail-Drug Stores and Proprietary Stores,' listed on the NYSE under ticker CVS.",
+      "source": "SEC submissions metadata (https://data.sec.gov/submissions/CIK0000064803.)"
+    },
+    {
+      "topic": "Revenue Scale",
+      "statement": "CVS Health reported total revenue of $357.776 billion for FY2025, filed on 2026-02-10.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000064803.)"
+    },
+    {
+      "topic": "Net Income",
+      "statement": "CVS Health reported net income of $8.344 billion for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000064803.)"
+    },
+    {
+      "topic": "Cash Flow",
+      "statement": "CVS Health generated $13.426 billion in operating cash flow for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000064803.)"
+    },
+    {
+      "topic": "Balance Sheet",
+      "statement": "As of FY2025 year-end, CVS Health had stockholders' equity of $75.56 billion and cash and cash equivalents of $8.196 billion.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000064803.)"
+    },
+    {
+      "topic": "Segment Structure",
+      "statement": "CVS Health reports three operating segments: Health Care Benefits, Health Services, and Pharmacy and Consumer Health, with intersegment eliminations and corporate/reconciling items.",
+      "source": "10-K filed 2026-02-10 (https://www.sec.gov/Archives/edgar/data/64803/000006480326000010/cvs-20251231.htm)"
+    },
+    {
+      "topic": "Revenue Categories",
+      "statement": "The 10-K reports revenue broken down by product/service categories including Pharmacy Revenue, Front Store Revenue, Premiums, and Product and Service Other across all three segments.",
+      "source": "10-K filed 2026-02-10 (https://www.sec.gov/Archives/edgar/data/64803/000006480326000010/cvs-20251231.htm)"
+    },
+    {
+      "topic": "Health Care Benefits Product Lines",
+      "statement": "The Health Care Benefits segment includes product lines such as Individual Exchange, Group Medicare Advantage, and Medicare, with specific reporting periods referenced for each.",
+      "source": "10-K filed 2026-02-10 (https://www.sec.gov/Archives/edgar/data/64803/000006480326000010/cvs-20251231.htm)"
+    },
+    {
+      "topic": "Variable Interest Entities",
+      "statement": "CVS Health consolidates Red Oak Sourcing LLC as a variable interest entity primary beneficiary and also has VIE relationships with Physicians Groups, hedge funds, private equity funds, and real estate funds where it is not the primary beneficiary.",
+      "source": "10-K filed 2026-02-10 (https://www.sec.gov/Archives/edgar/data/64803/000006480326000010/cvs-20251231.htm)"
+    },
+    {
+      "topic": "Acquisitions and Divestitures",
+      "statement": "The 10-K references a Rite Aid asset acquisition in Q3 2025, Omnicare LLC as of year-end 2025, and a Health Care Delivery reporting unit, as well as a Medicare Shared Savings Program disposal group within Health Services.",
+      "source": "10-K filed 2026-02-10 (https://www.sec.gov/Archives/edgar/data/64803/000006480326000010/cvs-20251231.htm)"
+    },
+    {
+      "topic": "Restructuring",
+      "statement": "CVS Health has an ongoing 2023 Restructuring Program with activity tracked through at least FY2025.",
+      "source": "10-K filed 2026-02-10 (https://www.sec.gov/Archives/edgar/data/64803/000006480326000010/cvs-20251231.htm)"
+    },
+    {
+      "topic": "Capital Structure - Debt",
+      "statement": "CVS Health has numerous outstanding senior notes with maturities ranging from 2026 through 2065, including junior subordinated notes (Series A and Series B) issued in December 2024, indicating significant long-term debt issuance activity.",
+      "source": "10-K filed 2026-02-10 (https://www.sec.gov/Archives/edgar/data/64803/000006480326000010/cvs-20251231.htm)"
+    },
+    {
+      "topic": "Credit Facilities",
+      "statement": "CVS Health maintains multiple five-year credit agreements, including facilities dated May 16, 2019, May 11, 2021, and May 16, 2022, each with Bank of America N.A. as administrative agent, with the 2021 facility amended four times through May 2025.",
+      "source": "10-K filed 2026-02-10 (https://www.sec.gov/Archives/edgar/data/64803/000006480326000010/cvs-20251231.htm)"
+    },
+    {
+      "topic": "Management - CEO",
+      "statement": "J. David Joyner serves as President, Chief Executive Officer, and Chair of the Board of CVS Health, with the Chair role effective January 1, 2026.",
+      "source": "10-K filed 2026-02-10 (https://www.sec.gov/Archives/edgar/data/64803/000006480326000010/cvs-20251231.htm)"
+    },
+    {
+      "topic": "Management - CFO",
+      "statement": "Brian O. Newman serves as Executive Vice President and Chief Financial Officer of CVS Health.",
+      "source": "10-K filed 2026-02-10 (https://www.sec.gov/Archives/edgar/data/64803/000006480326000010/cvs-20251231.htm)"
+    },
+    {
+      "topic": "Management - Other Executives",
+      "statement": "Named executive officers with restrictive covenant and change-in-control agreements include Thomas F. Cowhey, Tilak Mandadi, Prem Shah, Samrat Khichi, Heidi B. Capozzi, and J. David Joyner.",
+      "source": "10-K filed 2026-02-10 (https://www.sec.gov/Archives/edgar/data/64803/000006480326000010/cvs-20251231.htm)"
+    },
+    {
+      "topic": "Board of Directors",
+      "statement": "The CVS Health Board includes 13 director nominees for the 2026 Annual Meeting, including Fernando Aguirre, Jeffrey R. Balser, C. David Brown II, Alecia A. DeCoudreaux, Anne M. Finucane, John E. Gallina, J. David Joyner, J. Scott Kirby, Michael F. Mahoney, Leslie V. Norwalk, Larry M. Robbins, Guy P. Sansone, and Douglas H. Shulman.",
+      "source": "DEF 14A filed 2026-04-03 (https://www.sec.gov/Archives/edgar/data/64803/000130817926000201/cvs014969-def14a.htm)"
+    },
+    {
+      "topic": "Board Leadership",
+      "statement": "Michael F. Mahoney serves as Lead Independent Director, while Roger N. Farah, former Chair of the Board, is retiring and will not stand for re-election at the 2026 Annual Meeting after nearly twenty years of service.",
+      "source": "DEF 14A filed 2026-04-03 (https://www.sec.gov/Archives/edgar/data/64803/000130817926000201/cvs014969-def14a.htm)"
+    },
+    {
+      "topic": "CEO Transition",
+      "statement": "Karen S. Lynch served as CEO from February 1, 2021 through October 17, 2024, when J. David Joyner assumed the role effective October 18, 2024.",
+      "source": "DEF 14A filed 2026-04-03 (https://www.sec.gov/Archives/edgar/data/64803/000130817926000201/cvs014969-def14a.htm)"
+    },
+    {
+      "topic": "Business Performance - 2025",
+      "statement": "In 2025, CVS Health delivered $402.1 billion in revenue, generated $10.6 billion in operating cash flow, and returned over $3.0 billion to stockholders.",
+      "source": "DEF 14A filed 2026-04-03 (https://www.sec.gov/Archives/edgar/data/64803/000130817926000201/cvs014969-def14a.htm)"
+    },
+    {
+      "topic": "Competitive Position - Pharmacy",
+      "statement": "CVS Pharmacy held 29%+ retail pharmacy script share as of year-end 2025, and the company serves approximately 185 million Americans.",
+      "source": "DEF 14A filed 2026-04-03 (https://www.sec.gov/Archives/edgar/data/64803/000130817926000201/cvs014969-def14a.htm)"
+    },
+    {
+      "topic": "Competitive Position - Cost Savings",
+      "statement": "Aetna and Caremark together generated $315 billion+ in annual savings for clients and members through negotiations with providers and drug manufacturers.",
+      "source": "DEF 14A filed 2026-04-03 (https://www.sec.gov/Archives/edgar/data/64803/000130817926000201/cvs014969-def14a.htm)"
+    },
+    {
+      "topic": "Health Care Delivery",
+      "statement": "Signify Health clinicians supported 500K+ reconnections to care throughout 2025, and impacted approximately 16 million care gaps.",
+      "source": "DEF 14A filed 2026-04-03 (https://www.sec.gov/Archives/edgar/data/64803/000130817926000201/cvs014969-def14a.htm)"
+    },
+    {
+      "topic": "Technology and AI Investment",
+      "statement": "CVS Health is investing in AI-powered analytics to identify members taking GLP-1 medications needing support services, equipping pharmacists with AI tools for medication adherence, and using AI to reduce call center volume and complex call handling time by 20-30%.",
+      "source": "DEF 14A filed 2026-04-03 (https://www.sec.gov/Archives/edgar/data/64803/000130817926000201/cvs014969-def14a.htm)"
+    },
+    {
+      "topic": "Biosimilar Strategy",
+      "statement": "CVS Health's formulary strategy delivered more than $1.5 billion in client savings through biosimilar adoption in 2025.",
+      "source": "DEF 14A filed 2026-04-03 (https://www.sec.gov/Archives/edgar/data/64803/000130817926000201/cvs014969-def14a.htm)"
+    },
+    {
+      "topic": "Workforce",
+      "statement": "CVS Health employs a workforce of more than 300,000 colleagues, with approximately 16 million hours spent in learning and development courses and 64,000+ positions filled by internal candidates in 2025.",
+      "source": "DEF 14A filed 2026-04-03 (https://www.sec.gov/Archives/edgar/data/64803/000130817926000201/cvs014969-def14a.htm)"
+    },
+    {
+      "topic": "Governance - Activist Engagement",
+      "statement": "CVS Health entered into a confidentiality agreement with Glenview Capital Management, LLC dated November 17, 2024, and Larry M. Robbins of Glenview serves as a director nominee.",
+      "source": "10-K filed 2026-02-10 (https://www.sec.gov/Archives/edgar/data/64803/000006480326000010/cvs-20251231.htm)"
+    },
+    {
+      "topic": "Compensation Governance",
+      "statement": "CVS Health adopted a Dodd-Frank Clawback Policy on September 21, 2023, and is seeking stockholder approval for a new 2026 Incentive Compensation Plan to replace the expiring 2017 Incentive Compensation Plan.",
+      "source": "10-K filed 2026-02-10 (https://www.sec.gov/Archives/edgar/data/64803/000006480326000010/cvs-20251231.htm)"
+    },
+    {
+      "topic": "Stockholder Proposal - Governance Risk",
+      "statement": "A stockholder proposal at the 2026 Annual Meeting seeks to reduce the threshold for the stockholder right to act by written consent, with the Board recommending a vote against the proposal.",
+      "source": "DEF 14A filed 2026-04-03 (https://www.sec.gov/Archives/edgar/data/64803/000130817926000201/cvs014969-def14a.htm)"
+    },
+    {
+      "topic": "Aetna Prior Authorization",
+      "statement": "95%+ of Aetna's eligible prior authorization requests were approved within 24 hours, and the company introduced bundled prior authorization for select conditions to reduce administrative burdens.",
+      "source": "DEF 14A filed 2026-04-03 (https://www.sec.gov/Archives/edgar/data/64803/000130817926000201/cvs014969-def14a.htm)"
+    },
+    {
+      "topic": "Long-term Debt History",
+      "statement": "CVS Health reported long-term debt of $71.444 billion as of FY2019, filed on 2020-02-18, reflecting the significant leverage taken on for the Aetna acquisition.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000064803.)"
+    },
+    {
+      "topic": "Acquired Equity Plans",
+      "statement": "CVS Health continued to grant awards under the Oak Street Health and Signify Health incentive plans after acquiring those companies, with amended plans expiring on May 16, 2024.",
+      "source": "10-K filed 2026-02-10 (https://www.sec.gov/Archives/edgar/data/64803/000006480326000010/cvs-20251231.htm)"
+    }
+  ]
+}

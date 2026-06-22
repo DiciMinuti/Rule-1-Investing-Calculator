@@ -1,0 +1,85 @@
+{
+  "symbol": "SCCO",
+  "companyName": "Southern Copper Corporation",
+  "generatedAt": "2026-06-22",
+  "management": {
+    "grade": "middle",
+    "sections": [
+      {
+        "title": "Leadership",
+        "grade": "middle",
+        "summary": "Chairman German Larrea Mota-Velasco oversees a company navigating sudden succession after CEO Oscar Gonzalez Rocha died on April 13, 2026, triggering the appointment of Interim CEO Leonardo Contreras Lerdo de Tejada. The board reduced its size from nine to eight nominees, leaving a leadership structure still in flux during a critical transition period.",
+        "points": [
+          "Oscar Gonzalez Rocha's unexpected April 13, 2026 death activated the succession plan, elevating board nominee Leonardo Contreras Lerdo de Tejada to Interim CEO without a permanent replacement named.",
+          "CFO Raul Jacob Ruisanchez and Comptroller Lina A. Vingerhoets Vilca remain in their 10-K-named roles, providing financial continuity while the top executive seat is temporary.",
+          "Chairman German Larrea Mota-Velasco also serves as a director, concentrating board and executive oversight authority in a single figure during the interim period."
+        ]
+      },
+      {
+        "title": "Capital Allocation",
+        "grade": "middle",
+        "summary": "Southern Copper generated $3.5731 billion in FY2025 operating cash flow against $5.7585 billion in long-term debt and $3.2581 billion in cash, yielding a net debt position of roughly $2.5 billion on $9.1716 billion in equity. The balance sheet supports continued mining investment but does not indicate aggressive deleveraging or large buyback activity.",
+        "points": [
+          "FY2025 operating cash flow of $3.5731 billion comfortably covers the $5.7585 billion long-term debt load, with $3.2581 billion in cash providing a liquidity cushion for capital projects.",
+          "Stockholders' equity of $9.1716 billion against long-term debt of $5.7585 billion produces a debt-to-equity ratio near 0.63, a moderate leverage profile for a cyclical mining operator.",
+          "The 826,065,041 shares outstanding at the April 2026 record date show no evidence of significant share repurchase activity reducing the count."
+        ]
+      },
+      {
+        "title": "Shareholder Alignment",
+        "grade": "middle",
+        "summary": "The compensation philosophy targets business objective achievement and retention of executives with core competencies critical to long-term strategy, while non-employee directors receive modest cash and equity awards tied to attendance. The advisory say-on-pay vote is non-binding, and director equity grants are small relative to the company's market capitalization.",
+        "points": [
+          "Non-employee directors earn $20,000 annual cash plus $13,000 per in-person meeting and $6,000 per committee meeting, with equity grants of 1,600 shares annually plus quarterly 400-share attendance awards.",
+          "The proxy's compensation objectives explicitly link pay to superior corporate performance and retention of key competencies, though the advisory shareholder vote on executive pay is non-binding.",
+          "Starting Q1 2026, directors can earn an additional 200 shares contingent on full-year board attendance, tightening the link between director participation and equity rewards."
+        ]
+      },
+      {
+        "title": "Communication",
+        "grade": "middle",
+        "summary": "Southern Copper files standard SEC disclosures including a 10-K with named executive officers in the signature block and a DEF 14A proxy detailing director nominees, compensation, and voting mechanics. The company reports FY2025 revenue of $9.8958 billion and operating cash flow of $3.5731 billion through XBRL company facts, with Galaz, Yamazaki, Ruiz Urquiza S.C. as auditor since 2009.",
+        "points": [
+          "The 10-K signature block identifies the CEO, CFO Raul Jacob Ruisanchez, and Comptroller Lina A. Vingerhoets Vilca, providing clear executive accountability in financial filings.",
+          "The 2026 proxy discloses eight director nominees by name, board meeting frequency (four scheduled meetings in 2025), and 100% director attendance at those sessions.",
+          "Shareholder voting mechanics are specified: plurality for director elections, majority for auditor ratification and the non-binding advisory pay vote, giving investors clear procedural visibility."
+        ]
+      },
+      {
+        "title": "Governance",
+        "grade": "middle",
+        "summary": "The board fixed director count at nine in January 2026 but nominated only eight after Gonzalez Rocha's death, with all 2025 directors achieving 100% attendance at four scheduled meetings. The proxy references affiliated Grupo Mexico entities, and the company maintains a Securities Law Compliance Policy for insider trading, though related-party dynamics warrant investor attention.",
+        "points": [
+          "The board met four times in 2025 with 100% attendance by all directors, and each director participated in at least 75% of combined board and committee meetings they served on.",
+          "The 10-K and proxy reference affiliated entities including Grupo Mexico SAB de CV and other Grupo Mexico-related companies, creating potential related-party considerations for minority shareholders.",
+          "The company adopted a Securities Law Compliance Policy covering material non-public information and securities transactions for directors, officers, employees, and covered individuals, establishing formal insider trading guardrails."
+        ]
+      }
+    ]
+  },
+  "moat": {
+    "grade": "middle",
+    "types": [
+      {
+        "type": "Cost Advantage Through Scale",
+        "grade": "middle",
+        "summary": "Southern Copper's FY2025 revenue of $9.8958 billion and operating cash flow of $3.5731 billion reflect a mining operation of sufficient scale to spread fixed costs across large copper output volumes, though the packet does not provide unit costs or specific margin data to confirm a cost leadership position."
+      },
+      {
+        "type": "Asset-Based Competitive Advantage",
+        "grade": "middle",
+        "summary": "With stockholders' equity of $9.1716 billion and long-term debt of $5.7585 billion backing its mining infrastructure, Southern Copper controls substantial physical assets in copper extraction, but the packet lacks reserve data, mine locations, or production tonnage to fully assess asset quality and longevity."
+      },
+      {
+        "type": "Financial Strength",
+        "grade": "middle",
+        "summary": "The company's $3.2581 billion cash position against $5.7585 billion in long-term debt, combined with $3.5731 billion in FY2025 operating cash flow, provides financial flexibility to weather copper price cycles and fund capital projects without distressed financing, a meaningful advantage in a capital-intensive industry."
+      },
+      {
+        "type": "Regulatory and Structural Barriers",
+        "grade": "dull",
+        "summary": "The packet does not provide specific regulatory permits, mining concessions, environmental licenses, or government agreements that would constitute a formal regulatory moat for Southern Copper, though the company's status as an NYSE-listed metal mining entity with Grupo Mexico affiliations implies operating in a regulated mining environment."
+      }
+    ]
+  }
+}

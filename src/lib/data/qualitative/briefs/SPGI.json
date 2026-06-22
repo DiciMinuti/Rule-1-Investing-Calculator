@@ -1,0 +1,86 @@
+{
+  "symbol": "SPGI",
+  "companyName": "S&P Global",
+  "generatedAt": "2026-06-22",
+  "management": {
+    "grade": "strong",
+    "sections": [
+      {
+        "title": "Leadership",
+        "grade": "strong",
+        "summary": "Martina L. Cheung leads S&P Global as President and CEO, signing the FY2025 10-K on February 10, 2026, with Eric W. Aboaf as CFO since September 2024. Ian P. Livingston chairs a 10-director board, with William Green retiring at the 2026 Annual Meeting.",
+        "points": [
+          "Martina L. Cheung serves as President and CEO and has been a Director since 2024, signing the 10-K on February 10, 2026.",
+          "Eric W. Aboaf joined as EVP and CFO with an offer letter dated September 18, 2024, overseeing a company with $15.336 billion in FY2025 revenue.",
+          "Christopher F. Craig serves as SVP and Chief Accounting Officer, and Steve Kemps serves as EVP and Chief Legal Officer."
+        ]
+      },
+      {
+        "title": "Capital Allocation",
+        "grade": "strong",
+        "summary": "S&P Global returned $6.2 billion to shareholders in 2025, including $1.2 billion in dividends and $5.0 billion in share repurchases, maintaining over 50 consecutive years of dividend increases. The company ran multiple uncapped accelerated repurchase programs throughout 2025 and authorized a new repurchase program on November 13, 2025.",
+        "points": [
+          "Returned $6.2 billion to shareholders in 2025, split between $1.2 billion in dividends and $5.0 billion in share repurchases.",
+          "Maintained more than 50 consecutive years of dividend increases as of 2025, demonstrating consistent capital return discipline.",
+          "Initiated uncapped accelerated share repurchase programs on February 19, May 6, August 12, and December 4, 2025, plus a new repurchase authorization on November 13.",
+          "Completed divestitures of Engineering Solutions, Leveraged Commentary and Data, PrimeOne, and Fincentric across 2023-2025 to streamline the portfolio."
+        ]
+      },
+      {
+        "title": "Shareholder Alignment",
+        "grade": "strong",
+        "summary": "Approximately 92% of CEO and 82% of other NEOs' 2025 total target annual compensation was performance-based, emphasizing pay-for-performance principles. The company holds 18.4 million securities available for future equity issuance as of December 31, 2025.",
+        "points": [
+          "Approximately 92% of CEO and 82% of other NEOs' 2025 target compensation was performance-based, tying pay to results.",
+          "As of December 31, 2025, 982,406 outstanding options had a weighted-average exercise price of $74.46, aligning executive gains with shareholder value.",
+          "The board nominated 10 directors for one-year terms at the 2026 Annual Meeting, ensuring annual accountability to shareholders."
+        ]
+      },
+      {
+        "title": "Communication",
+        "grade": "strong",
+        "summary": "S&P Global files detailed 10-K and DEF 14A disclosures with segment-level revenue and adjusted EBITA reporting across five operating segments. The 2026 Proxy Statement reports FY2025 revenue of $15.336 billion up 8% YoY, GAAP net income of $4.471 billion up 16% YoY, and diluted EPS of $14.66 up 19% YoY.",
+        "points": [
+          "The 10-K for FY2025 reports operating segments including Market Intelligence, Ratings, Energy, Mobility, and Indices with a Corporate non-segment category.",
+          "The 2026 Proxy Statement discloses segment-level adjusted EBITA margins, including S&P Dow Jones Indices at 71.0% and Mobility at 39.9%.",
+          "Ernst & Young LLP audited the consolidated financial statements for the year ended December 31, 2025, with the board recommending ratification for 2026."
+        ]
+      },
+      {
+        "title": "Governance",
+        "grade": "strong",
+        "summary": "Ian P. Livingston chairs a board of 10 nominees with William Green retiring, while the company maintains a five-year revolving credit facility expiring December 17, 2029. Long-term debt of $11.394 billion is balanced against stockholders' equity of $33.159 billion as of FY2025.",
+        "points": [
+          "The board nominated 10 directors for one-year terms at the 2026 Annual Meeting, with William Green not standing for re-election and retiring.",
+          "S&P Global holds a five-year revolving credit facility expiring December 17, 2029, and senior notes with maturities ranging from 2026 to 2062, including sustainability-linked notes due 2029.",
+          "As of FY2025, the company carried long-term debt of $11,394 million against stockholders' equity of $33,159 million and cash of $1,666 million."
+        ]
+      }
+    ]
+  },
+  "moat": {
+    "grade": "strong",
+    "types": [
+      {
+        "type": "Intangible Assets",
+        "grade": "strong",
+        "summary": "S&P Global's intangible assets include databases, software, media content, customer relationships, and trade names, with Goldman Sachs Commodity and Broad Market intellectual property tied to the Indices segment. The company leverages 100+ years of trust and differentiated data and IP across its essential intelligence platform."
+      },
+      {
+        "type": "Network Effects",
+        "grade": "strong",
+        "summary": "The S&P Dow Jones Indices segment generated $1,850 million in FY2025 revenue with a 71.0% adjusted EBITA margin, reflecting how benchmark indices become embedded in investment products and trading strategies. These indices create self-reinforcing adoption as more funds track them, deepening their market authority."
+      },
+      {
+        "type": "Switching Costs",
+        "grade": "strong",
+        "summary": "The Market Intelligence segment produced $4,916 million in FY2025 revenue with a 34.0% adjusted EBITA margin, driven by data and analytics integrated into customer workflows. The Mobility segment added $1,747 million in revenue with a 39.9% margin, reflecting embedded relationships with automotive and transportation customers."
+      },
+      {
+        "type": "Efficient Scale",
+        "grade": "middle",
+        "summary": "S&P Global operates five segments with FY2025 revenue of $15.336 billion and operating cash flow of $3,710 million, leveraging shared data infrastructure and AI-enabled solutions across business lines. The company's scale enables $6.2 billion in annual shareholder returns while investing in high-growth adjacencies and enterprise AI capabilities."
+      }
+    ]
+  }
+}

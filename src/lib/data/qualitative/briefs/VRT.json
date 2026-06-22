@@ -1,0 +1,80 @@
+{
+  "symbol": "VRT",
+  "companyName": "Vertiv Holdings",
+  "generatedAt": "2026-06-22",
+  "management": {
+    "grade": "strong",
+    "sections": [
+      {
+        "title": "Leadership",
+        "grade": "strong",
+        "summary": "CEO Giordano Albertazzi leads a management team that scaled net sales to $10.2 billion in FY2025, a 28% increase, while expanding adjusted operating margin by 100 basis points to 20.4%. Executive Chairman David M. Cote provides board leadership through a separate Chairman and CEO structure.",
+        "points": [
+          "Albertazzi's 2025 compensation included a $1.3 million base salary, a $4.0 million actual cash bonus, and roughly $13.04 million in annual equity grant date fair value.",
+          "The board nominated eleven directors for the 2026 Annual Meeting, including Cote, Albertazzi, and Steven S. Reinemund, maintaining separate Chairman and CEO roles."
+        ]
+      },
+      {
+        "title": "Capital Allocation",
+        "grade": "strong",
+        "summary": "Vertiv deployed approximately $1.2 billion for strategic acquisitions in 2025, targeting AI infrastructure capabilities across customized racks, advanced monitoring, and liquid cooling fluid management. Capital expenditures rose to $220.0 million, with $110.9 million directed to the Americas segment to support capacity expansion.",
+        "points": [
+          "Acquisitions included Great Lakes for AI infrastructure racks and cabinets, Waylay for AI-enabled monitoring, and PurgeRite for specialized liquid cooling fluid management.",
+          "The company partnered with NVIDIA on 800 VDC power architectures and with Caterpillar and Oklo on on-site power generation for gigawatt-scale AI infrastructure."
+        ]
+      },
+      {
+        "title": "Shareholder Alignment",
+        "grade": "strong",
+        "summary": "Vertiv requires executive officers and directors to meet stock ownership guidelines with a 'no sale' restriction until guidelines are met, directly tying leadership wealth to equity retention. The company prohibits hedging and pledging of shares by officers, directors, and employees, reducing incentives for risk-taking detached from shareholder outcomes.",
+        "points": [
+          "The CEO's target cash bonus was set at 150% of base salary, with actual 2025 cash bonus of $4.0 million tied to performance metrics.",
+          "Vertiv does not maintain a poison pill or stockholder rights plan, avoiding structural barriers that could insulate management from shareholder accountability."
+        ]
+      },
+      {
+        "title": "Communication",
+        "grade": "strong",
+        "summary": "Vertiv reports financial results across three geographic segments-Americas, Asia Pacific, and Europe, Middle East & Africa-with FY2025 segment net sales of $6,386.3 million, $2,019.2 million, and $1,824.4 million respectively. The 10-K and DEF 14A disclose revenue by product versus services and spares, organic growth rates, backlog, and operating margin by segment.",
+        "points": [
+          "FY2025 disclosures break out product revenue of $8,207.0 million (up 31.4% YoY) and services and spares revenue of $2,022.9 million (up 14.5% YoY), with organic growth rates of 30.1% and 12.8% respectively.",
+          "The company reports backlog of $15.0 billion at year-end 2025, up 109% year-over-year, providing investors visibility into future revenue."
+        ]
+      },
+      {
+        "title": "Governance",
+        "grade": "middle",
+        "summary": "Vertiv's governance framework includes share ownership guidelines with no-sale restrictions and prohibitions on hedging and pledging, but the company faces a pending securities class action in the Southern District of New York. The SEC concluded its investigation on December 30, 2025, without recommending enforcement action.",
+        "points": [
+          "The putative class action In re Vertiv Holdings Co Securities Litigation (22-cv-3572) alleges misleading statements regarding inflationary and supply chain pressures, with Exchange Act claims under Sections 10(b) and 20(a) still pending.",
+          "Long-term debt of $2,907.2 million consists primarily of a Term Loan due 2032 and Senior Secured Notes due 2028, against cash and equivalents of $780.4 million as of December 31, 2025."
+        ]
+      }
+    ]
+  },
+  "moat": {
+    "grade": "strong",
+    "types": [
+      {
+        "type": "Switching Costs",
+        "grade": "strong",
+        "summary": "Vertiv's over 5,000 field service engineers worldwide provide preventative maintenance, remote monitoring, and critical digital infrastructure software that embed the company into customer operations. Services and spares revenue of $2,022.9 million in FY2025, growing 14.5% year-over-year, reflects an installed base that generates recurring demand tied to uptime-critical data center operations."
+      },
+      {
+        "type": "Intangible Assets",
+        "grade": "strong",
+        "summary": "Engineering, research and development costs of $441.7 million in FY2025, up 20% from the prior year, fund proprietary products including Vertiv OneCore converged infrastructure and Vertiv SmartRun prefabricated whitespace solutions. The portfolio spans AC and DC power management, liquid-cooled thermal systems, energy storage, and software for managing IT equipment across data center environments."
+      },
+      {
+        "type": "Efficient Scale",
+        "grade": "strong",
+        "summary": "With FY2025 net sales of $10.2 billion across more than 130 countries and a $15.0 billion year-end backlog, Vertiv operates at a scale that few competitors can match in power, cooling, and IT infrastructure for data centers. The Americas segment alone generated $6,386.3 million in revenue and $1,714.3 million in segment operating profit, demonstrating regional density advantages."
+      },
+      {
+        "type": "Network Effects",
+        "grade": "middle",
+        "summary": "Strategic partnerships with NVIDIA on 800 VDC power architectures and with Caterpillar and Oklo on on-site power generation for gigawatt-scale AI infrastructure position Vertiv within an ecosystem where adoption of its solutions reinforces demand for complementary products. The 2025 acquisitions of Great Lakes, Waylay, and PurgeRite extend this ecosystem across AI infrastructure racks, monitoring, and liquid cooling."
+      }
+    ]
+  }
+}

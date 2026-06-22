@@ -1,0 +1,127 @@
+{
+  "symbol": "LOW",
+  "companyName": "Lowe's Companies",
+  "updatedAt": "2026-06-22",
+  "facts": [
+    {
+      "topic": "Business Model",
+      "statement": "Lowe's is a Fortune 100 company and the world's second largest home improvement retailer, operating 1,759 home improvement stores and outlets in the United States with approximately 196 million square feet of retail selling space as of January 30, 2026.",
+      "source": "10-K filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/60667/000006066726000029/low-20260130.htm)"
+    },
+    {
+      "topic": "Business Model",
+      "statement": "Lowe's operated over 540 branch locations in the United States and Canada as of January 30, 2026, including branch locations added through the 2025 acquisitions of Foundation Building Materials (FBM) and Artisan Design Group (ADG).",
+      "source": "10-K filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/60667/000006066726000029/low-20260130.htm)"
+    },
+    {
+      "topic": "Strategy",
+      "statement": "Lowe's Total Home strategy, updated in December 2024, has five pillars: drive Pro penetration, accelerate online sales, expand home services, create a loyalty ecosystem, and increase space productivity.",
+      "source": "10-K filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/60667/000006066726000029/low-20260130.htm)"
+    },
+    {
+      "topic": "Customer Segments",
+      "statement": "Lowe's serves individual homeowners and renters across the DIY and do-it-for-me (DIFM) spectrum, and Pro customers primarily consisting of small to medium-sized tradespeople, repair and remodelers, and property managers; with the FBM and ADG acquisitions, Lowe's is also serving larger Pro customers in residential and commercial markets.",
+      "source": "10-K filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/60667/000006066726000029/low-20260130.htm)"
+    },
+    {
+      "topic": "Acquisitions",
+      "statement": "In June 2025, Lowe's acquired Artisan Design Group (ADG), a nationwide provider of design, distribution and installation services for interior surface finishes including flooring, cabinets and countertops, with a home builder and property manager customer base.",
+      "source": "DEF 14A filed 2026-04-16 (https://www.sec.gov/Archives/edgar/data/60667/000006066726000056/low-20260415.htm)"
+    },
+    {
+      "topic": "Acquisitions",
+      "statement": "In October 2025, Lowe's acquired Foundation Building Materials (FBM), a North American distributor of interior building products including drywall, metal framing, ceiling systems, commercial doors and hardware, insulation and complementary products serving large residential and commercial professionals.",
+      "source": "DEF 14A filed 2026-04-16 (https://www.sec.gov/Archives/edgar/data/60667/000006066726000056/low-20260415.htm)"
+    },
+    {
+      "topic": "Acquisitions",
+      "statement": "FBM's aggregate assets (excluding goodwill and intangible assets net) and net sales represented 4.5% and 1.5% of Lowe's consolidated total assets and consolidated net sales, respectively, as of and for the year ended January 30, 2026.",
+      "source": "10-K filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/60667/000006066726000029/low-20260130.htm)"
+    },
+    {
+      "topic": "Revenue Scale",
+      "statement": "Lowe's reported revenue of $86.377 billion for FY2025 (fiscal year ended January 30, 2026).",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000060667.)"
+    },
+    {
+      "topic": "Profitability",
+      "statement": "Lowe's reported net income of $7.726 billion for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000060667.)"
+    },
+    {
+      "topic": "Cash Flow",
+      "statement": "Lowe's generated operating cash flow of $8.14 billion for FY2025.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000060667.)"
+    },
+    {
+      "topic": "Balance Sheet",
+      "statement": "As of January 30, 2026, Lowe's had stockholders' equity of negative $14.254 billion, long-term debt of $39.819 billion, and cash and equivalents of $1.761 billion.",
+      "source": "SEC company facts summary (https://data.sec.gov/api/xbrl/companyfacts/CIK0000060667.)"
+    },
+    {
+      "topic": "Segment Performance",
+      "statement": "For FY2025, the Retail Home Improvement segment generated net sales of $84.078 billion with operating income of $10.223 billion (12.16% operating margin), while the Other segment generated net sales of $2.208 billion with an operating loss of $70 million.",
+      "source": "10-K filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/60667/000006066726000029/low-20260130.htm)"
+    },
+    {
+      "topic": "Margins",
+      "statement": "Lowe's reported a consolidated operating margin of 11.77% for FY2025; adjusted operating margin was 12.11% after excluding $293 million in pre-tax transaction costs and intangible asset amortization related to the ADG and FBM acquisitions.",
+      "source": "DEF 14A filed 2026-04-16 (https://www.sec.gov/Archives/edgar/data/60667/000006066726000056/low-20260415.htm)"
+    },
+    {
+      "topic": "Capital Allocation",
+      "statement": "Lowe's returned $2.6 billion in dividends to shareholders in FY2025 and has paid $12.1 billion in dividends over the last five years; the company has also repurchased $37.4 billion in shares over the last five years.",
+      "source": "DEF 14A filed 2026-04-16 (https://www.sec.gov/Archives/edgar/data/60667/000006066726000056/low-20260415.htm)"
+    },
+    {
+      "topic": "Capital Allocation",
+      "statement": "Lowe's generated $46.3 billion in cash flows from operations over the last five years and achieved a 2025 return on invested capital (ROIC) of 26.1%.",
+      "source": "DEF 14A filed 2026-04-16 (https://www.sec.gov/Archives/edgar/data/60667/000006066726000056/low-20260415.htm)"
+    },
+    {
+      "topic": "Capital Allocation",
+      "statement": "Lowe's is a Dividend Aristocrat and increased its annual dividend per share by 4.4% in 2025.",
+      "source": "DEF 14A filed 2026-04-16 (https://www.sec.gov/Archives/edgar/data/60667/000006066726000056/low-20260415.htm)"
+    },
+    {
+      "topic": "Management",
+      "statement": "Marvin R. Ellison serves as Chairman, President and Chief Executive Officer of Lowe's; Brandon J. Sink serves as Executive Vice President and Chief Financial Officer; and Dan C. Griggs, Jr. serves as Senior Vice President, Tax and Chief Accounting Officer.",
+      "source": "10-K filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/60667/000006066726000029/low-20260130.htm)"
+    },
+    {
+      "topic": "Board of Directors",
+      "statement": "Lowe's Board of Directors consists of 12 nominees including Marvin R. Ellison as Chairman, President and CEO, and Richard W. Dreiling as Lead Independent Director; other directors include Raul Alvarez, Scott H. Baxter, Sandra B. Cochran, Laurie Z. Douglas, Navdeep Gupta, Brian C. Rogers, Bertram L. Scott, Lawrence Simkins, Colleen Taylor, and Mary Beth West.",
+      "source": "DEF 14A filed 2026-04-16 (https://www.sec.gov/Archives/edgar/data/60667/000006066726000056/low-20260415.htm)"
+    },
+    {
+      "topic": "Online Business",
+      "statement": "Approximately 13% of Lowe's retail sales are online, and the company has approximately 300,000 associates.",
+      "source": "DEF 14A filed 2026-04-16 (https://www.sec.gov/Archives/edgar/data/60667/000006066726000056/low-20260415.htm)"
+    },
+    {
+      "topic": "Product Categories",
+      "statement": "Lowe's reports operating segment merchandise categories including Appliances, Seasonal and Outdoor Living, Lumber, Lawn and Garden, Hardware, Kitchens and Bath, Building Materials, Rough Plumbing, Paint, Millwork, Tools, Electrical, Flooring, and Decor.",
+      "source": "10-K filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/60667/000006066726000029/low-20260130.htm)"
+    },
+    {
+      "topic": "Risk Factors",
+      "statement": "On February 20, 2026, the Supreme Court declared that tariffs imposed under the International Emergency Economic Powers Act (IEEPA) were invalid, and on March 4, 2026, the Court of International Trade ordered U.S. Customs and Border Protection to liquidate entries without regard to IEEPA duties; Lowe's is evaluating the impact on its consolidated financial position, results of operations, and cash flows.",
+      "source": "10-K filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/60667/000006066726000029/low-20260130.htm)"
+    },
+    {
+      "topic": "Technology Transformation",
+      "statement": "Lowe's is undergoing a multi-year technology transformation which includes updating and modernizing its distribution and replenishment systems, as well as certain accounting and finance systems, with updates expected to continue for the next few years.",
+      "source": "10-K filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/60667/000006066726000029/low-20260130.htm)"
+    },
+    {
+      "topic": "Share Count",
+      "statement": "As of March 19, 2026, Lowe's had 560,063,429 shares of common stock outstanding with a par value of $0.50 per share.",
+      "source": "10-K filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/60667/000006066726000029/low-20260130.htm)"
+    },
+    {
+      "topic": "Competitive Position",
+      "statement": "Lowe's competes with national and regional home improvement warehouse chains and lumber yards, as well as traditional hardware, plumbing, electrical, drywall and home specialty stores in most of the markets it serves.",
+      "source": "10-K filed 2026-03-23 (https://www.sec.gov/Archives/edgar/data/60667/000006066726000029/low-20260130.htm)"
+    }
+  ]
+}

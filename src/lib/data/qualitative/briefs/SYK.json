@@ -1,0 +1,80 @@
+{
+  "symbol": "SYK",
+  "companyName": "Stryker Corporation",
+  "generatedAt": "2026-06-22",
+  "management": {
+    "grade": "strong",
+    "sections": [
+      {
+        "title": "Leadership",
+        "grade": "strong",
+        "summary": "CEO Kevin A. Lobo leads a management team that grew net sales 11.2% to $25,116 million in 2025 while expanding adjusted EPS to $13.63. The leadership team executed the Inari Medical acquisition in February 2025 and integrated multiple 2024 tuck-in deals including Artelon, Vertos Medical, and SERF SAS.",
+        "points": [
+          "Kevin A. Lobo serves as Chair and CEO, overseeing a company with approximately 53,600 employees and $25,116 million in 2025 net sales across MedSurg/Neurotechnology and Orthopaedics/Spine segments.",
+          "CFO Preston W. Wells and Chief Accounting Officer William E. Berry, Jr. manage a capital structure with $12,188 million in long-term debt and $3,652 million in cash as of FY2025."
+        ]
+      },
+      {
+        "title": "Capital Allocation",
+        "grade": "strong",
+        "summary": "Stryker deploys capital across R&D, acquisitions, and dividends, spending $1,388 million on R&D in FY2025 while completing the Inari Medical acquisition and raising dividends 5.0% to $3.36 per share. The company maintains numerous senior unsecured notes with maturities through 2050 and entered a new credit agreement with Wells Fargo in February 2025.",
+        "points": [
+          "R&D investment of $1,388 million in FY2025 represented approximately 6.8% of revenue, supporting product development across Knees, Hips, Neurovascular, Endoscopy, and Spine categories.",
+          "The Inari Medical acquisition closed in February 2025 and represented approximately 10% of total assets and 2.3% of net sales for the year, adding peripheral vascular capabilities to the portfolio."
+        ]
+      },
+      {
+        "title": "Shareholder Alignment",
+        "grade": "strong",
+        "summary": "Variable performance and stock-based compensation averaged 87% of total direct compensation for Named Executive Officers in 2025, aligning pay with results. Stryker's five-year cumulative total shareholder return from 2021 to 2025 exceeded the S&P 500 Health Care Index.",
+        "points": [
+          "CEO Kevin Lobo's 2025 total compensation was $21,401,495, with a CEO-to-median-employee pay ratio of 264 to 1, heavily weighted toward performance-based equity.",
+          "Stryker does not have employment or severance agreements, does not allow contractual change-in-control payments, and does not pay tax gross-ups, reducing executive entrenchment risk."
+        ]
+      },
+      {
+        "title": "Communication",
+        "grade": "strong",
+        "summary": "Stryker reports financial results across two segments with product categories including Instruments, Endoscopy, Medical, Neurovascular, Knees, Hips, Trauma and Extremities, and Spine, split by U.S. and Non-U.S. markets for 2023 through 2025. The company provides both GAAP and adjusted non-GAAP measures, disclosing $581 million in intangible amortization and $430 million in acquisition-related costs as adjustments.",
+        "points": [
+          "The 10-K filed February 11, 2026 details revenue by segment, product category, and geography for three years, and the DEF 14A filed March 23, 2026 reports adjusted net earnings of $5,267 million versus GAAP net earnings of $3,246 million.",
+          "Stryker discloses recall-related charges of $48 million, regulatory and legal matters charges of $12 million, and goodwill impairment charges of $120 million for 2025 separately in its proxy statement."
+        ]
+      },
+      {
+        "title": "Governance",
+        "grade": "strong",
+        "summary": "Stryker's ten-director board includes Lead Independent Director Sherilyn S. McCoy and Audit Committee Chair Andrew K. Silvernail, with all directors other than CEO Lobo classified as independent. The company has no poison pill, provides proxy access, allows shareholders to call special meetings, and requires majority voting with a resignation policy.",
+        "points": [
+          "All directors are elected annually under majority voting in uncontested elections, coupled with a director resignation policy if they fail to receive majority support.",
+          "Ernst & Young LLP issued an unqualified audit opinion on the consolidated financial statements, and internal controls were assessed as effective as of December 31, 2025, excluding recently acquired Inari Medical operations."
+        ]
+      }
+    ]
+  },
+  "moat": {
+    "grade": "strong",
+    "types": [
+      {
+        "type": "Intangible Assets and Regulatory",
+        "grade": "strong",
+        "summary": "Stryker's surgical and medical instrument portfolio spans regulated product categories including Neurovascular, NeuroCranial, Knees, Hips, and Spine implants, requiring FDA clearances and clinical validation that create barriers to entry. The company recorded recall-related charges of $48 million in 2025, reflecting the regulatory complexity and product liability exposure inherent in its device businesses."
+      },
+      {
+        "type": "Switching Costs",
+        "grade": "strong",
+        "summary": "Stryker's Instruments, Endoscopy, and Medical product categories embed equipment and consumables in hospital operating workflows, creating training and procurement switching costs. The company's $25,116 million in 2025 net sales across approximately 53,600 employees reflects deep hospital system integration across both MedSurg and Orthopaedics segments."
+      },
+      {
+        "type": "Research and Development Scale",
+        "grade": "strong",
+        "summary": "Stryker spent $1,388 million on R&D in FY2025, approximately 6.8% of revenue, funding innovation across Knees, Hips, Trauma and Extremities, Neurovascular, and Spine product families. This R&D scale, combined with $3,711 million in operating cash flow, supports a pipeline that smaller competitors struggle to match across so many device categories simultaneously."
+      },
+      {
+        "type": "Acquisition-Driven Portfolio Breadth",
+        "grade": "middle",
+        "summary": "Stryker has expanded its portfolio through acquisitions including Wright Medical Group, Vocera Communications, Inari Medical, and multiple 2024 tuck-in deals such as Vertos Medical and SERF SAS, broadening its Orthopaedics, Neurotechnology, and MedSurg offerings. The Inari acquisition alone represented approximately 10% of total assets as of December 31, 2025, demonstrating the scale of Stryker's M&A-driven growth strategy."
+      }
+    ]
+  }
+}
