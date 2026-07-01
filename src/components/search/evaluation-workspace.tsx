@@ -16,6 +16,13 @@ import {
 import { Fragment, type ReactNode, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { MiniPriceChart } from "@/components/ui/mini-price-chart";
 import {
+  CHART_RANGE_OPTIONS,
+  DEFAULT_INDICATOR_CHART_RANGE,
+  getChartDateTicks,
+  getChartRange,
+  type ChartRangeLabel,
+} from "@/lib/chart-ranges";
+import {
   buildTechnicalIndicators,
   type IndicatorSignal,
   type MacdPoint,
@@ -33,6 +40,7 @@ import {
 } from "@/lib/rule1";
 import { getQualitativeBrief } from "@/lib/data/qualitative-briefs";
 import {
+  formatChartDate,
   formatCurrency,
   formatCompact,
   formatDate,
@@ -1705,6 +1713,10 @@ function BusinessStep({
 }
 
 function indicatorTone(signal: IndicatorSignal | SummarySignal) {
+  if (signal === "insufficient") {
+    return "unavailable";
+  }
+
   if (signal === "bullish") {
     return "good";
   }
@@ -1725,10 +1737,38 @@ function IndicatorStat({ label, value }: { label: string; value: string }) {
   );
 }
 
-const indicatorChartLimit = 90;
 const indicatorChartWidth = 920;
 const indicatorChartHeight = 150;
 const indicatorChartPadding = 12;
+const chartSignalEpsilon = 0.000001;
+
+type IndicatorMarkerTone = "bullish" | "bearish";
+type StochasticThreshold = "overbought" | "oversold";
+
+function ChartRangeControls({
+  label,
+  onSelect,
+  selectedRange,
+}: {
+  label: string;
+  onSelect: (range: ChartRangeLabel) => void;
+  selectedRange: ChartRangeLabel;
+}) {
+  return (
+    <div className="chart-range-controls" aria-label={label}>
+      {CHART_RANGE_OPTIONS.map((option) => (
+        <button
+          className={`segmented-button ${selectedRange === option.label ? "active" : ""}`}
+          key={option.label}
+          type="button"
+          onClick={() => onSelect(option.label)}
+        >
+          {option.label}
+        </button>
+      ))}
+    </div>
+  );
+}
 
 function formatSessionsAgo(value: number | undefined) {
   if (!Number.isFinite(value)) {
@@ -1766,6 +1806,10 @@ function finiteChartValues(values: Array<number | null | undefined>) {
   return values.filter((value): value is number => Number.isFinite(value));
 }
 
+function chartX(index: number, pointCount: number) {
+  return (index / Math.max(pointCount - 1, 1)) * indicatorChartWidth;
+}
+
 function chartY(value: number, min: number, spread: number) {
   const innerHeight = indicatorChartHeight - indicatorChartPadding * 2;
   return indicatorChartPadding + innerHeight - ((value - min) / spread) * innerHeight;
@@ -1793,14 +1837,122 @@ function chartPath(values: Array<number | null | undefined>, min: number, max: n
     .join(" ");
 }
 
+function chartSignal(
+  primary: number | null | undefined,
+  secondary: number | null | undefined,
+): IndicatorMarkerTone | undefined {
+  if (!Number.isFinite(primary) || !Number.isFinite(secondary)) {
+    return undefined;
+  }
+
+  if ((primary as number) > (secondary as number) + chartSignalEpsilon) {
+    return "bullish";
+  }
+
+  if ((primary as number) < (secondary as number) - chartSignalEpsilon) {
+    return "bearish";
+  }
+
+  return undefined;
+}
+
+function findLineCrossMarkers<T extends { date: string }>(
+  points: T[],
+  getPrimary: (point: T) => number | null | undefined,
+  getSecondary: (point: T) => number | null | undefined,
+  bullishLabel: string,
+  bearishLabel: string,
+) {
+  const markers: Array<{ date: string; index: number; label: string; tone: IndicatorMarkerTone }> = [];
+  let previousSignal: IndicatorMarkerTone | undefined;
+
+  points.forEach((point, index) => {
+    const currentSignal = chartSignal(getPrimary(point), getSecondary(point));
+    if (!currentSignal) {
+      return;
+    }
+
+    if (previousSignal && previousSignal !== currentSignal) {
+      markers.push({
+        date: point.date,
+        index,
+        label: currentSignal === "bullish" ? bullishLabel : bearishLabel,
+        tone: currentSignal,
+      });
+    }
+
+    previousSignal = currentSignal;
+  });
+
+  return markers;
+}
+
+function stochasticThreshold(value: number | null | undefined): StochasticThreshold | "middle" | undefined {
+  if (!Number.isFinite(value)) {
+    return undefined;
+  }
+
+  if ((value as number) > 80) {
+    return "overbought";
+  }
+
+  if ((value as number) < 20) {
+    return "oversold";
+  }
+
+  return "middle";
+}
+
+function findStochasticThresholdMarkers(points: StochasticsPoint[]) {
+  const markers: Array<{ date: string; index: number; label: string; tone: StochasticThreshold; value: number }> = [];
+  let previousZone: StochasticThreshold | "middle" | undefined;
+
+  points.forEach((point, index) => {
+    const zone = stochasticThreshold(point.k);
+    if (!zone) {
+      return;
+    }
+
+    if (zone !== "middle" && previousZone !== zone) {
+      markers.push({
+        date: point.date,
+        index,
+        label: zone === "overbought" ? "%K above 80%" : "%K below 20%",
+        tone: zone,
+        value: point.k as number,
+      });
+    }
+
+    previousZone = zone;
+  });
+
+  return markers;
+}
+
+function IndicatorChartFrame({ children, points }: { children: ReactNode; points: Array<{ date: string }> }) {
+  const dateTicks = getChartDateTicks(points);
+
+  return (
+    <div className="indicator-chart-shell">
+      {children}
+      <div className="chart-axis" aria-hidden="true">
+        {dateTicks.map((tick) => (
+          <span key={`${tick.date}-${tick.index}`}>{formatChartDate(tick.date)}</span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function IndicatorChartEmpty() {
   return <div className="indicator-chart-empty">Chart unavailable</div>;
 }
 
-function MacdMiniChart({ points }: { points: MacdPoint[] }) {
+function MacdMiniChart({ points, rangeLabel }: { points: MacdPoint[]; rangeLabel: ChartRangeLabel }) {
+  const range = getChartRange(rangeLabel);
   const chartPoints = points
     .filter((point) => Number.isFinite(point.macd) || Number.isFinite(point.signal) || Number.isFinite(point.histogram))
-    .slice(-indicatorChartLimit);
+    .slice(-range.sessions);
   const values = finiteChartValues(chartPoints.flatMap((point) => [point.macd, point.signal, point.histogram]));
 
   if (chartPoints.length < 2 || !values.length) {
@@ -1813,57 +1965,133 @@ function MacdMiniChart({ points }: { points: MacdPoint[] }) {
   const spread = max - min;
   const zeroY = chartY(0, min, spread);
   const barWidth = Math.max(2, indicatorChartWidth / chartPoints.length - 2);
+  const crossMarkers = findLineCrossMarkers(
+    chartPoints,
+    (point) => point.macd,
+    (point) => point.signal,
+    "MACD crossed above signal",
+    "MACD crossed below signal",
+  );
 
   return (
-    <svg className="indicator-chart" viewBox={`0 0 ${indicatorChartWidth} ${indicatorChartHeight}`} role="img" aria-label="MACD history">
-      <line x1="0" x2={indicatorChartWidth} y1={zeroY} y2={zeroY} className="indicator-chart-grid" />
-      {chartPoints.map((point, index) => {
-        if (!Number.isFinite(point.histogram)) {
-          return null;
-        }
+    <IndicatorChartFrame points={chartPoints}>
+      <svg className="indicator-chart" viewBox={`0 0 ${indicatorChartWidth} ${indicatorChartHeight}`} role="img" aria-label={`${rangeLabel} MACD history`}>
+        <line x1="0" x2={indicatorChartWidth} y1={zeroY} y2={zeroY} className="indicator-chart-grid" />
+        {chartPoints.map((point, index) => {
+          if (!Number.isFinite(point.histogram)) {
+            return null;
+          }
 
-        const x = (index / Math.max(chartPoints.length - 1, 1)) * indicatorChartWidth;
-        const y = chartY(point.histogram as number, min, spread);
-        return (
-          <rect
-            className={point.histogram && point.histogram >= 0 ? "indicator-bar good" : "indicator-bar bad"}
-            height={Math.max(1, Math.abs(zeroY - y))}
-            key={point.date}
-            width={barWidth}
-            x={x - barWidth / 2}
-            y={Math.min(y, zeroY)}
-          />
-        );
-      })}
-      <path d={chartPath(chartPoints.map((point) => point.macd), min, max)} className="indicator-line primary" />
-      <path d={chartPath(chartPoints.map((point) => point.signal), min, max)} className="indicator-line secondary" />
-    </svg>
+          const x = chartX(index, chartPoints.length);
+          const y = chartY(point.histogram as number, min, spread);
+          return (
+            <rect
+              className={(point.histogram as number) >= 0 ? "indicator-bar good" : "indicator-bar bad"}
+              height={Math.max(1, Math.abs(zeroY - y))}
+              key={point.date}
+              width={barWidth}
+              x={x - barWidth / 2}
+              y={Math.min(y, zeroY)}
+            />
+          );
+        })}
+        <path d={chartPath(chartPoints.map((point) => point.macd), min, max)} className="indicator-line primary" />
+        <path d={chartPath(chartPoints.map((point) => point.signal), min, max)} className="indicator-line secondary" />
+        {crossMarkers.map((marker) => {
+          const point = chartPoints[marker.index];
+          const x = chartX(marker.index, chartPoints.length);
+          const y = chartY(point.macd as number, min, spread);
+
+          return (
+            <g key={`${marker.date}-${marker.tone}`}>
+              <title>{`${formatDate(marker.date)}: ${marker.label}`}</title>
+              <line
+                x1={x}
+                x2={x}
+                y1={indicatorChartPadding}
+                y2={indicatorChartHeight - indicatorChartPadding}
+                className={`indicator-marker-line ${marker.tone}`}
+              />
+              <circle cx={x} cy={y} r="4" className={`indicator-marker-dot ${marker.tone}`} />
+            </g>
+          );
+        })}
+      </svg>
+    </IndicatorChartFrame>
   );
 }
 
-function StochasticsMiniChart({ points }: { points: StochasticsPoint[] }) {
+function StochasticsMiniChart({ points, rangeLabel }: { points: StochasticsPoint[]; rangeLabel: ChartRangeLabel }) {
+  const range = getChartRange(rangeLabel);
   const chartPoints = points
     .filter((point) => Number.isFinite(point.k) || Number.isFinite(point.d))
-    .slice(-indicatorChartLimit);
+    .slice(-range.sessions);
 
   if (chartPoints.length < 2) {
     return <IndicatorChartEmpty />;
   }
 
+  const overboughtY = chartY(80, 0, 100);
+  const oversoldY = chartY(20, 0, 100);
+  const thresholdMarkers = findStochasticThresholdMarkers(chartPoints);
+
   return (
-    <svg className="indicator-chart" viewBox={`0 0 ${indicatorChartWidth} ${indicatorChartHeight}`} role="img" aria-label="Stochastics history">
-      <line x1="0" x2={indicatorChartWidth} y1={chartY(80, 0, 100)} y2={chartY(80, 0, 100)} className="indicator-chart-grid band" />
-      <line x1="0" x2={indicatorChartWidth} y1={chartY(20, 0, 100)} y2={chartY(20, 0, 100)} className="indicator-chart-grid band" />
-      <path d={chartPath(chartPoints.map((point) => point.k), 0, 100)} className="indicator-line primary" />
-      <path d={chartPath(chartPoints.map((point) => point.d), 0, 100)} className="indicator-line secondary" />
-    </svg>
+    <IndicatorChartFrame points={chartPoints}>
+      <svg className="indicator-chart" viewBox={`0 0 ${indicatorChartWidth} ${indicatorChartHeight}`} role="img" aria-label={`${rangeLabel} Stochastics history`}>
+        <rect
+          x="0"
+          y={indicatorChartPadding}
+          width={indicatorChartWidth}
+          height={Math.max(0, overboughtY - indicatorChartPadding)}
+          className="indicator-threshold-zone overbought"
+        />
+        <rect
+          x="0"
+          y={oversoldY}
+          width={indicatorChartWidth}
+          height={Math.max(0, indicatorChartHeight - indicatorChartPadding - oversoldY)}
+          className="indicator-threshold-zone oversold"
+        />
+        <line x1="0" x2={indicatorChartWidth} y1={overboughtY} y2={overboughtY} className="indicator-chart-grid band" />
+        <line x1="0" x2={indicatorChartWidth} y1={oversoldY} y2={oversoldY} className="indicator-chart-grid band" />
+        <path d={chartPath(chartPoints.map((point) => point.k), 0, 100)} className="indicator-line primary" />
+        <path d={chartPath(chartPoints.map((point) => point.d), 0, 100)} className="indicator-line secondary" />
+        {thresholdMarkers.map((marker) => {
+          const x = chartX(marker.index, chartPoints.length);
+          const y = chartY(marker.value, 0, 100);
+
+          return (
+            <g key={`${marker.date}-${marker.tone}`}>
+              <title>{`${formatDate(marker.date)}: ${marker.label}`}</title>
+              <line
+                x1={x}
+                x2={x}
+                y1={indicatorChartPadding}
+                y2={indicatorChartHeight - indicatorChartPadding}
+                className={`indicator-marker-line ${marker.tone}`}
+              />
+              <circle cx={x} cy={y} r="4" className={`indicator-threshold-dot ${marker.tone}`} />
+            </g>
+          );
+        })}
+      </svg>
+    </IndicatorChartFrame>
   );
 }
 
-function MovingAverageMiniChart({ points }: { points: MovingAveragePoint[] }) {
+function MovingAverageMiniChart({
+  period,
+  points,
+  rangeLabel,
+}: {
+  period: number;
+  points: MovingAveragePoint[];
+  rangeLabel: ChartRangeLabel;
+}) {
+  const range = getChartRange(rangeLabel);
   const chartPoints = points
-    .filter((point) => Number.isFinite(point.close) || Number.isFinite(point.average))
-    .slice(-indicatorChartLimit);
+    .filter((point) => Number.isFinite(point.close) && Number.isFinite(point.average))
+    .slice(-range.sessions);
   const values = finiteChartValues(chartPoints.flatMap((point) => [point.close, point.average]));
 
   if (chartPoints.length < 2 || !values.length) {
@@ -1872,15 +2100,44 @@ function MovingAverageMiniChart({ points }: { points: MovingAveragePoint[] }) {
 
   const min = Math.min(...values);
   const max = Math.max(...values);
+  const spread = max - min || 1;
+  const crossMarkers = findLineCrossMarkers(
+    chartPoints,
+    (point) => point.close,
+    (point) => point.average,
+    `Price crossed above ${period}-day average`,
+    `Price crossed below ${period}-day average`,
+  );
 
   return (
-    <svg className="indicator-chart" viewBox={`0 0 ${indicatorChartWidth} ${indicatorChartHeight}`} role="img" aria-label="Moving average history">
-      <line x1="0" x2={indicatorChartWidth} y1={indicatorChartPadding} y2={indicatorChartPadding} className="indicator-chart-grid" />
-      <line x1="0" x2={indicatorChartWidth} y1={indicatorChartHeight / 2} y2={indicatorChartHeight / 2} className="indicator-chart-grid" />
-      <line x1="0" x2={indicatorChartWidth} y1={indicatorChartHeight - indicatorChartPadding} y2={indicatorChartHeight - indicatorChartPadding} className="indicator-chart-grid" />
-      <path d={chartPath(chartPoints.map((point) => point.close), min, max)} className="indicator-line primary" />
-      <path d={chartPath(chartPoints.map((point) => point.average), min, max)} className="indicator-line secondary" />
-    </svg>
+    <IndicatorChartFrame points={chartPoints}>
+      <svg className="indicator-chart" viewBox={`0 0 ${indicatorChartWidth} ${indicatorChartHeight}`} role="img" aria-label={`${rangeLabel} Moving average history`}>
+        <line x1="0" x2={indicatorChartWidth} y1={indicatorChartPadding} y2={indicatorChartPadding} className="indicator-chart-grid" />
+        <line x1="0" x2={indicatorChartWidth} y1={indicatorChartHeight / 2} y2={indicatorChartHeight / 2} className="indicator-chart-grid" />
+        <line x1="0" x2={indicatorChartWidth} y1={indicatorChartHeight - indicatorChartPadding} y2={indicatorChartHeight - indicatorChartPadding} className="indicator-chart-grid" />
+        <path d={chartPath(chartPoints.map((point) => point.close), min, max)} className="indicator-line primary" />
+        <path d={chartPath(chartPoints.map((point) => point.average), min, max)} className="indicator-line secondary" />
+        {crossMarkers.map((marker) => {
+          const point = chartPoints[marker.index];
+          const x = chartX(marker.index, chartPoints.length);
+          const y = chartY(point.close, min, spread);
+
+          return (
+            <g key={`${marker.date}-${marker.tone}`}>
+              <title>{`${formatDate(marker.date)}: ${marker.label}`}</title>
+              <line
+                x1={x}
+                x2={x}
+                y1={indicatorChartPadding}
+                y2={indicatorChartHeight - indicatorChartPadding}
+                className={`indicator-marker-line ${marker.tone}`}
+              />
+              <circle cx={x} cy={y} r="4" className={`indicator-marker-dot ${marker.tone}`} />
+            </g>
+          );
+        })}
+      </svg>
+    </IndicatorChartFrame>
   );
 }
 
@@ -1900,6 +2157,7 @@ function IndicatorCard({
   children: ReactNode;
 }) {
   const tone = indicatorTone(signal);
+  const unavailable = signal === "insufficient";
 
   return (
     <section className={`indicator-card ${tone}`}>
@@ -1909,16 +2167,23 @@ function IndicatorCard({
             <h3 className="section-title">{title}</h3>
             <span className="subtle">{meta}</span>
           </div>
-          <div className="muted">{detail}</div>
+          {unavailable ? null : <div className="muted">{detail}</div>}
         </div>
       </div>
-      <div className="indicator-stat-grid">{children}</div>
-      {chart}
+      {unavailable ? (
+        <div className="indicator-unavailable">Unavailable</div>
+      ) : (
+        <>
+          <div className="indicator-stat-grid">{children}</div>
+          {chart}
+        </>
+      )}
     </section>
   );
 }
 
 function IndicatorsStep({ prices }: { prices: PriceHistory }) {
+  const [selectedRange, setSelectedRange] = useState<ChartRangeLabel>(DEFAULT_INDICATOR_CHART_RANGE);
   const indicators = useMemo(
     () => buildTechnicalIndicators(prices.history),
     [prices.history],
@@ -1931,6 +2196,11 @@ function IndicatorsStep({ prices }: { prices: PriceHistory }) {
     <div className="stack">
       <div className="qualitative-header">
         <h2 className="section-title">Indicators</h2>
+        <ChartRangeControls
+          label="Indicator chart range"
+          selectedRange={selectedRange}
+          onSelect={setSelectedRange}
+        />
       </div>
 
       <div className="indicator-grid">
@@ -1939,7 +2209,7 @@ function IndicatorsStep({ prices }: { prices: PriceHistory }) {
           meta={`${macd.fastPeriod}/${macd.slowPeriod}/${macd.signalPeriod}`}
           signal={macd.signal}
           detail={macd.detail}
-          chart={<MacdMiniChart points={macd.points} />}
+          chart={<MacdMiniChart points={macd.points} rangeLabel={selectedRange} />}
         >
           <IndicatorStat label="MACD" value={formatNumber(macd.latest?.macd, 3)} />
           <IndicatorStat label="Signal" value={formatNumber(macd.latest?.signal, 3)} />
@@ -1954,7 +2224,7 @@ function IndicatorsStep({ prices }: { prices: PriceHistory }) {
           meta={`${stochastics.period}/${stochastics.signalPeriod}`}
           signal={stochastics.signal}
           detail={stochastics.detail}
-          chart={<StochasticsMiniChart points={stochastics.points} />}
+          chart={<StochasticsMiniChart points={stochastics.points} rangeLabel={selectedRange} />}
         >
           <IndicatorStat label="%K" value={formatNumber(stochastics.latest?.k, 1)} />
           <IndicatorStat label="%D" value={formatNumber(stochastics.latest?.d, 1)} />
@@ -1969,7 +2239,7 @@ function IndicatorsStep({ prices }: { prices: PriceHistory }) {
           meta={`${movingAverage.period} day`}
           signal={movingAverage.signal}
           detail={movingAverage.detail}
-          chart={<MovingAverageMiniChart points={movingAverage.points} />}
+          chart={<MovingAverageMiniChart period={movingAverage.period} points={movingAverage.points} rangeLabel={selectedRange} />}
         >
           <IndicatorStat label="Close" value={formatCurrency(movingAverage.latest?.close)} />
           <IndicatorStat label="Average" value={formatCurrency(movingAverage.latest?.average)} />

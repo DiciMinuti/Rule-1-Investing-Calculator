@@ -5,6 +5,7 @@ import {
   calculateEma,
   calculateMovingAverage,
   calculateStochastics,
+  DEFAULT_INDICATOR_SETTINGS,
 } from "@/lib/indicators";
 import type { PricePoint } from "@/lib/types";
 
@@ -25,6 +26,17 @@ function datedPoint(index: number, close: number, ohlc = true): PricePoint {
 }
 
 describe("technical indicators", () => {
+  it("uses Phil Town indicator defaults", () => {
+    expect(DEFAULT_INDICATOR_SETTINGS).toMatchObject({
+      macdFastPeriod: 8,
+      macdSlowPeriod: 17,
+      macdSignalPeriod: 9,
+      stochasticsPeriod: 14,
+      stochasticsSignalPeriod: 5,
+      movingAveragePeriod: 10,
+    });
+  });
+
   it("seeds EMA with the first full-period average", () => {
     expect(calculateEma([1, 2, 3, 4, 5], 3)).toEqual([null, null, 2, 3, 4]);
   });

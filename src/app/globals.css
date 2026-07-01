@@ -1008,6 +1008,20 @@ a:hover {
   gap: 6px;
 }
 
+.chart-axis {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  color: var(--subtle);
+  font-size: 0.74rem;
+  line-height: 1.2;
+}
+
+.chart-axis span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
 .mini-chart {
   display: block;
   width: 100%;
@@ -1349,6 +1363,15 @@ a:hover {
   background: rgba(248, 113, 113, 0.03);
 }
 
+.indicator-card.unavailable {
+  background: transparent;
+}
+
+.indicator-unavailable {
+  color: var(--subtle);
+  font-size: 0.92rem;
+}
+
 .indicator-stat-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(88px, 1fr));
@@ -1372,6 +1395,12 @@ a:hover {
   width: 100%;
   height: 150px;
   color: var(--muted);
+}
+
+.indicator-chart-shell {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
 }
 
 .indicator-chart-grid {
@@ -1409,12 +1438,56 @@ a:hover {
   fill: var(--red);
 }
 
+.indicator-threshold-zone {
+  opacity: 0.18;
+}
+
+.indicator-threshold-zone.overbought {
+  fill: var(--red);
+}
+
+.indicator-threshold-zone.oversold {
+  fill: var(--green);
+}
+
+.indicator-marker-line {
+  stroke-width: 1;
+  stroke-dasharray: 3 6;
+  opacity: 0.42;
+  vector-effect: non-scaling-stroke;
+}
+
+.indicator-marker-line.bullish,
+.indicator-marker-line.oversold {
+  stroke: var(--green);
+}
+
+.indicator-marker-line.bearish,
+.indicator-marker-line.overbought {
+  stroke: var(--red);
+}
+
+.indicator-marker-dot,
+.indicator-threshold-dot {
+  stroke: var(--background);
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+}
+
+.indicator-marker-dot.bullish,
+.indicator-threshold-dot.oversold {
+  fill: var(--green);
+}
+
+.indicator-marker-dot.bearish,
+.indicator-threshold-dot.overbought {
+  fill: var(--red);
+}
+
 .indicator-chart-empty {
   display: grid;
   place-items: center;
   min-height: 150px;
-  border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.025);
   color: var(--subtle);
 }
 
@@ -1903,7 +1976,8 @@ a:hover {
   }
 
   .price-panel-header,
-  .price-readout {
+  .price-readout,
+  .qualitative-header {
     align-items: flex-start;
     flex-direction: column;
   }

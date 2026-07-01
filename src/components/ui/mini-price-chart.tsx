@@ -2,14 +2,14 @@
 
 import { useMemo, useState } from "react";
 import type { PricePoint } from "@/lib/types";
-import { formatCurrency, formatDate, formatPercent } from "@/lib/format";
-
-const rangeOptions = [
-  { label: "1Y", days: 260 },
-  { label: "3Y", days: 780 },
-  { label: "5Y", days: 1300 },
-  { label: "10Y", days: 2600 },
-];
+import {
+  CHART_RANGE_OPTIONS,
+  DEFAULT_PRICE_CHART_RANGE,
+  getChartDateTicks,
+  getChartRange,
+  type ChartRangeLabel,
+} from "@/lib/chart-ranges";
+import { formatChartDate, formatCurrency, formatDate, formatPercent } from "@/lib/format";
 
 function pointPath(points: PricePoint[], width: number, height: number, min: number, spread: number) {
   return points
@@ -22,10 +22,10 @@ function pointPath(points: PricePoint[], width: number, height: number, min: num
 }
 
 export function MiniPriceChart({ points, sourceLabel }: { points: PricePoint[]; sourceLabel?: string }) {
-  const [selectedRange, setSelectedRange] = useState("5Y");
+  const [selectedRange, setSelectedRange] = useState<ChartRangeLabel>(DEFAULT_PRICE_CHART_RANGE);
   const [hoverIndex, setHoverIndex] = useState<number | null>(null);
-  const range = rangeOptions.find((option) => option.label === selectedRange) ?? rangeOptions[2];
-  const chartPoints = useMemo(() => points.slice(-range.days), [points, range.days]);
+  const range = getChartRange(selectedRange);
+  const chartPoints = useMemo(() => points.slice(-range.sessions), [points, range.sessions]);
 
   if (chartPoints.length < 2) {
     return <div className="chart-empty">Price chart unavailable.</div>;
@@ -45,6 +45,7 @@ export function MiniPriceChart({ points, sourceLabel }: { points: PricePoint[]; 
   const hoverPoint = hoverIndex === null ? latest : chartPoints[hoverIndex];
   const hoverX = hoverIndex === null ? width : (hoverIndex / (chartPoints.length - 1)) * width;
   const hoverY = padding + innerHeight - ((hoverPoint.close - min) / spread) * innerHeight;
+  const dateTicks = getChartDateTicks(chartPoints);
 
   function updateHover(clientX: number, currentTarget: SVGSVGElement) {
     const rect = currentTarget.getBoundingClientRect();
@@ -64,7 +65,7 @@ export function MiniPriceChart({ points, sourceLabel }: { points: PricePoint[]; 
           </div>
         </div>
         <div className="chart-range-controls" aria-label="Price chart range">
-          {rangeOptions.map((option) => (
+          {CHART_RANGE_OPTIONS.map((option) => (
             <button
               className={`segmented-button ${selectedRange === option.label ? "active" : ""}`}
               key={option.label}
@@ -107,6 +108,11 @@ export function MiniPriceChart({ points, sourceLabel }: { points: PricePoint[]; 
         <line x1={hoverX} x2={hoverX} y1={padding} y2={height - padding} className="chart-hover-line" />
         <circle cx={hoverX} cy={hoverY} r="4" className="chart-hover-dot" />
       </svg>
+      <div className="chart-axis" aria-hidden="true">
+        {dateTicks.map((tick) => (
+          <span key={`${tick.date}-${tick.index}`}>{formatChartDate(tick.date)}</span>
+        ))}
+      </div>
       <div className="chart-stats">
         <span>Low {formatCurrency(min)}</span>
         <span>High {formatCurrency(max)}</span>

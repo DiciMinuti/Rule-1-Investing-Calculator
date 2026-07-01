@@ -80,6 +80,23 @@ export function formatDate(value: string | undefined) {
   }).format(date);
 }
 
+export function formatChartDate(value: string | undefined) {
+  if (!value) {
+    return "—";
+  }
+
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) {
+    return value;
+  }
+
+  return new Intl.DateTimeFormat("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "2-digit",
+  }).format(date);
+}
+
 export function gradeTone(grade: BusinessGrade) {
   if (grade === "strong") {
     return "good";

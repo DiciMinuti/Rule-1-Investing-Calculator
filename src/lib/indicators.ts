@@ -91,11 +91,11 @@ export type IndicatorSettings = {
 };
 
 export const DEFAULT_INDICATOR_SETTINGS = {
-  macdFastPeriod: 12,
-  macdSlowPeriod: 26,
+  macdFastPeriod: 8,
+  macdSlowPeriod: 17,
   macdSignalPeriod: 9,
   stochasticsPeriod: 14,
-  stochasticsSignalPeriod: 3,
+  stochasticsSignalPeriod: 5,
   movingAveragePeriod: 10,
 } satisfies Required<IndicatorSettings>;
 
@@ -496,7 +496,7 @@ export function calculateStochastics(
     (point) => point.k,
     (point) => point.d,
   );
-  const zone = latest.k >= 80 ? "overbought" : latest.k <= 20 ? "oversold" : "middle";
+  const zone = latest.k > 80 ? "overbought" : latest.k < 20 ? "oversold" : "middle";
   const detail = crossoverDetail(
     signal,
     previousSignal,
