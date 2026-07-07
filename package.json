@@ -1,7 +1,16 @@
 {
   "name": "rule-one-portfolio",
   "version": "0.1.0",
-  "private": true,
+  "description": "A local-first Rule #1-style investing research and valuation app.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DiciMinuti/rule-one-portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DiciMinuti/rule-one-portfolio/issues"
+  },
+  "homepage": "https://github.com/DiciMinuti/rule-one-portfolio#readme",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
