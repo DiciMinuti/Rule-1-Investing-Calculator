@@ -62,7 +62,12 @@ function splitAdjustmentFactor(fiscalYear: number, splits: StockSplit[]) {
 function latestFinancialWithEps(financials: AnnualFinancials[]) {
   return financials
     .toSorted((a, b) => b.fiscalYear - a.fiscalYear)
-    .find((row) => isFiniteNumber(row.epsDiluted) || deriveEps(row.netIncome, row.sharesDiluted) !== undefined);
+    .find(
+      (row) =>
+        isFiniteNumber(row.ttmEpsDiluted) ||
+        isFiniteNumber(row.epsDiluted) ||
+        deriveEps(row.netIncome, row.sharesDiluted) !== undefined,
+    );
 }
 
 function identityCheck(profile: CompanyProfile): DataAuditCheck {
@@ -162,11 +167,12 @@ function splitAdjustedValuationCheck(
       id: "splitAdjustedValuation",
       label: "Split-adjusted valuation EPS",
       status: "fail",
-      detail: "No annual EPS or net-income/share pair was available for valuation.",
+      detail: "No TTM EPS, annual EPS, or net-income/share pair was available for valuation.",
     };
   }
 
-  const rawEps = latest.epsDiluted ?? deriveEps(latest.netIncome, latest.sharesDiluted);
+  const usesTtm = isFiniteNumber(latest.ttmEpsDiluted);
+  const rawEps = latest.ttmEpsDiluted ?? latest.epsDiluted ?? deriveEps(latest.netIncome, latest.sharesDiluted);
   const factor = splitAdjustmentFactor(latest.fiscalYear, splits ?? []);
   const expectedEps = isFiniteNumber(rawEps) ? rawEps * factor : undefined;
 
@@ -188,8 +194,8 @@ function splitAdjustedValuationCheck(
     status: matches ? "pass" : "fail",
     detail: matches
       ? hasLaterSplit
-        ? `Valuation EPS uses split-adjusted fiscal ${latest.fiscalYear} EPS (${expectedEps.toFixed(4)}).`
-        : `Valuation EPS matches fiscal ${latest.fiscalYear} EPS (${expectedEps.toFixed(4)}).`
+        ? `Valuation EPS uses split-adjusted ${usesTtm ? "TTM" : "fiscal"} ${latest.fiscalYear} EPS (${expectedEps.toFixed(4)}).`
+        : `Valuation EPS matches ${usesTtm ? "TTM" : "fiscal"} ${latest.fiscalYear} EPS (${expectedEps.toFixed(4)}).`
       : `Valuation EPS ${assumptions.eps.toFixed(4)} does not match expected split-adjusted EPS ${expectedEps.toFixed(
           4,
         )}.`,

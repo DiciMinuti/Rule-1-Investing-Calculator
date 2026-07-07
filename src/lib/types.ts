@@ -126,6 +126,7 @@ export type AnnualFinancials = {
   revenue?: number;
   netIncome?: number;
   epsDiluted?: number;
+  ttmEpsDiluted?: number;
   sharesDiluted?: number;
   stockholdersEquity?: number;
   operatingCashFlow?: number;

@@ -237,7 +237,19 @@ describe("Rule #1 calculations", () => {
     expect(equityGrowth?.windows[1].value).toBeCloseTo(0.2, 4);
   });
 
-  it("uses the latest annual row with EPS for default valuation EPS", () => {
+  it("uses TTM EPS before latest annual EPS for default valuation EPS", () => {
+    const assumptions = deriveDefaultAssumptions(
+      [
+        { fiscalYear: 2025, epsDiluted: 4.9, sourceFacts: {} },
+        { fiscalYear: 2026, ttmEpsDiluted: 5.4, netIncome: 120_000_000_000, sourceFacts: {} },
+      ],
+      200,
+    );
+
+    expect(assumptions.eps).toBe(5.4);
+  });
+
+  it("falls back to the latest annual row with EPS when TTM EPS is unavailable", () => {
     const assumptions = deriveDefaultAssumptions(
       [
         { fiscalYear: 2025, epsDiluted: 4.9, sourceFacts: {} },

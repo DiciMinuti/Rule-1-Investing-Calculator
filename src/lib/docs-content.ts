@@ -505,7 +505,7 @@ export const docsChapters: DocsChapter[] = [
         title: "Start with EPS",
         body: [
           "EPS means earnings per share. If a company earned $1 billion and has 1 billion shares, EPS is $1. If the same earnings are spread over fewer shares, EPS is higher. Since you own shares, per-share earnings matter.",
-          "The app uses the latest available annual EPS when possible. That is convenient, but you should still inspect it. A one-time gain, temporary loss, recession year, or accounting charge can make current EPS unrepresentative. For cyclical businesses, normalized EPS may be more useful than the latest year.",
+          "The app uses trailing-twelve-month EPS when quarterly data is available, then falls back to the latest annual EPS. That is convenient, but you should still inspect it. A one-time gain, temporary loss, recession year, or accounting charge can make current EPS unrepresentative. For cyclical businesses, normalized EPS may be more useful than the latest year.",
           "Real businesses are not smooth machines. An energy producer, bank, or semiconductor company can have earnings that move sharply with cycles. A stable consumer staples business may be easier to model. The less predictable the EPS, the more conservative the valuation should be.",
         ],
         appNotes: [

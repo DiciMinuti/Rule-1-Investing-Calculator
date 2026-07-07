@@ -71,6 +71,12 @@ type AnnualExtract = {
   source: DataSourceRef;
 };
 
+type InterimExtract = AnnualExtract & {
+  fiscalPeriod: "Q1" | "Q2" | "Q3";
+  filed?: string;
+  end?: string;
+};
+
 type InlineFact = {
   conceptName: string;
   fiscalYear: number;
@@ -575,11 +581,12 @@ function sourceRef(
   fiscalYear: number,
   confidence: DataSourceRef["confidence"],
   unit?: string,
+  fiscalPeriod?: string,
 ): DataSourceRef {
   return {
     label: `SEC ${conceptName}${unit ? ` (${unit})` : ""}`,
     url: `${SEC_COMPANY_FACTS_URL}/CIK${padCik(cik)}.json`,
-    period: `FY ${fiscalYear}`,
+    period: fiscalPeriod ? `${fiscalPeriod} ${fiscalYear}` : `FY ${fiscalYear}`,
     confidence,
   };
 }
@@ -618,6 +625,201 @@ export function extractAnnualFacts(
     );
 
   return candidates[0]?.extracts ?? [];
+}
+
+function isInterimPeriod(value: SecFactValue): value is SecFactValue & { fp: "Q1" | "Q2" | "Q3" } {
+  return value.fp === "Q1" || value.fp === "Q2" || value.fp === "Q3";
+}
+
+function expectedYtdDaysForPeriod(period: "Q1" | "Q2" | "Q3") {
+  if (period === "Q1") {
+    return { min: 60, max: 130 };
+  }
+
+  if (period === "Q2") {
+    return { min: 150, max: 220 };
+  }
+
+  return { min: 240, max: 310 };
+}
+
+function isInterimYtdFact(value: SecFactValue) {
+  if (!isFiniteNumber(value.val) || !isInterimPeriod(value) || !(value.form ?? "").startsWith("10-Q")) {
+    return false;
+  }
+
+  if (!value.start || !value.end) {
+    return value.fp === "Q1";
+  }
+
+  const startTime = Date.parse(value.start);
+  const endTime = Date.parse(value.end);
+  if (!Number.isFinite(startTime) || !Number.isFinite(endTime)) {
+    return false;
+  }
+
+  const days = (endTime - startTime) / 86_400_000;
+  const expected = expectedYtdDaysForPeriod(value.fp);
+  return days >= expected.min && days <= expected.max;
+}
+
+function fiscalYearFromInterimFact(value: SecFactValue) {
+  if (value.fy) {
+    return value.fy;
+  }
+
+  if (value.end) {
+    const endYear = Number(value.end.slice(0, 4));
+    if (Number.isInteger(endYear)) {
+      return endYear;
+    }
+  }
+
+  return undefined;
+}
+
+function interimExtractsForConcept(
+  cik: string,
+  conceptName: string,
+  concept: SecConcept,
+  preferredUnits: string[],
+  confidence: DataSourceRef["confidence"],
+) {
+  const selectedUnits = chooseUnits(concept, preferredUnits);
+  if (!selectedUnits) {
+    return [];
+  }
+
+  const byPeriod = new Map<string, SecFactValue & { fp: "Q1" | "Q2" | "Q3" }>();
+  selectedUnits.values.filter(isInterimYtdFact).forEach((value) => {
+    if (!isInterimPeriod(value)) {
+      return;
+    }
+
+    const fiscalYear = fiscalYearFromInterimFact(value);
+    if (!fiscalYear) {
+      return;
+    }
+
+    const key = `${fiscalYear}-${value.fp}`;
+    const existing = byPeriod.get(key);
+    if (!existing) {
+      byPeriod.set(key, value);
+      return;
+    }
+
+    const existingFiled = existing.filed ?? "";
+    const valueFiled = value.filed ?? "";
+    if (valueFiled > existingFiled) {
+      byPeriod.set(key, value);
+    }
+  });
+
+  return Array.from(byPeriod.values())
+    .map((value): InterimExtract | undefined => {
+      const fiscalYear = fiscalYearFromInterimFact(value);
+      if (!fiscalYear) {
+        return undefined;
+      }
+
+      return {
+        fiscalYear,
+        fiscalPeriod: value.fp,
+        filed: value.filed,
+        end: value.end,
+        value: value.val as number,
+        source: sourceRef(cik, conceptName, fiscalYear, confidence, selectedUnits.unit, value.fp),
+      };
+    })
+    .filter((extract): extract is InterimExtract => extract !== undefined)
+    .toSorted((a, b) => {
+      const periodRank = { Q1: 1, Q2: 2, Q3: 3 };
+      return (
+        a.fiscalYear - b.fiscalYear ||
+        periodRank[a.fiscalPeriod] - periodRank[b.fiscalPeriod] ||
+        (a.end ?? "").localeCompare(b.end ?? "")
+      );
+    });
+}
+
+export function extractInterimFacts(
+  facts: SecCompanyFacts,
+  cik: string,
+  conceptNames: string[],
+  preferredUnits: string[],
+  confidence: DataSourceRef["confidence"] = "high",
+): InterimExtract[] {
+  const usGaap = facts.facts?.["us-gaap"];
+  if (!usGaap) {
+    return [];
+  }
+
+  const candidates = conceptNames
+    .map((conceptName, index) => {
+      const concept = usGaap[conceptName];
+      const extracts = concept
+        ? interimExtractsForConcept(cik, conceptName, concept, preferredUnits, confidence)
+        : [];
+
+      return {
+        index,
+        extracts,
+        latestYear: extracts.at(-1)?.fiscalYear ?? 0,
+      };
+    })
+    .filter((candidate) => candidate.extracts.length > 0)
+    .toSorted(
+      (a, b) =>
+        b.latestYear - a.latestYear ||
+        b.extracts.length - a.extracts.length ||
+        a.index - b.index,
+    );
+
+  return candidates[0]?.extracts ?? [];
+}
+
+function calculateTtmEpsFromInterims(
+  annualEps: AnnualExtract[],
+  interimEps: InterimExtract[],
+) {
+  const latestInterim = interimEps
+    .toSorted((a, b) => {
+      const periodRank = { Q1: 1, Q2: 2, Q3: 3 };
+      return (
+        b.fiscalYear - a.fiscalYear ||
+        periodRank[b.fiscalPeriod] - periodRank[a.fiscalPeriod] ||
+        (b.filed ?? "").localeCompare(a.filed ?? "")
+      );
+    })[0];
+
+  if (!latestInterim) {
+    return undefined;
+  }
+
+  const latestAnnual = annualEps
+    .filter((extract) => extract.fiscalYear === latestInterim.fiscalYear - 1)
+    .at(-1);
+  const priorComparableInterim = interimEps.find(
+    (extract) =>
+      extract.fiscalYear === latestInterim.fiscalYear - 1 &&
+      extract.fiscalPeriod === latestInterim.fiscalPeriod,
+  );
+
+  if (!latestAnnual || !priorComparableInterim) {
+    return undefined;
+  }
+
+  return {
+    fiscalYear: latestInterim.fiscalYear,
+    value: latestAnnual.value - priorComparableInterim.value + latestInterim.value,
+    source: {
+      ...latestInterim.source,
+      label: "SEC TTM diluted EPS",
+      period: `TTM through ${latestInterim.fiscalPeriod} ${latestInterim.fiscalYear}`,
+      confidence: "medium" as const,
+      note: `Calculated as FY ${latestAnnual.fiscalYear} EPS - ${priorComparableInterim.fiscalPeriod} ${priorComparableInterim.fiscalYear} EPS + ${latestInterim.fiscalPeriod} ${latestInterim.fiscalYear} EPS.`,
+    },
+  };
 }
 
 function setAnnualValue(
@@ -788,6 +990,11 @@ export async function getCompanyFinancials(symbol: string): Promise<AnnualFinanc
     60 * 60 * 24,
   );
   const map = new Map<number, AnnualFinancials>();
+  const annualEpsExtracts = extractAnnualFacts(facts, company.cik, conceptMap.epsDiluted, unitPreferences.eps);
+  const ttmEps = calculateTtmEpsFromInterims(
+    annualEpsExtracts,
+    extractInterimFacts(facts, company.cik, conceptMap.epsDiluted, unitPreferences.eps),
+  );
 
   addExtracts(
     map,
@@ -801,7 +1008,7 @@ export async function getCompanyFinancials(symbol: string): Promise<AnnualFinanc
   );
   addExtracts(
     map,
-    extractAnnualFacts(facts, company.cik, conceptMap.epsDiluted, unitPreferences.eps),
+    annualEpsExtracts,
     "epsDiluted",
   );
   addExtracts(
@@ -851,6 +1058,13 @@ export async function getCompanyFinancials(symbol: string): Promise<AnnualFinanc
   addInlineFallbacks(map, inlineFacts, conceptMap.epsDiluted, "epsDiluted");
   addInlineFallbacks(map, inlineFacts, conceptMap.sharesDiluted, "sharesDiluted");
   addInlineFallbacks(map, inlineFacts, conceptMap.capex, "capex");
+
+  if (ttmEps) {
+    const row = map.get(ttmEps.fiscalYear) ?? { fiscalYear: ttmEps.fiscalYear, sourceFacts: {} };
+    row.ttmEpsDiluted = ttmEps.value;
+    row.sourceFacts.ttmEpsDiluted = ttmEps.source;
+    map.set(ttmEps.fiscalYear, row);
+  }
 
   return Array.from(map.values())
     .map((row) => {

@@ -559,10 +559,20 @@ export function latestAnnualFinancial(financials: AnnualFinancials[]) {
   return financials.toSorted((a, b) => b.fiscalYear - a.fiscalYear)[0];
 }
 
-function latestAnnualFinancialWithEps(financials: AnnualFinancials[]) {
+function latestFinancialWithValuationEps(financials: AnnualFinancials[]) {
   return financials
     .toSorted((a, b) => b.fiscalYear - a.fiscalYear)
-    .find((row) => isFiniteNumber(row.epsDiluted) || deriveEps(row.netIncome, row.sharesDiluted) !== undefined);
+    .find(
+      (row) =>
+        isFiniteNumber(row.ttmEpsDiluted) ||
+        isFiniteNumber(row.epsDiluted) ||
+        deriveEps(row.netIncome, row.sharesDiluted) !== undefined,
+    );
+}
+
+function splitAdjustedValuationEps(row: AnnualFinancials, splits: StockSplit[]) {
+  const eps = row.ttmEpsDiluted ?? row.epsDiluted ?? deriveEps(row.netIncome, row.sharesDiluted);
+  return splitAdjustedPerShareValue(eps, row.fiscalYear, splits);
 }
 
 export function deriveDefaultAssumptions(
@@ -572,8 +582,8 @@ export function deriveDefaultAssumptions(
   splits: StockSplit[] = [],
   overrides?: Partial<ValuationAssumptions>,
 ): ValuationAssumptions {
-  const latest = latestAnnualFinancialWithEps(financials) ?? latestAnnualFinancial(financials);
-  const eps = latest ? (splitAdjustedEps(latest, splits) ?? 0) : 0;
+  const latest = latestFinancialWithValuationEps(financials) ?? latestAnnualFinancial(financials);
+  const eps = latest ? (splitAdjustedValuationEps(latest, splits) ?? 0) : 0;
   const historicalGrowthRate = deriveHistoricalEpsGrowthRate(financials, splits);
   const historicalPe = deriveHistoricalPe(financials, priceHistory, splits);
   const baseAssumptions = {
