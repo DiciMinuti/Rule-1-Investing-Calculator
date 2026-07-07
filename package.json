@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "A local-first Rule #1-style investing research and valuation app.",
   "license": "MIT",
+  "packageManager": "pnpm@10.20.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DiciMinuti/rule-one-portfolio.git"
