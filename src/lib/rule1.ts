@@ -573,7 +573,7 @@ export function deriveDefaultAssumptions(
   overrides?: Partial<ValuationAssumptions>,
 ): ValuationAssumptions {
   const latest = latestAnnualFinancialWithEps(financials) ?? latestAnnualFinancial(financials);
-  const eps = latest?.epsDiluted ?? deriveEps(latest?.netIncome, latest?.sharesDiluted) ?? 0;
+  const eps = latest ? (splitAdjustedEps(latest, splits) ?? 0) : 0;
   const historicalGrowthRate = deriveHistoricalEpsGrowthRate(financials, splits);
   const historicalPe = deriveHistoricalPe(financials, priceHistory, splits);
   const baseAssumptions = {

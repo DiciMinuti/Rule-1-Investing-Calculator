@@ -204,6 +204,19 @@ describe("Rule #1 calculations", () => {
     expect(assumptions.futurePe).toBeCloseTo(22.5, 1);
   });
 
+  it("uses split-adjusted EPS for default valuation inputs after a later split", () => {
+    const assumptions = deriveDefaultAssumptions(
+      [{ fiscalYear: 2025, epsDiluted: 30.37, sourceFacts: {} }],
+      218.76,
+      [],
+      [{ date: "2026-06-12", numerator: 10, denominator: 1 }],
+      { growthRate: 0.15, futurePe: 30 },
+    );
+
+    expect(assumptions.eps).toBeCloseTo(3.037, 4);
+    expect(calculateValuation(assumptions, "strong").stickerPrice).toBeLessThan(300);
+  });
+
   it("does not mix total equity into a book-value-per-share series", () => {
     const bigFive = buildBigFive(
       [

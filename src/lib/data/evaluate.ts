@@ -1,5 +1,6 @@
 import { getPriceHistory } from "@/lib/data/prices";
 import { getCompanyFilings, getCompanyFinancials, getCompanyProfile } from "@/lib/data/sec";
+import { buildDataAuditReport } from "@/lib/data/audit";
 import { buildBigFive, calculateValuation, deriveBusinessGrade, deriveDefaultAssumptions } from "@/lib/rule1";
 import type { AnnualFinancials, FilingLink, PriceHistory, RuleOneEvaluation } from "@/lib/types";
 
@@ -51,6 +52,15 @@ export async function evaluateCompany(
   );
   const businessGrade = deriveBusinessGrade({ bigFive });
   const valuation = calculateValuation(assumptions, businessGrade);
+  const loadedAt = new Date().toISOString();
+  const audit = buildDataAuditReport({
+    profile,
+    financials,
+    prices,
+    bigFive,
+    assumptions,
+    generatedAt: loadedAt,
+  });
 
   return {
     profile,
@@ -60,6 +70,7 @@ export async function evaluateCompany(
     bigFive,
     assumptions,
     valuation,
-    loadedAt: new Date().toISOString(),
+    audit,
+    loadedAt,
   };
 }

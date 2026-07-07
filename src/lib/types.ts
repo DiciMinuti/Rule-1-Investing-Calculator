@@ -215,6 +215,28 @@ export type ValuationResult = {
   warnings: string[];
 };
 
+export type DataAuditStatus = "pass" | "warn" | "fail";
+
+export type DataAuditCheck = {
+  id:
+    | "identity"
+    | "price"
+    | "fundamentals"
+    | "bigFive"
+    | "splitAdjustedValuation"
+    | "technicalIndicators";
+  label: string;
+  status: DataAuditStatus;
+  detail: string;
+  source?: DataSourceRef;
+};
+
+export type DataAuditReport = {
+  status: DataAuditStatus;
+  generatedAt: string;
+  checks: DataAuditCheck[];
+};
+
 export type RuleOneEvaluation = {
   profile: CompanyProfile;
   financials: AnnualFinancials[];
@@ -223,6 +245,7 @@ export type RuleOneEvaluation = {
   bigFive: BigFiveResult;
   assumptions: ValuationAssumptions;
   valuation: ValuationResult;
+  audit: DataAuditReport;
   loadedAt: string;
 };
 
