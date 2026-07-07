@@ -294,7 +294,7 @@ export async function loadQualitativeUniverse() {
 async function main() {
   const options = parseArgs(process.argv.slice(2));
   if (!options.symbols.length) {
-    console.error("Usage: npm run qualitative:facts -- NVDA [MSFT ...] [--force]");
+    console.error("Usage: pnpm qualitative:facts -- NVDA [MSFT ...] [--force]");
     process.exit(1);
   }
 

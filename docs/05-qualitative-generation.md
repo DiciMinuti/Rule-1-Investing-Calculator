@@ -16,37 +16,37 @@ The app does not call OpenAI at runtime. Qualitative management and moat briefs 
 Create a fact-packet template:
 
 ```bash
-npm run qualitative:template -- AAPL
+pnpm qualitative:template -- AAPL
 ```
 
 Check a fact packet without calling OpenAI:
 
 ```bash
-npm run qualitative:generate -- AAPL --dry-run
+pnpm qualitative:generate -- AAPL --dry-run
 ```
 
 Build a fact packet from public SEC source material:
 
 ```bash
-npm run qualitative:facts -- AAPL --force
+pnpm qualitative:facts -- AAPL --force
 ```
 
 Generate a brief:
 
 ```bash
-OPENAI_API_KEY=... npm run qualitative:generate -- AAPL --force
+OPENAI_API_KEY=... pnpm qualitative:generate -- AAPL --force
 ```
 
 Choose a model explicitly:
 
 ```bash
-OPENAI_API_KEY=... OPENAI_MODEL=gpt-5.5 npm run qualitative:generate -- AAPL --force
+OPENAI_API_KEY=... OPENAI_MODEL=gpt-5.5 pnpm qualitative:generate -- AAPL --force
 ```
 
 Use separate models for cost control:
 
 ```bash
-OPENAI_FACT_MODEL=gpt-5.4-mini OPENAI_BRIEF_MODEL=gpt-5.5 npm run qualitative:batch -- --from=1 --to=300
+OPENAI_FACT_MODEL=gpt-5.4-mini OPENAI_BRIEF_MODEL=gpt-5.5 pnpm qualitative:batch -- --from=1 --to=300
 ```
 
 The fact-packet step is usually the expensive step because it reads larger SEC source packets. The final brief step uses a smaller fact packet as input, so it can keep a stronger model while still reducing total cost.
@@ -54,7 +54,7 @@ The fact-packet step is usually the expensive step because it reads larger SEC s
 Use Z.ai for cheaper fact packets while keeping OpenAI for the final brief:
 
 ```bash
-ZAI_API_KEY=... OPENAI_FACT_PROVIDER=zai ZAI_FACT_MODEL=glm-5.2 OPENAI_BRIEF_MODEL=gpt-5.5 npm run qualitative:batch -- --symbols=C,QCOM
+ZAI_API_KEY=... OPENAI_FACT_PROVIDER=zai ZAI_FACT_MODEL=glm-5.2 OPENAI_BRIEF_MODEL=gpt-5.5 pnpm qualitative:batch -- --symbols=C,QCOM
 ```
 
 The Z.ai path uses JSON mode and then runs the same local fact-packet validator before any brief is generated.
@@ -62,37 +62,37 @@ The Z.ai path uses JSON mode and then runs the same local fact-packet validator 
 Use Z.ai for both fact packets and final briefs:
 
 ```bash
-ZAI_API_KEY=... OPENAI_FACT_PROVIDER=zai OPENAI_BRIEF_PROVIDER=zai ZAI_FACT_MODEL=glm-5.2 ZAI_BRIEF_MODEL=glm-5.2 npm run qualitative:batch -- --symbols=SCHW,DE
+ZAI_API_KEY=... OPENAI_FACT_PROVIDER=zai OPENAI_BRIEF_PROVIDER=zai ZAI_FACT_MODEL=glm-5.2 ZAI_BRIEF_MODEL=glm-5.2 pnpm qualitative:batch -- --symbols=SCHW,DE
 ```
 
 Validate committed briefs:
 
 ```bash
-npm run qualitative:validate
+pnpm qualitative:validate
 ```
 
 Rebuild the frontend registry after editing per-symbol JSON manually:
 
 ```bash
-npm run qualitative:index
+pnpm qualitative:index
 ```
 
 Refresh the large-cap coverage universe:
 
 ```bash
-npm run qualitative:universe -- --limit=300
+pnpm qualitative:universe -- --limit=300
 ```
 
 Run a resumable batch from the coverage universe:
 
 ```bash
-npm run qualitative:batch -- --from=1 --to=30
+pnpm qualitative:batch -- --from=1 --to=30
 ```
 
 Run specific symbols:
 
 ```bash
-npm run qualitative:batch -- --symbols=NVDA,GOOG,MSFT
+pnpm qualitative:batch -- --symbols=NVDA,GOOG,MSFT
 ```
 
 Batch runs skip existing fact packets and briefs by default, retry failed API calls, rebuild the brief index, and write status reports to `src/lib/data/qualitative/reports/`.

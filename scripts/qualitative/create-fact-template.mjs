@@ -44,7 +44,7 @@ function factTemplate(symbol) {
 
 const symbols = process.argv.slice(2).map((symbol) => symbol.toUpperCase());
 if (!symbols.length) {
-  console.error("Usage: npm run qualitative:template -- AAPL [MSFT ...]");
+  console.error("Usage: pnpm qualitative:template -- AAPL [MSFT ...]");
   process.exit(1);
 }
 
